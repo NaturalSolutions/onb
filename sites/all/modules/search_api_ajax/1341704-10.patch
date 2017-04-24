@@ -1,0 +1,298 @@
+diff --git a/search_api_ajax.js b/search_api_ajax.js
+index 551dd38..05e6cff 100644
+--- a/search_api_ajax.js
++++ b/search_api_ajax.js
+@@ -13,8 +13,8 @@
+     var speed = Drupal.settings.search_api_ajax.scrollspeed;
+     // notice the "search_api_ajax_path" instead of
+     // "search_api_ajax.path" for magic reasons
+-    // uses JS native encodeURI() to replace spaces with %20
+-    var ajaxPath = encodeURI(Drupal.settings.search_api_ajax_path);
++    var ajaxPath = Drupal.settings.search_api_ajax_path;
++    var qPath = Drupal.settings.search_api_ajax_qpath;
+     var isView = Drupal.settings.search_api_ajax.view;
+ 
+     // initialize listeners
+@@ -30,8 +30,31 @@
+     };
+     // extract url for ajax history
+     Drupal.search_api_ajax.url_to_state = function(url) {
+-      return url.replace(new RegExp('^.*' + Drupal.settings.basePath + ajaxPath + '/' + '?'), '');
++      var state = '';
++      if (isView) {
++        var query = Drupal.search_api_ajax.get_url_state(url)["query"];
++      }
++      state = url.replace(new RegExp('^.*' + Drupal.settings.basePath + ajaxPath + '/' + '?'), '');
++      if (query) {
++        state = query + state.replace('?query=' + query, '');
++      }
++      else {
++        state = state.replace('?query=', '');
++        state = state.replace('?', '&');
++      }
++      return state;
+     };
++
++    Drupal.search_api_ajax.get_url_state = function(url) {
++      var vars = [], hash;
++      var hashes = url.slice(url.indexOf('?') + 1).split('&');
++      for(var i = 0; i < hashes.length; i++) {
++        hash = hashes[i].split('=');
++        vars.push(hash[0]);
++        vars[hash[0]] = hash[1];
++      }
++      return vars;
++    }
+     // prepare and perform ajax search request
+     Drupal.search_api_ajax.request_callback = function(state) {
+       if(content) {
+@@ -58,7 +81,12 @@
+       }
+ 
+       // post ajax, read json
+-      $.post(Drupal.settings.basePath + 'search_api_ajax/' + ajaxPath + '/' + state, {
++      var keysPath = '/' + state;
++      if(isView) {
++        keysPath = '?query=' + state;
++      }
++
++      $.post(Drupal.settings.basePath + 'search_api_ajax/' + ajaxPath + keysPath, {
+         js : 1
+       }, Drupal.search_api_ajax.response_callback, 'json');
+     };
+@@ -145,7 +173,17 @@
+           separator = '&';
+         }
+ 
+-        return Drupal.search_api_ajax.navigate($(this).find('input[name="range-ajax-target"]').val() + separator + 'filter[' + $(this).find('input[name="range-field"]').val() + '][0]=' + '[' + $(this).find('input[name="range-from"]').val() + ' ' + $(this).find('input[name="range-to"]').val() + ']');
++        // add a filter in the form of &f[n]=field_name:[A B]
++        // instead of actually knowing what "n" is, we just f[]
++        // @todo Facet API can have different 'f', how to know which?
++        var addFilter = 'f[]='
++          + $(this).find('input[name="range-field"]').val()
++          + ':'
++          + '[' + $(this).find('input[name="range-from"]').val()
++          + ' TO '
++          + $(this).find('input[name="range-to"]').val() + ']';
++
++        return Drupal.search_api_ajax.navigate($(this).find('input[name="range-ajax-target"]').val() + separator + addFilter);
+       });
+     };
+   }
+@@ -160,6 +198,7 @@
+     }
+ 
+     // listen to changes
++    // @todo when going from /page#q= to /page it should also trigger 
+     Y.on('history:change', function(e) {
+       var changed = e.changed;
+       if(changed.q) {
+diff --git a/search_api_ajax.module b/search_api_ajax.module
+index da03527..c1bd01b 100644
+--- a/search_api_ajax.module
++++ b/search_api_ajax.module
+@@ -10,13 +10,38 @@
+ function search_api_ajax_search_api_ajax_settings() {
+   global $theme_key;
+   $settings = array();
+-  $regions = system_region_list($theme_key);
+ 
+-  // add facets, sorts and ranges blocks by default for compatibility
+-  foreach ($regions as $region_key => $region_name) {
+-    $blocks = block_list($region_key);
++  // get all drupal blocks
++  $settings['blocks'] = &drupal_static(__FUNCTION__);
++  if (!isset($settings['blocks'])) {
++    $blocks = array();
++
++    // Drupal blocks
++    // @todo cache this?
++    $regions = system_region_list($theme_key);
++    foreach ($regions as $region_key => $region_name) {
++      $settings['regions'][] = $region_key;
++      $block_list = block_list($region_key);
++
++      // remove inactive blocks (status=0)
++      foreach ($block_list as $key => $block) {
++        if ($block->status == 0) {
++          unset($block_list[$key]);
++        }
++      }
++      $blocks = array_merge(block_list($region_key), $blocks);
++      if (module_exists('context')) {
++        $blocks = array_merge(context_get_plugin('reaction', 'block')->block_list($region_key), $blocks);
++      }
++    }
++
++    $modules = search_api_ajax_modules();
+     foreach ($blocks as $block) {
+-      if ($block->status == 1 && in_array($block->module, array('search_api_facets', 'search_api_ranges', 'search_api_sorts', 'search_api_widgets'))) {
++      if (in_array($block->module, $modules)) {
++        // facetapi block names are strtolowered in html, so do same here
++        if (in_array($block->module, array('facetapi', 'facetapi_tagcloud'))) {
++          $block->delta = strtolower($block->delta);
++        }
+         $settings['blocks'][$block->module . '_' . $block->delta] = str_replace('_', '-', '#block-' . $block->module . '-' . $block->delta);
+       }
+     }
+@@ -37,7 +62,11 @@ function search_api_ajax_search_api_ajax_settings() {
+     // views paths have 3 parts, search pages only 2
+     if ($path_parts[0] == 'search_api_views') {
+       $trail = menu_set_active_trail();
+-      $views_path = isset($trail[1]['link_path']) ? $trail[1]['link_path'] : $trail[1]['path'];
++
++      // process last entry
++      end($trail);
++      $key = key($trail);
++      $views_path = isset($trail[$key]['link_path']) ? $trail[$key]['link_path'] : $trail[$key]['path'];
+       $path = search_api_ajax_get_views_path($views_path);
+       $settings['view'] = 1;
+     }
+@@ -45,8 +74,8 @@ function search_api_ajax_search_api_ajax_settings() {
+       $path = $path_parts[1];
+       $settings['view'] = 0;
+     }
+-    if (!empty($path)) {
+ 
++    if (!empty($path)) {
+       // needed to add current page path to ajax
+       drupal_add_js(array('search_api_ajax_path' => $path), 'setting');
+     }
+@@ -62,6 +91,18 @@ function search_api_ajax_search_api_ajax_settings() {
+ function search_api_ajax_menu() {
+   $items = array();
+   // during uninstallation, this would lead to a fatal error otherwise.
++  if (module_exists('taxonomy')) {
++    $items['search_api_ajax/%/%'] = array(
++      'title' => '',
++      'description' => '',
++      'page callback' => 'search_api_ajax_proxy_taxonomy',
++      'page arguments' => array(),
++      'access arguments' => array('view published content'),
++      'type' => MENU_CALLBACK,
++      'file' => 'search_api_ajax.pages.inc',
++    );
++  }
++  // during uninstallation, this would lead to a fatal error otherwise.
+   if (module_exists('search_api_page')) {
+     foreach (search_api_page_load_multiple(FALSE, array('enabled' => TRUE)) as $page) {
+       $items['search_api_ajax/' . $page->path] = array(
+@@ -106,7 +147,14 @@ function search_api_ajax_menu() {
+ function search_api_ajax_modules() {
+   static $modules = NULL;
+   if (is_null($modules)) {
+-    $modules = array('search_api_facets', 'search_api_ranges', 'search_api_sorts', 'search_api_widgets');
++    $modules = array(
++      'search_api_facets',
++      'search_api_ranges',
++      'search_api_sorts',
++      'search_api_widgets',
++      'facetapi',
++      'facetapi_tagcloud',
++    );
+     drupal_alter('search_api_ajax_modules', $modules);
+   }
+   return $modules;
+diff --git a/search_api_ajax.pages.inc b/search_api_ajax.pages.inc
+index b9330ac..dd37b24 100644
+--- a/search_api_ajax.pages.inc
++++ b/search_api_ajax.pages.inc
+@@ -32,6 +32,17 @@ function search_api_ajax_proxy_views($name, $display, $keys = NULL) {
+ }
+ 
+ /**
++ * Checks incoming AJAX requests for Taxonomy term paths
++ */
++function search_api_ajax_proxy_taxonomy() {
++  $args = arg();
++  $path = $args[1] . '/' . $args[2];
++  $path = drupal_lookup_path('source', $path);
++  $return = menu_execute_active_handler($path, FALSE);
++  search_api_ajax_return_json($return);
++}
++
++/**
+  * Performs a search request and returns page & block content html as JSON
+  *
+  * If the incoming request is not an AJAX request, user/bot is redirected
+@@ -52,13 +63,13 @@ function search_api_ajax_return_json($return) {
+   if (is_int($return)) {
+     switch ($return) {
+       case MENU_NOT_FOUND:
+-        drupal_set_header('HTTP/1.1 404 Not Found');
++        drupal_add_http_header('Status', '404 Not Found');
+         break;
+       case MENU_ACCESS_DENIED:
+-        drupal_set_header('HTTP/1.1 403 Forbidden');
++        drupal_add_http_header('Status', '403 Forbidden');
+         break;
+       case MENU_SITE_OFFLINE:
+-        drupal_set_header('HTTP/1.1 503 Service unavailable');
++        drupal_add_http_header('Status', '503 Service unavailable');
+         break;
+     }
+   }
+@@ -75,23 +86,40 @@ function search_api_ajax_return_json($return) {
+     }
+     $json = array('regions' => array('search_api_ajax' => $return));
+ 
++    // add new blocks
++    $blocks = array();
++
++    // Drupal blocks
++    // @todo cache this?
+     $regions = system_region_list($theme);
+-    $modules = search_api_ajax_modules();
+-    foreach (array_keys($regions) as $region) {
+-      if ($list = block_list($region)) {
+-        foreach ($list as $block) {
+-          if (in_array($block->module, $modules)) {
+-            $rendered_block = _block_render_blocks(array($block));
+-            $rendered_block = _block_get_renderable_array($rendered_block);
+-            $json['regions'][$region][$block->module .'_'. $block->delta] = drupal_render($rendered_block);
+-
+-            // new blocks may have come into existence, we notify about them
+-            // otherwise they would never be displayed to the user
+-            // @see search_api_ajax.js
+-            $json['blocks'][$block->module . '_' . $block->delta] = str_replace('_', '-', '#block-' . $block->module . '-' . $block->delta);
+-          }
++    foreach ($regions as $region_key => $region_name) {
++      $settings['regions'][] = $region_key;
++      $block_list = block_list($region_key);
++
++      // remove inactive blocks (status=0)
++      foreach ($block_list as $key => $block) {
++        if ($block->status == 0) {
++          unset($block_list[$key]);
+         }
+       }
++      $blocks = array_merge(block_list($region_key), $blocks);
++      if (module_exists('context')) {
++        $blocks = array_merge(context_get_plugin('reaction', 'block')->block_list($region_key), $blocks);
++      }
++    }
++
++    $modules = search_api_ajax_modules();
++    foreach ($blocks as $block) {
++      if (in_array($block->module, $modules)) {
++        $rendered_block = _block_render_blocks(array($block));
++        $rendered_block = _block_get_renderable_array($rendered_block);
++        $json['regions'][$block->region][$block->module .'_'. $block->delta] = drupal_render($rendered_block);
++
++        // new blocks may have come into existence, we notify about them
++        // otherwise they would never be displayed to the user
++        // @see search_api_ajax.js
++        $json['blocks'][$block->module . '_' . $block->delta] = str_replace('_', '-', '#block-' . $block->module . '-' . $block->delta);
++      }
+     }
+ 
+     // merge all scopes and settings
+@@ -102,6 +130,7 @@ function search_api_ajax_return_json($return) {
+ 
+     header('Content-Type: application/json');
+     print json_encode($json);
+-    exit;
++    
++    $contexts = context_active_contexts();
+   }
+ }

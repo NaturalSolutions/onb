@@ -1,0 +1,5 @@
+name = Search ajaxified
+description = "Ajaxifies Search API pages with jQuery Livequery and Yahoo! iFrame."
+dependencies[] = search_api
+core = 7.x
+package = Search

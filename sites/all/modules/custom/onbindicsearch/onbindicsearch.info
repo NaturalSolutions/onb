@@ -1,0 +1,7 @@
+name = Indicateurs ONB Custom Search Module
+description = Search Extensions
+core = 7.x
+package = SINP / ONB
+dependencies[] = search_api
+
+files[] = onbindicsearch.module
