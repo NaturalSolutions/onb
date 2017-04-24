@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Glossaire feature.
+ */
+
+include_once 'glossaire.features.inc';
