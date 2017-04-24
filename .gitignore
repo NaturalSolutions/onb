@@ -14,3 +14,6 @@ tmp/
 
 # OS generated files
 .DS_Store
+
+# IDE Files
+.idea
