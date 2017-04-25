@@ -327,7 +327,7 @@ text-decoration:underline;
 
 /*Page d'accueil*/
 .front #zone-postscript .block{
-height:160px;
+    min-height: 200px;
 }
 
 .front .view-recherche-actualite .view-content{
