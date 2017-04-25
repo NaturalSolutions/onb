@@ -924,12 +924,23 @@ function onb_global_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'views_nivo_slider';
   $handler->display->display_options['style_options']['effect'] = array(
-    'random' => 'random',
+    'sliceUpLeft' => 'sliceUpLeft',
   );
-  $handler->display->display_options['style_options']['animSpeed'] = '700';
   $handler->display->display_options['style_options']['pauseTime'] = '5000';
   $handler->display->display_options['style_options']['controlNavThumbsField'] = 'title';
   $handler->display->display_options['style_options']['controlNavThumbsIC'] = 'thumbnail';
+  $handler->display->display_options['style_options']['advanced_settings'] = array(
+    'toggle_bc' => 0,
+    'beforeChange' => '',
+    'toggle_ac' => 0,
+    'afterChange' => '',
+    'toggle_sse' => 0,
+    'slideshowEnd' => '',
+    'toggle_ls' => 0,
+    'lastSlide' => '',
+    'toggle_al' => 0,
+    'afterLoad' => '',
+  );
   $handler->display->display_options['row_plugin'] = 'nivo_sliderfields';
   $handler->display->display_options['row_options']['image_field'] = 'field_questionvisuel';
   $handler->display->display_options['row_options']['title_field'] = 'nothing';
@@ -1031,6 +1042,10 @@ function onb_global_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $export['diaporama'] = $view;
 
   $view = new view();
@@ -1526,7 +1541,8 @@ function onb_global_views_default_views() {
   /* Display: Bloc - accueil */
   $handler = $view->new_display('block', 'Bloc - accueil', 'block_1');
   $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'slideshow';
@@ -1542,9 +1558,10 @@ function onb_global_views_default_views() {
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['weight'] = '1';
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['type'] = 'views_slideshow_pager_fields';
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['views_slideshow_pager_fields_fields'] = array(
+    'url' => 0,
     'title' => 0,
     'field_actu_date' => 0,
-    'field_motscles' => 0,
+    'nothing' => 0,
   );
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_controls']['weight'] = '1';
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_controls']['type'] = 'views_slideshow_controls_text';
@@ -1552,9 +1569,10 @@ function onb_global_views_default_views() {
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['weight'] = '1';
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['type'] = 'views_slideshow_pager_fields';
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['views_slideshow_pager_fields_fields'] = array(
+    'url' => 0,
     'title' => 0,
     'field_actu_date' => 0,
-    'field_motscles' => 0,
+    'nothing' => 0,
   );
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['weight'] = '1';
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['type'] = 'views_slideshow_controls_text';
@@ -1627,6 +1645,12 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a class="colorbox-load colorbox-node" href="[url]?width=500&height=500&iframe=true">[title]</a> - [field_actu_date]';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Critère de tri: Indexed Nœud : Date */
+  $handler->display->display_options['sorts']['field_actu_date']['id'] = 'field_actu_date';
+  $handler->display->display_options['sorts']['field_actu_date']['table'] = 'search_api_index_search_actualite';
+  $handler->display->display_options['sorts']['field_actu_date']['field'] = 'field_actu_date';
+  $handler->display->display_options['sorts']['field_actu_date']['order'] = 'DESC';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Critère de filtrage: Indexed Nœud : Type de contenu */
@@ -1648,13 +1672,24 @@ function onb_global_views_default_views() {
   $handler->display->display_options['filters']['field_actu_date_1']['field'] = 'field_actu_date';
   $handler->display->display_options['filters']['field_actu_date_1']['operator'] = '<=';
   $handler->display->display_options['filters']['field_actu_date_1']['value'] = 'now';
+  $handler->display->display_options['block_caching'] = '-1';
 
   /* Display: Bloc page */
   $handler = $view->new_display('block', 'Bloc page', 'block_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '5';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Éléments par page';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Tout -';
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Décalage';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« premier';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ précédent';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'suivant ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'dernier »';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'views_accordion';
   $handler->display->display_options['style_options']['row-start-open'] = '0';
@@ -1706,6 +1741,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['block_caching'] = '8';
   $export['recherche_actualite'] = $view;
 
   $view = new view();
@@ -5998,10 +6034,12 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['fields']['field_abondance']['id'] = 'field_abondance';
   $handler->display->display_options['fields']['field_abondance']['table'] = 'field_data_field_abondance';
   $handler->display->display_options['fields']['field_abondance']['field'] = 'field_abondance';
+  $handler->display->display_options['fields']['field_abondance']['type'] = 'taxonomy_term_reference_link';
   /* Champ: Contenu : Accessibilité des données */
   $handler->display->display_options['fields']['field_accessiblite']['id'] = 'field_accessiblite';
   $handler->display->display_options['fields']['field_accessiblite']['table'] = 'field_data_field_accessiblite';
   $handler->display->display_options['fields']['field_accessiblite']['field'] = 'field_accessiblite';
+  $handler->display->display_options['fields']['field_accessiblite']['type'] = 'taxonomy_term_reference_link';
   /* Champ: Contenu : Code indicateur */
   $handler->display->display_options['fields']['field_code_1']['id'] = 'field_code_1';
   $handler->display->display_options['fields']['field_code_1']['table'] = 'field_data_field_code';

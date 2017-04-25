@@ -385,7 +385,7 @@ node/*/edit';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'drupal_private_key';
-  $strongarm->value = 'cev8PpR9kxHTKiOQkJ8nN0OYLdmUMnaFy4rlLr8iwqo';
+  $strongarm->value = 'oUH55HYZNgOHidm19Y7dRRO_fy5xEvdlQta0xxK_g9w';
   $export['drupal_private_key'] = $strongarm;
 
   $strongarm = new stdClass();
