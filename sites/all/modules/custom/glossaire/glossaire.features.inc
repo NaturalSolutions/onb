@@ -17,6 +17,9 @@ function glossaire_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "facetapi" && $api == "facetapi_defaults") {
     return array("version" => "1");
   }
+  if ($module == "strongarm" && $api == "strongarm") {
+    return array("version" => "1");
+  }
 }
 
 /**
@@ -41,19 +44,15 @@ function glossaire_default_search_api_index() {
       "index_directly" : 1,
       "cron_limit" : "50",
       "fields" : {
-        "name" : { "type" : "string" },
-        "weight" : { "type" : "integer" },
-        "vocabulary" : { "type" : "integer", "entity_type" : "taxonomy_vocabulary" },
-        "field_definitions" : {
-          "type" : "list\\u003Cinteger\\u003E",
-          "entity_type" : "field_collection_item"
-        },
-        "field_first_letter" : { "type" : "string" },
-        "search_api_language" : { "type" : "string" },
         "field_definitions:field_thematique" : {
           "type" : "list\\u003Clist\\u003Cinteger\\u003E\\u003E",
           "entity_type" : "taxonomy_term"
-        }
+        },
+        "field_first_letter" : { "type" : "string" },
+        "name" : { "type" : "string" },
+        "search_api_language" : { "type" : "string" },
+        "vocabulary" : { "type" : "integer", "entity_type" : "taxonomy_vocabulary" },
+        "weight" : { "type" : "integer" }
       },
       "data_alter_callbacks" : {
         "search_api_alter_bundle_filter" : {
@@ -244,43 +243,6 @@ function glossaire_default_search_api_server() {
           "field_date" : {
             "table" : "search_api_db_search_actualites_field_date",
             "type" : "date",
-            "boost" : "1.0"
-          }
-        },
-        "search_glossaire" : {
-          "name" : {
-            "table" : "search_api_db_search_glossaire_name",
-            "type" : "string",
-            "boost" : "1.0"
-          },
-          "field_definitions" : {
-            "table" : "search_api_db_search_glossaire_field_definitions",
-            "type" : "list\\u003Cinteger\\u003E",
-            "boost" : "1.0"
-          },
-          "search_api_language" : {
-            "table" : "search_api_db_search_glossaire_search_api_language",
-            "type" : "string",
-            "boost" : "1.0"
-          },
-          "field_definitions:field_thematique" : {
-            "table" : "search_api_db_search_glossaire_field_definitions_field_thematiq",
-            "type" : "list\\u003Clist\\u003Cinteger\\u003E\\u003E",
-            "boost" : "1.0"
-          },
-          "vocabulary" : {
-            "table" : "search_api_db_search_glossaire_vocabulary",
-            "type" : "integer",
-            "boost" : "1.0"
-          },
-          "field_first_letter" : {
-            "table" : "search_api_db_search_glossaire_field_first_letter",
-            "type" : "string",
-            "boost" : "1.0"
-          },
-          "weight" : {
-            "table" : "search_api_db_search_glossaire_weight",
-            "type" : "integer",
             "boost" : "1.0"
           }
         },
@@ -552,7 +514,7 @@ function glossaire_default_search_api_server() {
             "boost" : "1.0"
           },
           "body:summary" : {
-            "table" : "search_api_db_node_index_text",
+            "table" : "search_api_db_node_index_body_summary",
             "type" : "text",
             "boost" : "1.0"
           },
@@ -609,6 +571,44 @@ function glossaire_default_search_api_server() {
           "field_perimetre_statut_prod" : {
             "table" : "search_api_db_node_index_field_perimetre_statut_prod",
             "type" : "list\\u003Cinteger\\u003E",
+            "boost" : "1.0"
+          }
+        },
+        "search_glossaire" : {
+          "name" : {
+            "table" : "search_api_db_search_glossaire",
+            "column" : "name",
+            "type" : "string",
+            "boost" : "1.0"
+          },
+          "weight" : {
+            "table" : "search_api_db_search_glossaire",
+            "column" : "weight",
+            "type" : "integer",
+            "boost" : "1.0"
+          },
+          "vocabulary" : {
+            "table" : "search_api_db_search_glossaire",
+            "column" : "vocabulary",
+            "type" : "integer",
+            "boost" : "1.0"
+          },
+          "field_first_letter" : {
+            "table" : "search_api_db_search_glossaire",
+            "column" : "field_first_letter",
+            "type" : "string",
+            "boost" : "1.0"
+          },
+          "search_api_language" : {
+            "table" : "search_api_db_search_glossaire",
+            "column" : "search_api_language",
+            "type" : "string",
+            "boost" : "1.0"
+          },
+          "field_definitions:field_thematique" : {
+            "table" : "search_api_db_search_glossaire_field_definitions_field_themati",
+            "column" : "value",
+            "type" : "list\\u003Clist\\u003Cinteger\\u003E\\u003E",
             "boost" : "1.0"
           }
         }

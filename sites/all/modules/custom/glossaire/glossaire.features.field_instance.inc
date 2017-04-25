@@ -10,7 +10,8 @@
 function glossaire_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'field_collection_item-field_definitions-field_definition'
+  // Exported field_instance:
+  // 'field_collection_item-field_definitions-field_definition'.
   $field_instances['field_collection_item-field_definitions-field_definition'] = array(
     'bundle' => 'field_definitions',
     'default_value' => NULL,
@@ -23,6 +24,13 @@ function glossaire_field_default_field_instances() {
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 1,
+      ),
+      'teaser2' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
       ),
       'teaser_user' => array(
         'label' => 'hidden',
@@ -54,7 +62,8 @@ function glossaire_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_definitions-field_reference'
+  // Exported field_instance:
+  // 'field_collection_item-field_definitions-field_reference'.
   $field_instances['field_collection_item-field_definitions-field_reference'] = array(
     'bundle' => 'field_definitions',
     'default_value' => NULL,
@@ -67,6 +76,13 @@ function glossaire_field_default_field_instances() {
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 2,
+      ),
+      'teaser2' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
       ),
       'teaser_user' => array(
         'label' => 'inline',
@@ -98,7 +114,8 @@ function glossaire_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_definitions-field_site_internet'
+  // Exported field_instance:
+  // 'field_collection_item-field_definitions-field_site_internet'.
   $field_instances['field_collection_item-field_definitions-field_site_internet'] = array(
     'bundle' => 'field_definitions',
     'default_value' => NULL,
@@ -111,6 +128,13 @@ function glossaire_field_default_field_instances() {
         'settings' => array(),
         'type' => 'link_default',
         'weight' => 3,
+      ),
+      'teaser2' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 2,
       ),
       'teaser_user' => array(
         'label' => 'hidden',
@@ -155,7 +179,8 @@ function glossaire_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_definitions-field_thematique'
+  // Exported field_instance:
+  // 'field_collection_item-field_definitions-field_thematique'.
   $field_instances['field_collection_item-field_definitions-field_thematique'] = array(
     'bundle' => 'field_definitions',
     'default_value' => NULL,
@@ -168,6 +193,25 @@ function glossaire_field_default_field_instances() {
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 0,
+      ),
+      'teaser2' => array(
+        'label' => 'hidden',
+        'module' => 'textformatter',
+        'settings' => array(
+          'textformatter_class' => 'italic',
+          'textformatter_comma_and' => 0,
+          'textformatter_comma_full_stop' => 0,
+          'textformatter_comma_override' => 0,
+          'textformatter_comma_tag' => 'span',
+          'textformatter_contrib' => array(),
+          'textformatter_separator_custom' => '',
+          'textformatter_separator_custom_class' => 'textformatter-separator',
+          'textformatter_separator_custom_tag' => 'span',
+          'textformatter_term_plain' => 1,
+          'textformatter_type' => 'comma',
+        ),
+        'type' => 'textformatter_list',
+        'weight' => 3,
       ),
       'teaser_user' => array(
         'label' => 'hidden',
@@ -205,7 +249,7 @@ function glossaire_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-glossaire-field_definitions'
+  // Exported field_instance: 'taxonomy_term-glossaire-field_definitions'.
   $field_instances['taxonomy_term-glossaire-field_definitions'] = array(
     'bundle' => 'glossaire',
     'default_value' => NULL,
@@ -261,7 +305,7 @@ function glossaire_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-glossaire-field_first_letter'
+  // Exported field_instance: 'taxonomy_term-glossaire-field_first_letter'.
   $field_instances['taxonomy_term-glossaire-field_first_letter'] = array(
     'bundle' => 'glossaire',
     'deleted' => 0,
@@ -304,7 +348,7 @@ function glossaire_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-sigle-field_first_letter'
+  // Exported field_instance: 'taxonomy_term-sigle-field_first_letter'.
   $field_instances['taxonomy_term-sigle-field_first_letter'] = array(
     'bundle' => 'sigle',
     'deleted' => 0,

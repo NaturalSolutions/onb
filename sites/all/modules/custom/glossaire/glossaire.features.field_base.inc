@@ -10,21 +10,13 @@
 function glossaire_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_definition'
+  // Exported field_base: 'field_definition'.
   $field_bases['field_definition'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_definition',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'global_block_settings' => 1,
     'indexes' => array(
       'format' => array(
@@ -40,24 +32,27 @@ function glossaire_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_definitions'
+  // Exported field_base: 'field_definitions'.
   $field_bases['field_definitions'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_definitions',
-    'foreign keys' => array(),
     'global_block_settings' => 1,
     'indexes' => array(
       'revision_id' => array(
         0 => 'revision_id',
+      ),
+      'value' => array(
+        0 => 'value',
       ),
     ),
     'locked' => 0,
     'module' => 'field_collection',
     'settings' => array(
       'hide_blank_items' => 1,
+      'hide_initial_item' => FALSE,
       'path' => '',
       'profile2_private' => FALSE,
     ),
@@ -65,7 +60,7 @@ function glossaire_field_default_field_bases() {
     'type' => 'field_collection',
   );
 
-  // Exported field_base: 'field_first_letter'
+  // Exported field_base: 'field_first_letter'.
   $field_bases['field_first_letter'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -75,7 +70,6 @@ function glossaire_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
     'global_block_settings' => 1,
     'indexes' => array(),
     'locked' => 0,
@@ -97,27 +91,20 @@ $entity_field[0][\'value\'] = "$capitale";',
       ),
       'display_format' => '$display_output = $entity_field_item[\'value\'];',
       'profile2_private' => FALSE,
+      'recalculate' => FALSE,
       'store' => 1,
     ),
     'translatable' => 0,
     'type' => 'computed',
   );
 
-  // Exported field_base: 'field_reference'
+  // Exported field_base: 'field_reference'.
   $field_bases['field_reference'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_reference',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'global_block_settings' => 1,
     'indexes' => array(
       'format' => array(
@@ -133,7 +120,7 @@ $entity_field[0][\'value\'] = "$capitale";',
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_site_internet'
+  // Exported field_base: 'field_site_internet'.
   $field_bases['field_site_internet'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -143,7 +130,6 @@ $entity_field[0][\'value\'] = "$capitale";',
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
     'global_block_settings' => 1,
     'indexes' => array(),
     'locked' => 0,
@@ -168,7 +154,7 @@ $entity_field[0][\'value\'] = "$capitale";',
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_thematique'
+  // Exported field_base: 'field_thematique'.
   $field_bases['field_thematique'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -177,14 +163,6 @@ $entity_field[0][\'value\'] = "$capitale";',
     'field_name' => 'field_thematique',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'tid' => array(
-        'columns' => array(
-          'tid' => 'tid',
-        ),
-        'table' => 'taxonomy_term_data',
-      ),
     ),
     'global_block_settings' => 1,
     'indexes' => array(
