@@ -20,9 +20,10 @@
           titleElt = titleElt[0];
           // Status values: 1 = not collapsible, 2 = collapsible and expanded, 3 = collapsible and collapsed, 4 = always collapsed
           var stat = settings.collapsiblock.blocks[id] ? settings.collapsiblock.blocks[id] : defaultState;
-          /*if (stat == 1) {
+
+          if (stat == 1) {
             return;
-          }*/
+          }
 
           titleElt.target = $(this).find(block_content);
           $(titleElt)

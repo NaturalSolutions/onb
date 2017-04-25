@@ -149,7 +149,7 @@ Drupal.blockFloatTracker = function (blockInfo) {
 
   // Track positioning relative to the viewport and set position.
   var vScroll = (document.documentElement.scrollTop || document.body.scrollTop);
-  if (vScroll > blockInfo.minOffset) {
+  if (vScroll > blockInfo.minOffset + 250) { // +250 to fix front superposition of block
     var topPosition = blockInfo.padding_top;
     // Block height can change if there a collapsible fields etc... inside the
     // block so recalculate every time we are floating the block.
