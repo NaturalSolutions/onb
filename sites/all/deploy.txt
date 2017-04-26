@@ -1,5 +1,10 @@
 DEPLOIEMENT ONB
 
+Pour son instance locale :
+- créer un fichier settings.local.php avec la conf de la base et tout paramètre utile pour cette instance
+
+git pull
+
 // Active le modul diff qui permet de faire des diff sur les features : drush fd / drush fd <nom_feature>
 drush en diff
 
