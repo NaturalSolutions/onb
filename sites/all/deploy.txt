@@ -1,0 +1,28 @@
+DEPLOIEMENT ONB
+
+Pour son instance locale :
+- créer un fichier settings.local.php avec la conf de la base et tout paramètre utile pour cette instance
+
+git pull
+
+// Active le modul diff qui permet de faire des diff sur les features : drush fd / drush fd <nom_feature>
+drush en diff
+
+// Désactive Overlay et active le thème d'amnistration Adminimal
+drush dis overlay -y
+drush en adminimal -y
+
+// Active la Feature principale onb_global
+drush en onb_global
+
+// Désactive les vues par défaut du modules admin_views, personnalisées et featurisées dans onb_globale
+drush vdis admin_views_node admin_views_user admin_views_file
+
+// Désactive le thème d'amnistration Seven
+drush dis seven -y
+
+// Active les modules non dépendants de la feature onb_global
+drush en strongarm admin_views better_exposed_filters diff blockfloat -y
+
+// Met la base de donnée à jour
+drush updb -y
