@@ -48,7 +48,11 @@ zones[content] = Content
 zones[postscript] = Postscript
 zones[footer] = Footer
 
+; OPTIONAL SCRIPTS
+scripts[] = scripts/script.js
+
 ; OPTIONAL STYLESHEETS
+stylesheets[all][] = css/print-actu.css
 
 css[global.css][name] = Your custom global styles
 css[global.css][description] = This file holds all the globally active custom CSS of your theme.

@@ -70,7 +70,7 @@ a:hover {
 }
 
 #section-header {
-  width: 960px;
+/* width: 960px; */
   margin: 0 auto;
 }
 
@@ -118,6 +118,7 @@ ul.nice-menu ul {
 
 #main-menu, #nice-menu-2 {
   line-height: 35px;
+  float: none;
 }
 
 #nice-menu-2 ul {
@@ -231,6 +232,9 @@ ul.nice-menu-down li ul li.menuparent {
   float: right;
   line-height: 30px;
   padding-right: 10px;
+  z-index: 999;
+  position: absolute;
+  right: 0;
 }
 
 /*Flux RSS*/
@@ -239,6 +243,9 @@ ul.nice-menu-down li ul li.menuparent {
   width: auto;
   line-height: 28px;
   padding-right: 5px;
+  position: absolute;
+  right: -10px;
+
 }
 
 /*Main wrapper*/
