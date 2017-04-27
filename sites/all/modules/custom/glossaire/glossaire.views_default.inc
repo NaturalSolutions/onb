@@ -77,11 +77,11 @@ function glossaire_views_default_views() {
       'empty_column' => 0,
     ),
   );
-  /* Entête: Global : Zone de texte */
+  /* Header: Global: Zone de texte */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  /* Champ: Indexed Terme de taxonomie : Nom */
+  /* Field: Indexed Terme de taxonomie: Nom */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'search_api_index_search_glossaire';
   $handler->display->display_options['fields']['name']['field'] = 'name';
@@ -89,7 +89,7 @@ function glossaire_views_default_views() {
   $handler->display->display_options['fields']['name']['exclude'] = TRUE;
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['name']['link_to_entity'] = 0;
-  /* Champ: Indexed Terme de taxonomie : Vocabulaire */
+  /* Field: Indexed Terme de taxonomie: Vocabulaire */
   $handler->display->display_options['fields']['vocabulary']['id'] = 'vocabulary';
   $handler->display->display_options['fields']['vocabulary']['table'] = 'search_api_index_search_glossaire';
   $handler->display->display_options['fields']['vocabulary']['field'] = 'vocabulary';
@@ -97,7 +97,7 @@ function glossaire_views_default_views() {
   $handler->display->display_options['fields']['vocabulary']['exclude'] = TRUE;
   $handler->display->display_options['fields']['vocabulary']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['vocabulary']['link_to_entity'] = 0;
-  /* Champ: Indexed Terme de taxonomie : Définitions */
+  /* Field: Indexed Terme de taxonomie: Définitions */
   $handler->display->display_options['fields']['field_definitions']['id'] = 'field_definitions';
   $handler->display->display_options['fields']['field_definitions']['table'] = 'search_api_index_search_glossaire';
   $handler->display->display_options['fields']['field_definitions']['field'] = 'field_definitions';
@@ -107,7 +107,7 @@ function glossaire_views_default_views() {
   $handler->display->display_options['fields']['field_definitions']['display'] = 'view';
   $handler->display->display_options['fields']['field_definitions']['view_mode'] = 'teaser2';
   $handler->display->display_options['fields']['field_definitions']['bypass_access'] = 0;
-  /* Champ: Indexed Terme de taxonomie : Description */
+  /* Field: Indexed Terme de taxonomie: Description */
   $handler->display->display_options['fields']['description']['id'] = 'description';
   $handler->display->display_options['fields']['description']['table'] = 'search_api_index_search_glossaire';
   $handler->display->display_options['fields']['description']['field'] = 'description';
@@ -117,7 +117,7 @@ function glossaire_views_default_views() {
   $handler->display->display_options['fields']['description']['alter']['text'] = '<span class="[vocabulary]">[description]</span>';
   $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['description']['link_to_entity'] = 0;
-  /* Champ: Définitions : Thématique (indexed) */
+  /* Field: Définitions: Thématique (indexed) */
   $handler->display->display_options['fields']['field_definitions_field_thematique']['id'] = 'field_definitions_field_thematique';
   $handler->display->display_options['fields']['field_definitions_field_thematique']['table'] = 'search_api_index_search_glossaire';
   $handler->display->display_options['fields']['field_definitions_field_thematique']['field'] = 'field_definitions_field_thematique';
@@ -128,7 +128,7 @@ function glossaire_views_default_views() {
   $handler->display->display_options['fields']['field_definitions_field_thematique']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_definitions_field_thematique']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_definitions_field_thematique']['bypass_access'] = 0;
-  /* Champ: Global : Texte personnalisé */
+  /* Field: Global: Texte personnalisé */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -136,7 +136,7 @@ function glossaire_views_default_views() {
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="rouge">[name]<br\\></div>
 <div class="noir">[field_definitions]<span class="descrip">[description]</span><br\\></div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Critère de tri: Indexed Terme de taxonomie : Nom */
+  /* Sort criterion: Indexed Terme de taxonomie: Nom */
   $handler->display->display_options['sorts']['name']['id'] = 'name';
   $handler->display->display_options['sorts']['name']['table'] = 'search_api_index_search_glossaire';
   $handler->display->display_options['sorts']['name']['field'] = 'name';
@@ -144,13 +144,13 @@ function glossaire_views_default_views() {
     1 => 'AND',
     2 => 'OR',
   );
-  /* Critère de filtrage: Indexed Terme de taxonomie : Nom */
+  /* Filter criterion: Indexed Terme de taxonomie: Nom */
   $handler->display->display_options['filters']['name']['id'] = 'name';
   $handler->display->display_options['filters']['name']['table'] = 'search_api_index_search_glossaire';
   $handler->display->display_options['filters']['name']['field'] = 'name';
   $handler->display->display_options['filters']['name']['operator'] = 'not empty';
   $handler->display->display_options['filters']['name']['group'] = 1;
-  /* Critère de filtrage: Indexed Terme de taxonomie : Vocabulaire */
+  /* Filter criterion: Indexed Terme de taxonomie: Vocabulaire */
   $handler->display->display_options['filters']['vocabulary']['id'] = 'vocabulary';
   $handler->display->display_options['filters']['vocabulary']['table'] = 'search_api_index_search_glossaire';
   $handler->display->display_options['filters']['vocabulary']['field'] = 'vocabulary';
@@ -167,7 +167,7 @@ function glossaire_views_default_views() {
     5 => 0,
     4 => 0,
   );
-  /* Critère de filtrage: Indexed Terme de taxonomie : Vocabulaire */
+  /* Filter criterion: Indexed Terme de taxonomie: Vocabulaire */
   $handler->display->display_options['filters']['vocabulary_1']['id'] = 'vocabulary_1';
   $handler->display->display_options['filters']['vocabulary_1']['table'] = 'search_api_index_search_glossaire';
   $handler->display->display_options['filters']['vocabulary_1']['field'] = 'vocabulary';
@@ -188,7 +188,7 @@ function glossaire_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Entête: Global : Zone de texte */
+  /* Header: Global: Zone de texte */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
