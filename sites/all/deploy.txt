@@ -22,7 +22,9 @@ drush vdis admin_views_node admin_views_user admin_views_file
 drush dis seven -y
 
 // Active les modules non dépendants de la feature onb_global
-drush en strongarm admin_views better_exposed_filters diff blockfloat -y
+drush en strongarm rules_i18n -y
+Voir si utiles
+//admin_views better_exposed_filters diff blockfloat -y
 
 // Met la base de donnée à jour
 drush updb -y

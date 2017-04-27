@@ -28,7 +28,7 @@ function onb_global_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'collapsiblock_default_state';
-  $strongarm->value = '3';
+  $strongarm->value = 3;
   $export['collapsiblock_default_state'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -36,64 +36,64 @@ function onb_global_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'collapsiblock_settings';
   $strongarm->value = array(
-    'block-facetapi-jugyl43OZdfGX6R3k5meeF1KhIYZt2dl' => '1',
-    'block-views-recherche-actualite-block-1' => '1',
-    'block-facetapi-5PJZvOhKN1WCbQmELrQjWYWBUah5UQYp' => '1',
-    'block-facetapi-OkyjI0cN3JZuY77oDfOcmyEMrALdHbro' => '1',
-    'block-facetapi-3lTwMC5PVStMfwVIVo860u5kQBG4eQKo' => '3',
-    'block-facetapi-2VJ8pkIbxvsRMDPMMBxW7Js5UQwFzdI5' => '3',
-    'block-facetapi-qHkLlWWHvZedkTRbfBhaefsoE1aCYinL' => '3',
-    'block-facetapi-iBmdtOA6tLf1TxWZ6z7GHHMJZok1xfpN' => '3',
-    'block-block-1' => '1',
-    'block-ds-extras-barre-de-gauche' => '1',
-    'block-facetapi-zJW12ifaWLGVfq1Iot3Ncl3DGmGaPiJq' => '3',
-    'block-facetapi-jbnMBFs4msbpxVc3vgYx2bbVtR1lm4QM' => '3',
-    'block-facetapi-elAtZQS3y2moNjP82yifaBhIgfen0Iwj' => '3',
-    'block-ds-extras-barre-de-gauche-question' => '1',
-    'block-current-search-question' => '1',
-    'block-block-2' => '1',
-    'block-facetapi-zQB2U5nTCxyIoEbKzsPEePi8Y9UlJNtM' => '3',
-    'block-current-search-clone-of-standard' => '1',
-    'block-current-search-standard' => '1',
-    'block-block-3' => '1',
-    'block-menu-block-1' => '1',
-    'block-block-4' => '1',
-    'block-facetapi-qIKfIl3fzLn7s6sYLnlpIAnMOifVQCbE' => '3',
-    'block-block-7' => '1',
-    'block-block-5' => '3',
-    'block-block-6' => '1',
-    'block-facetapi-mz1U7vEhTOGB4H2dC0zmfwGvT31f0Fwp' => '3',
-    'block-block-8' => '2',
-    'block-system-main' => '1',
-    'block-block-10' => '1',
-    'block-ds-extras-barre-de-gauche-question-fiche-s' => '1',
-    'block-facetapi-d0bp4OQSE2q0vtCzwYPNhhvUzTccy1U6' => '3',
-    'block-nice-menus-1' => '1',
-    'block-menu-block-2' => '1',
-    'block-facetapi-eu6vN512fqAsYV1y7yANyYUq71V8U9I2' => '3',
-    'block-facetapi-8C1JGy9U5JwO2jylR0FTyxNCtD1kGQMO' => '3',
-    'block-facetapi-BYtTIDsMiwLQyV1FpOE4A8vyl5UDjGvM' => '1',
-    'block-facetapi-Ps7TNGjqNuYITL1WWq9MqTtN6cH7HXnQ' => '1',
-    'block-ds-extras-barre-de-gauche-thematique' => '1',
-    'block-facetapi-Otv7RdLf1y1TB1lCVtWocv8ry8OtswLQ' => '3',
-    'block-views-relations-block-1' => '1',
-    'block-views-relations-block-2' => '1',
-    'block-facetapi-vDQ4ArGTU9uhM0FTXpDbAA9obMysq2DH' => '3',
-    'block-block-11' => '1',
-    'block-facetapi-fKeETSMo2wFzNypWf1D4iD6E9FGsjQa1' => '2',
-    'block-facetapi-uh114tgpzyuTf7QTaLrgbskK2IDReJ1y' => '3',
-    'block-facetapi-Y3Ml4151d6BxE6M1ArWBOUSB1DTK2Obr' => '3',
-    'block-facetapi-1PFPsSdQ1oEEDvWm0FDBZrlA8YUBd9xN' => '3',
-    'block-facetapi-pOr55Bx1UDk595Yd0nNveGRjdDfo651V' => '3',
-    'block-facetapi-LSI7jZWvqfi8MbFKzT02JOrqfFrjuHpw' => '3',
-    'block-facetapi-ryQChgBW1gs9cHvN0NhB70XOPfSy0g2Y' => '3',
-    'block-facetapi-JKQatLJ3o3ev1dIdqGLuGrZYRpqbL0QQ' => '1',
-    'block-nice-menus-2' => '1',
-    'block-facetapi-byttidsmiwlqyv1fpoe4a8vyl5udjgvm' => '3',
-    'block-facetapi-ps7tngjqnuyitl1wwq9mqttn6ch7hxnq' => '3',
-    'block-facetapi-jugyl43ozdfgx6r3k5meef1khiyzt2dl' => '3',
-    'block-facetapi-5pjzvohkn1wcbqmelrqjwywbuah5uqyp' => '3',
-    'block-facetapi-jkqatlj3o3ev1didqglugrzyrpqbl0qq' => '3',
+    'block-facetapi-jugyl43OZdfGX6R3k5meeF1KhIYZt2dl' => 1,
+    'block-views-recherche-actualite-block-1' => 1,
+    'block-facetapi-5PJZvOhKN1WCbQmELrQjWYWBUah5UQYp' => 1,
+    'block-facetapi-OkyjI0cN3JZuY77oDfOcmyEMrALdHbro' => 1,
+    'block-facetapi-3lTwMC5PVStMfwVIVo860u5kQBG4eQKo' => 3,
+    'block-facetapi-2VJ8pkIbxvsRMDPMMBxW7Js5UQwFzdI5' => 3,
+    'block-facetapi-qHkLlWWHvZedkTRbfBhaefsoE1aCYinL' => 3,
+    'block-facetapi-iBmdtOA6tLf1TxWZ6z7GHHMJZok1xfpN' => 3,
+    'block-block-1' => 1,
+    'block-ds-extras-barre-de-gauche' => 1,
+    'block-facetapi-zJW12ifaWLGVfq1Iot3Ncl3DGmGaPiJq' => 3,
+    'block-facetapi-jbnMBFs4msbpxVc3vgYx2bbVtR1lm4QM' => 3,
+    'block-facetapi-elAtZQS3y2moNjP82yifaBhIgfen0Iwj' => 3,
+    'block-ds-extras-barre-de-gauche-question' => 1,
+    'block-current-search-question' => 1,
+    'block-block-2' => 1,
+    'block-facetapi-zQB2U5nTCxyIoEbKzsPEePi8Y9UlJNtM' => 3,
+    'block-current-search-clone-of-standard' => 1,
+    'block-current-search-standard' => 1,
+    'block-block-3' => 1,
+    'block-menu-block-1' => 1,
+    'block-block-4' => 1,
+    'block-facetapi-qIKfIl3fzLn7s6sYLnlpIAnMOifVQCbE' => 3,
+    'block-block-7' => 1,
+    'block-block-5' => 3,
+    'block-block-6' => 1,
+    'block-facetapi-mz1U7vEhTOGB4H2dC0zmfwGvT31f0Fwp' => 3,
+    'block-block-8' => 2,
+    'block-system-main' => 1,
+    'block-block-10' => 1,
+    'block-ds-extras-barre-de-gauche-question-fiche-s' => 1,
+    'block-facetapi-d0bp4OQSE2q0vtCzwYPNhhvUzTccy1U6' => 3,
+    'block-nice-menus-1' => 1,
+    'block-menu-block-2' => 1,
+    'block-facetapi-eu6vN512fqAsYV1y7yANyYUq71V8U9I2' => 3,
+    'block-facetapi-8C1JGy9U5JwO2jylR0FTyxNCtD1kGQMO' => 3,
+    'block-facetapi-BYtTIDsMiwLQyV1FpOE4A8vyl5UDjGvM' => 1,
+    'block-facetapi-Ps7TNGjqNuYITL1WWq9MqTtN6cH7HXnQ' => 1,
+    'block-ds-extras-barre-de-gauche-thematique' => 1,
+    'block-facetapi-Otv7RdLf1y1TB1lCVtWocv8ry8OtswLQ' => 3,
+    'block-views-relations-block-1' => 1,
+    'block-views-relations-block-2' => 1,
+    'block-facetapi-vDQ4ArGTU9uhM0FTXpDbAA9obMysq2DH' => 3,
+    'block-block-11' => 1,
+    'block-facetapi-fKeETSMo2wFzNypWf1D4iD6E9FGsjQa1' => 2,
+    'block-facetapi-uh114tgpzyuTf7QTaLrgbskK2IDReJ1y' => 3,
+    'block-facetapi-Y3Ml4151d6BxE6M1ArWBOUSB1DTK2Obr' => 3,
+    'block-facetapi-1PFPsSdQ1oEEDvWm0FDBZrlA8YUBd9xN' => 3,
+    'block-facetapi-pOr55Bx1UDk595Yd0nNveGRjdDfo651V' => 3,
+    'block-facetapi-LSI7jZWvqfi8MbFKzT02JOrqfFrjuHpw' => 3,
+    'block-facetapi-ryQChgBW1gs9cHvN0NhB70XOPfSy0g2Y' => 3,
+    'block-facetapi-JKQatLJ3o3ev1dIdqGLuGrZYRpqbL0QQ' => 1,
+    'block-nice-menus-2' => 1,
+    'block-facetapi-byttidsmiwlqyv1fpoe4a8vyl5udjgvm' => 3,
+    'block-facetapi-ps7tngjqnuyitl1wwq9mqttn6ch7hxnq' => 3,
+    'block-facetapi-jugyl43ozdfgx6r3k5meef1khiyzt2dl' => 3,
+    'block-facetapi-5pjzvohkn1wcbqmelrqjwywbuah5uqyp' => 3,
+    'block-facetapi-jkqatlj3o3ev1didqglugrzyrpqbl0qq' => 3,
   );
   $export['collapsiblock_settings'] = $strongarm;
 
@@ -101,28 +101,28 @@ function onb_global_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'collapsiblock_slide_speed';
-  $strongarm->value = '200';
+  $strongarm->value = 200;
   $export['collapsiblock_slide_speed'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'collapsiblock_slide_type';
-  $strongarm->value = '1';
+  $strongarm->value = 1;
   $export['collapsiblock_slide_type'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'colorbox_caption_trim';
-  $strongarm->value = '0';
+  $strongarm->value = 0;
   $export['colorbox_caption_trim'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'colorbox_caption_trim_length';
-  $strongarm->value = '75';
+  $strongarm->value = 75;
   $export['colorbox_caption_trim_length'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -136,7 +136,7 @@ function onb_global_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'colorbox_custom_settings_activate';
-  $strongarm->value = '0';
+  $strongarm->value = 0;
   $export['colorbox_custom_settings_activate'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -150,14 +150,14 @@ function onb_global_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'colorbox_initialheight';
-  $strongarm->value = '100';
+  $strongarm->value = 100;
   $export['colorbox_initialheight'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'colorbox_initialwidth';
-  $strongarm->value = '300';
+  $strongarm->value = 300;
   $export['colorbox_initialwidth'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -192,7 +192,7 @@ function onb_global_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'colorbox_opacity';
-  $strongarm->value = '0.85';
+  $strongarm->value = 0.84999999999999997779553950749686919152736663818359375;
   $export['colorbox_opacity'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -224,14 +224,14 @@ node/*/edit';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'colorbox_scrolling';
-  $strongarm->value = '1';
+  $strongarm->value = 1;
   $export['colorbox_scrolling'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'colorbox_slideshow';
-  $strongarm->value = '0';
+  $strongarm->value = 0;
   $export['colorbox_slideshow'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -245,7 +245,7 @@ node/*/edit';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'colorbox_slideshowspeed';
-  $strongarm->value = '2500';
+  $strongarm->value = 2500;
   $export['colorbox_slideshowspeed'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -301,7 +301,7 @@ node/*/edit';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'colorbox_transition_speed';
-  $strongarm->value = '350';
+  $strongarm->value = 350;
   $export['colorbox_transition_speed'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -315,21 +315,21 @@ node/*/edit';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'disable_messages_debug_visible_div';
-  $strongarm->value = '0';
+  $strongarm->value = 0;
   $export['disable_messages_debug_visible_div'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'disable_messages_enable';
-  $strongarm->value = '1';
+  $strongarm->value = 1;
   $export['disable_messages_enable'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'disable_messages_enable_debug';
-  $strongarm->value = '0';
+  $strongarm->value = 0;
   $export['disable_messages_enable_debug'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -350,7 +350,7 @@ node/*/edit';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'disable_messages_ignore_case';
-  $strongarm->value = '1';
+  $strongarm->value = 1;
   $export['disable_messages_ignore_case'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -578,14 +578,14 @@ node/*/edit';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'nice_menus_depth_1';
-  $strongarm->value = '-1';
+  $strongarm->value = -1;
   $export['nice_menus_depth_1'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'nice_menus_depth_2';
-  $strongarm->value = '-1';
+  $strongarm->value = -1;
   $export['nice_menus_depth_2'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -620,7 +620,7 @@ node/*/edit';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'nice_menus_respect_expand_2';
-  $strongarm->value = '0';
+  $strongarm->value = 0;
   $export['nice_menus_respect_expand_2'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -690,7 +690,7 @@ node/*/edit';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_map_forum_threshold';
-  $strongarm->value = '-1';
+  $strongarm->value = -1;
   $export['site_map_forum_threshold'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -756,7 +756,7 @@ node/*/edit';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_map_show_rss_links';
-  $strongarm->value = '0';
+  $strongarm->value = 0;
   $export['site_map_show_rss_links'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -796,7 +796,7 @@ node/*/edit';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_map_term_threshold';
-  $strongarm->value = '0';
+  $strongarm->value = 0;
   $export['site_map_term_threshold'] = $strongarm;
 
   $strongarm = new stdClass();

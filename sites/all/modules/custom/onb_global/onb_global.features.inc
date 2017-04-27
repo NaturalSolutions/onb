@@ -193,7 +193,7 @@ function onb_global_node_info() {
       'base' => 'node_content',
       'description' => t('Utilisez les <em>pages de base</em> pour votre contenu statique, tel que la page \'Qui sommes-nous\'.'),
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Titre'),
       'help' => '',
     ),
     'producteur' => array(

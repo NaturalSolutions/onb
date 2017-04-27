@@ -285,6 +285,15 @@ function onb_global_user_default_permissions() {
     'module' => 'contact',
   );
 
+  // Exported permission: 'administer content translations'.
+  $permissions['administer content translations'] = array(
+    'name' => 'administer content translations',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'i18n_node',
+  );
+
   // Exported permission: 'administer content types'.
   $permissions['administer content types'] = array(
     'name' => 'administer content types',
@@ -463,6 +472,15 @@ function onb_global_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'lexicon',
+  );
+
+  // Exported permission: 'administer masquerade'.
+  $permissions['administer masquerade'] = array(
+    'name' => 'administer masquerade',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'masquerade',
   );
 
   // Exported permission: 'administer media browser'.
@@ -1889,6 +1907,33 @@ function onb_global_user_default_permissions() {
     'module' => 'features',
   );
 
+  // Exported permission: 'masquerade as admin'.
+  $permissions['masquerade as admin'] = array(
+    'name' => 'masquerade as admin',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'masquerade',
+  );
+
+  // Exported permission: 'masquerade as any user'.
+  $permissions['masquerade as any user'] = array(
+    'name' => 'masquerade as any user',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'masquerade',
+  );
+
+  // Exported permission: 'masquerade as user'.
+  $permissions['masquerade as user'] = array(
+    'name' => 'masquerade as user',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'masquerade',
+  );
+
   // Exported permission: 'node-specific print configuration'.
   $permissions['node-specific print configuration'] = array(
     'name' => 'node-specific print configuration',
@@ -2033,6 +2078,15 @@ function onb_global_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'i18n_string',
+  );
+
+  // Exported permission: 'translate content'.
+  $permissions['translate content'] = array(
+    'name' => 'translate content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'translation',
   );
 
   // Exported permission: 'translate interface'.
