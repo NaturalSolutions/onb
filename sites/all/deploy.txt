@@ -2,6 +2,7 @@ DEPLOIEMENT ONB
 
 Pour son instance locale :
 - créer un fichier settings.local.php avec la conf de la base et tout paramètre utile pour cette instance
+- créer ou remettre le .htaccess à la racine du projet www selon le context
 
 git pull
 
@@ -29,3 +30,6 @@ drush en strongarm rules_i18n admin_views -y
 
 // Met la base de donnée à jour
 drush updb -y
+
+NB, à faire à la main :
+1/ cocher FR comme langue par default dans "admin/config/regional/language"
