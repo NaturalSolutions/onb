@@ -322,11 +322,6 @@ function onb_global_context_default_contexts() {
         'actualites/toutes' => 'actualites/toutes',
       ),
     ),
-    'views' => array(
-      'values' => array(
-        'recherche_actualite:page' => 'recherche_actualite:page',
-      ),
-    ),
   );
   $context->reactions = array(
     'block' => array(
@@ -360,6 +355,12 @@ function onb_global_context_default_contexts() {
           'delta' => '2nqGdPLV05KnsANhCZeBMYNCR7Km2Wou',
           'region' => 'sidebar_first',
           'weight' => '-10',
+        ),
+        'print-print-links' => array(
+          'module' => 'print',
+          'delta' => 'print-links',
+          'region' => 'sidebar_first',
+          'weight' => '-9',
         ),
       ),
     ),

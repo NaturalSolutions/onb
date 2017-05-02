@@ -1683,19 +1683,20 @@ function onb_global_views_default_views() {
   /* Display: Bloc page */
   $handler = $view->new_display('block', 'Bloc page', 'block_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
-  $handler->display->display_options['pager']['options']['quantity'] = '5';
+  $handler->display->display_options['pager']['options']['quantity'] = '14';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Éléments par page';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Tout -';
   $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Décalage';
-  $handler->display->display_options['pager']['options']['tags']['first'] = '« premier';
+  $handler->display->display_options['pager']['options']['tags']['first'] = 'premier';
   $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ précédent';
   $handler->display->display_options['pager']['options']['tags']['next'] = 'suivant ›';
-  $handler->display->display_options['pager']['options']['tags']['last'] = 'dernier »';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'dernier';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'views_accordion';
   $handler->display->display_options['style_options']['row-start-open'] = '0';
