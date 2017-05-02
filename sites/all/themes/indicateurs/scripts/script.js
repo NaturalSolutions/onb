@@ -1,27 +1,14 @@
 jQuery( document ).ready(function() {
 
-	var printOneActu = function(){
+	var editBtnImpression = function(){
 
-		jQuery('.view-recherche-actualite .views-row').each(function(index, el) {
-
-			jQuery(this).find('.print-btn').click(function(event) {
-
-				jQuery(this).parents('.views-row ').addClass('toPrint');
-
-				window.print();
-
-			});
-		})
+		jQuery('#block-print-print-links a').html('<img class="print-icon print-icon-margin" typeof="foaf:Image" src="http://indicateurs-biodiversite.naturefrance.fr/sites/all/modules/print/icons/print_icon.gif" alt="Imprimer la fiche complète" title="Imprimer l\'actualité">Imprimer l\'actualité');
 
 	};
 
 	window.init = function() {
 
-		if(jQuery('body').hasClass('context-actualites')){
-
-			printOneActu();
-
-		}
+		if(jQuery('body').hasClass('context-actualites')) editBtnImpression();
 
 	}
 
