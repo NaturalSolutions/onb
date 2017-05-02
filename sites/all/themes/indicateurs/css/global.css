@@ -374,6 +374,9 @@ div .collapsiblock a {
 
 .front .view-recherche-actualite .view-footer {
   margin-top: 5px;
+  position: relative;
+  top: 25px;
+  text-align: center;
 }
 
 .nivo-caption {
@@ -1476,3 +1479,20 @@ ul ul, ol ul {
   list-style-type: circle;
   margin-left: 1em;
 }
+
+/* ONGLET ONB */
+body.page-node-3 div.field-type-image img{
+  width: 100%;
+}
+
+/* HOME PAGE */
+div.view-id-recherche_actualite.view-display-id-block_1 .views-slideshow-controls-text-next{
+  float: right;
+}
+div.view-id-recherche_actualite.view-display-id-block_1 .views-slideshow-controls-text-pause{
+  display: none;
+}
+div.view-id-recherche_actualite.view-display-id-block_1  div.views-slideshow-controls-text.views_slideshow_controls_text a{
+  color: #000;
+}
+
