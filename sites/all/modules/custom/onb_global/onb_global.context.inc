@@ -86,7 +86,6 @@ function onb_global_context_default_contexts() {
     ),
     'path' => array(
       'values' => array(
-        'lonb*' => 'lonb*',
         'indicateurs/tableau2' => 'indicateurs/tableau2',
         'indicateurs/tableau1' => 'indicateurs/tableau1',
         'indicateurs/tableau3' => 'indicateurs/tableau3',
