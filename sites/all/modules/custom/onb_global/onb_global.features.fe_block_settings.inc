@@ -1178,8 +1178,8 @@ function onb_global_default_fe_block_settings() {
         'weight' => 4,
       ),
       'indicateurs' => array(
-        'region' => '',
-        'status' => 0,
+        'region' => 'header_first',
+        'status' => 1,
         'theme' => 'indicateurs',
         'weight' => 4,
       ),
