@@ -34,14 +34,6 @@
 
     <hr class="print-hr" />
     <div class="print-content"><?php print $print['content']; ?></div>
-
-    <?php
-      //Test if in page actualité to print to PDF current actu
-      if( drupal_get_path_alias(current_path()) == "actualites/toutes"){
-        print views_embed_view('recherche_actualite','block_2');
-      }
-    ?>
-
     <div class="print-footer"><?php print $print['footer_message']; ?></div>
      </body>
 </html>
