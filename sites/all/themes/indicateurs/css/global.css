@@ -550,7 +550,8 @@ a.bouton-questions:hover {
   padding: 10px 0;
 }
 
-.node-type-fiche-indicateur #breadcrumb {
+.node-type-fiche-indicateur #breadcrumb,
+.node-type-actualite #breadcrumb {
   display: inline;
 }
 
