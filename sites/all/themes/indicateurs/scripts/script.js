@@ -6,9 +6,19 @@ jQuery( document ).ready(function() {
 
 	};
 
+	// Fix JS in wait to find in config Drupal how to have complete breadcrum
+	var addbreadcrumActualite = function(){
+
+		jQuery('.breadcrumb').append(' » <a href="http://indicateurs-biodiversite.naturefrance.fr/actualites/toutes" title="Retrouver toutes les actualités liées aux publications de l\'ONB et à l\'évolution de ce site">L\'actualité</a>')
+
+	};
+
 	window.init = function() {
 
 		if(jQuery('body').hasClass('context-actualites')) editBtnImpression();
+
+		// Fix JS in wait to find in config Drupal how to have complete breadcrum
+		if(jQuery('body').hasClass('node-type-actualite')) addbreadcrumActualite();
 
 	}
 
