@@ -368,11 +368,13 @@ div .collapsiblock a {
   min-height: 200px;
 }
 
-.front .view-recherche-actualite .view-content {
+.front .view-recherche-actualite .view-content,
+body.node-type-actualite .view-recherche-actualite .view-content {
   margin-top: 10px;
 }
 
-.front .view-recherche-actualite .view-footer {
+.front .view-recherche-actualite .view-footer,
+body.node-type-actualite  .view-recherche-actualite .view-footer {
   margin-top: 5px;
   position: relative;
   top: 25px;
