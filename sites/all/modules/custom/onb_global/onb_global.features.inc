@@ -180,12 +180,28 @@ function onb_global_node_info() {
       'title_label' => t('Titre'),
       'help' => '',
     ),
+    'event_calendar' => array(
+      'name' => t('Event Calendar'),
+      'base' => 'node_content',
+      'description' => t('A content type to create events for calendar.'),
+      'has_title' => '1',
+      'title_label' => t('Event Title'),
+      'help' => '',
+    ),
     'fiche_indicateur' => array(
       'name' => t('Fiche indicateur'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
       'title_label' => t('Nom complet de l\'indicateur'),
+      'help' => '',
+    ),
+    'fiche_ressource_bibliographique' => array(
+      'name' => t('Fiche ressource bibliographique'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Titre'),
       'help' => '',
     ),
     'page' => array(

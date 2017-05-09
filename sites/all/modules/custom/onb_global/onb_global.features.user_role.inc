@@ -16,6 +16,12 @@ function onb_global_user_default_roles() {
     'weight' => 3,
   );
 
+  // Exported role: contributeur.
+  $roles['contributeur'] = array(
+    'name' => 'contributeur',
+    'weight' => 4,
+  );
+
   // Exported role: webmaster.
   $roles['webmaster'] = array(
     'name' => 'webmaster',

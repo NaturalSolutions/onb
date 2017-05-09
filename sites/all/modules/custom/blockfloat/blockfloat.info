@@ -1,4 +1,0 @@
-name = BLock float
-description = Makes a block float at the top of the screen
-core = 7.x
-package = Daesign

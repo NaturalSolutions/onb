@@ -12,6 +12,34 @@ function onb_global_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
+  $export['calendar-calendar_legend'] = array(
+    'cache' => 1,
+    'custom' => 0,
+    'delta' => 'calendar_legend',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'calendar',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'indicateurs' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'indicateurs',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   $export['comment-recent'] = array(
     'cache' => 1,
     'custom' => 0,
@@ -2088,6 +2116,90 @@ function onb_global_default_fe_block_settings() {
     'cache' => -1,
     'custom' => 0,
     'delta' => '-exp-recherche_questions-page_6',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'indicateurs' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'indicateurs',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['views--exp-recherche_questions-page_7'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => '-exp-recherche_questions-page_7',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'indicateurs' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'indicateurs',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['views-calendar-block_1'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => 'calendar-block_1',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 1,
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'indicateurs' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'indicateurs',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['views-calendar-block_2'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => 'calendar-block_2',
     'i18n_block_language' => array(),
     'i18n_mode' => 0,
     'module' => 'views',

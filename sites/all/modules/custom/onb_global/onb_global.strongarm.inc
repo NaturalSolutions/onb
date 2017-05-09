@@ -79,7 +79,7 @@ function onb_global_strongarm() {
     'block-views-relations-block-1' => 1,
     'block-views-relations-block-2' => 1,
     'block-facetapi-vDQ4ArGTU9uhM0FTXpDbAA9obMysq2DH' => 3,
-    'block-block-11' => '1',
+    'block-block-11' => 1,
     'block-facetapi-fKeETSMo2wFzNypWf1D4iD6E9FGsjQa1' => 2,
     'block-facetapi-uh114tgpzyuTf7QTaLrgbskK2IDReJ1y' => 3,
     'block-facetapi-Y3Ml4151d6BxE6M1ArWBOUSB1DTK2Obr' => 3,
@@ -316,6 +316,83 @@ node/*/edit';
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_anonymous_fiche_ressource_bibliographique';
+  $strongarm->value = 0;
+  $export['comment_anonymous_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_mode_fiche_ressource_bibliographique';
+  $strongarm->value = 1;
+  $export['comment_default_mode_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_per_page_fiche_ressource_bibliographique';
+  $strongarm->value = '50';
+  $export['comment_default_per_page_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_event_calendar';
+  $strongarm->value = 1;
+  $export['comment_event_calendar'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_fiche_ressource_bibliographique';
+  $strongarm->value = '2';
+  $export['comment_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_form_location_fiche_ressource_bibliographique';
+  $strongarm->value = 1;
+  $export['comment_form_location_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_preview_fiche_ressource_bibliographique';
+  $strongarm->value = '1';
+  $export['comment_preview_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_subject_field_fiche_ressource_bibliographique';
+  $strongarm->value = 1;
+  $export['comment_subject_field_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_enable_revisions_page_node_fiche_ressource_bibliographique';
+  $strongarm->value = 1;
+  $export['diff_enable_revisions_page_node_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_preview_changes_node_fiche_ressource_bibliographique';
+  $strongarm->value = 1;
+  $export['diff_show_preview_changes_node_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_preview_node_fiche_ressource_bibliographique';
+  $strongarm->value = 'full';
+  $export['diff_view_mode_preview_node_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'disable_messages_debug_visible_div';
   $strongarm->value = 0;
   $export['disable_messages_debug_visible_div'] = $strongarm;
@@ -380,7 +457,7 @@ node/*/edit';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'drupal_http_request_fails';
-  $strongarm->value = TRUE;
+  $strongarm->value = FALSE;
   $export['drupal_http_request_fails'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -572,6 +649,59 @@ node/*/edit';
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__fiche_ressource_bibliographique';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(
+        'language' => array(
+          'weight' => '2',
+        ),
+        'title' => array(
+          'weight' => '0',
+        ),
+        'path' => array(
+          'weight' => '3',
+        ),
+      ),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_node__fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_sync_node_type_fiche_ressource_bibliographique';
+  $strongarm->value = array();
+  $export['i18n_sync_node_type_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'language_content_type_fiche_ressource_bibliographique';
+  $strongarm->value = '2';
+  $export['language_content_type_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_fiche_ressource_bibliographique';
+  $strongarm->value = array(
+    0 => 'main-menu',
+  );
+  $export['menu_options_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_parent_fiche_ressource_bibliographique';
+  $strongarm->value = 'main-menu:0';
+  $export['menu_parent_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'nice_menus_custom_css';
   $strongarm->value = '';
   $export['nice_menus_custom_css'] = $strongarm;
@@ -638,6 +768,52 @@ node/*/edit';
   $strongarm->name = 'nice_menus_type_2';
   $strongarm->value = 'down';
   $export['nice_menus_type_2'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_event_calendar';
+  $strongarm->value = array(
+    0 => 'status',
+  );
+  $export['node_options_event_calendar'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_fiche_ressource_bibliographique';
+  $strongarm->value = array(
+    0 => 'status',
+  );
+  $export['node_options_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_preview_event_calendar';
+  $strongarm->value = 0;
+  $export['node_preview_event_calendar'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_preview_fiche_ressource_bibliographique';
+  $strongarm->value = '1';
+  $export['node_preview_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_event_calendar';
+  $strongarm->value = 0;
+  $export['node_submitted_event_calendar'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_fiche_ressource_bibliographique';
+  $strongarm->value = 0;
+  $export['node_submitted_fiche_ressource_bibliographique'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

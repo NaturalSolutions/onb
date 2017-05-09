@@ -1,7 +1,9 @@
 DOC TRADUCTION Localization / Internationalization (l10n / i18n) ONB
+Cf. https://traduction.drupal.fr/doc/lost-translation-manuel-du-traducteur
 
 
 1. LES BASES
+*************
 
 De nombreux modules servent à traduire Drupal.
 
@@ -22,7 +24,11 @@ La panoplie de modules Internationalization (i18n) permet quant à elle la tradu
 Dans le cas des nodes par ex., le module Core Content translation duplique le node et ajoute une table et un onglet dans l'UI permettant de faire correspondre les 2 contenus de chaque langue.
 
 
-Natif (Drupal Core) :
+
+2. MODULES
+***********
+
+- Natifs (Drupal Core) :
 
 Locale (locale)
 Adds language handling functionality and enables the translation of the user interface to languages other than English.
@@ -31,13 +37,13 @@ Content translation (translation)
 Allows content to be translated into different languages.
 
 
-Localization (l10n) :
+- Localization (l10n) :
 
 Localization update (l10n_update)
 Provides automatic downloads and updates for translations.
 
 
-Internationalization (i18n) :
+- Internationalization (i18n) :
 
 Contact translation (i18n_contact)
 Makes contact categories and replies available for translation.
@@ -77,6 +83,33 @@ Multilingual variables that switch language depending on page language.
 
 Views translation (i18nviews)
 Translation of views strings and content selection for views. Requires Views 3.x
+
+
+
+3. TRADUIRE
+************
+
+- Traduire les chaînes de l'interface :
+Les traductions de Drupal ou des modules contribs peuvent se metrte à jour ici :
+admin/config/regional/translate/update
+
+Si les chaînes ne sont pas traduites ou que l'on souhaite modifier les traductions, cela se passe ici :
+admin/config/regional/translate/translate
+
+NB : la recherche est SENSIBLE À LA CASSE !
+De plus certains chaînes contiennent des variables (@var, %var, $var) qui peuvent gêner la recherche.
+Attention à ne pas supprimer ces variables dans la chaîne de traduction (ex : "Are you sure you want to delete %label?" => "Êtes-vous certain de vouloir supprimer %label ?")
+
+
+- Traduire les contenus (node) :
+
+
+
+- Traduire les blocs :
+
+
+
+- Traduire les menus :
 
 
 
