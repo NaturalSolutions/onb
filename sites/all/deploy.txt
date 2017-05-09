@@ -16,8 +16,8 @@ drush en adminimal -y
 // Active la Feature principale onb_global
 drush en onb_global
 
-// Active la Feature du calendrier onb_events_calendar
-drush en onb_events_calendar
+// Active le module du calendrier event_calendar
+drush en event_calendar
 
 // Désactive les vues par défaut du modules admin_views, personnalisées et featurisées dans onb_globale
 drush vdis admin_views_node admin_views_user admin_views_file

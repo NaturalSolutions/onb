@@ -83,12 +83,51 @@ a:hover {
   background-image: url(../images/web_onb_bandeau.jpg);
   width: 960px;
   height: 200px;
-  line-height: 200px;
+  /*line-height: 200px;*/
 }
 
 #region-branding img {
   vertical-align: middle;
+  margin-top: 50px;
 }
+
+.language-switcher-locale-url {
+  clear: both;
+  margin-left: 20px;
+}
+
+  .language-switcher-locale-url li {
+    list-style: none;
+    float: left;
+  }
+
+  .language-switcher-locale-url li a {
+    opacity: .5;
+    text-indent: -9999px;
+    font-size: 0;
+    cursor: pointer;
+    padding-left: 25px;
+    text-transform: uppercase;
+    height: 13px;
+    display: block;
+    /*font-size: 0;*/
+  }
+
+    .language-switcher-locale-url li.en a {
+      margin-right: 5px;
+      background: url('../images/flag-en-moy.png') no-repeat;
+    }
+    .language-switcher-locale-url li.fr a {
+      background: url('../images/flag-fr-moy.png') no-repeat;
+    }
+
+    .language-switcher-locale-url li a.active,
+    .language-switcher-locale-url li a:hover {
+      opacity: 1;
+    }
+    .language-switcher-locale-url li a.active {
+      cursor: default;
+    }
 
 .site-name-slogan {
   float: right;

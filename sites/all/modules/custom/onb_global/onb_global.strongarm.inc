@@ -94,6 +94,8 @@ function onb_global_strongarm() {
     'block-facetapi-jugyl43ozdfgx6r3k5meef1khiyzt2dl' => 3,
     'block-facetapi-5pjzvohkn1wcbqmelrqjwywbuah5uqyp' => 3,
     'block-facetapi-jkqatlj3o3ev1didqglugrzyrpqbl0qq' => 3,
+    'block-views-calendar-block-1' => '1',
+    'block-locale-language' => '1',
   );
   $export['collapsiblock_settings'] = $strongarm;
 
@@ -192,7 +194,7 @@ function onb_global_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'colorbox_opacity';
-  $strongarm->value = 0.84999999999999998;
+  $strongarm->value = 0.84999999999999997779553950749686919152736663818359375;
   $export['colorbox_opacity'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -655,7 +657,7 @@ node/*/edit';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_default_country';
-  $strongarm->value = '';
+  $strongarm->value = 'FR';
   $export['site_default_country'] = $strongarm;
 
   $strongarm = new stdClass();

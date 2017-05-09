@@ -1178,13 +1178,13 @@ function onb_global_default_fe_block_settings() {
         'weight' => 4,
       ),
       'indicateurs' => array(
-        'region' => 'header_first',
+        'region' => 'branding',
         'status' => 1,
         'theme' => 'indicateurs',
         'weight' => 4,
       ),
     ),
-    'title' => '',
+    'title' => '<none>',
     'visibility' => 0,
   );
 
