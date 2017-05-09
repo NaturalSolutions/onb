@@ -1,0 +1,82 @@
+DOC TRADUCTION Localization / Internationalization (l10n / i18n) ONB
+
+
+1. LES BASES
+
+De nombreux modules servent à traduire Drupal.
+
+Il convient de distinguer :
+- ce qui sert à traduire l'interface (le Back Office, les chaînes des modules, du thème, le nom des champs (labels), les boutons, etc.) => localization
+- ce qui sert à traduire les contenus (les nodes, les blocks, les vues, etc.) => internationalization
+
+En gros, localization (l10n) va permettre la traduction de chaînes via la fonction t() fournie par le Core de Drupal (il est donc fortement conseilllé de l'utiliser pour toutes les chaînes que l'on implémente dans un module custom). Le module du Core, Locale, permet de sélectionner la ou les langues que l'on souhaite utiliser sur le site.
+
+https://localize.drupal.org/ permet de bénéficier des traductions déjà faites par les différentes communautés d'utilisateurs pour les langues choisies pour traduire automatiquement Drupal et les modules contribués. Le module contrib l10n_update permet de mettre à jour automatiquement ces traductions.
+
+NB : les chaînes traduites passant par la fonction t() dépendent de la chaîne originale.
+Cela signifie que si l'on modifie une chaîne d'origine (dans un module custom par exemple), il faut refaire sa traduction.
+Le système de traduction utilise la chaîne d'origine pour faire correspoondre la traduction, et non un ID.
+
+
+La panoplie de modules Internationalization (i18n) permet quant à elle la traduction du reste, c'est-à-dire des contenus et de tout ce qui ne passe pas par une fonction t() (le texte d'entête d'une vue par exemple). Les modules i18n utilisent des tables de correspondance pour effectuer ces tradutions.
+Dans le cas des nodes par ex., le module Core Content translation duplique le node et ajoute une table et un onglet dans l'UI permettant de faire correspondre les 2 contenus de chaque langue.
+
+
+Natif (Drupal Core) :
+
+Locale (locale)
+Adds language handling functionality and enables the translation of the user interface to languages other than English.
+
+Content translation (translation)
+Allows content to be translated into different languages.
+
+
+Localization (l10n) :
+
+Localization update (l10n_update)
+Provides automatic downloads and updates for translations.
+
+
+Internationalization (i18n) :
+
+Contact translation (i18n_contact)
+Makes contact categories and replies available for translation.
+
+Field translation (i18n_field)
+Translate field properties
+
+Menu translation (i18n_menu)
+Supports translatable custom menu items.
+
+Path translation (i18n_path)
+Define translations for generic paths
+
+Rules translation (rules_i18n)
+Allows translating rules.
+
+String translation (i18n_string)
+Provides support for translation of user defined strings.
+
+Synchronize translations (i18n_sync)
+Synchronizes taxonomy and fields across translations of the same content.
+
+Taxonomy translation (i18n_taxonomy)
+Enables multilingual taxonomy.
+
+Translation redirect (i18n_redirect)
+Redirect to translated page when available. SEO for multilingual sites.
+
+Translation sets (i18n_translation)
+Simple translation sets API for generic objects
+
+User mail translation (i18n_user)
+Translate emails sent from the User module.
+
+Variable translation (i18n_variable)
+Multilingual variables that switch language depending on page language.
+
+Views translation (i18nviews)
+Translation of views strings and content selection for views. Requires Views 3.x
+
+
+
