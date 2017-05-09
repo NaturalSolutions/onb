@@ -79,7 +79,7 @@ function onb_global_strongarm() {
     'block-views-relations-block-1' => 1,
     'block-views-relations-block-2' => 1,
     'block-facetapi-vDQ4ArGTU9uhM0FTXpDbAA9obMysq2DH' => 3,
-    'block-block-11' => 1,
+    'block-block-11' => '1',
     'block-facetapi-fKeETSMo2wFzNypWf1D4iD6E9FGsjQa1' => 2,
     'block-facetapi-uh114tgpzyuTf7QTaLrgbskK2IDReJ1y' => 3,
     'block-facetapi-Y3Ml4151d6BxE6M1ArWBOUSB1DTK2Obr' => 3,

@@ -4253,6 +4253,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
 
   /* Display: Page MMarinsLittoraux */
   $handler = $view->new_display('page_with_page_title', 'Page MMarinsLittoraux', 'page_6');
+  $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
@@ -4344,6 +4345,71 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
     'page_with_page_title_1' => 0,
   );
   $handler->display->display_options['attachment_position'] = 'after';
+
+  /* Display: Page MMarinsLittoraux */
+  $handler = $view->new_display('page', 'Page MMarinsLittoraux', 'page_7');
+  $handler->display->display_options['defaults']['access'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'field_questionvisuel' => 'field_questionvisuel',
+    'title' => 'title',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'field_questionvisuel' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['style_options']['caption'] = 'Les questions liées à la thématique "Biodiversité & milieux humides"';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Zone de texte */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Indexed Nœud: Type de contenu */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_questions';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'question' => 'question',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Indexed Nœud: Jeu(x) d'indicateurs */
+  $handler->display->display_options['filters']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
+  $handler->display->display_options['filters']['field_jeux_indicateur']['table'] = 'search_api_index_search_questions';
+  $handler->display->display_options['filters']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
+  $handler->display->display_options['filters']['field_jeux_indicateur']['value'] = array(
+    128 => '128',
+  );
+  /* Filter criterion: Indexed Nœud: Statut */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'search_api_index_search_questions';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = array(
+    1 => '1',
+  );
+  $handler->display->display_options['path'] = 'questions/milieux_marins_et_littoraux';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['name'] = 'main-menu';
+  $handler->display->display_options['menu']['context'] = 0;
   $export['recherche_questions'] = $view;
 
   $view = new view();
