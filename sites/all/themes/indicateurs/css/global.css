@@ -189,7 +189,8 @@ ul.nice-menu.inline li, ul.nice-menu.inline li {
 }
 
 #main-menu a,
-ul.nice-menu a {
+ul#nice-menu-1 a,
+ul#nice-menu-2 a {
   color: white;
   font-size: 14px;
   text-decoration: none;
@@ -214,7 +215,8 @@ ul.nice-menu li:hover, ul.nice-menu li.active, ul.nice-menu li.active-trail {
 
 /* modifs loR */
 
-ul.nice-menu ul li ul {
+ul#nice-menu-1 ul li ul,
+ul#nice-menu-2 ul li ul {
   top: 0;
   left: 100%;
 }
@@ -243,11 +245,14 @@ ul.nice-menu ul {
   }
 
 
-
 ul.nice-menu-down li.menuparent,
 ul.nice-menu-down li ul li.menuparent {
-  background: none !important;
+  background: none;
 }
+
+  ul.nice-menu-down .menuparent a {
+      padding-right: 0;
+  }
 
   ul.nice-menu-down li.menuparent > a:after,
   ul.nice-menu-down li ul li.menuparent > a:after {
