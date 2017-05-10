@@ -19,6 +19,9 @@ drush en onb_global
 // Active le module du calendrier event_calendar
 drush en event_calendar
 
+// Active le bloc multilingue
+drush en features_language
+
 // Désactive les vues par défaut du modules admin_views, personnalisées et featurisées dans onb_globale
 drush vdis admin_views_node admin_views_user admin_views_file
 

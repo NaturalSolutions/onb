@@ -106,7 +106,9 @@ Attention à ne pas supprimer ces variables dans la chaîne de traduction (ex : 
 
 
 - Traduire les blocs :
-
+	- rendre le bloc traduisible, et donc on traduit son contenu
+	- donner une langue au bloc et donc on duplique les blocs (j'ajoute FR / EN dans les descritpions des blocs pour les distinguer facilement)
+ex : admin/structure/block/manage/block/1/configure
 
 
 - Traduire les menus :
