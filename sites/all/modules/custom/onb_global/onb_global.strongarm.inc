@@ -13,6 +13,13 @@ function onb_global_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = '404_fast_html';
+  $strongarm->value = '<html xmlns="http://www.w3.org/1999/xhtml"><head><title>404 Not Found</title></head><body><h1>Not Found</h1><p>The requested URL "@path" was not found on this server.</p></body></html>';
+  $export['404_fast_html'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'clean_url';
   $strongarm->value = 1;
   $export['clean_url'] = $strongarm;
@@ -69,7 +76,7 @@ function onb_global_strongarm() {
     'block-ds-extras-barre-de-gauche-question-fiche-s' => 1,
     'block-facetapi-d0bp4OQSE2q0vtCzwYPNhhvUzTccy1U6' => 3,
     'block-nice-menus-1' => '1',
-    'block-menu-block-2' => 1,
+    'block-menu-block-2' => '1',
     'block-facetapi-eu6vN512fqAsYV1y7yANyYUq71V8U9I2' => 3,
     'block-facetapi-8C1JGy9U5JwO2jylR0FTyxNCtD1kGQMO' => 3,
     'block-facetapi-BYtTIDsMiwLQyV1FpOE4A8vyl5UDjGvM' => 1,
@@ -194,7 +201,7 @@ function onb_global_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'colorbox_opacity';
-  $strongarm->value = 0.84999999999999998;
+  $strongarm->value = 0.84999999999999997779553950749686919152736663818359375;
   $export['colorbox_opacity'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -757,14 +764,14 @@ node/*/edit';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'i18n_node_default_language_none';
-  $strongarm->value = 1;
+  $strongarm->value = '0';
   $export['i18n_node_default_language_none'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'i18n_node_extended_event_calendar';
-  $strongarm->value = 1;
+  $strongarm->value = '1';
   $export['i18n_node_extended_event_calendar'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -778,7 +785,9 @@ node/*/edit';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'i18n_node_options_event_calendar';
-  $strongarm->value = array();
+  $strongarm->value = array(
+    0 => 'current',
+  );
   $export['i18n_node_options_event_calendar'] = $strongarm;
 
   $strongarm = new stdClass();

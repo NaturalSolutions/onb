@@ -12,6 +12,36 @@ function onb_global_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
+  $export['block-hp_acces_question_biodiversite'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'i18n_block_language' => array(
+      0 => 'fr',
+    ),
+    'i18n_mode' => 1,
+    'machine_name' => 'hp_acces_question_biodiversite',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => -23,
+      ),
+      'indicateurs' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'indicateurs',
+        'weight' => -23,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   $export['calendar-calendar_legend'] = array(
     'cache' => 1,
     'custom' => 0,
@@ -1272,6 +1302,34 @@ function onb_global_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['menu-menu-main-menu-en'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => 'menu-main-menu-en',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'menu',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'indicateurs' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'indicateurs',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   $export['menu-menu-menu-secondaire'] = array(
     'cache' => -1,
     'custom' => 0,
@@ -1332,7 +1390,9 @@ function onb_global_default_fe_block_settings() {
     'cache' => -1,
     'custom' => 0,
     'delta' => 2,
-    'i18n_block_language' => array(),
+    'i18n_block_language' => array(
+      0 => 'fr',
+    ),
     'i18n_mode' => 0,
     'module' => 'menu_block',
     'node_types' => array(),
@@ -1353,6 +1413,34 @@ function onb_global_default_fe_block_settings() {
       ),
     ),
     'title' => 'Thématiques',
+    'visibility' => 0,
+  );
+
+  $export['menu_block-3'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => 3,
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'menu_block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'indicateurs' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'indicateurs',
+        'weight' => 0,
+      ),
+    ),
+    'title' => 'Thematics',
     'visibility' => 0,
   );
 
@@ -2144,6 +2232,34 @@ function onb_global_default_fe_block_settings() {
     'cache' => -1,
     'custom' => 0,
     'delta' => '-exp-recherche_questions-page_7',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'indicateurs' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'indicateurs',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['views--exp-recherche_questions-page_8'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => '-exp-recherche_questions-page_8',
     'i18n_block_language' => array(),
     'i18n_mode' => 0,
     'module' => 'views',
