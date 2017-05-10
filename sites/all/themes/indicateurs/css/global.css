@@ -101,6 +101,12 @@ a:hover {
     float: left;
   }
 
+
+  .language-switcher-locale-url li span.locale-untranslated {
+    display: none;
+  }
+
+
   .language-switcher-locale-url li a {
     opacity: .5;
     text-indent: -9999px;

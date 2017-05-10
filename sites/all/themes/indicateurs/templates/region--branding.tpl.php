@@ -7,9 +7,6 @@
         <?php print $linked_logo_img; ?>
       </div>
       <?php endif; ?>
-      <div id="menu-language">
-        <?php print render($translation_links); ?>
-      </div>
       <?php if ($site_name || $site_slogan): ?>
       <?php $class = $site_name_hidden && $site_slogan_hidden ? ' element-invisible' : ''; ?>
       <hgroup class="site-name-slogan<?php print $class; ?>">        
