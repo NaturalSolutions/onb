@@ -161,34 +161,35 @@ ul.nice-menu ul {
   z-index: 10000;
 }
 
-#main-menu, #nice-menu-2 {
+#main-menu, ul.nice-menu {
   line-height: 35px;
   float: none;
 }
 
-#nice-menu-2 ul {
+ul.nice-menu ul {
   z-index: 1000;
 }
 
-ul#nice-menu-2 li {
+ul.nice-menu li {
   background-color: transparent;
   border-top: none;
   border-left: none;
   border-bottom: none;
 }
 
-ul#nice-menu-2 a {
+ul.nice-menu a {
   display: inline;
+  color: #fff;
 }
 
 #main-menu.inline li, ul#main-menu.inline li,
-#nice-menu-2.inline li, ul#nice-menu-2.inline li {
+ul.nice-menu.inline li, ul.nice-menu.inline li {
   padding: 0;
   margin: 0;
 }
 
 #main-menu a,
-#nice-menu-2 a {
+ul.nice-menu a {
   color: white;
   font-size: 14px;
   text-decoration: none;
@@ -200,25 +201,25 @@ ul#nice-menu-2 a {
 }
 
 #main-menu li,
-#nice-menu-2 li {
+ul.nice-menu li {
   border-right: #E3E3E3 1px solid;
   line-height: 35px;
   float: left;
 }
 
 #main-menu li:hover, #main-menu li.active, #main-menu li.active-trail,
-#nice-menu-2 li:hover, #nice-menu-2 li.active, #nice-menu-2 li.active-trail {
-  background: url("../images/barre_hover.png") repeat-x scroll 0 0 transparent;
+ul.nice-menu li:hover, ul.nice-menu li.active, ul.nice-menu li.active-trail {
+  background: url("../images/barre_hover.png") repeat-x scroll 0 0 transparent !important;
 }
 
 /* modifs loR */
 
-ul#nice-menu-2 ul li ul {
+ul.nice-menu ul li ul {
   top: 0;
   left: 100%;
 }
 
-ul#nice-menu-2 ul {
+ul.nice-menu ul {
   top: 35px;
   background-color: #8BC300;
   border: solid 1px white;
@@ -227,17 +228,17 @@ ul#nice-menu-2 ul {
   width: auto;
 }
 
-  ul#nice-menu-2 ul li {
+  ul.nice-menu ul li {
     white-space: nowrap;
     width: auto;
     border-right: none;
   }
 
 
-  #nice-menu-2 ul li:hover,
-  #nice-menu-2 ul li.active,
-  #nice-menu-2 ul li.active-trail {
-    background: url("../images/barre_hover.png") repeat-x scroll 0 0 transparent;
+  ul.nice-menu ul li:hover,
+  ul.nice-menu ul li.active,
+  ul.nice-menu ul li.active-trail {
+    background: url("../images/barre_hover.png") repeat-x scroll 0 0 transparent !important;
     width: 100%;
   }
 
@@ -245,7 +246,7 @@ ul#nice-menu-2 ul {
 
 ul.nice-menu-down li.menuparent,
 ul.nice-menu-down li ul li.menuparent {
-  background: none;
+  background: none !important;
 }
 
   ul.nice-menu-down li.menuparent > a:after,

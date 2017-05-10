@@ -260,14 +260,14 @@ function onb_global_taxonomy_default_vocabularies() {
       ),
     ),
     'jeux_d_indicateurs' => array(
-      'name' => 'Jeux d\'indicateurs',
+      'name' => 'Jeux d\'indicateurs FR',
       'machine_name' => 'jeux_d_indicateurs',
       'description' => '',
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
       'language' => 'und',
-      'i18n_mode' => 0,
+      'i18n_mode' => 4,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',

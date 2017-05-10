@@ -108,6 +108,53 @@ function onb_global_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'page_actualite';
+  $context->description = '';
+  $context->tag = 'Actualités';
+  $context->conditions = array(
+    'node' => array(
+      'values' => array(
+        'actualite' => 'actualite',
+      ),
+      'options' => array(
+        'node_form' => '0',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'print-print-links' => array(
+          'module' => 'print',
+          'delta' => 'print-links',
+          'region' => 'sidebar_first',
+          'weight' => '-10',
+        ),
+        'block-11' => array(
+          'module' => 'block',
+          'delta' => '11',
+          'region' => 'sidebar_first',
+          'weight' => '-9',
+        ),
+        'views-recherche_actualite-block_1' => array(
+          'module' => 'views',
+          'delta' => 'recherche_actualite-block_1',
+          'region' => 'sidebar_first',
+          'weight' => '-8',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 1;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Actualités');
+  $export['page_actualite'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'page_indicateur';
   $context->description = '';
   $context->tag = 'Indicateurs';
@@ -163,6 +210,50 @@ function onb_global_context_default_contexts() {
   // Included for use with string extractors like potx.
   t('Indicateurs');
   $export['page_indicateur'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'page_onb';
+  $context->description = '';
+  $context->tag = 'ONB';
+  $context->conditions = array(
+    'menu' => array(
+      'values' => array(
+        'node/3' => 'node/3',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'menu_block-1' => array(
+          'module' => 'menu_block',
+          'delta' => '1',
+          'region' => 'sidebar_first',
+          'weight' => '-47',
+        ),
+        'print-print-links' => array(
+          'module' => 'print',
+          'delta' => 'print-links',
+          'region' => 'sidebar_first',
+          'weight' => '-46',
+        ),
+        'block-11' => array(
+          'module' => 'block',
+          'delta' => '11',
+          'region' => 'sidebar_first',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('ONB');
+  $export['page_onb'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */

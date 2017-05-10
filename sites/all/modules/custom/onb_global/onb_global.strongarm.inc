@@ -44,7 +44,7 @@ function onb_global_strongarm() {
     'block-facetapi-2VJ8pkIbxvsRMDPMMBxW7Js5UQwFzdI5' => 3,
     'block-facetapi-qHkLlWWHvZedkTRbfBhaefsoE1aCYinL' => 3,
     'block-facetapi-iBmdtOA6tLf1TxWZ6z7GHHMJZok1xfpN' => 3,
-    'block-block-1' => 1,
+    'block-block-1' => '1',
     'block-ds-extras-barre-de-gauche' => 1,
     'block-facetapi-zJW12ifaWLGVfq1Iot3Ncl3DGmGaPiJq' => 3,
     'block-facetapi-jbnMBFs4msbpxVc3vgYx2bbVtR1lm4QM' => 3,
@@ -68,7 +68,7 @@ function onb_global_strongarm() {
     'block-block-10' => 1,
     'block-ds-extras-barre-de-gauche-question-fiche-s' => 1,
     'block-facetapi-d0bp4OQSE2q0vtCzwYPNhhvUzTccy1U6' => 3,
-    'block-nice-menus-1' => 1,
+    'block-nice-menus-1' => '1',
     'block-menu-block-2' => 1,
     'block-facetapi-eu6vN512fqAsYV1y7yANyYUq71V8U9I2' => 3,
     'block-facetapi-8C1JGy9U5JwO2jylR0FTyxNCtD1kGQMO' => 3,
@@ -316,6 +316,13 @@ node/*/edit';
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_anonymous_event_calendar';
+  $strongarm->value = 0;
+  $export['comment_anonymous_event_calendar'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_fiche_ressource_bibliographique';
   $strongarm->value = 0;
   $export['comment_anonymous_fiche_ressource_bibliographique'] = $strongarm;
@@ -323,9 +330,23 @@ node/*/edit';
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_mode_event_calendar';
+  $strongarm->value = 1;
+  $export['comment_default_mode_event_calendar'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_mode_fiche_ressource_bibliographique';
   $strongarm->value = 1;
   $export['comment_default_mode_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_per_page_event_calendar';
+  $strongarm->value = '50';
+  $export['comment_default_per_page_event_calendar'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -338,7 +359,7 @@ node/*/edit';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_event_calendar';
-  $strongarm->value = 1;
+  $strongarm->value = '1';
   $export['comment_event_calendar'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -351,9 +372,23 @@ node/*/edit';
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_form_location_event_calendar';
+  $strongarm->value = 1;
+  $export['comment_form_location_event_calendar'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_form_location_fiche_ressource_bibliographique';
   $strongarm->value = 1;
   $export['comment_form_location_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_preview_event_calendar';
+  $strongarm->value = '1';
+  $export['comment_preview_event_calendar'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -365,9 +400,23 @@ node/*/edit';
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_subject_field_event_calendar';
+  $strongarm->value = 1;
+  $export['comment_subject_field_event_calendar'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_subject_field_fiche_ressource_bibliographique';
   $strongarm->value = 1;
   $export['comment_subject_field_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_enable_revisions_page_node_event_calendar';
+  $strongarm->value = 1;
+  $export['diff_enable_revisions_page_node_event_calendar'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -379,9 +428,23 @@ node/*/edit';
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_preview_changes_node_event_calendar';
+  $strongarm->value = 1;
+  $export['diff_show_preview_changes_node_event_calendar'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'diff_show_preview_changes_node_fiche_ressource_bibliographique';
   $strongarm->value = 1;
   $export['diff_show_preview_changes_node_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_preview_node_event_calendar';
+  $strongarm->value = 'full';
+  $export['diff_view_mode_preview_node_event_calendar'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -672,9 +735,100 @@ node/*/edit';
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_hide_translation_links';
+  $strongarm->value = 1;
+  $export['i18n_hide_translation_links'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_default_language_for_event_calendar';
+  $strongarm->value = '-- current --';
+  $export['i18n_node_default_language_for_event_calendar'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_default_language_for_fiche_ressource_bibliographique';
+  $strongarm->value = '-- current --';
+  $export['i18n_node_default_language_for_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_default_language_none';
+  $strongarm->value = 1;
+  $export['i18n_node_default_language_none'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_extended_event_calendar';
+  $strongarm->value = 1;
+  $export['i18n_node_extended_event_calendar'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_extended_fiche_ressource_bibliographique';
+  $strongarm->value = '1';
+  $export['i18n_node_extended_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_options_event_calendar';
+  $strongarm->value = array();
+  $export['i18n_node_options_event_calendar'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_options_fiche_ressource_bibliographique';
+  $strongarm->value = array(
+    0 => 'current',
+  );
+  $export['i18n_node_options_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_string_allowed_formats';
+  $strongarm->value = array(
+    'full_html' => 'full_html',
+    'filtered_html' => 'filtered_html',
+    'plain_text' => 'plain_text',
+    'ds_code' => 0,
+  );
+  $export['i18n_string_allowed_formats'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_string_source_language';
+  $strongarm->value = 'en';
+  $export['i18n_string_source_language'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_sync_node_type_event_calendar';
+  $strongarm->value = array();
+  $export['i18n_sync_node_type_event_calendar'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'i18n_sync_node_type_fiche_ressource_bibliographique';
   $strongarm->value = array();
   $export['i18n_sync_node_type_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'language_content_type_event_calendar';
+  $strongarm->value = '2';
+  $export['language_content_type_event_calendar'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -686,11 +840,154 @@ node/*/edit';
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'language_content_type_thematique';
+  $strongarm->value = 0;
+  $export['language_content_type_thematique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'language_count';
+  $strongarm->value = 2;
+  $export['language_count'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'language_default';
+  $strongarm->value = (object) array(
+    'language' => 'fr',
+    'name' => 'French',
+    'native' => 'Français',
+    'direction' => '0',
+    'enabled' => '1',
+    'plurals' => '2',
+    'formula' => '($n!=1)',
+    'domain' => '',
+    'prefix' => 'fr',
+    'weight' => '0',
+    'javascript' => 'vhJ9a5PpNJZcxZyxouM9etcsEAoxfdy9wv3lp6Reb_o',
+  );
+  $export['language_default'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'language_negotiation_language';
+  $strongarm->value = array(
+    'locale-url' => array(
+      'callbacks' => array(
+        'language' => 'locale_language_from_url',
+        'switcher' => 'locale_language_switcher_url',
+        'url_rewrite' => 'locale_language_url_rewrite_url',
+      ),
+      'file' => 'includes/locale.inc',
+    ),
+    'locale-user' => array(
+      'callbacks' => array(
+        'language' => 'locale_language_from_user',
+      ),
+      'file' => 'includes/locale.inc',
+    ),
+    'language-default' => array(
+      'callbacks' => array(
+        'language' => 'language_from_default',
+      ),
+    ),
+    'locale-browser' => array(
+      'callbacks' => array(
+        'language' => 'locale_language_from_browser',
+      ),
+      'file' => 'includes/locale.inc',
+      'cache' => 0,
+    ),
+  );
+  $export['language_negotiation_language'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'language_negotiation_language_content';
+  $strongarm->value = array(
+    'locale-interface' => array(
+      'callbacks' => array(
+        'language' => 'locale_language_from_interface',
+      ),
+      'file' => 'includes/locale.inc',
+    ),
+  );
+  $export['language_negotiation_language_content'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'language_negotiation_language_url';
+  $strongarm->value = array(
+    'locale-url' => array(
+      'callbacks' => array(
+        'language' => 'locale_language_from_url',
+        'switcher' => 'locale_language_switcher_url',
+        'url_rewrite' => 'locale_language_url_rewrite_url',
+      ),
+      'file' => 'includes/locale.inc',
+    ),
+    'locale-url-fallback' => array(
+      'callbacks' => array(
+        'language' => 'locale_language_url_fallback',
+      ),
+      'file' => 'includes/locale.inc',
+    ),
+  );
+  $export['language_negotiation_language_url'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'language_types';
+  $strongarm->value = array(
+    'language' => TRUE,
+    'language_content' => FALSE,
+    'language_url' => FALSE,
+  );
+  $export['language_types'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'locale_language_providers_weight_language';
+  $strongarm->value = array(
+    'locale-url' => -10,
+    'locale-session' => -6,
+    'locale-user' => -9,
+    'locale-browser' => -7,
+    'language-default' => -8,
+  );
+  $export['locale_language_providers_weight_language'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_event_calendar';
+  $strongarm->value = array(
+    0 => 'main-menu',
+  );
+  $export['menu_options_event_calendar'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_fiche_ressource_bibliographique';
   $strongarm->value = array(
     0 => 'main-menu',
   );
   $export['menu_options_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_parent_event_calendar';
+  $strongarm->value = 'main-menu:0';
+  $export['menu_parent_event_calendar'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -710,7 +1007,7 @@ node/*/edit';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'nice_menus_depth_1';
-  $strongarm->value = -1;
+  $strongarm->value = '-1';
   $export['nice_menus_depth_1'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -724,7 +1021,7 @@ node/*/edit';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'nice_menus_menu_1';
-  $strongarm->value = 'main-menu:0';
+  $strongarm->value = 'menu-main-menu-en:0';
   $export['nice_menus_menu_1'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -791,7 +1088,7 @@ node/*/edit';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_event_calendar';
-  $strongarm->value = 0;
+  $strongarm->value = '0';
   $export['node_preview_event_calendar'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -990,6 +1287,30 @@ node/*/edit';
   $strongarm->name = 'site_slogan';
   $strongarm->value = 'Les indicateurs de l\'Observatoire National de la Biodiversité';
   $export['site_slogan'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'variable_realm_list_language';
+  $strongarm->value = array(
+    0 => 'site_name',
+    1 => 'site_slogan',
+    2 => 'site_frontpage',
+    3 => 'site_403',
+    4 => 'site_404',
+    5 => 'maintenance_mode_message',
+    6 => 'date_first_day',
+    7 => 'user_default_timezone',
+    8 => 'user_mail_register_admin_created_[mail_part]',
+    9 => 'user_mail_register_no_approval_required_[mail_part]',
+    10 => 'user_mail_register_pending_approval_[mail_part]',
+    11 => 'user_mail_password_reset_[mail_part]',
+    12 => 'user_mail_status_activated_[mail_part]',
+    13 => 'user_mail_status_blocked_[mail_part]',
+    14 => 'user_mail_cancel_confirm_[mail_part]',
+    15 => 'user_mail_status_canceled_[mail_part]',
+  );
+  $export['variable_realm_list_language'] = $strongarm;
 
   return $export;
 }

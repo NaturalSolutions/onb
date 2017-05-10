@@ -1374,8 +1374,8 @@ function onb_global_default_fe_block_settings() {
         'weight' => 0,
       ),
       'indicateurs' => array(
-        'region' => '',
-        'status' => 0,
+        'region' => 'menu',
+        'status' => 1,
         'theme' => 'indicateurs',
         'weight' => 0,
       ),
