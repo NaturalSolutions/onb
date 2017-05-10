@@ -17,16 +17,6 @@
  */
 
 function indicateurs_preprocess_page(&$vars) {
-  // Translation links
-  $path = drupal_is_front_page() ? '<front>' : $_GET['q'];
-  $links = language_negotiation_get_switch_links('language', $path);
-  $vars['translation_links'] = array(
-    '#theme' => 'links',
-    '#links' => $links->links,
-    '#attributes' => array(
-      'id' => 'translation-links',
-      'class' => array('inline')
-    )
-  );
+
 } //indicateurs_preprocess_page
 
