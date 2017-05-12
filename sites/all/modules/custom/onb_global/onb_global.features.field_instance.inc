@@ -1508,61 +1508,6 @@ function onb_global_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-actualite-field_created_date'.
-  $field_instances['node-actualite-field_created_date'] = array(
-    'bundle' => 'actualite',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'short',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-          'show_remaining_days' => FALSE,
-        ),
-        'type' => 'date_default',
-        'weight' => 1,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_created_date',
-    'label' => 'Date',
-    'required' => 1,
-    'settings' => array(
-      'default_value' => 'now',
-      'default_value2' => 'same',
-      'default_value_code' => '',
-      'default_value_code2' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'date',
-      'settings' => array(
-        'display_all_day' => 0,
-        'increment' => 15,
-        'input_format' => 'd/m/Y - H:i:s',
-        'input_format_custom' => '',
-        'label_position' => 'above',
-        'text_parts' => array(),
-        'year_range' => '-0:+3',
-      ),
-      'type' => 'date_popup',
-      'weight' => 1,
-    ),
-  );
-
   // Exported field_instance: 'node-actualite-field_motscles'.
   $field_instances['node-actualite-field_motscles'] = array(
     'bundle' => 'actualite',

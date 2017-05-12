@@ -112,10 +112,10 @@ function onb_global_wysiwyg_default_profiles() {
       'pasteFromWordRemoveStyles' => 1,
     ),
     'preferences' => array(
+      'add_to_summaries' => FALSE,
       'default' => 1,
-      'user_choose' => 0,
       'show_toggle' => 0,
-      'add_to_summaries' => 0,
+      'user_choose' => 0,
       'version' => '3.6.2.7275',
     ),
     'name' => 'formatfull_html',

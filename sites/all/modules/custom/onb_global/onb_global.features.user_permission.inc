@@ -2631,22 +2631,11 @@ function onb_global_user_default_permissions() {
     'module' => 'filter',
   );
 
-  // Exported permission: 'view diffs of changed files'.
-  $permissions['view diffs of changed files'] = array(
-    'name' => 'view diffs of changed files',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'hacked',
-  );
-
   // Exported permission: 'view error messages'.
   $permissions['view error messages'] = array(
     'name' => 'view error messages',
     'roles' => array(
       'administrator' => 'administrator',
-      'authenticated user' => 'authenticated user',
-      'webmaster' => 'webmaster',
     ),
     'module' => 'disable_messages',
   );
@@ -2742,8 +2731,6 @@ function onb_global_user_default_permissions() {
     'name' => 'view warning messages',
     'roles' => array(
       'administrator' => 'administrator',
-      'authenticated user' => 'authenticated user',
-      'webmaster' => 'webmaster',
     ),
     'module' => 'disable_messages',
   );

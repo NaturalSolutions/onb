@@ -63,12 +63,12 @@ function onb_global_strongarm() {
     'block-current-search-clone-of-standard' => 1,
     'block-current-search-standard' => 1,
     'block-block-3' => 1,
-    'block-menu-block-1' => 1,
+    'block-menu-block-1' => '1',
     'block-block-4' => 1,
     'block-facetapi-qIKfIl3fzLn7s6sYLnlpIAnMOifVQCbE' => 3,
     'block-block-7' => 1,
     'block-block-5' => 3,
-    'block-block-6' => 1,
+    'block-block-6' => '1',
     'block-facetapi-mz1U7vEhTOGB4H2dC0zmfwGvT31f0Fwp' => 3,
     'block-block-8' => 2,
     'block-system-main' => 1,
@@ -86,7 +86,7 @@ function onb_global_strongarm() {
     'block-views-relations-block-1' => 1,
     'block-views-relations-block-2' => 1,
     'block-facetapi-vDQ4ArGTU9uhM0FTXpDbAA9obMysq2DH' => 3,
-    'block-block-11' => 1,
+    'block-block-11' => '1',
     'block-facetapi-fKeETSMo2wFzNypWf1D4iD6E9FGsjQa1' => 2,
     'block-facetapi-uh114tgpzyuTf7QTaLrgbskK2IDReJ1y' => 3,
     'block-facetapi-Y3Ml4151d6BxE6M1ArWBOUSB1DTK2Obr' => 3,
@@ -103,6 +103,7 @@ function onb_global_strongarm() {
     'block-facetapi-jkqatlj3o3ev1didqglugrzyrpqbl0qq' => 3,
     'block-views-calendar-block-1' => '1',
     'block-locale-language' => '1',
+    'block-print-print-links' => '1',
   );
   $export['collapsiblock_settings'] = $strongarm;
 
@@ -201,7 +202,7 @@ function onb_global_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'colorbox_opacity';
-  $strongarm->value = 0.84999999999999997779553950749686919152736663818359375;
+  $strongarm->value = 0.85;
   $export['colorbox_opacity'] = $strongarm;
 
   $strongarm = new stdClass();

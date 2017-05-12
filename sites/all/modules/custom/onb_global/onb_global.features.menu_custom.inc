@@ -15,8 +15,8 @@ function onb_global_menu_default_menu_custom() {
     'menu_name' => 'main-menu',
     'title' => 'Menu principal',
     'description' => 'Le <em>menu Principal</em> est fréquemment utilisé pour afficher les sections importantes du site, souvent dans la barre de navigation de haut de page.',
-    'language' => 'fr',
-    'i18n_mode' => 2,
+    'language' => 'und',
+    'i18n_mode' => 5,
   );
   // Exported menu: menu-main-menu-en.
   $menus['menu-main-menu-en'] = array(

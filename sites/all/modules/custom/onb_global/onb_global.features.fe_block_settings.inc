@@ -1363,7 +1363,7 @@ function onb_global_default_fe_block_settings() {
     'custom' => 0,
     'delta' => 1,
     'i18n_block_language' => array(),
-    'i18n_mode' => 0,
+    'i18n_mode' => 1,
     'module' => 'menu_block',
     'node_types' => array(),
     'pages' => 'lonb*',
@@ -1416,34 +1416,6 @@ function onb_global_default_fe_block_settings() {
     'visibility' => 0,
   );
 
-  $export['menu_block-3'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 3,
-    'i18n_block_language' => array(),
-    'i18n_mode' => 0,
-    'module' => 'menu_block',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'adminimal' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'adminimal',
-        'weight' => 0,
-      ),
-      'indicateurs' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'indicateurs',
-        'weight' => 0,
-      ),
-    ),
-    'title' => 'Thematics',
-    'visibility' => 0,
-  );
-
   $export['nice_menus-1'] = array(
     'cache' => -1,
     'custom' => 0,
@@ -1462,8 +1434,8 @@ function onb_global_default_fe_block_settings() {
         'weight' => 0,
       ),
       'indicateurs' => array(
-        'region' => 'menu',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'indicateurs',
         'weight' => 0,
       ),
@@ -1560,8 +1532,10 @@ function onb_global_default_fe_block_settings() {
     'cache' => 4,
     'custom' => 0,
     'delta' => 'print-links',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 0,
+    'i18n_block_language' => array(
+      0 => 'fr',
+    ),
+    'i18n_mode' => 1,
     'module' => 'print',
     'node_types' => array(),
     'pages' => '',
