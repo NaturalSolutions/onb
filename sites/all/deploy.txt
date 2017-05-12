@@ -39,3 +39,20 @@ drush updb -y
 
 NB, à faire à la main :
 1/ cocher FR comme langue par default dans "admin/config/regional/language"
+
+
+/************/
+/* WARNINGS */
+/************/
+
+Certains modules ont été patchés.
+La bonne pratique voudrait qu'on les replace dans un dossier 'patched_modules' ou autres pour les dissocier des modules contribs intouchés.
+Mais cela nécessite d'effectuer une commande drush (drush rr) pour reconstruire la base de registre de Drupal pour qu'il retrouve ses modules.
+Drush n'étant pas installé sur le serveur de prod, ce n'est pas possible.
+
+Liste des modules ptchés :
+- term_reference_tree (pour compatibilité avec i18n)
+
+
+
+
