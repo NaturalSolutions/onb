@@ -1,0 +1,31 @@
+diff --git a/sites/all/modules/menu_block/menu_block.module b/sites/all/modules/menu_block/menu_block.module
+index 7010188..c8620ea 100644
+--- a/sites/all/modules/menu_block/menu_block.module
++++ b/sites/all/modules/menu_block/menu_block.module
+@@ -326,9 +326,25 @@ function menu_block_get_config($delta = NULL) {
+     }
+ 
+     $config['delta'] = $delta;
++      //Get the transalation object.
++  if (module_exists('i18n_menu')) {
++   $menu_object = menu_load($config['menu_name']);
++    if($menu_object['i18n_mode'] == '5')  {
++    if (!empty($config['parent_mlid'])) {
++      $item = menu_link_load($config['parent_mlid']);
++      $set = i18n_translation_object('menu_link', $item);
++      if (!empty($set)) {
++        $translation_set = $set->get_translations();
++        global $language;
++        if (isset($translation_set[$language->language]) && !empty($translation_set[$language->language]['mlid'])) {
++          $config['parent_mlid'] = $translation_set[$language->language]['mlid'];
++        }
++      }
++    } 
++   }
++  }
+     $configs[$delta] = $config;
+   }
+-
+   return $configs[$delta];
+ }
+ 
