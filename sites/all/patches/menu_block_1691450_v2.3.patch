@@ -1,0 +1,22 @@
+diff --git menu_block.module menu_block.module
+index 83cf0c9..d5cc1c4 100644
+--- menu_block.module
++++ menu_block.module
+@@ -304,8 +304,16 @@ function menu_tree_build($config) {
+   menu_block_set_title(t($menu_names[$config['menu_name']]));
+ 
+   if ($config['expanded'] || $config['parent_mlid']) {
++    if ($node = menu_get_object()) {
++      menu_node_prepare($node);
++    }
+     // Get the full, un-pruned tree.
+-    $tree = menu_tree_all_data($config['menu_name']);
++    if (isset($node->menu['menu_name']) && $node->menu['menu_name'] == $config['menu_name']) {
++      $tree = menu_tree_all_data($config['menu_name'], $node->menu);
++    }
++    else {
++      $tree = menu_tree_all_data($config['menu_name']);
++    }
+     // And add the active trail data back to the full tree.
+     menu_tree_add_active_path($tree);
+   }
