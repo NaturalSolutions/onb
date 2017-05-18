@@ -106,15 +106,12 @@ Attention à ne pas supprimer ces variables dans la chaîne de traduction (ex : 
 
 
 - Traduire les blocs :
-2 possibilités :
 	- rendre le bloc traduisible, et donc on traduit son contenu
 	- donner une langue au bloc et donc on duplique les blocs (j'ajoute FR / EN dans les descritpions des blocs pour les distinguer facilement)
 ex : admin/structure/block/manage/block/1/configure
 
 
 - Traduire les menus :
-2 possibilités :
-	- Traduire et Localiser. Les éléments de menu dotés d'une langue pourront être traduits. Les éléments de menu sans langue seront localisés.
-	- Langue fixe. Les éléments de menu auront une langue globale et apparaîtront uniquement sur les pages dans cette langue.
+
 
 

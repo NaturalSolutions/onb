@@ -830,7 +830,9 @@ clear:both;
 .view-recherche-questions .view-display-id-attachment_1 .view-content,
 .view-recherche-questions .view-display-id-attachment_2 .view-content,
 .view-recherche-questions .view-display-id-attachment_3 .view-content,
-.view-recherche-questions .view-display-id-attachment_4 .view-content {
+.view-recherche-questions .view-display-id-attachment_4 .view-content, 
+.view-recherche-questions .view-display-id-attachment_5 .view-content,
+.view-recherche-questions .view-display-id-attachment_6 .view-content {
   display: inherit;
 }
 
@@ -1537,7 +1539,7 @@ ul ul, ol ul {
 }
 
 /* ONGLET ONB */
-body.page-node-3 div.field-type-image img{
+body.context-lonb div.field-type-image img{
   width: 100%;
 }
 
@@ -1550,5 +1552,9 @@ div.view-id-recherche_actualite.view-display-id-block_1 .views-slideshow-control
 }
 div.view-id-recherche_actualite.view-display-id-block_1  div.views-slideshow-controls-text.views_slideshow_controls_text a{
   color: #000;
+}
+
+span.lexicon-term {    
+    border-bottom: 0 !important;    
 }
 
