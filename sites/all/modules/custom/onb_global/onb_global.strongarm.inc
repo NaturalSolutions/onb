@@ -58,16 +58,16 @@ function onb_global_strongarm() {
     'block-facetapi-elAtZQS3y2moNjP82yifaBhIgfen0Iwj' => 3,
     'block-ds-extras-barre-de-gauche-question' => 1,
     'block-current-search-question' => 1,
-    'block-block-2' => 1,
+    'block-block-2' => '1',
     'block-facetapi-zQB2U5nTCxyIoEbKzsPEePi8Y9UlJNtM' => 3,
     'block-current-search-clone-of-standard' => 1,
     'block-current-search-standard' => 1,
-    'block-block-3' => 1,
+    'block-block-3' => '1',
     'block-menu-block-1' => '1',
     'block-block-4' => 1,
     'block-facetapi-qIKfIl3fzLn7s6sYLnlpIAnMOifVQCbE' => 3,
     'block-block-7' => 1,
-    'block-block-5' => 3,
+    'block-block-5' => '3',
     'block-block-6' => '1',
     'block-facetapi-mz1U7vEhTOGB4H2dC0zmfwGvT31f0Fwp' => 3,
     'block-block-8' => 2,
@@ -96,14 +96,28 @@ function onb_global_strongarm() {
     'block-facetapi-ryQChgBW1gs9cHvN0NhB70XOPfSy0g2Y' => 3,
     'block-facetapi-JKQatLJ3o3ev1dIdqGLuGrZYRpqbL0QQ' => 1,
     'block-nice-menus-2' => 1,
-    'block-facetapi-byttidsmiwlqyv1fpoe4a8vyl5udjgvm' => 3,
-    'block-facetapi-ps7tngjqnuyitl1wwq9mqttn6ch7hxnq' => 3,
-    'block-facetapi-jugyl43ozdfgx6r3k5meef1khiyzt2dl' => 3,
-    'block-facetapi-5pjzvohkn1wcbqmelrqjwywbuah5uqyp' => 3,
-    'block-facetapi-jkqatlj3o3ev1didqglugrzyrpqbl0qq' => 3,
+    'block-facetapi-byttidsmiwlqyv1fpoe4a8vyl5udjgvm' => '3',
+    'block-facetapi-ps7tngjqnuyitl1wwq9mqttn6ch7hxnq' => '3',
+    'block-facetapi-jugyl43ozdfgx6r3k5meef1khiyzt2dl' => '3',
+    'block-facetapi-5pjzvohkn1wcbqmelrqjwywbuah5uqyp' => '3',
+    'block-facetapi-jkqatlj3o3ev1didqglugrzyrpqbl0qq' => '3',
     'block-views-calendar-block-1' => '1',
     'block-locale-language' => '1',
     'block-print-print-links' => '1',
+    'block-facetapi-mz1u7vehtogb4h2dc0zmfwgvt31f0fwp' => '3',
+    'block-facetapi-qikfil3fzln7s6sylnlpianmoifvqcbe' => '3',
+    'block-facetapi-zqb2u5ntcxyioebkzspeepi8y9uljntm' => '3',
+    'block-facetapi-qhkllwwhvzedktrbfbhaefsoe1acyinl' => '3',
+    'block-facetapi-3ltwmc5pvstmfwvivo860u5kqbg4eqko' => '3',
+    'block-facetapi-ibmdtoa6tlf1txwz6z7ghhmjzok1xfpn' => '3',
+    'block-facetapi-uh114tgpzyutf7qtalrgbskk2idrej1y' => '3',
+    'block-facetapi-1pfpssdq1oeedvwm0fdbzrla8yubd9xn' => '3',
+    'block-facetapi-d0bp4oqse2q0vtczwypnhhvuztccy1u6' => '3',
+    'block-facetapi-zjw12ifawlgvfq1iot3ncl3dgmgapijq' => '3',
+    'block-facetapi-jbnmbfs4msbpxvc3vgyx2bbvtr1lm4qm' => '3',
+    'block-facetapi-8c1jgy9u5jwo2jylr0ftyxnctd1kgqmo' => '3',
+    'block-menu-block-3' => '1',
+    'block-menu-block-4' => '1',
   );
   $export['collapsiblock_settings'] = $strongarm;
 
@@ -202,7 +216,7 @@ function onb_global_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'colorbox_opacity';
-  $strongarm->value = 0.85;
+  $strongarm->value = 0.84999999999999997779553950749686919152736663818359375;
   $export['colorbox_opacity'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -876,7 +890,7 @@ node/*/edit';
     'domain' => '',
     'prefix' => 'fr',
     'weight' => '0',
-    'javascript' => 'vhJ9a5PpNJZcxZyxouM9etcsEAoxfdy9wv3lp6Reb_o',
+    'javascript' => 'SztkfNQuZ47ibN1VaxPzWp0Mkb2RJ4oMhYhV4OjZmnM',
   );
   $export['language_default'] = $strongarm;
 

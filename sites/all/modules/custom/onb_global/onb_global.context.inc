@@ -126,11 +126,11 @@ function onb_global_context_default_contexts() {
           'region' => 'postscript_second',
           'weight' => '-10',
         ),
-        'menu_block-2' => array(
+        'menu_block-4' => array(
           'module' => 'menu_block',
-          'delta' => '2',
+          'delta' => '4',
           'region' => 'postscript_third',
-          'weight' => '-38',
+          'weight' => '-10',
         ),
         'block-3' => array(
           'module' => 'block',
@@ -292,13 +292,12 @@ function onb_global_context_default_contexts() {
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'page_onb';
-  $context->description = '';
+  $context->description = 'ONB FR';
   $context->tag = 'ONB';
   $context->conditions = array(
     'menu' => array(
       'values' => array(
         'node/3' => 'node/3',
-        'node/460' => 'node/460',
       ),
     ),
   );
@@ -331,6 +330,7 @@ function onb_global_context_default_contexts() {
   // Translatables
   // Included for use with string extractors like potx.
   t('ONB');
+  t('ONB FR');
   $export['page_onb'] = $context;
 
   $context = new stdClass();
@@ -486,6 +486,7 @@ function onb_global_context_default_contexts() {
     'path' => array(
       'values' => array(
         'actualites/toutes' => 'actualites/toutes',
+        'actualites/all' => 'actualites/all',
       ),
     ),
   );

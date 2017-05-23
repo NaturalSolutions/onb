@@ -184,6 +184,13 @@ function glossaire_views_default_views() {
     5 => 0,
     4 => 0,
   );
+  /* Filter criterion: Indexed Terme de taxonomie: Language de l'élément */
+  $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
+  $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_glossaire';
+  $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
+  $handler->display->display_options['filters']['search_api_language']['value'] = array(
+    'current' => 'current',
+  );
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
@@ -194,6 +201,52 @@ function glossaire_views_default_views() {
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['content'] = '<p><big>Qu\'est-ce qu\'une donnée d\'inventaire ? Un indicateur ?&nbsp; Le droit de propriété intellectuelle ? Que signifient GBIF, ZICO ?</big></p><p><big>Les travaux du SINP et de l\'ONB ont rapidement montré l\'importance&nbsp; d\'une terminologie précise pour avancer avec l\'ensemble des acteurs en prévenant les quiproquos et autres malentendus. Il est également utile de retrouver facilement la signification d</big><big>es sigles et acronymes utilisés : organismes, politiques, projets..</big></p><p><big>Il peut exister plusieurs définitions pour un même terme ou expression. Par exemple "<em>base de données</em>" possède une définition informatique ("<em>un regroupement ordonné d\'informations numérisées</em>") mais également juridique ("<em>toute collection d\'informations, numériques ou non</em>"). Les mots, termes et expressions du glossaire sont répartis en 4 thèmes :</big></p><ul><li><div><big>les mots des <strong>systèmes d\'information</strong> : donnée, observation, fournisseur de données... ;</big></div></li><li><div><big>les mots des <strong>observatoires</strong> : indicateur, pertinence, périmètre, sensibilité... ;</big></div></li><li><div><big>les mots du <strong>statut juridique</strong> : droit <em>sui generis</em>, propriété intellectuelle... ;</big></div></li><li><div><big>les mots de la <strong>biodiversité</strong> : espèce, habitat, milieu...</big></div></li></ul><p>Les mots du glossaire déjà intégrés sont signalés (cf ci-dessus) dans le site par un surlignage en pointillé.</p>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['filter_groups']['groups'] = array(
+    1 => 'AND',
+    2 => 'OR',
+  );
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Indexed Terme de taxonomie: Nom */
+  $handler->display->display_options['filters']['name']['id'] = 'name';
+  $handler->display->display_options['filters']['name']['table'] = 'search_api_index_search_glossaire';
+  $handler->display->display_options['filters']['name']['field'] = 'name';
+  $handler->display->display_options['filters']['name']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['name']['group'] = 1;
+  /* Filter criterion: Indexed Terme de taxonomie: Vocabulaire */
+  $handler->display->display_options['filters']['vocabulary']['id'] = 'vocabulary';
+  $handler->display->display_options['filters']['vocabulary']['table'] = 'search_api_index_search_glossaire';
+  $handler->display->display_options['filters']['vocabulary']['field'] = 'vocabulary';
+  $handler->display->display_options['filters']['vocabulary']['value'] = '44';
+  $handler->display->display_options['filters']['vocabulary']['group'] = 2;
+  $handler->display->display_options['filters']['vocabulary']['expose']['operator_id'] = 'vocabulary_op';
+  $handler->display->display_options['filters']['vocabulary']['expose']['label'] = 'Vocabulaire';
+  $handler->display->display_options['filters']['vocabulary']['expose']['operator'] = 'vocabulary_op';
+  $handler->display->display_options['filters']['vocabulary']['expose']['identifier'] = 'vocabulary';
+  $handler->display->display_options['filters']['vocabulary']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    5 => 0,
+    4 => 0,
+  );
+  /* Filter criterion: Indexed Terme de taxonomie: Vocabulaire */
+  $handler->display->display_options['filters']['vocabulary_1']['id'] = 'vocabulary_1';
+  $handler->display->display_options['filters']['vocabulary_1']['table'] = 'search_api_index_search_glossaire';
+  $handler->display->display_options['filters']['vocabulary_1']['field'] = 'vocabulary';
+  $handler->display->display_options['filters']['vocabulary_1']['value'] = '48';
+  $handler->display->display_options['filters']['vocabulary_1']['group'] = 2;
+  $handler->display->display_options['filters']['vocabulary_1']['expose']['operator_id'] = 'vocabulary_1_op';
+  $handler->display->display_options['filters']['vocabulary_1']['expose']['label'] = 'Vocabulaire';
+  $handler->display->display_options['filters']['vocabulary_1']['expose']['operator'] = 'vocabulary_1_op';
+  $handler->display->display_options['filters']['vocabulary_1']['expose']['identifier'] = 'vocabulary_1';
+  $handler->display->display_options['filters']['vocabulary_1']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    5 => 0,
+    4 => 0,
+  );
   $handler->display->display_options['path'] = 'glossaire';
   $export['recherche_glossaire'] = $view;
 
