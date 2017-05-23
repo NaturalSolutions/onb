@@ -216,7 +216,7 @@ function onb_global_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'colorbox_opacity';
-  $strongarm->value = 0.84999999999999997779553950749686919152736663818359375;
+  $strongarm->value = 0.84999999999999998;
   $export['colorbox_opacity'] = $strongarm;
 
   $strongarm = new stdClass();
