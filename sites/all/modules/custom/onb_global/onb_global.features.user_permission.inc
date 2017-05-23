@@ -2239,6 +2239,7 @@ function onb_global_user_default_permissions() {
     'name' => 'flush caches',
     'roles' => array(
       'administrator' => 'administrator',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'admin_menu',
   );

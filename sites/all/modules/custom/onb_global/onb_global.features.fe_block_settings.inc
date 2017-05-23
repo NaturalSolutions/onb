@@ -411,7 +411,7 @@ function onb_global_default_fe_block_settings() {
     'custom' => 0,
     'delta' => '1PFPsSdQ1oEEDvWm0FDBZrlA8YUBd9xN',
     'i18n_block_language' => array(),
-    'i18n_mode' => 0,
+    'i18n_mode' => 1,
     'module' => 'facetapi',
     'node_types' => array(),
     'pages' => '',
@@ -430,7 +430,7 @@ function onb_global_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => 'Date de l\'Analyse FRB',
+    'title' => 'Date of Analysis FRB',
     'visibility' => 0,
   );
 
@@ -467,7 +467,7 @@ function onb_global_default_fe_block_settings() {
     'custom' => 0,
     'delta' => '3lTwMC5PVStMfwVIVo860u5kQBG4eQKo',
     'i18n_block_language' => array(),
-    'i18n_mode' => 0,
+    'i18n_mode' => 1,
     'module' => 'facetapi',
     'node_types' => array(),
     'pages' => '',
@@ -486,7 +486,7 @@ function onb_global_default_fe_block_settings() {
         'weight' => -15,
       ),
     ),
-    'title' => 'Type de pression',
+    'title' => 'Pressure Type',
     'visibility' => 0,
   );
 
@@ -495,7 +495,7 @@ function onb_global_default_fe_block_settings() {
     'custom' => 0,
     'delta' => '5PJZvOhKN1WCbQmELrQjWYWBUah5UQYp',
     'i18n_block_language' => array(),
-    'i18n_mode' => 0,
+    'i18n_mode' => 1,
     'module' => 'facetapi',
     'node_types' => array(),
     'pages' => '',
@@ -514,7 +514,7 @@ function onb_global_default_fe_block_settings() {
         'weight' => -21,
       ),
     ),
-    'title' => 'Couverture géographique',
+    'title' => 'Geographic coverage',
     'visibility' => 0,
   );
 
@@ -523,7 +523,7 @@ function onb_global_default_fe_block_settings() {
     'custom' => 0,
     'delta' => '8C1JGy9U5JwO2jylR0FTyxNCtD1kGQMO',
     'i18n_block_language' => array(),
-    'i18n_mode' => 0,
+    'i18n_mode' => 1,
     'module' => 'facetapi',
     'node_types' => array(),
     'pages' => '',
@@ -542,7 +542,7 @@ function onb_global_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => 'Type de thématique',
+    'title' => 'Topic type',
     'visibility' => 0,
   );
 
@@ -551,7 +551,7 @@ function onb_global_default_fe_block_settings() {
     'custom' => 0,
     'delta' => 'BYtTIDsMiwLQyV1FpOE4A8vyl5UDjGvM',
     'i18n_block_language' => array(),
-    'i18n_mode' => 0,
+    'i18n_mode' => 1,
     'module' => 'facetapi',
     'node_types' => array(),
     'pages' => '',
@@ -570,7 +570,7 @@ function onb_global_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => 'Statut de publication',
+    'title' => 'Status of publication',
     'visibility' => 0,
   );
 
@@ -607,7 +607,7 @@ function onb_global_default_fe_block_settings() {
     'custom' => 0,
     'delta' => 'JKQatLJ3o3ev1dIdqGLuGrZYRpqbL0QQ',
     'i18n_block_language' => array(),
-    'i18n_mode' => 0,
+    'i18n_mode' => 1,
     'module' => 'facetapi',
     'node_types' => array(),
     'pages' => '',
@@ -626,7 +626,7 @@ function onb_global_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => 'Echelle territoriale de restitution ',
+    'title' => 'Territorial scale of restitution',
     'visibility' => 0,
   );
 
@@ -691,7 +691,7 @@ function onb_global_default_fe_block_settings() {
     'custom' => 0,
     'delta' => 'Ps7TNGjqNuYITL1WWq9MqTtN6cH7HXnQ',
     'i18n_block_language' => array(),
-    'i18n_mode' => 0,
+    'i18n_mode' => 1,
     'module' => 'facetapi',
     'node_types' => array(),
     'pages' => '',
@@ -710,7 +710,7 @@ function onb_global_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => 'Date de publication du jeu d\'indicateurs',
+    'title' => 'Release date of the indicators set',
     'visibility' => 0,
   );
 
@@ -719,7 +719,7 @@ function onb_global_default_fe_block_settings() {
     'custom' => 0,
     'delta' => 'd0bp4OQSE2q0vtCzwYPNhhvUzTccy1U6',
     'i18n_block_language' => array(),
-    'i18n_mode' => 0,
+    'i18n_mode' => 1,
     'module' => 'facetapi',
     'node_types' => array(),
     'pages' => '',
@@ -738,7 +738,7 @@ function onb_global_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => 'Thématique',
+    'title' => 'Topic',
     'visibility' => 0,
   );
 
@@ -803,7 +803,7 @@ function onb_global_default_fe_block_settings() {
     'custom' => 0,
     'delta' => 'iBmdtOA6tLf1TxWZ6z7GHHMJZok1xfpN',
     'i18n_block_language' => array(),
-    'i18n_mode' => 0,
+    'i18n_mode' => 1,
     'module' => 'facetapi',
     'node_types' => array(),
     'pages' => '',
@@ -822,7 +822,7 @@ function onb_global_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => 'Producteur',
+    'title' => 'Grower',
     'visibility' => 0,
   );
 
@@ -831,7 +831,7 @@ function onb_global_default_fe_block_settings() {
     'custom' => 0,
     'delta' => 'jbnMBFs4msbpxVc3vgYx2bbVtR1lm4QM',
     'i18n_block_language' => array(),
-    'i18n_mode' => 0,
+    'i18n_mode' => 1,
     'module' => 'facetapi',
     'node_types' => array(),
     'pages' => '',
@@ -850,7 +850,7 @@ function onb_global_default_fe_block_settings() {
         'weight' => -19,
       ),
     ),
-    'title' => 'Orientation Stratégique de la SNB',
+    'title' => 'SNB Strategic Orientation',
     'visibility' => 0,
   );
 
@@ -859,7 +859,7 @@ function onb_global_default_fe_block_settings() {
     'custom' => 0,
     'delta' => 'jugyl43OZdfGX6R3k5meeF1KhIYZt2dl',
     'i18n_block_language' => array(),
-    'i18n_mode' => 0,
+    'i18n_mode' => 1,
     'module' => 'facetapi',
     'node_types' => array(),
     'pages' => '',
@@ -878,7 +878,7 @@ function onb_global_default_fe_block_settings() {
         'weight' => -23,
       ),
     ),
-    'title' => 'Orientation Stratégique de la SNB',
+    'title' => 'SNB Strategic Orientation',
     'visibility' => 0,
   );
 
@@ -887,7 +887,7 @@ function onb_global_default_fe_block_settings() {
     'custom' => 0,
     'delta' => 'mz1U7vEhTOGB4H2dC0zmfwGvT31f0Fwp',
     'i18n_block_language' => array(),
-    'i18n_mode' => 0,
+    'i18n_mode' => 1,
     'module' => 'facetapi',
     'node_types' => array(),
     'pages' => '',
@@ -906,7 +906,7 @@ function onb_global_default_fe_block_settings() {
         'weight' => -17,
       ),
     ),
-    'title' => 'Mot clé',
+    'title' => 'Keyword',
     'visibility' => 0,
   );
 
@@ -971,7 +971,7 @@ function onb_global_default_fe_block_settings() {
     'custom' => 0,
     'delta' => 'qHkLlWWHvZedkTRbfBhaefsoE1aCYinL',
     'i18n_block_language' => array(),
-    'i18n_mode' => 0,
+    'i18n_mode' => 1,
     'module' => 'facetapi',
     'node_types' => array(),
     'pages' => '',
@@ -999,7 +999,7 @@ function onb_global_default_fe_block_settings() {
     'custom' => 0,
     'delta' => 'qIKfIl3fzLn7s6sYLnlpIAnMOifVQCbE',
     'i18n_block_language' => array(),
-    'i18n_mode' => 0,
+    'i18n_mode' => 1,
     'module' => 'facetapi',
     'node_types' => array(),
     'pages' => '',
@@ -1018,7 +1018,7 @@ function onb_global_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => 'Jeu d\'indicateurs',
+    'title' => 'Indicators set',
     'visibility' => 0,
   );
 
@@ -1055,7 +1055,7 @@ function onb_global_default_fe_block_settings() {
     'custom' => 0,
     'delta' => 'uh114tgpzyuTf7QTaLrgbskK2IDReJ1y',
     'i18n_block_language' => array(),
-    'i18n_mode' => 0,
+    'i18n_mode' => 1,
     'module' => 'facetapi',
     'node_types' => array(),
     'pages' => '',
@@ -1074,7 +1074,7 @@ function onb_global_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => 'Analyse FRB',
+    'title' => 'FRB Analysis',
     'visibility' => 0,
   );
 
@@ -1111,7 +1111,7 @@ function onb_global_default_fe_block_settings() {
     'custom' => 0,
     'delta' => 'zJW12ifaWLGVfq1Iot3Ncl3DGmGaPiJq',
     'i18n_block_language' => array(),
-    'i18n_mode' => 0,
+    'i18n_mode' => 1,
     'module' => 'facetapi',
     'node_types' => array(),
     'pages' => '',
@@ -1130,7 +1130,7 @@ function onb_global_default_fe_block_settings() {
         'weight' => -20,
       ),
     ),
-    'title' => 'Objectif de la SNB',
+    'title' => 'SNB goal',
     'visibility' => 0,
   );
 
@@ -1171,7 +1171,9 @@ function onb_global_default_fe_block_settings() {
     'module' => 'locale',
     'node_types' => array(),
     'pages' => '',
-    'roles' => array(),
+    'roles' => array(
+      'utilisateur authentifié' => 2,
+    ),
     'themes' => array(
       'adminimal' => array(
         'region' => '',
@@ -1246,34 +1248,6 @@ function onb_global_default_fe_block_settings() {
     'visibility' => 0,
   );
 
-  $export['menu-menu-main-menu-en'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'menu-main-menu-en',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 0,
-    'module' => 'menu',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'adminimal' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'adminimal',
-        'weight' => 0,
-      ),
-      'indicateurs' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'indicateurs',
-        'weight' => 0,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 0,
-  );
-
   $export['menu-menu-menu-secondaire'] = array(
     'cache' => -1,
     'custom' => 0,
@@ -1307,7 +1281,7 @@ function onb_global_default_fe_block_settings() {
     'custom' => 0,
     'delta' => 1,
     'i18n_block_language' => array(),
-    'i18n_mode' => 1,
+    'i18n_mode' => 0,
     'module' => 'menu_block',
     'node_types' => array(),
     'pages' => 'lonb*',
@@ -1334,9 +1308,7 @@ function onb_global_default_fe_block_settings() {
     'cache' => -1,
     'custom' => 0,
     'delta' => 2,
-    'i18n_block_language' => array(
-      0 => 'fr',
-    ),
+    'i18n_block_language' => array(),
     'i18n_mode' => 0,
     'module' => 'menu_block',
     'node_types' => array(),
@@ -2155,7 +2127,9 @@ function onb_global_default_fe_block_settings() {
     'module' => 'views',
     'node_types' => array(),
     'pages' => '',
-    'roles' => array(),
+    'roles' => array(
+      'utilisateur authentifié' => 2,
+    ),
     'themes' => array(
       'adminimal' => array(
         'region' => '',
