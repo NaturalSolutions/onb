@@ -1538,7 +1538,7 @@ function onb_global_views_default_views() {
     'field_actu_date' => 'field_actu_date',
   );
   $handler->display->display_options['row_options']['separator'] = ' - ';
-  /* Field: Indexed Node: Title */
+  /* Field: Indexed Nœud: Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_search_actualite';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -1547,7 +1547,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['link_class'] = 'colorbox-load colorbox-node';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
-  /* Field: Indexed Node: Date */
+  /* Field: Indexed Nœud: Date */
   $handler->display->display_options['fields']['field_actu_date']['id'] = 'field_actu_date';
   $handler->display->display_options['fields']['field_actu_date']['table'] = 'search_api_index_search_actualite';
   $handler->display->display_options['fields']['field_actu_date']['field'] = 'field_actu_date';
@@ -1560,25 +1560,25 @@ function onb_global_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Indexed Node: Mot(s) Clé(s) */
+  /* Field: Indexed Nœud: Mot(s) Clé(s) */
   $handler->display->display_options['fields']['field_motscles']['id'] = 'field_motscles';
   $handler->display->display_options['fields']['field_motscles']['table'] = 'search_api_index_search_actualite';
   $handler->display->display_options['fields']['field_motscles']['field'] = 'field_motscles';
   $handler->display->display_options['fields']['field_motscles']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_motscles']['view_mode'] = 'full';
-  /* Sort criterion: Indexed Node: Date */
+  /* Sort criterion: Indexed Nœud: Date */
   $handler->display->display_options['sorts']['field_actu_date']['id'] = 'field_actu_date';
   $handler->display->display_options['sorts']['field_actu_date']['table'] = 'search_api_index_search_actualite';
   $handler->display->display_options['sorts']['field_actu_date']['field'] = 'field_actu_date';
   $handler->display->display_options['sorts']['field_actu_date']['order'] = 'DESC';
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nœud: Type de contenu */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_actualite';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'actualite' => 'actualite',
   );
-  /* Filter criterion: Indexed Node: Item language */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_actualite';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -1655,7 +1655,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['footer']['area']['content'] = '<a href="/actualites/toutes">Retrouvez toutes nos actualités</a>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Indexed Node: URL */
+  /* Field: Indexed Nœud: URL */
   $handler->display->display_options['fields']['url']['id'] = 'url';
   $handler->display->display_options['fields']['url']['table'] = 'search_api_index_search_actualite';
   $handler->display->display_options['fields']['url']['field'] = 'url';
@@ -1664,7 +1664,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['url']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['url']['display_as_link'] = FALSE;
   $handler->display->display_options['fields']['url']['link_to_entity'] = 0;
-  /* Field: Indexed Node: Title */
+  /* Field: Indexed Nœud: Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_search_actualite';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -1674,7 +1674,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['link_class'] = 'colorbox-load colorbox-node';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 0;
-  /* Field: Indexed Node: Date */
+  /* Field: Indexed Nœud: Date */
   $handler->display->display_options['fields']['field_actu_date']['id'] = 'field_actu_date';
   $handler->display->display_options['fields']['field_actu_date']['table'] = 'search_api_index_search_actualite';
   $handler->display->display_options['fields']['field_actu_date']['field'] = 'field_actu_date';
@@ -1696,33 +1696,33 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a class="" href="[url]">[title]</a> - [field_actu_date]';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Indexed Node: Date */
+  /* Sort criterion: Indexed Nœud: Date */
   $handler->display->display_options['sorts']['field_actu_date']['id'] = 'field_actu_date';
   $handler->display->display_options['sorts']['field_actu_date']['table'] = 'search_api_index_search_actualite';
   $handler->display->display_options['sorts']['field_actu_date']['field'] = 'field_actu_date';
   $handler->display->display_options['sorts']['field_actu_date']['order'] = 'DESC';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nœud: Type de contenu */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_actualite';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'actualite' => 'actualite',
   );
-  /* Filter criterion: Indexed Node: Date */
+  /* Filter criterion: Indexed Nœud: Date */
   $handler->display->display_options['filters']['field_actu_date']['id'] = 'field_actu_date';
   $handler->display->display_options['filters']['field_actu_date']['table'] = 'search_api_index_search_actualite';
   $handler->display->display_options['filters']['field_actu_date']['field'] = 'field_actu_date';
   $handler->display->display_options['filters']['field_actu_date']['operator'] = '>=';
   $handler->display->display_options['filters']['field_actu_date']['value'] = 'now - 3 month';
-  /* Filter criterion: Indexed Node: Date */
+  /* Filter criterion: Indexed Nœud: Date */
   $handler->display->display_options['filters']['field_actu_date_1']['id'] = 'field_actu_date_1';
   $handler->display->display_options['filters']['field_actu_date_1']['table'] = 'search_api_index_search_actualite';
   $handler->display->display_options['filters']['field_actu_date_1']['field'] = 'field_actu_date';
   $handler->display->display_options['filters']['field_actu_date_1']['operator'] = '<=';
   $handler->display->display_options['filters']['field_actu_date_1']['value'] = 'now';
-  /* Filter criterion: Indexed Node: Item language */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_actualite';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -1771,7 +1771,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Indexed Node: Title */
+  /* Field: Indexed Nœud: Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_search_actualite';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -1781,7 +1781,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['link_class'] = 'colorbox-load colorbox-node';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
-  /* Field: Indexed Node: Date */
+  /* Field: Indexed Nœud: Date */
   $handler->display->display_options['fields']['field_actu_date']['id'] = 'field_actu_date';
   $handler->display->display_options['fields']['field_actu_date']['table'] = 'search_api_index_search_actualite';
   $handler->display->display_options['fields']['field_actu_date']['field'] = 'field_actu_date';
@@ -1849,7 +1849,7 @@ function onb_global_views_default_views() {
       'empty_column' => 0,
     ),
   );
-  /* Field: Indexed Node: Visuels */
+  /* Field: Indexed Nœud: Visuels */
   $handler->display->display_options['fields']['field_collecvisuels']['id'] = 'field_collecvisuels';
   $handler->display->display_options['fields']['field_collecvisuels']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_collecvisuels']['field'] = 'field_collecvisuels';
@@ -1859,7 +1859,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_collecvisuels']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_collecvisuels']['display'] = 'view';
   $handler->display->display_options['fields']['field_collecvisuels']['view_mode'] = 'visuels_indicateurs';
-  /* Field: Indexed Node: Title */
+  /* Field: Indexed Nœud: Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -1867,7 +1867,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
-  /* Field: Indexed Node: Intitulé court */
+  /* Field: Indexed Nœud: Intitulé court */
   $handler->display->display_options['fields']['field_intitule_court']['id'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_intitule_court']['field'] = 'field_intitule_court';
@@ -1882,11 +1882,11 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '[title]<br\\>
 [field_intitule_court]';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Sort criterion: Indexed Node: Title */
+  /* Sort criterion: Indexed Nœud: Titre */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nœud: Type de contenu */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -1966,7 +1966,7 @@ function onb_global_views_default_views() {
 ';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Indexed Node: Visuels */
+  /* Field: Indexed Nœud: Visuels */
   $handler->display->display_options['fields']['field_collecvisuels']['id'] = 'field_collecvisuels';
   $handler->display->display_options['fields']['field_collecvisuels']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_collecvisuels']['field'] = 'field_collecvisuels';
@@ -1976,7 +1976,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_collecvisuels']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_collecvisuels']['display'] = 'view';
   $handler->display->display_options['fields']['field_collecvisuels']['view_mode'] = 'visuels_indicateurs';
-  /* Field: Indexed Node: Title */
+  /* Field: Indexed Nœud: Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -1986,14 +1986,14 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['alt'] = 'Accéder à la fiche indicateur';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
-  /* Field: Indexed Node: Intitulé court */
+  /* Field: Indexed Nœud: Intitulé court */
   $handler->display->display_options['fields']['field_intitule_court']['id'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_intitule_court']['field'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['label'] = '';
   $handler->display->display_options['fields']['field_intitule_court']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_intitule_court']['element_label_colon'] = FALSE;
-  /* Field: Indexed Node: Jeu(x) d'indicateurs */
+  /* Field: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['fields']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['fields']['field_jeux_indicateur']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
@@ -2002,7 +2002,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_jeux_indicateur']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_jeux_indicateur']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_jeux_indicateur']['bypass_access'] = 0;
-  /* Field: Indexed Node: Valeur par période */
+  /* Field: Indexed Nœud: Valeur par période */
   $handler->display->display_options['fields']['field_valeurannee']['id'] = 'field_valeurannee';
   $handler->display->display_options['fields']['field_valeurannee']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_valeurannee']['field'] = 'field_valeurannee';
@@ -2027,7 +2027,7 @@ function onb_global_views_default_views() {
     2 => 'OR',
   );
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nœud: Type de contenu */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -2035,35 +2035,39 @@ function onb_global_views_default_views() {
     'fiche_indicateur' => 'fiche_indicateur',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Indexed Node: Jeu(x) d'indicateurs */
+  /* Filter criterion: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['filters']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['value'] = array(
     120 => '120',
-    122 => '122',
     123 => '123',
+    122 => '122',
+    1897 => '1897',
+    204 => '204',
+    206 => '206',
+    205 => '205',
     124 => '124',
-    125 => '125',
     148 => '148',
     131 => '131',
-    130 => '130',
     127 => '127',
     126 => '126',
     121 => '121',
+    130 => '130',
+    125 => '125',
     128 => '128',
     149 => '149',
     129 => '129',
     203 => '203',
   );
-  /* Filter criterion: Indexed Node: Status */
+  /* Filter criterion: Indexed Nœud: Statut */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Node: Item language */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -2132,7 +2136,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Indexed Node: Visuels */
+  /* Field: Indexed Nœud: Visuels */
   $handler->display->display_options['fields']['field_collecvisuels']['id'] = 'field_collecvisuels';
   $handler->display->display_options['fields']['field_collecvisuels']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_collecvisuels']['field'] = 'field_collecvisuels';
@@ -2142,7 +2146,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_collecvisuels']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_collecvisuels']['display'] = 'view';
   $handler->display->display_options['fields']['field_collecvisuels']['view_mode'] = 'visuels_indicateurs';
-  /* Field: Indexed Node: Title */
+  /* Field: Indexed Nœud: Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -2150,14 +2154,14 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
-  /* Field: Indexed Node: Intitulé court */
+  /* Field: Indexed Nœud: Intitulé court */
   $handler->display->display_options['fields']['field_intitule_court']['id'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_intitule_court']['field'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['label'] = '';
   $handler->display->display_options['fields']['field_intitule_court']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_intitule_court']['element_label_colon'] = FALSE;
-  /* Field: Indexed Node: Jeu(x) d'indicateurs */
+  /* Field: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['fields']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['fields']['field_jeux_indicateur']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
@@ -2165,7 +2169,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_jeux_indicateur']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_jeux_indicateur']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_jeux_indicateur']['bypass_access'] = 0;
-  /* Field: Indexed Node: Valeur par période */
+  /* Field: Indexed Nœud: Valeur par période */
   $handler->display->display_options['fields']['field_valeurannee']['id'] = 'field_valeurannee';
   $handler->display->display_options['fields']['field_valeurannee']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_valeurannee']['field'] = 'field_valeurannee';
@@ -2187,14 +2191,14 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nœud: Type de contenu */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'fiche_indicateur' => 'fiche_indicateur',
   );
-  /* Filter criterion: Indexed Node: Jeu(x) d'indicateurs */
+  /* Filter criterion: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['filters']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
@@ -2204,20 +2208,20 @@ function onb_global_views_default_views() {
     122 => '122',
     123 => '123',
   );
-  /* Filter criterion: Indexed Node: Status */
+  /* Filter criterion: Indexed Nœud: Statut */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Node: Title */
+  /* Filter criterion: Indexed Nœud: Titre */
   $handler->display->display_options['filters']['title']['id'] = 'title';
   $handler->display->display_options['filters']['title']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['title']['field'] = 'title';
   $handler->display->display_options['filters']['title']['operator'] = '<>';
   $handler->display->display_options['filters']['title']['value'] = 'Déplacement des espèces lié au changement climatique';
-  /* Filter criterion: Indexed Node: Item language */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -2288,7 +2292,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Indexed Node: Visuels */
+  /* Field: Indexed Nœud: Visuels */
   $handler->display->display_options['fields']['field_collecvisuels']['id'] = 'field_collecvisuels';
   $handler->display->display_options['fields']['field_collecvisuels']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_collecvisuels']['field'] = 'field_collecvisuels';
@@ -2298,7 +2302,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_collecvisuels']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_collecvisuels']['display'] = 'view';
   $handler->display->display_options['fields']['field_collecvisuels']['view_mode'] = 'visuels_indicateurs';
-  /* Field: Indexed Node: Title */
+  /* Field: Indexed Nœud: Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -2306,14 +2310,14 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
-  /* Field: Indexed Node: Intitulé court */
+  /* Field: Indexed Nœud: Intitulé court */
   $handler->display->display_options['fields']['field_intitule_court']['id'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_intitule_court']['field'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['label'] = '';
   $handler->display->display_options['fields']['field_intitule_court']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_intitule_court']['element_label_colon'] = FALSE;
-  /* Field: Indexed Node: Jeu(x) d'indicateurs */
+  /* Field: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['fields']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['fields']['field_jeux_indicateur']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
@@ -2321,7 +2325,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_jeux_indicateur']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_jeux_indicateur']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_jeux_indicateur']['bypass_access'] = 0;
-  /* Field: Indexed Node: Valeur par période */
+  /* Field: Indexed Nœud: Valeur par période */
   $handler->display->display_options['fields']['field_valeurannee']['id'] = 'field_valeurannee';
   $handler->display->display_options['fields']['field_valeurannee']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_valeurannee']['field'] = 'field_valeurannee';
@@ -2341,28 +2345,28 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nœud: Type de contenu */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'fiche_indicateur' => 'fiche_indicateur',
   );
-  /* Filter criterion: Indexed Node: Jeu(x) d'indicateurs */
+  /* Filter criterion: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['filters']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['value'] = array(
     148 => '148',
   );
-  /* Filter criterion: Indexed Node: Status */
+  /* Filter criterion: Indexed Nœud: Statut */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Node: Item language */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -2433,7 +2437,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Indexed Node: Visuels */
+  /* Field: Indexed Nœud: Visuels */
   $handler->display->display_options['fields']['field_collecvisuels']['id'] = 'field_collecvisuels';
   $handler->display->display_options['fields']['field_collecvisuels']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_collecvisuels']['field'] = 'field_collecvisuels';
@@ -2443,7 +2447,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_collecvisuels']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_collecvisuels']['display'] = 'view';
   $handler->display->display_options['fields']['field_collecvisuels']['view_mode'] = 'visuels_indicateurs';
-  /* Field: Indexed Node: Title */
+  /* Field: Indexed Nœud: Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -2451,14 +2455,14 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
-  /* Field: Indexed Node: Intitulé court */
+  /* Field: Indexed Nœud: Intitulé court */
   $handler->display->display_options['fields']['field_intitule_court']['id'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_intitule_court']['field'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['label'] = '';
   $handler->display->display_options['fields']['field_intitule_court']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_intitule_court']['element_label_colon'] = FALSE;
-  /* Field: Indexed Node: Jeu(x) d'indicateurs */
+  /* Field: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['fields']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['fields']['field_jeux_indicateur']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
@@ -2466,7 +2470,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_jeux_indicateur']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_jeux_indicateur']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_jeux_indicateur']['bypass_access'] = 0;
-  /* Field: Indexed Node: Valeur par période */
+  /* Field: Indexed Nœud: Valeur par période */
   $handler->display->display_options['fields']['field_valeurannee']['id'] = 'field_valeurannee';
   $handler->display->display_options['fields']['field_valeurannee']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_valeurannee']['field'] = 'field_valeurannee';
@@ -2486,28 +2490,28 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nœud: Type de contenu */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'fiche_indicateur' => 'fiche_indicateur',
   );
-  /* Filter criterion: Indexed Node: Jeu(x) d'indicateurs */
+  /* Filter criterion: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['filters']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['value'] = array(
     130 => '130',
   );
-  /* Filter criterion: Indexed Node: Status */
+  /* Filter criterion: Indexed Nœud: Statut */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Node: Item language */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -2578,7 +2582,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Indexed Node: Visuels */
+  /* Field: Indexed Nœud: Visuels */
   $handler->display->display_options['fields']['field_collecvisuels']['id'] = 'field_collecvisuels';
   $handler->display->display_options['fields']['field_collecvisuels']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_collecvisuels']['field'] = 'field_collecvisuels';
@@ -2588,7 +2592,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_collecvisuels']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_collecvisuels']['display'] = 'view';
   $handler->display->display_options['fields']['field_collecvisuels']['view_mode'] = 'visuels_indicateurs';
-  /* Field: Indexed Node: Title */
+  /* Field: Indexed Nœud: Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -2596,14 +2600,14 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
-  /* Field: Indexed Node: Intitulé court */
+  /* Field: Indexed Nœud: Intitulé court */
   $handler->display->display_options['fields']['field_intitule_court']['id'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_intitule_court']['field'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['label'] = '';
   $handler->display->display_options['fields']['field_intitule_court']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_intitule_court']['element_label_colon'] = FALSE;
-  /* Field: Indexed Node: Jeu(x) d'indicateurs */
+  /* Field: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['fields']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['fields']['field_jeux_indicateur']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
@@ -2611,7 +2615,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_jeux_indicateur']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_jeux_indicateur']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_jeux_indicateur']['bypass_access'] = 0;
-  /* Field: Indexed Node: Valeur par période */
+  /* Field: Indexed Nœud: Valeur par période */
   $handler->display->display_options['fields']['field_valeurannee']['id'] = 'field_valeurannee';
   $handler->display->display_options['fields']['field_valeurannee']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_valeurannee']['field'] = 'field_valeurannee';
@@ -2631,28 +2635,28 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nœud: Type de contenu */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'fiche_indicateur' => 'fiche_indicateur',
   );
-  /* Filter criterion: Indexed Node: Jeu(x) d'indicateurs */
+  /* Filter criterion: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['filters']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['value'] = array(
     121 => '121',
   );
-  /* Filter criterion: Indexed Node: Status */
+  /* Filter criterion: Indexed Nœud: Statut */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Node: Item language */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -2723,7 +2727,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Indexed Node: Visuels */
+  /* Field: Indexed Nœud: Visuels */
   $handler->display->display_options['fields']['field_collecvisuels']['id'] = 'field_collecvisuels';
   $handler->display->display_options['fields']['field_collecvisuels']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_collecvisuels']['field'] = 'field_collecvisuels';
@@ -2733,7 +2737,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_collecvisuels']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_collecvisuels']['display'] = 'view';
   $handler->display->display_options['fields']['field_collecvisuels']['view_mode'] = 'visuels_indicateurs';
-  /* Field: Indexed Node: Title */
+  /* Field: Indexed Nœud: Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -2741,14 +2745,14 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
-  /* Field: Indexed Node: Intitulé court */
+  /* Field: Indexed Nœud: Intitulé court */
   $handler->display->display_options['fields']['field_intitule_court']['id'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_intitule_court']['field'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['label'] = '';
   $handler->display->display_options['fields']['field_intitule_court']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_intitule_court']['element_label_colon'] = FALSE;
-  /* Field: Indexed Node: Jeu(x) d'indicateurs */
+  /* Field: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['fields']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['fields']['field_jeux_indicateur']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
@@ -2756,7 +2760,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_jeux_indicateur']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_jeux_indicateur']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_jeux_indicateur']['bypass_access'] = 0;
-  /* Field: Indexed Node: Valeur par période */
+  /* Field: Indexed Nœud: Valeur par période */
   $handler->display->display_options['fields']['field_valeurannee']['id'] = 'field_valeurannee';
   $handler->display->display_options['fields']['field_valeurannee']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_valeurannee']['field'] = 'field_valeurannee';
@@ -2776,28 +2780,28 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nœud: Type de contenu */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'fiche_indicateur' => 'fiche_indicateur',
   );
-  /* Filter criterion: Indexed Node: Jeu(x) d'indicateurs */
+  /* Filter criterion: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['filters']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['value'] = array(
     125 => '125',
   );
-  /* Filter criterion: Indexed Node: Status */
+  /* Filter criterion: Indexed Nœud: Statut */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Node: Item language */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -2868,7 +2872,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Indexed Node: Visuels */
+  /* Field: Indexed Nœud: Visuels */
   $handler->display->display_options['fields']['field_collecvisuels']['id'] = 'field_collecvisuels';
   $handler->display->display_options['fields']['field_collecvisuels']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_collecvisuels']['field'] = 'field_collecvisuels';
@@ -2878,7 +2882,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_collecvisuels']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_collecvisuels']['display'] = 'view';
   $handler->display->display_options['fields']['field_collecvisuels']['view_mode'] = 'visuels_indicateurs';
-  /* Field: Indexed Node: Title */
+  /* Field: Indexed Nœud: Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -2886,14 +2890,14 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
-  /* Field: Indexed Node: Intitulé court */
+  /* Field: Indexed Nœud: Intitulé court */
   $handler->display->display_options['fields']['field_intitule_court']['id'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_intitule_court']['field'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['label'] = '';
   $handler->display->display_options['fields']['field_intitule_court']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_intitule_court']['element_label_colon'] = FALSE;
-  /* Field: Indexed Node: Jeu(x) d'indicateurs */
+  /* Field: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['fields']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['fields']['field_jeux_indicateur']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
@@ -2902,7 +2906,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_jeux_indicateur']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_jeux_indicateur']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_jeux_indicateur']['bypass_access'] = 0;
-  /* Field: Indexed Node: Valeur par période */
+  /* Field: Indexed Nœud: Valeur par période */
   $handler->display->display_options['fields']['field_valeurannee']['id'] = 'field_valeurannee';
   $handler->display->display_options['fields']['field_valeurannee']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_valeurannee']['field'] = 'field_valeurannee';
@@ -2922,28 +2926,28 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nœud: Type de contenu */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'fiche_indicateur' => 'fiche_indicateur',
   );
-  /* Filter criterion: Indexed Node: Jeu(x) d'indicateurs */
+  /* Filter criterion: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['filters']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['value'] = array(
     128 => '128',
   );
-  /* Filter criterion: Indexed Node: Status */
+  /* Filter criterion: Indexed Nœud: Statut */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Node: Item language */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -3014,7 +3018,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Indexed Node: Visuels */
+  /* Field: Indexed Nœud: Visuels */
   $handler->display->display_options['fields']['field_collecvisuels']['id'] = 'field_collecvisuels';
   $handler->display->display_options['fields']['field_collecvisuels']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_collecvisuels']['field'] = 'field_collecvisuels';
@@ -3024,7 +3028,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_collecvisuels']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_collecvisuels']['display'] = 'view';
   $handler->display->display_options['fields']['field_collecvisuels']['view_mode'] = 'visuels_indicateurs';
-  /* Field: Indexed Node: Title */
+  /* Field: Indexed Nœud: Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -3032,21 +3036,21 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
-  /* Field: Indexed Node: Intitulé court */
+  /* Field: Indexed Nœud: Intitulé court */
   $handler->display->display_options['fields']['field_intitule_court']['id'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_intitule_court']['field'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['label'] = '';
   $handler->display->display_options['fields']['field_intitule_court']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_intitule_court']['element_label_colon'] = FALSE;
-  /* Field: Indexed Node: Jeu(x) d'indicateurs */
+  /* Field: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['fields']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['fields']['field_jeux_indicateur']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
   $handler->display->display_options['fields']['field_jeux_indicateur']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_jeux_indicateur']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_jeux_indicateur']['view_mode'] = 'full';
-  /* Field: Indexed Node: Valeur par période */
+  /* Field: Indexed Nœud: Valeur par période */
   $handler->display->display_options['fields']['field_valeurannee']['id'] = 'field_valeurannee';
   $handler->display->display_options['fields']['field_valeurannee']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_valeurannee']['field'] = 'field_valeurannee';
@@ -3066,14 +3070,14 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nœud: Type de contenu */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'fiche_indicateur' => 'fiche_indicateur',
   );
-  /* Filter criterion: Indexed Node: Jeu(x) d'indicateurs */
+  /* Filter criterion: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['filters']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
@@ -3081,14 +3085,14 @@ function onb_global_views_default_views() {
     205 => '205',
     206 => '206',
   );
-  /* Filter criterion: Indexed Node: Status */
+  /* Filter criterion: Indexed Nœud: Statut */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Node: Item language */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -3158,7 +3162,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Indexed Node: Visuels */
+  /* Field: Indexed Nœud: Visuels */
   $handler->display->display_options['fields']['field_collecvisuels']['id'] = 'field_collecvisuels';
   $handler->display->display_options['fields']['field_collecvisuels']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_collecvisuels']['field'] = 'field_collecvisuels';
@@ -3168,7 +3172,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_collecvisuels']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_collecvisuels']['display'] = 'view';
   $handler->display->display_options['fields']['field_collecvisuels']['view_mode'] = 'visuels_indicateurs';
-  /* Field: Indexed Node: Title */
+  /* Field: Indexed Nœud: Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -3176,21 +3180,21 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
-  /* Field: Indexed Node: Intitulé court */
+  /* Field: Indexed Nœud: Intitulé court */
   $handler->display->display_options['fields']['field_intitule_court']['id'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_intitule_court']['field'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['label'] = '';
   $handler->display->display_options['fields']['field_intitule_court']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_intitule_court']['element_label_colon'] = FALSE;
-  /* Field: Indexed Node: Jeu(x) d'indicateurs */
+  /* Field: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['fields']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['fields']['field_jeux_indicateur']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
   $handler->display->display_options['fields']['field_jeux_indicateur']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_jeux_indicateur']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_jeux_indicateur']['view_mode'] = 'full';
-  /* Field: Indexed Node: Valeur par période */
+  /* Field: Indexed Nœud: Valeur par période */
   $handler->display->display_options['fields']['field_valeurannee']['id'] = 'field_valeurannee';
   $handler->display->display_options['fields']['field_valeurannee']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_valeurannee']['field'] = 'field_valeurannee';
@@ -3210,14 +3214,14 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nœud: Type de contenu */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'fiche_indicateur' => 'fiche_indicateur',
   );
-  /* Filter criterion: Indexed Node: Jeu(x) d'indicateurs */
+  /* Filter criterion: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['filters']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
@@ -3225,14 +3229,14 @@ function onb_global_views_default_views() {
     204 => '204',
     206 => '206',
   );
-  /* Filter criterion: Indexed Node: Status */
+  /* Filter criterion: Indexed Nœud: Statut */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Node: Item language */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -3314,7 +3318,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = '<p>Les indicateurs développés par l&#39;observatoire national de la biodiversité sont organisés en différents <strong>jeux</strong>, chacun s&#39;attachant à couvrir l&#39;ensemble des aspects d&#39;une <strong>thématique </strong>particulière, sur la base d&#39;une série limitée de <strong>questions </strong>de société.</p><p><strong>La consultation la plus appropriée des indicateurs du site passe par l&#39;onglet &quot;<em>Les thématiques</em>&quot; ou l&#39;onglet &quot;<em>Les questions</em>&quot;, chaque indicateur y étant mis en perspective dans son contexte d&#39;utilisation et d&#39;interprétation.</strong></p>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Indexed Node: Visuels */
+  /* Field: Indexed Nœud: Visuels */
   $handler->display->display_options['fields']['field_collecvisuels']['id'] = 'field_collecvisuels';
   $handler->display->display_options['fields']['field_collecvisuels']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_collecvisuels']['field'] = 'field_collecvisuels';
@@ -3324,7 +3328,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_collecvisuels']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_collecvisuels']['display'] = 'view';
   $handler->display->display_options['fields']['field_collecvisuels']['view_mode'] = 'visuels_indicateurs';
-  /* Field: Indexed Node: Title */
+  /* Field: Indexed Nœud: Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -3334,21 +3338,21 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['alt'] = 'Accéder à la fiche indicateur';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
-  /* Field: Indexed Node: Intitulé court */
+  /* Field: Indexed Nœud: Intitulé court */
   $handler->display->display_options['fields']['field_intitule_court']['id'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_intitule_court']['field'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['label'] = '';
   $handler->display->display_options['fields']['field_intitule_court']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_intitule_court']['element_label_colon'] = FALSE;
-  /* Field: Indexed Node: Jeu(x) d'indicateurs */
+  /* Field: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['fields']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['fields']['field_jeux_indicateur']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
   $handler->display->display_options['fields']['field_jeux_indicateur']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_jeux_indicateur']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_jeux_indicateur']['view_mode'] = 'full';
-  /* Field: Indexed Node: Valeur par période */
+  /* Field: Indexed Nœud: Valeur par période */
   $handler->display->display_options['fields']['field_valeurannee']['id'] = 'field_valeurannee';
   $handler->display->display_options['fields']['field_valeurannee']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_valeurannee']['field'] = 'field_valeurannee';
@@ -3357,7 +3361,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_valeurannee']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_valeurannee']['display'] = 'view';
   $handler->display->display_options['fields']['field_valeurannee']['view_mode'] = 'full';
-  /* Field: Indexed Node: Couverture géographique */
+  /* Field: Indexed Nœud: Couverture géographique */
   $handler->display->display_options['fields']['field_couveture_geo']['id'] = 'field_couveture_geo';
   $handler->display->display_options['fields']['field_couveture_geo']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_couveture_geo']['field'] = 'field_couveture_geo';
@@ -3384,7 +3388,7 @@ function onb_global_views_default_views() {
     2 => 'OR',
   );
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nœud: Type de contenu */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -3392,7 +3396,7 @@ function onb_global_views_default_views() {
     'fiche_indicateur' => 'fiche_indicateur',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Indexed Node: Jeu(x) d'indicateurs */
+  /* Filter criterion: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['filters']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
@@ -3400,7 +3404,7 @@ function onb_global_views_default_views() {
     120 => '120',
     122 => '122',
   );
-  /* Filter criterion: Indexed Node: Status */
+  /* Filter criterion: Indexed Nœud: Statut */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -3427,7 +3431,7 @@ function onb_global_views_default_views() {
   );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Indexed Node: Title */
+  /* Field: Indexed Nœud: Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -3445,7 +3449,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['style_options']['provide_file'] = 1;
   $handler->display->display_options['style_options']['parent_sort'] = 0;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Indexed Node: Visuels */
+  /* Field: Indexed Nœud: Visuels */
   $handler->display->display_options['fields']['field_collecvisuels']['id'] = 'field_collecvisuels';
   $handler->display->display_options['fields']['field_collecvisuels']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_collecvisuels']['field'] = 'field_collecvisuels';
@@ -3455,7 +3459,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_collecvisuels']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_collecvisuels']['display'] = 'view';
   $handler->display->display_options['fields']['field_collecvisuels']['view_mode'] = 'visuels_indicateurs';
-  /* Field: Indexed Node: Title */
+  /* Field: Indexed Nœud: Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -3463,14 +3467,14 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
-  /* Field: Indexed Node: Intitulé court */
+  /* Field: Indexed Nœud: Intitulé court */
   $handler->display->display_options['fields']['field_intitule_court']['id'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_intitule_court']['field'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['label'] = '';
   $handler->display->display_options['fields']['field_intitule_court']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_intitule_court']['element_label_colon'] = FALSE;
-  /* Field: Indexed Node: Valeur par période */
+  /* Field: Indexed Nœud: Valeur par période */
   $handler->display->display_options['fields']['field_valeurannee']['id'] = 'field_valeurannee';
   $handler->display->display_options['fields']['field_valeurannee']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_valeurannee']['field'] = 'field_valeurannee';
@@ -3480,7 +3484,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_valeurannee']['display'] = 'view';
   $handler->display->display_options['fields']['field_valeurannee']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_valeurannee']['bypass_access'] = 0;
-  /* Field: Indexed Node: Couverture géographique */
+  /* Field: Indexed Nœud: Couverture géographique */
   $handler->display->display_options['fields']['field_couveture_geo']['id'] = 'field_couveture_geo';
   $handler->display->display_options['fields']['field_couveture_geo']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_couveture_geo']['field'] = 'field_couveture_geo';
@@ -3490,7 +3494,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_couveture_geo']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_couveture_geo']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_couveture_geo']['bypass_access'] = 0;
-  /* Field: Indexed Node: Jeu(x) d'indicateurs */
+  /* Field: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['fields']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['fields']['field_jeux_indicateur']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
@@ -3511,14 +3515,14 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nœud: Type de contenu */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'fiche_indicateur' => 'fiche_indicateur',
   );
-  /* Filter criterion: Indexed Node: Jeu(x) d'indicateurs */
+  /* Filter criterion: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['filters']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
@@ -3526,7 +3530,7 @@ function onb_global_views_default_views() {
     120 => '120',
     122 => '122',
   );
-  /* Filter criterion: Indexed Node: Status */
+  /* Filter criterion: Indexed Nœud: Statut */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -3612,7 +3616,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = '<p>Les indicateurs développés par l&#39;observatoire national de la biodiversité sont organisés en différents <strong>jeux</strong>, chacun s&#39;attachant à couvrir l&#39;ensemble des aspects d&#39;une <strong>thématique </strong>particulière, sur la base d&#39;une série limitée de <strong>questions </strong>de société.</p><p><strong>La consultation la plus appropriée des indicateurs du site passe par l&#39;onglet &quot;<em>Les thématiques</em>&quot; ou l&#39;onglet &quot;<em>Les questions</em>&quot;, chaque indicateur y étant mis en perspective dans son contexte d&#39;utilisation et d&#39;interprétation.</strong></p>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Indexed Node: Visuels */
+  /* Field: Indexed Nœud: Visuels */
   $handler->display->display_options['fields']['field_collecvisuels']['id'] = 'field_collecvisuels';
   $handler->display->display_options['fields']['field_collecvisuels']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_collecvisuels']['field'] = 'field_collecvisuels';
@@ -3622,7 +3626,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_collecvisuels']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_collecvisuels']['display'] = 'view';
   $handler->display->display_options['fields']['field_collecvisuels']['view_mode'] = 'visuels_indicateurs';
-  /* Field: Indexed Node: Title */
+  /* Field: Indexed Nœud: Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -3632,21 +3636,21 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['alt'] = 'Accéder à la fiche indicateur';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
-  /* Field: Indexed Node: Intitulé court */
+  /* Field: Indexed Nœud: Intitulé court */
   $handler->display->display_options['fields']['field_intitule_court']['id'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_intitule_court']['field'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['label'] = '';
   $handler->display->display_options['fields']['field_intitule_court']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_intitule_court']['element_label_colon'] = FALSE;
-  /* Field: Indexed Node: Jeu(x) d'indicateurs */
+  /* Field: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['fields']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['fields']['field_jeux_indicateur']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
   $handler->display->display_options['fields']['field_jeux_indicateur']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_jeux_indicateur']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_jeux_indicateur']['view_mode'] = 'full';
-  /* Field: Indexed Node: Valeur par période */
+  /* Field: Indexed Nœud: Valeur par période */
   $handler->display->display_options['fields']['field_valeurannee']['id'] = 'field_valeurannee';
   $handler->display->display_options['fields']['field_valeurannee']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_valeurannee']['field'] = 'field_valeurannee';
@@ -3655,7 +3659,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_valeurannee']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_valeurannee']['display'] = 'view';
   $handler->display->display_options['fields']['field_valeurannee']['view_mode'] = 'full';
-  /* Field: Indexed Node: Couverture géographique */
+  /* Field: Indexed Nœud: Couverture géographique */
   $handler->display->display_options['fields']['field_couveture_geo']['id'] = 'field_couveture_geo';
   $handler->display->display_options['fields']['field_couveture_geo']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_couveture_geo']['field'] = 'field_couveture_geo';
@@ -3682,7 +3686,7 @@ function onb_global_views_default_views() {
     2 => 'OR',
   );
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nœud: Type de contenu */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -3690,7 +3694,7 @@ function onb_global_views_default_views() {
     'fiche_indicateur' => 'fiche_indicateur',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Indexed Node: Jeu(x) d'indicateurs */
+  /* Filter criterion: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['filters']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
@@ -3699,7 +3703,7 @@ function onb_global_views_default_views() {
     122 => '122',
     123 => '123',
   );
-  /* Filter criterion: Indexed Node: Status */
+  /* Filter criterion: Indexed Nœud: Statut */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -3780,7 +3784,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = '<p>Les indicateurs développés par l&#39;observatoire national de la biodiversité sont organisés en différents <strong>jeux</strong>, chacun s&#39;attachant à couvrir l&#39;ensemble des aspects d&#39;une <strong>thématique </strong>particulière, sur la base d&#39;une série limitée de <strong>questions </strong>de société.</p><p><strong>La consultation la plus appropriée des indicateurs du site passe par l&#39;onglet &quot;<em>Les thématiques</em>&quot; ou l&#39;onglet &quot;<em>Les questions</em>&quot;, chaque indicateur y étant mis en perspective dans son contexte d&#39;utilisation et d&#39;interprétation.</strong></p>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Indexed Node: Visuels */
+  /* Field: Indexed Nœud: Visuels */
   $handler->display->display_options['fields']['field_collecvisuels']['id'] = 'field_collecvisuels';
   $handler->display->display_options['fields']['field_collecvisuels']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_collecvisuels']['field'] = 'field_collecvisuels';
@@ -3790,7 +3794,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_collecvisuels']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_collecvisuels']['display'] = 'view';
   $handler->display->display_options['fields']['field_collecvisuels']['view_mode'] = 'visuels_indicateurs';
-  /* Field: Indexed Node: Title */
+  /* Field: Indexed Nœud: Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -3800,21 +3804,21 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['alt'] = 'Accéder à la fiche indicateur';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
-  /* Field: Indexed Node: Intitulé court */
+  /* Field: Indexed Nœud: Intitulé court */
   $handler->display->display_options['fields']['field_intitule_court']['id'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_intitule_court']['field'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['label'] = '';
   $handler->display->display_options['fields']['field_intitule_court']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_intitule_court']['element_label_colon'] = FALSE;
-  /* Field: Indexed Node: Jeu(x) d'indicateurs */
+  /* Field: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['fields']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['fields']['field_jeux_indicateur']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
   $handler->display->display_options['fields']['field_jeux_indicateur']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_jeux_indicateur']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_jeux_indicateur']['view_mode'] = 'full';
-  /* Field: Indexed Node: Valeur par période */
+  /* Field: Indexed Nœud: Valeur par période */
   $handler->display->display_options['fields']['field_valeurannee']['id'] = 'field_valeurannee';
   $handler->display->display_options['fields']['field_valeurannee']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_valeurannee']['field'] = 'field_valeurannee';
@@ -3823,7 +3827,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_valeurannee']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_valeurannee']['display'] = 'view';
   $handler->display->display_options['fields']['field_valeurannee']['view_mode'] = 'full';
-  /* Field: Indexed Node: Couverture géographique */
+  /* Field: Indexed Nœud: Couverture géographique */
   $handler->display->display_options['fields']['field_couveture_geo']['id'] = 'field_couveture_geo';
   $handler->display->display_options['fields']['field_couveture_geo']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_couveture_geo']['field'] = 'field_couveture_geo';
@@ -3850,7 +3854,7 @@ function onb_global_views_default_views() {
     2 => 'OR',
   );
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nœud: Type de contenu */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -3858,14 +3862,14 @@ function onb_global_views_default_views() {
     'fiche_indicateur' => 'fiche_indicateur',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Indexed Node: Jeu(x) d'indicateurs */
+  /* Filter criterion: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['filters']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['value'] = array(
     123 => '123',
   );
-  /* Filter criterion: Indexed Node: Status */
+  /* Filter criterion: Indexed Nœud: Statut */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -3946,7 +3950,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = '<p>Les indicateurs développés par l&#39;observatoire national de la biodiversité sont organisés en différents <strong>jeux</strong>, chacun s&#39;attachant à couvrir l&#39;ensemble des aspects d&#39;une <strong>thématique </strong>particulière, sur la base d&#39;une série limitée de <strong>questions </strong>de société.</p><p><strong>La consultation la plus appropriée des indicateurs du site passe par l&#39;onglet &quot;<em>Les thématiques</em>&quot; ou l&#39;onglet &quot;<em>Les questions</em>&quot;, chaque indicateur y étant mis en perspective dans son contexte d&#39;utilisation et d&#39;interprétation.</strong></p>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Indexed Node: Visuels */
+  /* Field: Indexed Nœud: Visuels */
   $handler->display->display_options['fields']['field_collecvisuels']['id'] = 'field_collecvisuels';
   $handler->display->display_options['fields']['field_collecvisuels']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_collecvisuels']['field'] = 'field_collecvisuels';
@@ -3956,7 +3960,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_collecvisuels']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_collecvisuels']['display'] = 'view';
   $handler->display->display_options['fields']['field_collecvisuels']['view_mode'] = 'visuels_indicateurs';
-  /* Field: Indexed Node: Title */
+  /* Field: Indexed Nœud: Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -3966,21 +3970,21 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['alt'] = 'Accéder à la fiche indicateur';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
-  /* Field: Indexed Node: Intitulé court */
+  /* Field: Indexed Nœud: Intitulé court */
   $handler->display->display_options['fields']['field_intitule_court']['id'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_intitule_court']['field'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['label'] = '';
   $handler->display->display_options['fields']['field_intitule_court']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_intitule_court']['element_label_colon'] = FALSE;
-  /* Field: Indexed Node: Jeu(x) d'indicateurs */
+  /* Field: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['fields']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['fields']['field_jeux_indicateur']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
   $handler->display->display_options['fields']['field_jeux_indicateur']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_jeux_indicateur']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_jeux_indicateur']['view_mode'] = 'full';
-  /* Field: Indexed Node: Valeur par période */
+  /* Field: Indexed Nœud: Valeur par période */
   $handler->display->display_options['fields']['field_valeurannee']['id'] = 'field_valeurannee';
   $handler->display->display_options['fields']['field_valeurannee']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_valeurannee']['field'] = 'field_valeurannee';
@@ -3989,7 +3993,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_valeurannee']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_valeurannee']['display'] = 'view';
   $handler->display->display_options['fields']['field_valeurannee']['view_mode'] = 'full';
-  /* Field: Indexed Node: Couverture géographique */
+  /* Field: Indexed Nœud: Couverture géographique */
   $handler->display->display_options['fields']['field_couveture_geo']['id'] = 'field_couveture_geo';
   $handler->display->display_options['fields']['field_couveture_geo']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['fields']['field_couveture_geo']['field'] = 'field_couveture_geo';
@@ -4016,7 +4020,7 @@ function onb_global_views_default_views() {
     2 => 'OR',
   );
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nœud: Type de contenu */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -4024,14 +4028,14 @@ function onb_global_views_default_views() {
     'fiche_indicateur' => 'fiche_indicateur',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Indexed Node: Jeu(x) d'indicateurs */
+  /* Filter criterion: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['filters']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['value'] = array(
     125 => '125',
   );
-  /* Filter criterion: Indexed Node: Status */
+  /* Filter criterion: Indexed Nœud: Statut */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -4098,7 +4102,7 @@ function onb_global_views_default_views() {
 Remarque : il s\'agit de la première publication de ces questions, qui sont donc susceptibles d\'évoluer au fil de la maturation de la réflexion ayant servi pour la rédaction des pages &quot;<em>Questions</em>&quot;  ci-dessous dans le périmètre de la <a href="http://indicateurs-biodiversite.naturefrance.fr/thematiques/biodiversite-milieux-marins-et-littoraux">thématique définie</a>. </p>
 ';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
-  /* Field: Indexed Node: Visuel */
+  /* Field: Indexed Nœud: Visuel */
   $handler->display->display_options['fields']['field_questionvisuel']['id'] = 'field_questionvisuel';
   $handler->display->display_options['fields']['field_questionvisuel']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['fields']['field_questionvisuel']['field'] = 'field_questionvisuel';
@@ -4109,18 +4113,18 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
     'image_style' => 'square_thumbnail_80',
     'image_link' => '',
   );
-  /* Field: Indexed Node: Title */
+  /* Field: Indexed Nœud: Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
-  /* Sort criterion: Indexed Node: Title */
+  /* Sort criterion: Indexed Nœud: Titre */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nœud: Type de contenu */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -4128,21 +4132,21 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
     'question' => 'question',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Indexed Node: Status */
+  /* Filter criterion: Indexed Nœud: Statut */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Node: Jeu(x) d'indicateurs */
+  /* Filter criterion: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['filters']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['value'] = array(
     128 => '128',
   );
-  /* Filter criterion: Indexed Node: Item language */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -4188,13 +4192,13 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['empty'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Indexed Node: Jeu(x) d'indicateurs */
+  /* Relationship: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['relationships']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['relationships']['field_jeux_indicateur']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['relationships']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
   $handler->display->display_options['relationships']['field_jeux_indicateur']['label'] = 'Indicators set(s)';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Indexed Node: Jeu(x) d'indicateurs */
+  /* Field: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['fields']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['fields']['field_jeux_indicateur']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['fields']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
@@ -4207,7 +4211,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['fields']['field_jeux_indicateur']['bypass_access'] = 0;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nœud: Type de contenu */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -4215,14 +4219,14 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
     'question' => 'question',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Indexed Node: Status */
+  /* Filter criterion: Indexed Nœud: Statut */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Node: Jeu(x) d'indicateurs */
+  /* Filter criterion: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['filters']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
@@ -4246,7 +4250,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
     129 => '129',
     203 => '203',
   );
-  /* Filter criterion: Indexed Node: Item language */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -4299,7 +4303,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nœud: Type de contenu */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -4307,21 +4311,21 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
     'question' => 'question',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Indexed Node: Status */
+  /* Filter criterion: Indexed Nœud: Statut */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Node: Jeu(x) d'indicateurs */
+  /* Filter criterion: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['filters']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['value'] = array(
     120 => '120',
   );
-  /* Filter criterion: Indexed Node: Item language */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -4380,7 +4384,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nœud: Type de contenu */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -4388,21 +4392,21 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
     'question' => 'question',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Indexed Node: Status */
+  /* Filter criterion: Indexed Nœud: Statut */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Node: Jeu(x) d'indicateurs */
+  /* Filter criterion: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['filters']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['value'] = array(
     121 => '121',
   );
-  /* Filter criterion: Indexed Node: Item language */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -4459,7 +4463,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nœud: Type de contenu */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -4467,21 +4471,21 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
     'question' => 'question',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Indexed Node: Status */
+  /* Filter criterion: Indexed Nœud: Statut */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Node: Jeu(x) d'indicateurs */
+  /* Filter criterion: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['filters']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['value'] = array(
     130 => '130',
   );
-  /* Filter criterion: Indexed Node: Item language */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -4540,7 +4544,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nœud: Type de contenu */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -4548,21 +4552,21 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
     'question' => 'question',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Indexed Node: Status */
+  /* Filter criterion: Indexed Nœud: Statut */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Node: Jeu(x) d'indicateurs */
+  /* Filter criterion: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['filters']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['value'] = array(
     125 => '125',
   );
-  /* Filter criterion: Indexed Node: Item language */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -4671,7 +4675,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nœud: Type de contenu */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -4679,21 +4683,21 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
     'question' => 'question',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Indexed Node: Status */
+  /* Filter criterion: Indexed Nœud: Statut */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Node: Jeu(x) d'indicateurs */
+  /* Filter criterion: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['filters']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['value'] = array(
     204 => '204',
   );
-  /* Filter criterion: Indexed Node: Item language */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -4749,7 +4753,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nœud: Type de contenu */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -4757,21 +4761,21 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
     'question' => 'question',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Indexed Node: Jeu(x) d'indicateurs */
+  /* Filter criterion: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['filters']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['value'] = array(
     120 => '120',
   );
-  /* Filter criterion: Indexed Node: Status */
+  /* Filter criterion: Indexed Nœud: Statut */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Node: Item language */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -4824,7 +4828,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nœud: Type de contenu */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -4832,21 +4836,21 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
     'question' => 'question',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Indexed Node: Jeu(x) d'indicateurs */
+  /* Filter criterion: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['filters']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['value'] = array(
     121 => '121',
   );
-  /* Filter criterion: Indexed Node: Status */
+  /* Filter criterion: Indexed Nœud: Statut */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Node: Item language */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -4915,7 +4919,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nœud: Type de contenu */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -4923,21 +4927,21 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
     'question' => 'question',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Indexed Node: Jeu(x) d'indicateurs */
+  /* Filter criterion: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['filters']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['value'] = array(
     125 => '125',
   );
-  /* Filter criterion: Indexed Node: Status */
+  /* Filter criterion: Indexed Nœud: Statut */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Node: Item language */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -4987,7 +4991,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nœud: Type de contenu */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -4995,21 +4999,21 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
     'question' => 'question',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Indexed Node: Jeu(x) d'indicateurs */
+  /* Filter criterion: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['filters']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['value'] = array(
     204 => '204',
   );
-  /* Filter criterion: Indexed Node: Status */
+  /* Filter criterion: Indexed Nœud: Statut */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Node: Item language */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -5034,7 +5038,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nœud: Type de contenu */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -5042,7 +5046,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
     'question' => 'question',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Indexed Node: Jeu(x) d'indicateurs */
+  /* Filter criterion: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['filters']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
@@ -5092,7 +5096,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nœud: Type de contenu */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -5100,21 +5104,21 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
     'question' => 'question',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Indexed Node: Jeu(x) d'indicateurs */
+  /* Filter criterion: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['filters']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['value'] = array(
     128 => '128',
   );
-  /* Filter criterion: Indexed Node: Status */
+  /* Filter criterion: Indexed Nœud: Statut */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Node: Item language */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -5166,7 +5170,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nœud: Type de contenu */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -5174,21 +5178,21 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
     'question' => 'question',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Indexed Node: Jeu(x) d'indicateurs */
+  /* Filter criterion: Indexed Nœud: Jeu(x) d'indicateurs */
   $handler->display->display_options['filters']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur']['value'] = array(
     130 => '130',
   );
-  /* Filter criterion: Indexed Node: Status */
+  /* Filter criterion: Indexed Nœud: Statut */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Node: Item language */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -5297,11 +5301,11 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  /* Relationship: Indexed Taxonomy term: Vocabulary */
+  /* Relationship: Indexed Terme de taxonomie: Vocabulaire */
   $handler->display->display_options['relationships']['vocabulary']['id'] = 'vocabulary';
   $handler->display->display_options['relationships']['vocabulary']['table'] = 'search_api_index_search_term_thematique';
   $handler->display->display_options['relationships']['vocabulary']['field'] = 'vocabulary';
-  /* Field: Indexed Taxonomy term: Visuel */
+  /* Field: Indexed Terme de taxonomie: Visuel */
   $handler->display->display_options['fields']['field_visuel']['id'] = 'field_visuel';
   $handler->display->display_options['fields']['field_visuel']['table'] = 'search_api_index_search_term_thematique';
   $handler->display->display_options['fields']['field_visuel']['field'] = 'field_visuel';
@@ -5312,14 +5316,14 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
     'image_style' => 'square_thumbnail_80',
     'image_link' => '',
   );
-  /* Field: Indexed Taxonomy term: Name */
+  /* Field: Indexed Terme de taxonomie: Nom */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'search_api_index_search_term_thematique';
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['name']['link_to_entity'] = 1;
-  /* Sort criterion: Indexed Taxonomy term: Weight */
+  /* Sort criterion: Indexed Terme de taxonomie: Poids */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'search_api_index_search_term_thematique';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
@@ -5391,13 +5395,13 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Indexed Taxonomy term: Weight */
+  /* Sort criterion: Indexed Terme de taxonomie: Poids */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'search_api_index_search_term_thematique';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Taxonomy term: Type de thématique */
+  /* Filter criterion: Indexed Terme de taxonomie: Type de thématique */
   $handler->display->display_options['filters']['field_type_de_thematique']['id'] = 'field_type_de_thematique';
   $handler->display->display_options['filters']['field_type_de_thematique']['table'] = 'search_api_index_search_term_thematique';
   $handler->display->display_options['filters']['field_type_de_thematique']['field'] = 'field_type_de_thematique';
