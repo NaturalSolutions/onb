@@ -336,6 +336,51 @@ function onb_global_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'page_onb_en';
+  $context->description = 'ONB EN';
+  $context->tag = 'ONB';
+  $context->conditions = array(
+    'menu' => array(
+      'values' => array(
+        'node/460' => 'node/460',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'menu_block-3' => array(
+          'module' => 'menu_block',
+          'delta' => '3',
+          'region' => 'sidebar_first',
+          'weight' => '-10',
+        ),
+        'print-print-links' => array(
+          'module' => 'print',
+          'delta' => 'print-links',
+          'region' => 'sidebar_first',
+          'weight' => '-9',
+        ),
+        'block-11' => array(
+          'module' => 'block',
+          'delta' => '11',
+          'region' => 'sidebar_first',
+          'weight' => '-8',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('ONB');
+  t('ONB EN');
+  $export['page_onb_en'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'page_question';
   $context->description = '';
   $context->tag = 'Questions';

@@ -9,6 +9,56 @@
  */
 function onb_global_taxonomy_default_vocabularies() {
   return array(
+    'accessibilit_ressource' => array(
+      'name' => 'Accessibilité de la ressource',
+      'machine_name' => 'accessibilit_ressource',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'language' => 'und',
+      'i18n_mode' => 1,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
+    'auteurs' => array(
+      'name' => 'Auteurs',
+      'machine_name' => 'auteurs',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'language' => 'und',
+      'i18n_mode' => 0,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
     'biais' => array(
       'name' => 'Biais',
       'machine_name' => 'biais',
@@ -37,6 +87,31 @@ function onb_global_taxonomy_default_vocabularies() {
     'cdb' => array(
       'name' => 'CDB',
       'machine_name' => 'cdb',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'language' => 'und',
+      'i18n_mode' => 1,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
+    'classification_ressource' => array(
+      'name' => 'Classification de la ressource',
+      'machine_name' => 'classification_ressource',
       'description' => '',
       'hierarchy' => 0,
       'module' => 'taxonomy',
@@ -359,6 +434,56 @@ function onb_global_taxonomy_default_vocabularies() {
         ),
       ),
     ),
+    'nature_ressource_externe' => array(
+      'name' => 'Nature de la ressource externe',
+      'machine_name' => 'nature_ressource_externe',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'language' => 'und',
+      'i18n_mode' => 1,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
+    'nature_ressource_interne' => array(
+      'name' => 'Nature de la ressource interne',
+      'machine_name' => 'nature_ressource_interne',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'language' => 'und',
+      'i18n_mode' => 1,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
     'niveau_d_appropriation' => array(
       'name' => 'Niveau d\'appropriation',
       'machine_name' => 'niveau_d_appropriation',
@@ -434,9 +559,109 @@ function onb_global_taxonomy_default_vocabularies() {
         ),
       ),
     ),
+    'origine_ressource' => array(
+      'name' => 'Origine de la  ressource',
+      'machine_name' => 'origine_ressource',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'language' => 'und',
+      'i18n_mode' => 1,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
     'pas_de_temps' => array(
       'name' => 'Pas de temps',
       'machine_name' => 'pas_de_temps',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'language' => 'und',
+      'i18n_mode' => 1,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
+    'perimetre_geographique' => array(
+      'name' => 'Périmètre géographique',
+      'machine_name' => 'perimetre_geographique',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'language' => 'und',
+      'i18n_mode' => 1,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
+    'perimetre_sectoriel' => array(
+      'name' => 'Périmètre sectoriel',
+      'machine_name' => 'perimetre_sectoriel',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'language' => 'und',
+      'i18n_mode' => 1,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
+    'perimetre_thematique_naturel' => array(
+      'name' => 'Périmètre thématique naturel',
+      'machine_name' => 'perimetre_thematique_naturel',
       'description' => '',
       'hierarchy' => 0,
       'module' => 'taxonomy',
@@ -562,6 +787,31 @@ function onb_global_taxonomy_default_vocabularies() {
     'statut_de_publication' => array(
       'name' => 'Statut de publication',
       'machine_name' => 'statut_de_publication',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'language' => 'und',
+      'i18n_mode' => 1,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
+    'statut_ressource' => array(
+      'name' => 'Statut de la ressource',
+      'machine_name' => 'statut_ressource',
       'description' => '',
       'hierarchy' => 0,
       'module' => 'taxonomy',

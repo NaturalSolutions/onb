@@ -12,6 +12,34 @@ function onb_global_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
+  $export['backup_migrate-quick_backup'] = array(
+    'cache' => 1,
+    'custom' => 0,
+    'delta' => 'quick_backup',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'backup_migrate',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'indicateurs' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'indicateurs',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   $export['block-hp_acces_question_biodiversite'] = array(
     'cache' => -1,
     'custom' => 0,
@@ -64,34 +92,6 @@ function onb_global_default_fe_block_settings() {
         'status' => 0,
         'theme' => 'indicateurs',
         'weight' => 0,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 0,
-  );
-
-  $export['comment-recent'] = array(
-    'cache' => 1,
-    'custom' => 0,
-    'delta' => 'recent',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 0,
-    'module' => 'comment',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'adminimal' => array(
-        'region' => 'dashboard_inactive',
-        'status' => 1,
-        'theme' => 'adminimal',
-        'weight' => -20,
-      ),
-      'indicateurs' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'indicateurs',
-        'weight' => -20,
       ),
     ),
     'title' => '',
@@ -406,734 +406,6 @@ function onb_global_default_fe_block_settings() {
     'visibility' => 0,
   );
 
-  $export['facetapi-1PFPsSdQ1oEEDvWm0FDBZrlA8YUBd9xN'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => '1PFPsSdQ1oEEDvWm0FDBZrlA8YUBd9xN',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 1,
-    'module' => 'facetapi',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'adminimal' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'adminimal',
-        'weight' => 0,
-      ),
-      'indicateurs' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'indicateurs',
-        'weight' => 0,
-      ),
-    ),
-    'title' => 'Date of Analysis FRB',
-    'visibility' => 0,
-  );
-
-  $export['facetapi-2nqGdPLV05KnsANhCZeBMYNCR7Km2Wou'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => '2nqGdPLV05KnsANhCZeBMYNCR7Km2Wou',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 0,
-    'module' => 'facetapi',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'adminimal' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'adminimal',
-        'weight' => -10,
-      ),
-      'indicateurs' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'indicateurs',
-        'weight' => -10,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 0,
-  );
-
-  $export['facetapi-3lTwMC5PVStMfwVIVo860u5kQBG4eQKo'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => '3lTwMC5PVStMfwVIVo860u5kQBG4eQKo',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 1,
-    'module' => 'facetapi',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'adminimal' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'adminimal',
-        'weight' => -15,
-      ),
-      'indicateurs' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'indicateurs',
-        'weight' => -15,
-      ),
-    ),
-    'title' => 'Pressure Type',
-    'visibility' => 0,
-  );
-
-  $export['facetapi-5PJZvOhKN1WCbQmELrQjWYWBUah5UQYp'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => '5PJZvOhKN1WCbQmELrQjWYWBUah5UQYp',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 1,
-    'module' => 'facetapi',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'adminimal' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'adminimal',
-        'weight' => -21,
-      ),
-      'indicateurs' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'indicateurs',
-        'weight' => -21,
-      ),
-    ),
-    'title' => 'Geographic coverage',
-    'visibility' => 0,
-  );
-
-  $export['facetapi-8C1JGy9U5JwO2jylR0FTyxNCtD1kGQMO'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => '8C1JGy9U5JwO2jylR0FTyxNCtD1kGQMO',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 1,
-    'module' => 'facetapi',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'adminimal' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'adminimal',
-        'weight' => 0,
-      ),
-      'indicateurs' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'indicateurs',
-        'weight' => 0,
-      ),
-    ),
-    'title' => 'Topic type',
-    'visibility' => 0,
-  );
-
-  $export['facetapi-BYtTIDsMiwLQyV1FpOE4A8vyl5UDjGvM'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'BYtTIDsMiwLQyV1FpOE4A8vyl5UDjGvM',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 1,
-    'module' => 'facetapi',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'adminimal' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'adminimal',
-        'weight' => 0,
-      ),
-      'indicateurs' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'indicateurs',
-        'weight' => 0,
-      ),
-    ),
-    'title' => 'Status of publication',
-    'visibility' => 0,
-  );
-
-  $export['facetapi-EgptENIDqhxpG2y3euh1nWFuN2ocy5mV'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'EgptENIDqhxpG2y3euh1nWFuN2ocy5mV',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 0,
-    'module' => 'facetapi',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'adminimal' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'adminimal',
-        'weight' => -7,
-      ),
-      'indicateurs' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'indicateurs',
-        'weight' => -7,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 0,
-  );
-
-  $export['facetapi-JKQatLJ3o3ev1dIdqGLuGrZYRpqbL0QQ'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'JKQatLJ3o3ev1dIdqGLuGrZYRpqbL0QQ',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 1,
-    'module' => 'facetapi',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'adminimal' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'adminimal',
-        'weight' => 0,
-      ),
-      'indicateurs' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'indicateurs',
-        'weight' => 0,
-      ),
-    ),
-    'title' => 'Territorial scale of restitution',
-    'visibility' => 0,
-  );
-
-  $export['facetapi-L5gDc0x0x1flmvqZOzKA7VzXuAnVGykq'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'L5gDc0x0x1flmvqZOzKA7VzXuAnVGykq',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 0,
-    'module' => 'facetapi',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'adminimal' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'adminimal',
-        'weight' => -8,
-      ),
-      'indicateurs' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'indicateurs',
-        'weight' => -8,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 0,
-  );
-
-  $export['facetapi-LSI7jZWvqfi8MbFKzT02JOrqfFrjuHpw'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'LSI7jZWvqfi8MbFKzT02JOrqfFrjuHpw',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 0,
-    'module' => 'facetapi',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'adminimal' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'adminimal',
-        'weight' => 0,
-      ),
-      'indicateurs' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'indicateurs',
-        'weight' => 0,
-      ),
-    ),
-    'title' => 'Vocabulaire',
-    'visibility' => 0,
-  );
-
-  $export['facetapi-Ps7TNGjqNuYITL1WWq9MqTtN6cH7HXnQ'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'Ps7TNGjqNuYITL1WWq9MqTtN6cH7HXnQ',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 1,
-    'module' => 'facetapi',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'adminimal' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'adminimal',
-        'weight' => 0,
-      ),
-      'indicateurs' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'indicateurs',
-        'weight' => 0,
-      ),
-    ),
-    'title' => 'Release date of the indicators set',
-    'visibility' => 0,
-  );
-
-  $export['facetapi-d0bp4OQSE2q0vtCzwYPNhhvUzTccy1U6'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'd0bp4OQSE2q0vtCzwYPNhhvUzTccy1U6',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 1,
-    'module' => 'facetapi',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'adminimal' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'adminimal',
-        'weight' => 0,
-      ),
-      'indicateurs' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'indicateurs',
-        'weight' => 0,
-      ),
-    ),
-    'title' => 'Topic',
-    'visibility' => 0,
-  );
-
-  $export['facetapi-dXAySpxiyV0afdjYuyWp5Oo5jBUYZhBO'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'dXAySpxiyV0afdjYuyWp5Oo5jBUYZhBO',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 0,
-    'module' => 'facetapi',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'adminimal' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'adminimal',
-        'weight' => -9,
-      ),
-      'indicateurs' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'indicateurs',
-        'weight' => -9,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 0,
-  );
-
-  $export['facetapi-elAtZQS3y2moNjP82yifaBhIgfen0Iwj'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'elAtZQS3y2moNjP82yifaBhIgfen0Iwj',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 0,
-    'module' => 'facetapi',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'adminimal' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'adminimal',
-        'weight' => -18,
-      ),
-      'indicateurs' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'indicateurs',
-        'weight' => -18,
-      ),
-    ),
-    'title' => 'DPSIR',
-    'visibility' => 0,
-  );
-
-  $export['facetapi-iBmdtOA6tLf1TxWZ6z7GHHMJZok1xfpN'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'iBmdtOA6tLf1TxWZ6z7GHHMJZok1xfpN',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 1,
-    'module' => 'facetapi',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'adminimal' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'adminimal',
-        'weight' => 0,
-      ),
-      'indicateurs' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'indicateurs',
-        'weight' => 0,
-      ),
-    ),
-    'title' => 'Grower',
-    'visibility' => 0,
-  );
-
-  $export['facetapi-jbnMBFs4msbpxVc3vgYx2bbVtR1lm4QM'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'jbnMBFs4msbpxVc3vgYx2bbVtR1lm4QM',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 1,
-    'module' => 'facetapi',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'adminimal' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'adminimal',
-        'weight' => -19,
-      ),
-      'indicateurs' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'indicateurs',
-        'weight' => -19,
-      ),
-    ),
-    'title' => 'SNB Strategic Orientation',
-    'visibility' => 0,
-  );
-
-  $export['facetapi-jugyl43OZdfGX6R3k5meeF1KhIYZt2dl'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'jugyl43OZdfGX6R3k5meeF1KhIYZt2dl',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 1,
-    'module' => 'facetapi',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'adminimal' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'adminimal',
-        'weight' => -23,
-      ),
-      'indicateurs' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'indicateurs',
-        'weight' => -23,
-      ),
-    ),
-    'title' => 'SNB Strategic Orientation',
-    'visibility' => 0,
-  );
-
-  $export['facetapi-mz1U7vEhTOGB4H2dC0zmfwGvT31f0Fwp'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'mz1U7vEhTOGB4H2dC0zmfwGvT31f0Fwp',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 1,
-    'module' => 'facetapi',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'adminimal' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'adminimal',
-        'weight' => -17,
-      ),
-      'indicateurs' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'indicateurs',
-        'weight' => -17,
-      ),
-    ),
-    'title' => 'Keyword',
-    'visibility' => 0,
-  );
-
-  $export['facetapi-pOr55Bx1UDk595Yd0nNveGRjdDfo651V'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'pOr55Bx1UDk595Yd0nNveGRjdDfo651V',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 0,
-    'module' => 'facetapi',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'adminimal' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'adminimal',
-        'weight' => 0,
-      ),
-      'indicateurs' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'indicateurs',
-        'weight' => 0,
-      ),
-    ),
-    'title' => 'Première lettre',
-    'visibility' => 0,
-  );
-
-  $export['facetapi-qGOSv5YJIsBgtVx2w2IiwF04F9CBiZt1'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'qGOSv5YJIsBgtVx2w2IiwF04F9CBiZt1',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 0,
-    'module' => 'facetapi',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'adminimal' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'adminimal',
-        'weight' => 0,
-      ),
-      'indicateurs' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'indicateurs',
-        'weight' => 0,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 0,
-  );
-
-  $export['facetapi-qHkLlWWHvZedkTRbfBhaefsoE1aCYinL'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'qHkLlWWHvZedkTRbfBhaefsoE1aCYinL',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 1,
-    'module' => 'facetapi',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'adminimal' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'adminimal',
-        'weight' => -23,
-      ),
-      'indicateurs' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'indicateurs',
-        'weight' => -23,
-      ),
-    ),
-    'title' => 'Habitat',
-    'visibility' => 0,
-  );
-
-  $export['facetapi-qIKfIl3fzLn7s6sYLnlpIAnMOifVQCbE'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'qIKfIl3fzLn7s6sYLnlpIAnMOifVQCbE',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 1,
-    'module' => 'facetapi',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'adminimal' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'adminimal',
-        'weight' => 0,
-      ),
-      'indicateurs' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'indicateurs',
-        'weight' => 0,
-      ),
-    ),
-    'title' => 'Indicators set',
-    'visibility' => 0,
-  );
-
-  $export['facetapi-ryQChgBW1gs9cHvN0NhB70XOPfSy0g2Y'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'ryQChgBW1gs9cHvN0NhB70XOPfSy0g2Y',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 0,
-    'module' => 'facetapi',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'adminimal' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'adminimal',
-        'weight' => 0,
-      ),
-      'indicateurs' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'indicateurs',
-        'weight' => 0,
-      ),
-    ),
-    'title' => 'Thématique',
-    'visibility' => 0,
-  );
-
-  $export['facetapi-uh114tgpzyuTf7QTaLrgbskK2IDReJ1y'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'uh114tgpzyuTf7QTaLrgbskK2IDReJ1y',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 1,
-    'module' => 'facetapi',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'adminimal' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'adminimal',
-        'weight' => 0,
-      ),
-      'indicateurs' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'indicateurs',
-        'weight' => 0,
-      ),
-    ),
-    'title' => 'FRB Analysis',
-    'visibility' => 0,
-  );
-
-  $export['facetapi-vDQ4ArGTU9uhM0FTXpDbAA9obMysq2DH'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'vDQ4ArGTU9uhM0FTXpDbAA9obMysq2DH',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 0,
-    'module' => 'facetapi',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'adminimal' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'adminimal',
-        'weight' => 0,
-      ),
-      'indicateurs' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'indicateurs',
-        'weight' => 0,
-      ),
-    ),
-    'title' => 'Date d\'actualisation de la fiche',
-    'visibility' => 0,
-  );
-
-  $export['facetapi-zJW12ifaWLGVfq1Iot3Ncl3DGmGaPiJq'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'zJW12ifaWLGVfq1Iot3Ncl3DGmGaPiJq',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 1,
-    'module' => 'facetapi',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'adminimal' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'adminimal',
-        'weight' => -20,
-      ),
-      'indicateurs' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'indicateurs',
-        'weight' => -20,
-      ),
-    ),
-    'title' => 'SNB goal',
-    'visibility' => 0,
-  );
-
   $export['lexicon-lexicon_random_term'] = array(
     'cache' => 1,
     'custom' => 0,
@@ -1329,6 +601,62 @@ function onb_global_default_fe_block_settings() {
       ),
     ),
     'title' => 'Thématiques',
+    'visibility' => 0,
+  );
+
+  $export['menu_block-3'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => 3,
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'menu_block',
+    'node_types' => array(),
+    'pages' => 'onb*',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'indicateurs' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'indicateurs',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 1,
+  );
+
+  $export['menu_block-4'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => 4,
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'menu_block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'indicateurs' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'indicateurs',
+        'weight' => 0,
+      ),
+    ),
+    'title' => 'Topics',
     'visibility' => 0,
   );
 
@@ -2094,6 +1422,34 @@ function onb_global_default_fe_block_settings() {
     'cache' => -1,
     'custom' => 0,
     'delta' => '-exp-recherche_questions-page_8',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'indicateurs' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'indicateurs',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['views--exp-recherche_questions-page_9'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => '-exp-recherche_questions-page_9',
     'i18n_block_language' => array(),
     'i18n_mode' => 0,
     'module' => 'views',

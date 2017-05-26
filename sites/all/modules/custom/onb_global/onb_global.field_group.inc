@@ -13,6 +13,37 @@ function onb_global_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_activites|node|fiche_ressource_bibliographique|form';
+  $field_group->group_name = 'group_activites';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'fiche_ressource_bibliographique';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '_add_new_group';
+  $field_group->data = array(
+    'label' => 'Activités',
+    'weight' => '11',
+    'children' => array(
+      0 => 'field_objectifs_missions',
+      1 => 'field_biens_services_produits',
+      2 => 'field_beneficiaires',
+      3 => 'field_projets',
+      4 => 'field_nb_indicateurs_used',
+    ),
+    'format_type' => 'accordion-item',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_activites|node|fiche_ressource_bibliographique|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_anal_frb|node|fiche_indicateur|print';
   $field_group->group_name = 'group_anal_frb';
   $field_group->entity_type = 'node';
@@ -2642,6 +2673,36 @@ function onb_global_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_perimetre|node|fiche_ressource_bibliographique|form';
+  $field_group->group_name = 'group_perimetre';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'fiche_ressource_bibliographique';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '_add_new_group';
+  $field_group->data = array(
+    'label' => 'Périmètre',
+    'weight' => '10',
+    'children' => array(
+      0 => 'field_perimetre_geo',
+      1 => 'field_perimetre_geo_precisions',
+      2 => 'field_perimetre_thematique_nat',
+      3 => 'field_perimetre_sectoriel',
+    ),
+    'format_type' => 'accordion-item',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_perimetre|node|fiche_ressource_bibliographique|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_pistes_groupe|node|fiche_indicateur|default';
   $field_group->group_name = 'group_pistes_groupe';
   $field_group->entity_type = 'node';
@@ -3436,6 +3497,70 @@ function onb_global_field_group_info() {
     ),
   );
   $field_groups['group_qualite|node|fiche_indicateur|question_indicateur'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_ref_peri_activites|node|fiche_ressource_bibliographique|form';
+  $field_group->group_name = 'group_ref_peri_activites';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'fiche_ressource_bibliographique';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Références, périmètre et activités',
+    'weight' => '8',
+    'children' => array(
+      0 => 'group_references_ressource',
+      1 => 'group_perimetre',
+      2 => 'group_activites',
+    ),
+    'format_type' => 'accordion',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'effect' => 'none',
+        'classes' => 'group-ref-peri-activites field-group-accordion',
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_ref_peri_activites|node|fiche_ressource_bibliographique|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_references_ressource|node|fiche_ressource_bibliographique|form';
+  $field_group->group_name = 'group_references_ressource';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'fiche_ressource_bibliographique';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '_add_new_group';
+  $field_group->data = array(
+    'label' => 'Références de la ressource',
+    'weight' => '9',
+    'children' => array(
+      0 => 'field_date_production',
+      1 => 'field_auteurs_complement',
+      2 => 'field_files',
+      3 => 'field_nature_interne',
+      4 => 'field_nature_externe',
+      5 => 'field_pagination',
+      6 => 'field_description',
+      7 => 'field_citation',
+      8 => 'field_auteures',
+    ),
+    'format_type' => 'accordion-item',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_references_ressource|node|fiche_ressource_bibliographique|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -4823,6 +4948,7 @@ function onb_global_field_group_info() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Activités');
   t('Analyse FRB');
   t('Analyse de l\'indicateur');
   t('Brève définition');
@@ -4859,9 +4985,12 @@ function onb_global_field_group_info() {
   t('Producteur');
   t('Production de l\'indicateur');
   t('Présentation et interprétation de l\'indicateur');
+  t('Périmètre');
   t('Qualité');
   t('Relations avec le(s) objectif(s) renseigné(s)');
   t('Rupture de série');
+  t('Références de la ressource');
+  t('Références, périmètre et activités');
   t('SUEB');
   t('Type de variable');
   t('Type(s) DPSIR');

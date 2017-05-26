@@ -52,15 +52,22 @@ function onb_global_user_default_permissions() {
     'module' => 'views',
   );
 
-  // Exported permission: 'access comments'.
-  $permissions['access comments'] = array(
-    'name' => 'access comments',
+  // Exported permission: 'access backup and migrate'.
+  $permissions['access backup and migrate'] = array(
+    'name' => 'access backup and migrate',
     'roles' => array(
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
     ),
-    'module' => 'comment',
+    'module' => 'backup_migrate',
+  );
+
+  // Exported permission: 'access backup files'.
+  $permissions['access backup files'] = array(
+    'name' => 'access backup files',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'backup_migrate',
   );
 
   // Exported permission: 'access content'.
@@ -263,6 +270,15 @@ function onb_global_user_default_permissions() {
     'module' => 'system',
   );
 
+  // Exported permission: 'administer backup and migrate'.
+  $permissions['administer backup and migrate'] = array(
+    'name' => 'administer backup and migrate',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'backup_migrate',
+  );
+
   // Exported permission: 'administer blocks'.
   $permissions['administer blocks'] = array(
     'name' => 'administer blocks',
@@ -270,15 +286,6 @@ function onb_global_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'block',
-  );
-
-  // Exported permission: 'administer comments'.
-  $permissions['administer comments'] = array(
-    'name' => 'administer comments',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'comment',
   );
 
   // Exported permission: 'administer contact forms'.
@@ -846,6 +853,13 @@ function onb_global_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'create auteur_e content'.
+  $permissions['create auteur_e content'] = array(
+    'name' => 'create auteur_e content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'create event_calendar content'.
   $permissions['create event_calendar content'] = array(
     'name' => 'create event_calendar content',
@@ -951,6 +965,13 @@ function onb_global_user_default_permissions() {
     'module' => 'file_entity',
   );
 
+  // Exported permission: 'delete any auteur_e content'.
+  $permissions['delete any auteur_e content'] = array(
+    'name' => 'delete any auteur_e content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'delete any document files'.
   $permissions['delete any document files'] = array(
     'name' => 'delete any document files',
@@ -1041,6 +1062,15 @@ function onb_global_user_default_permissions() {
     'module' => 'file_entity',
   );
 
+  // Exported permission: 'delete backup files'.
+  $permissions['delete backup files'] = array(
+    'name' => 'delete backup files',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'backup_migrate',
+  );
+
   // Exported permission: 'delete own actualite content'.
   $permissions['delete own actualite content'] = array(
     'name' => 'delete own actualite content',
@@ -1061,6 +1091,13 @@ function onb_global_user_default_permissions() {
       'webmaster' => 'webmaster',
     ),
     'module' => 'file_entity',
+  );
+
+  // Exported permission: 'delete own auteur_e content'.
+  $permissions['delete own auteur_e content'] = array(
+    'name' => 'delete own auteur_e content',
+    'roles' => array(),
+    'module' => 'node',
   );
 
   // Exported permission: 'delete own document files'.
@@ -1172,6 +1209,20 @@ function onb_global_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete terms in accessibilit_ressource'.
+  $permissions['delete terms in accessibilit_ressource'] = array(
+    'name' => 'delete terms in accessibilit_ressource',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in auteurs'.
+  $permissions['delete terms in auteurs'] = array(
+    'name' => 'delete terms in auteurs',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'delete terms in biais'.
   $permissions['delete terms in biais'] = array(
     'name' => 'delete terms in biais',
@@ -1189,6 +1240,13 @@ function onb_global_user_default_permissions() {
       'administrator' => 'administrator',
       'webmaster' => 'webmaster',
     ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in classification_ressource'.
+  $permissions['delete terms in classification_ressource'] = array(
+    'name' => 'delete terms in classification_ressource',
+    'roles' => array(),
     'module' => 'taxonomy',
   );
 
@@ -1322,6 +1380,20 @@ function onb_global_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: 'delete terms in nature_ressource_externe'.
+  $permissions['delete terms in nature_ressource_externe'] = array(
+    'name' => 'delete terms in nature_ressource_externe',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in nature_ressource_interne'.
+  $permissions['delete terms in nature_ressource_interne'] = array(
+    'name' => 'delete terms in nature_ressource_interne',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'delete terms in niveau_d_appropriation'.
   $permissions['delete terms in niveau_d_appropriation'] = array(
     'name' => 'delete terms in niveau_d_appropriation',
@@ -1352,6 +1424,13 @@ function onb_global_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: 'delete terms in origine_ressource'.
+  $permissions['delete terms in origine_ressource'] = array(
+    'name' => 'delete terms in origine_ressource',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'delete terms in pas_de_temps'.
   $permissions['delete terms in pas_de_temps'] = array(
     'name' => 'delete terms in pas_de_temps',
@@ -1359,6 +1438,27 @@ function onb_global_user_default_permissions() {
       'administrator' => 'administrator',
       'webmaster' => 'webmaster',
     ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in perimetre_geographique'.
+  $permissions['delete terms in perimetre_geographique'] = array(
+    'name' => 'delete terms in perimetre_geographique',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in perimetre_sectoriel'.
+  $permissions['delete terms in perimetre_sectoriel'] = array(
+    'name' => 'delete terms in perimetre_sectoriel',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in perimetre_thematique_naturel'.
+  $permissions['delete terms in perimetre_thematique_naturel'] = array(
+    'name' => 'delete terms in perimetre_thematique_naturel',
+    'roles' => array(),
     'module' => 'taxonomy',
   );
 
@@ -1419,6 +1519,13 @@ function onb_global_user_default_permissions() {
       'administrator' => 'administrator',
       'webmaster' => 'webmaster',
     ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in statut_ressource'.
+  $permissions['delete terms in statut_ressource'] = array(
+    'name' => 'delete terms in statut_ressource',
+    'roles' => array(),
     'module' => 'taxonomy',
   );
 
@@ -1646,6 +1753,13 @@ function onb_global_user_default_permissions() {
     'module' => 'file_entity',
   );
 
+  // Exported permission: 'edit any auteur_e content'.
+  $permissions['edit any auteur_e content'] = array(
+    'name' => 'edit any auteur_e content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'edit any document files'.
   $permissions['edit any document files'] = array(
     'name' => 'edit any document files',
@@ -1758,13 +1872,11 @@ function onb_global_user_default_permissions() {
     'module' => 'file_entity',
   );
 
-  // Exported permission: 'edit own comments'.
-  $permissions['edit own comments'] = array(
-    'name' => 'edit own comments',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'comment',
+  // Exported permission: 'edit own auteur_e content'.
+  $permissions['edit own auteur_e content'] = array(
+    'name' => 'edit own auteur_e content',
+    'roles' => array(),
+    'module' => 'node',
   );
 
   // Exported permission: 'edit own document files'.
@@ -1866,6 +1978,20 @@ function onb_global_user_default_permissions() {
     'module' => 'file_entity',
   );
 
+  // Exported permission: 'edit terms in accessibilit_ressource'.
+  $permissions['edit terms in accessibilit_ressource'] = array(
+    'name' => 'edit terms in accessibilit_ressource',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in auteurs'.
+  $permissions['edit terms in auteurs'] = array(
+    'name' => 'edit terms in auteurs',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'edit terms in biais'.
   $permissions['edit terms in biais'] = array(
     'name' => 'edit terms in biais',
@@ -1883,6 +2009,13 @@ function onb_global_user_default_permissions() {
       'administrator' => 'administrator',
       'webmaster' => 'webmaster',
     ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in classification_ressource'.
+  $permissions['edit terms in classification_ressource'] = array(
+    'name' => 'edit terms in classification_ressource',
+    'roles' => array(),
     'module' => 'taxonomy',
   );
 
@@ -2016,6 +2149,20 @@ function onb_global_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: 'edit terms in nature_ressource_externe'.
+  $permissions['edit terms in nature_ressource_externe'] = array(
+    'name' => 'edit terms in nature_ressource_externe',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in nature_ressource_interne'.
+  $permissions['edit terms in nature_ressource_interne'] = array(
+    'name' => 'edit terms in nature_ressource_interne',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'edit terms in niveau_d_appropriation'.
   $permissions['edit terms in niveau_d_appropriation'] = array(
     'name' => 'edit terms in niveau_d_appropriation',
@@ -2046,6 +2193,13 @@ function onb_global_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: 'edit terms in origine_ressource'.
+  $permissions['edit terms in origine_ressource'] = array(
+    'name' => 'edit terms in origine_ressource',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'edit terms in pas_de_temps'.
   $permissions['edit terms in pas_de_temps'] = array(
     'name' => 'edit terms in pas_de_temps',
@@ -2053,6 +2207,27 @@ function onb_global_user_default_permissions() {
       'administrator' => 'administrator',
       'webmaster' => 'webmaster',
     ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in perimetre_geographique'.
+  $permissions['edit terms in perimetre_geographique'] = array(
+    'name' => 'edit terms in perimetre_geographique',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in perimetre_sectoriel'.
+  $permissions['edit terms in perimetre_sectoriel'] = array(
+    'name' => 'edit terms in perimetre_sectoriel',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in perimetre_thematique_naturel'.
+  $permissions['edit terms in perimetre_thematique_naturel'] = array(
+    'name' => 'edit terms in perimetre_thematique_naturel',
+    'roles' => array(),
     'module' => 'taxonomy',
   );
 
@@ -2113,6 +2288,13 @@ function onb_global_user_default_permissions() {
       'administrator' => 'administrator',
       'webmaster' => 'webmaster',
     ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in statut_ressource'.
+  $permissions['edit terms in statut_ressource'] = array(
+    'name' => 'edit terms in statut_ressource',
+    'roles' => array(),
     'module' => 'taxonomy',
   );
 
@@ -2371,14 +2553,13 @@ function onb_global_user_default_permissions() {
     'module' => 'googleanalytics',
   );
 
-  // Exported permission: 'post comments'.
-  $permissions['post comments'] = array(
-    'name' => 'post comments',
+  // Exported permission: 'perform backup'.
+  $permissions['perform backup'] = array(
+    'name' => 'perform backup',
     'roles' => array(
       'administrator' => 'administrator',
-      'authenticated user' => 'authenticated user',
     ),
-    'module' => 'comment',
+    'module' => 'backup_migrate',
   );
 
   // Exported permission: 'recompute computed fields'.
@@ -2397,6 +2578,15 @@ function onb_global_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'features',
+  );
+
+  // Exported permission: 'restore from backup'.
+  $permissions['restore from backup'] = array(
+    'name' => 'restore from backup',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'backup_migrate',
   );
 
   // Exported permission: 'revert revisions'.
@@ -2437,16 +2627,6 @@ function onb_global_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'page_title',
-  );
-
-  // Exported permission: 'skip comment approval'.
-  $permissions['skip comment approval'] = array(
-    'name' => 'skip comment approval',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'authenticated user' => 'authenticated user',
-    ),
-    'module' => 'comment',
   );
 
   // Exported permission: 'tamper acronyme'.

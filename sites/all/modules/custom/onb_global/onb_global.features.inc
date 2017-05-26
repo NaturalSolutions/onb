@@ -8,6 +8,9 @@
  * Implements hook_ctools_plugin_api().
  */
 function onb_global_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "backup_migrate" && $api == "backup_migrate_exportables") {
+    return array("version" => "1");
+  }
   if ($module == "context" && $api == "context") {
     return array("version" => "3");
   }
@@ -168,51 +171,20 @@ function onb_global_image_default_styles() {
 }
 
 /**
- * Implements hook_menu_position_default_menu_positions().
- */
-function onb_global_menu_position_default_menu_positions() {
-  $items = array(
-    'actualites' => array(
-      'admin_title' => 'actualites',
-      'enabled' => 1,
-      'conditions' => 'a:1:{s:12:"content_type";a:1:{s:12:"content_type";a:1:{s:9:"actualite";s:9:"actualite";}}}',
-      'menu_name' => 'main-menu',
-      'plid' => 2362,
-      'mlid' => 2363,
-      'weight' => 0,
-      'machine_name' => 'actualites',
-    ),
-    'indicateur' => array(
-      'admin_title' => 'indicateur',
-      'enabled' => 1,
-      'conditions' => 'a:1:{s:12:"content_type";a:1:{s:12:"content_type";a:1:{s:16:"fiche_indicateur";s:16:"fiche_indicateur";}}}',
-      'menu_name' => 'main-menu',
-      'plid' => 1237,
-      'mlid' => 1699,
-      'weight' => 0,
-      'machine_name' => 'indicateur',
-    ),
-    'question' => array(
-      'admin_title' => 'question',
-      'enabled' => 1,
-      'conditions' => 'a:1:{s:12:"content_type";a:1:{s:12:"content_type";a:1:{s:8:"question";s:8:"question";}}}',
-      'menu_name' => 'main-menu',
-      'plid' => 1474,
-      'mlid' => 1698,
-      'weight' => 0,
-      'machine_name' => 'question',
-    ),
-  );
-  return $items;
-}
-
-/**
  * Implements hook_node_info().
  */
 function onb_global_node_info() {
   $items = array(
     'actualite' => array(
       'name' => t('Actualite'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Titre'),
+      'help' => '',
+    ),
+    'auteur_e' => array(
+      'name' => t('Auteur(e)'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',

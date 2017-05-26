@@ -5,3 +5,26 @@
  */
 
 include_once 'onb_global.features.inc';
+
+/**
+ * Implements hook_wysiwyg_plugin().
+ *
+ * @see hook_wysiwyg_plugin()
+ */
+function onb_global_wysiwyg_plugin($editor, $version) {
+  switch ($editor) {
+    case 'ckeditor':
+      return array(
+        'nbsp' => array(
+          'path' => drupal_get_path('module', 'onb_global') . '/plugins/nbsp',
+          'filename' => 'plugin.js',
+          'buttons' => array(
+            'nbsp' => t('Non breaking space'),
+          ),
+          'load' => TRUE,
+          'internal' => FALSE,
+        ),
+      );
+      break;
+  }
+}

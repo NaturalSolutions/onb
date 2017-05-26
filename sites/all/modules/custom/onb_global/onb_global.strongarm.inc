@@ -13,23 +13,9 @@ function onb_global_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = '404_fast_html';
-  $strongarm->value = '<html xmlns="http://www.w3.org/1999/xhtml"><head><title>404 Not Found</title></head><body><h1>Not Found</h1><p>The requested URL "@path" was not found on this server.</p></body></html>';
-  $export['404_fast_html'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'clean_url';
   $strongarm->value = 1;
   $export['clean_url'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'clear_all_question';
-  $strongarm->value = 0;
-  $export['clear_all_question'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -138,34 +124,6 @@ function onb_global_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'colorbox_caption_trim';
-  $strongarm->value = 0;
-  $export['colorbox_caption_trim'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'colorbox_caption_trim_length';
-  $strongarm->value = 75;
-  $export['colorbox_caption_trim_length'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'colorbox_compression_type';
-  $strongarm->value = 'source';
-  $export['colorbox_compression_type'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'colorbox_custom_settings_activate';
-  $strongarm->value = 0;
-  $export['colorbox_custom_settings_activate'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'colorbox_fixed';
   $strongarm->value = 1;
   $export['colorbox_fixed'] = $strongarm;
@@ -173,307 +131,353 @@ function onb_global_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'colorbox_initialheight';
-  $strongarm->value = 100;
-  $export['colorbox_initialheight'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'colorbox_initialwidth';
-  $strongarm->value = 300;
-  $export['colorbox_initialwidth'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'colorbox_inline';
-  $strongarm->value = 1;
-  $export['colorbox_inline'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'colorbox_load';
-  $strongarm->value = 1;
-  $export['colorbox_load'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'colorbox_maxheight';
-  $strongarm->value = '100%';
-  $export['colorbox_maxheight'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'colorbox_maxwidth';
-  $strongarm->value = '100%';
-  $export['colorbox_maxwidth'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'colorbox_opacity';
-  $strongarm->value = 0.84999999999999998;
-  $export['colorbox_opacity'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'colorbox_overlayclose';
-  $strongarm->value = 1;
-  $export['colorbox_overlayclose'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'colorbox_pages';
-  $strongarm->value = 'admin*
-img_assist*
-imce*
-node/add/*
-node/*/edit';
-  $export['colorbox_pages'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'colorbox_path';
-  $strongarm->value = 'sites/all/libraries/colorbox';
-  $export['colorbox_path'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'colorbox_scrolling';
-  $strongarm->value = 1;
-  $export['colorbox_scrolling'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'colorbox_slideshow';
+  $strongarm->name = 'date_api_use_iso8601';
   $strongarm->value = 0;
-  $export['colorbox_slideshow'] = $strongarm;
+  $export['date_api_use_iso8601'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'colorbox_slideshowauto';
-  $strongarm->value = 1;
-  $export['colorbox_slideshowauto'] = $strongarm;
+  $strongarm->name = 'date_api_version';
+  $strongarm->value = '7.2';
+  $export['date_api_version'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'colorbox_slideshowspeed';
-  $strongarm->value = 2500;
-  $export['colorbox_slideshowspeed'] = $strongarm;
+  $strongarm->name = 'date_default_timezone';
+  $strongarm->value = 'Europe/Berlin';
+  $export['date_default_timezone'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'colorbox_style';
-  $strongarm->value = 'default';
-  $export['colorbox_style'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'colorbox_text_close';
-  $strongarm->value = 'Close';
-  $export['colorbox_text_close'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'colorbox_text_current';
-  $strongarm->value = '{current} of {total}';
-  $export['colorbox_text_current'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'colorbox_text_next';
-  $strongarm->value = 'Next »';
-  $export['colorbox_text_next'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'colorbox_text_previous';
-  $strongarm->value = '« Prev';
-  $export['colorbox_text_previous'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'colorbox_text_start';
-  $strongarm->value = 'start slideshow';
-  $export['colorbox_text_start'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'colorbox_text_stop';
-  $strongarm->value = 'stop slideshow';
-  $export['colorbox_text_stop'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'colorbox_transition_speed';
-  $strongarm->value = 350;
-  $export['colorbox_transition_speed'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'colorbox_transition_type';
-  $strongarm->value = 'elastic';
-  $export['colorbox_transition_type'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_anonymous_event_calendar';
-  $strongarm->value = 0;
-  $export['comment_anonymous_event_calendar'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_anonymous_fiche_ressource_bibliographique';
-  $strongarm->value = 0;
-  $export['comment_anonymous_fiche_ressource_bibliographique'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_mode_event_calendar';
-  $strongarm->value = 1;
-  $export['comment_default_mode_event_calendar'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_mode_fiche_ressource_bibliographique';
-  $strongarm->value = 1;
-  $export['comment_default_mode_fiche_ressource_bibliographique'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_per_page_event_calendar';
-  $strongarm->value = '50';
-  $export['comment_default_per_page_event_calendar'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_per_page_fiche_ressource_bibliographique';
-  $strongarm->value = '50';
-  $export['comment_default_per_page_fiche_ressource_bibliographique'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_event_calendar';
+  $strongarm->name = 'date_first_day';
   $strongarm->value = '1';
-  $export['comment_event_calendar'] = $strongarm;
+  $export['date_first_day'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_fiche_ressource_bibliographique';
-  $strongarm->value = '2';
-  $export['comment_fiche_ressource_bibliographique'] = $strongarm;
+  $strongarm->name = 'date_format_annee';
+  $strongarm->value = 'Y';
+  $export['date_format_annee'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_form_location_event_calendar';
-  $strongarm->value = 1;
-  $export['comment_form_location_event_calendar'] = $strongarm;
+  $strongarm->name = 'date_format_jour';
+  $strongarm->value = 'd/m/Y';
+  $export['date_format_jour'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_form_location_fiche_ressource_bibliographique';
-  $strongarm->value = 1;
-  $export['comment_form_location_fiche_ressource_bibliographique'] = $strongarm;
+  $strongarm->name = 'date_format_long';
+  $strongarm->value = 'l, j F, Y - H:i';
+  $export['date_format_long'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_preview_event_calendar';
-  $strongarm->value = '1';
-  $export['comment_preview_event_calendar'] = $strongarm;
+  $strongarm->name = 'date_format_medium';
+  $strongarm->value = 'j F, Y - H:i';
+  $export['date_format_medium'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_preview_fiche_ressource_bibliographique';
-  $strongarm->value = '1';
-  $export['comment_preview_fiche_ressource_bibliographique'] = $strongarm;
+  $strongarm->name = 'date_format_search_api_facetapi_DAY';
+  $strongarm->value = 'F j, Y';
+  $export['date_format_search_api_facetapi_DAY'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_subject_field_event_calendar';
-  $strongarm->value = 1;
-  $export['comment_subject_field_event_calendar'] = $strongarm;
+  $strongarm->name = 'date_format_search_api_facetapi_HOUR';
+  $strongarm->value = 'H:__';
+  $export['date_format_search_api_facetapi_HOUR'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_subject_field_fiche_ressource_bibliographique';
-  $strongarm->value = 1;
-  $export['comment_subject_field_fiche_ressource_bibliographique'] = $strongarm;
+  $strongarm->name = 'date_format_search_api_facetapi_MINUTE';
+  $strongarm->value = 'H:i';
+  $export['date_format_search_api_facetapi_MINUTE'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'diff_enable_revisions_page_node_event_calendar';
-  $strongarm->value = 1;
-  $export['diff_enable_revisions_page_node_event_calendar'] = $strongarm;
+  $strongarm->name = 'date_format_search_api_facetapi_MONTH';
+  $strongarm->value = 'F Y';
+  $export['date_format_search_api_facetapi_MONTH'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'diff_enable_revisions_page_node_fiche_ressource_bibliographique';
-  $strongarm->value = 1;
-  $export['diff_enable_revisions_page_node_fiche_ressource_bibliographique'] = $strongarm;
+  $strongarm->name = 'date_format_search_api_facetapi_SECOND';
+  $strongarm->value = 'H:i:S';
+  $export['date_format_search_api_facetapi_SECOND'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'diff_show_preview_changes_node_event_calendar';
-  $strongarm->value = 1;
-  $export['diff_show_preview_changes_node_event_calendar'] = $strongarm;
+  $strongarm->name = 'date_format_search_api_facetapi_YEAR';
+  $strongarm->value = 'Y';
+  $export['date_format_search_api_facetapi_YEAR'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'diff_show_preview_changes_node_fiche_ressource_bibliographique';
-  $strongarm->value = 1;
-  $export['diff_show_preview_changes_node_fiche_ressource_bibliographique'] = $strongarm;
+  $strongarm->name = 'date_format_short';
+  $strongarm->value = 'd/m/Y - H:i';
+  $export['date_format_short'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'diff_view_mode_preview_node_event_calendar';
-  $strongarm->value = 'full';
-  $export['diff_view_mode_preview_node_event_calendar'] = $strongarm;
+  $strongarm->name = 'date_views_day_format_without_year';
+  $strongarm->value = 'l, F j';
+  $export['date_views_day_format_without_year'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'diff_view_mode_preview_node_fiche_ressource_bibliographique';
-  $strongarm->value = 'full';
-  $export['diff_view_mode_preview_node_fiche_ressource_bibliographique'] = $strongarm;
+  $strongarm->name = 'date_views_day_format_with_year';
+  $strongarm->value = 'l, F j, Y';
+  $export['date_views_day_format_with_year'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_views_month_format_without_year';
+  $strongarm->value = 'F';
+  $export['date_views_month_format_without_year'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_views_month_format_with_year';
+  $strongarm->value = 'F Y';
+  $export['date_views_month_format_with_year'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_views_week_format_without_year';
+  $strongarm->value = 'F j';
+  $export['date_views_week_format_without_year'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_views_week_format_with_year';
+  $strongarm->value = 'F j, Y';
+  $export['date_views_week_format_with_year'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'default_field_group';
+  $strongarm->value = array(
+    'group_analyse|node|fiche_indicateur|form' => FALSE,
+    'group_qualite|node|fiche_indicateur|form' => FALSE,
+    'group_avantages|node|fiche_indicateur|form' => FALSE,
+    'group_orientations_principales|node|fiche_indicateur|form' => FALSE,
+    'group_objectifs_snb_principaux|node|fiche_indicateur|form' => FALSE,
+    'group_definition|node|fiche_indicateur|form' => FALSE,
+    'group_breve_definition|node|fiche_indicateur|form' => FALSE,
+    'group_orientations_objectifs|node|fiche_indicateur|form' => FALSE,
+    'group_objectifs_snb_secondaires|node|fiche_indicateur|form' => FALSE,
+    'group_relation_objectifs|node|fiche_indicateur|form' => FALSE,
+    'group_limites|node|fiche_indicateur|form' => FALSE,
+    'group_pistes|node|fiche_indicateur|form' => FALSE,
+    'group_pistes_groupe|node|fiche_indicateur|form' => FALSE,
+    'group_type_dpsir|node|fiche_indicateur|form' => TRUE,
+    'group_type_pression|node|fiche_indicateur|form' => FALSE,
+    'group_milieux_concernes|node|fiche_indicateur|form' => FALSE,
+    'group_couverture_geo|node|fiche_indicateur|form' => FALSE,
+    'group_echelle_restitution|node|fiche_indicateur|form' => FALSE,
+    'group_grain_precision_echelle|node|fiche_indicateur|form' => FALSE,
+    'group_type_variable|node|fiche_indicateur|form' => FALSE,
+    'group_unite_mesure|node|fiche_indicateur|form' => FALSE,
+    'group_valeur_cible|node|fiche_indicateur|form' => FALSE,
+    'group_continuite_snb|node|fiche_indicateur|form' => FALSE,
+    'group_retro_calcul|node|fiche_indicateur|form' => FALSE,
+    'group_relation_indicateurs|node|fiche_indicateur|form' => FALSE,
+    'group_production|node|fiche_indicateur|form' => FALSE,
+    'group_producteur|node|fiche_indicateur|form' => FALSE,
+    'group_visuels|node|fiche_indicateur|form' => FALSE,
+    'group_presentation|node|fiche_indicateur|form' => FALSE,
+    'group_origine_source|node|fiche_indicateur|form' => FALSE,
+    'group_methodologie|node|fiche_indicateur|form' => FALSE,
+    'group_pas_tps_disponibilite|node|fiche_indicateur|form' => FALSE,
+    'group_pas_tps_restitution|node|fiche_indicateur|form' => FALSE,
+    'group_date_publication|node|fiche_indicateur|form' => FALSE,
+    'group_rupture_serie|node|fiche_indicateur|form' => FALSE,
+    'group_mod_interpretation|node|fiche_indicateur|form' => FALSE,
+    'group_definition|node|fiche_indicateur|default' => FALSE,
+    'group_objets_indicateurs|node|question|form' => FALSE,
+    'group_valeurannee|node|fiche_indicateur|form' => FALSE,
+    'group_definition|node|fiche_indicateur|full' => FALSE,
+    'group_production|node|fiche_indicateur|full' => FALSE,
+    'group_presentation_interpret|node|fiche_indicateur|full' => FALSE,
+    'group_analyse|node|fiche_indicateur|full' => FALSE,
+    'group_pistes|node|fiche_indicateur|full' => FALSE,
+    'group_analyse|node|fiche_indicateur|default' => FALSE,
+    'group_qualite|node|fiche_indicateur|default' => FALSE,
+    'group_avantages|node|fiche_indicateur|default' => FALSE,
+    'group_orientations_principales|node|fiche_indicateur|default' => FALSE,
+    'group_objectifs_snb_principaux|node|fiche_indicateur|default' => FALSE,
+    'group_breve_definition|node|fiche_indicateur|default' => FALSE,
+    'group_orientations_objectifs|node|fiche_indicateur|default' => FALSE,
+    'group_objectifs_snb_secondaires|node|fiche_indicateur|default' => FALSE,
+    'group_relation_objectifs|node|fiche_indicateur|default' => FALSE,
+    'group_limites|node|fiche_indicateur|default' => FALSE,
+    'group_pistes|node|fiche_indicateur|default' => FALSE,
+    'group_pistes_groupe|node|fiche_indicateur|default' => FALSE,
+    'group_type_dpsir|node|fiche_indicateur|default' => FALSE,
+    'group_type_pression|node|fiche_indicateur|default' => FALSE,
+    'group_milieux_concernes|node|fiche_indicateur|default' => FALSE,
+    'group_couverture_geo|node|fiche_indicateur|default' => FALSE,
+    'group_echelle_restitution|node|fiche_indicateur|default' => FALSE,
+    'group_grain_precision_echelle|node|fiche_indicateur|default' => FALSE,
+    'group_type_variable|node|fiche_indicateur|default' => FALSE,
+    'group_unite_mesure|node|fiche_indicateur|default' => FALSE,
+    'group_valeur_cible|node|fiche_indicateur|default' => FALSE,
+    'group_continuite_snb|node|fiche_indicateur|default' => FALSE,
+    'group_retro_calcul|node|fiche_indicateur|default' => FALSE,
+    'group_relation_indicateurs|node|fiche_indicateur|default' => FALSE,
+    'group_production|node|fiche_indicateur|default' => FALSE,
+    'group_producteur|node|fiche_indicateur|default' => FALSE,
+    'group_visuels|node|fiche_indicateur|default' => FALSE,
+    'group_presentation|node|fiche_indicateur|default' => FALSE,
+    'group_origine_source|node|fiche_indicateur|default' => FALSE,
+    'group_methodologie|node|fiche_indicateur|default' => FALSE,
+    'group_pas_tps_disponibilite|node|fiche_indicateur|default' => FALSE,
+    'group_pas_tps_restitution|node|fiche_indicateur|default' => FALSE,
+    'group_date_publication|node|fiche_indicateur|default' => FALSE,
+    'group_rupture_serie|node|fiche_indicateur|default' => FALSE,
+    'group_mod_interpretation|node|fiche_indicateur|default' => FALSE,
+    'group_valeurannee|node|fiche_indicateur|default' => FALSE,
+    'group_analyse|node|fiche_indicateur|print' => FALSE,
+    'group_qualite|node|fiche_indicateur|print' => FALSE,
+    'group_avantages|node|fiche_indicateur|print' => FALSE,
+    'group_orientations_principales|node|fiche_indicateur|print' => FALSE,
+    'group_objectifs_snb_principaux|node|fiche_indicateur|print' => FALSE,
+    'group_definition|node|fiche_indicateur|print' => FALSE,
+    'group_breve_definition|node|fiche_indicateur|print' => FALSE,
+    'group_orientations_objectifs|node|fiche_indicateur|print' => FALSE,
+    'group_objectifs_snb_secondaires|node|fiche_indicateur|print' => FALSE,
+    'group_relation_objectifs|node|fiche_indicateur|print' => FALSE,
+    'group_limites|node|fiche_indicateur|print' => FALSE,
+    'group_pistes|node|fiche_indicateur|print' => FALSE,
+    'group_pistes_groupe|node|fiche_indicateur|print' => FALSE,
+    'group_type_dpsir|node|fiche_indicateur|print' => FALSE,
+    'group_type_pression|node|fiche_indicateur|print' => FALSE,
+    'group_milieux_concernes|node|fiche_indicateur|print' => FALSE,
+    'group_couverture_geo|node|fiche_indicateur|print' => FALSE,
+    'group_echelle_restitution|node|fiche_indicateur|print' => FALSE,
+    'group_grain_precision_echelle|node|fiche_indicateur|print' => FALSE,
+    'group_type_variable|node|fiche_indicateur|print' => FALSE,
+    'group_unite_mesure|node|fiche_indicateur|print' => FALSE,
+    'group_valeur_cible|node|fiche_indicateur|print' => FALSE,
+    'group_continuite_snb|node|fiche_indicateur|print' => FALSE,
+    'group_retro_calcul|node|fiche_indicateur|print' => FALSE,
+    'group_relation_indicateurs|node|fiche_indicateur|print' => FALSE,
+    'group_production|node|fiche_indicateur|print' => FALSE,
+    'group_producteur|node|fiche_indicateur|print' => FALSE,
+    'group_visuels|node|fiche_indicateur|print' => FALSE,
+    'group_presentation|node|fiche_indicateur|print' => FALSE,
+    'group_origine_source|node|fiche_indicateur|print' => FALSE,
+    'group_methodologie|node|fiche_indicateur|print' => FALSE,
+    'group_pas_tps_disponibilite|node|fiche_indicateur|print' => FALSE,
+    'group_pas_tps_restitution|node|fiche_indicateur|print' => FALSE,
+    'group_date_publication|node|fiche_indicateur|print' => FALSE,
+    'group_rupture_serie|node|fiche_indicateur|print' => FALSE,
+    'group_mod_interpretation|node|fiche_indicateur|print' => FALSE,
+    'group_valeurannee|node|fiche_indicateur|print' => FALSE,
+    'group_sousquestion_details|field_collection_item|field_sousquestion_indicateur|form' => TRUE,
+    'group_sousquestion_indic_phrase|field_collection_item|field_sousquestion_indicateur|form' => FALSE,
+    'group_sousquestion_indic_visuels|field_collection_item|field_sousquestion_indicateur|form' => FALSE,
+    'group_sousquestion_indic_compl|field_collection_item|field_sousquestion_indicateur|form' => FALSE,
+    'group_sousquestion_indicateurs|field_collection_item|field_sousquestion|form' => FALSE,
+    'group_sousquestion_indicateur|field_collection_item|field_sousquestion|form' => FALSE,
+    'group_analyse|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_qualite|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_avantages|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_orientations_principales|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_objectifs_snb_principaux|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_definition|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_breve_definition|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_orientations_objectifs|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_objectifs_snb_secondaires|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_relation_objectifs|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_limites|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_pistes|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_pistes_groupe|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_type_dpsir|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_type_pression|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_milieux_concernes|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_couverture_geo|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_echelle_restitution|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_grain_precision_echelle|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_type_variable|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_unite_mesure|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_valeur_cible|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_continuite_snb|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_retro_calcul|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_relation_indicateurs|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_production|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_producteur|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_visuels|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_presentation|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_origine_source|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_methodologie|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_pas_tps_disponibilite|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_pas_tps_restitution|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_date_publication|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_rupture_serie|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_mod_interpretation|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_valeurannee|node|fiche_indicateur|question_indicateur' => FALSE,
+    'group_modalite_interpretation|node|fiche_indicateur|question_indicateur_ok' => FALSE,
+    'group_enbref|node|fiche_indicateur|full' => FALSE,
+    'group_relation_obj|node|fiche_indicateur|question_indicateur_ok' => FALSE,
+    'group_obj_snb|node|fiche_indicateur|form' => TRUE,
+    'group_obj_cdb|node|fiche_indicateur|form' => TRUE,
+    'group_cdb|node|fiche_indicateur|form' => FALSE,
+    'group_sueb|node|fiche_indicateur|form' => FALSE,
+    'group_analyse_frb|node|fiche_indicateur|form' => FALSE,
+    'group_anal_frb|node|fiche_indicateur|form' => TRUE,
+    'group_analyse_frb|node|fiche_indicateur|full' => FALSE,
+    'group_cdb|node|fiche_indicateur|print' => FALSE,
+    'group_sueb|node|fiche_indicateur|print' => FALSE,
+    'group_analyse_frb|node|fiche_indicateur|print' => FALSE,
+    'group_anal_frb|node|fiche_indicateur|print' => FALSE,
+    'group_enbref_impression|node|fiche_indicateur|print' => FALSE,
+    'group_jeu|node|fiche_indicateur|form' => FALSE,
+    'group_references_ressource|node|fiche_ressource_bibliographique|form' => FALSE,
+    'group_perimetre|node|fiche_ressource_bibliographique|form' => FALSE,
+    'group_activites|node|fiche_ressource_bibliographique|form' => FALSE,
+    'group_ref_peri_activites|node|fiche_ressource_bibliographique|form' => FALSE,
+  );
+  $export['default_field_group'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'default_file_type';
+  $strongarm->value = array(
+    'application' => TRUE,
+  );
+  $export['default_file_type'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'default_nodes_main';
+  $strongarm->value = '10';
+  $export['default_nodes_main'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -537,20 +541,6 @@ node/*/edit';
   $strongarm->name = 'disable_messages_page_filter_paths';
   $strongarm->value = '';
   $export['disable_messages_page_filter_paths'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'drupal_http_request_fails';
-  $strongarm->value = FALSE;
-  $export['drupal_http_request_fails'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'drupal_private_key';
-  $strongarm->value = 'oUH55HYZNgOHidm19Y7dRRO_fy5xEvdlQta0xxK_g9w';
-  $export['drupal_private_key'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -657,6 +647,13 @@ node/*/edit';
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'event_calendar_node_type';
+  $strongarm->value = 'event_calendar';
+  $export['event_calendar_node_type'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'extlink_alert';
   $strongarm->value = 0;
   $export['extlink_alert'] = $strongarm;
@@ -734,25 +731,971 @@ node/*/edit';
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings';
+  $strongarm->value = '';
+  $export['field_bundle_settings'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_bean__lien_thematiques_questions';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'entityreference_view_widget' => array(
+        'custom_settings' => TRUE,
+      ),
+      'default' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(
+        'title' => array(
+          'default' => array(
+            'weight' => '-9',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
+    ),
+  );
+  $export['field_bundle_settings_bean__lien_thematiques_questions'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_field_collection_item__field_analyse_frb';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'entityreference_view_widget' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'sousquestion_indicateur_impress' => array(
+        'custom_settings' => FALSE,
+      ),
+      'sous_question_impress' => array(
+        'custom_settings' => FALSE,
+      ),
+      'visuels_indicateurs' => array(
+        'custom_settings' => FALSE,
+      ),
+      'impression_field_collection' => array(
+        'custom_settings' => TRUE,
+      ),
+      'sous_question_gauche' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_field_collection_item__field_analyse_frb'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_field_collection_item__field_collecvisuels';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'entityreference_view_widget' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'visuels_indicateurs' => array(
+        'custom_settings' => TRUE,
+      ),
+      'sousquestion_indicateur_impress' => array(
+        'custom_settings' => FALSE,
+      ),
+      'sous_question_impress' => array(
+        'custom_settings' => FALSE,
+      ),
+      'visuel_indicateur_page' => array(
+        'custom_settings' => FALSE,
+      ),
+      'impression_field_collection' => array(
+        'custom_settings' => TRUE,
+      ),
+      'sous_question_gauche' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_field_collection_item__field_collecvisuels'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_field_collection_item__field_definitions';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'teaser2' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'impression_field_collection' => array(
+        'custom_settings' => FALSE,
+      ),
+      'sousquestion_indicateur_impress' => array(
+        'custom_settings' => FALSE,
+      ),
+      'sous_question_gauche' => array(
+        'custom_settings' => FALSE,
+      ),
+      'sous_question_impress' => array(
+        'custom_settings' => FALSE,
+      ),
+      'visuels_indicateurs' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_field_collection_item__field_definitions'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_field_collection_item__field_sousquestion';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'entityreference_view_widget' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'visuels_indicateurs' => array(
+        'custom_settings' => FALSE,
+      ),
+      'sous_question_impress' => array(
+        'custom_settings' => TRUE,
+      ),
+      'sousquestion_indicateur_impress' => array(
+        'custom_settings' => FALSE,
+      ),
+      'sous_question_gauche' => array(
+        'custom_settings' => TRUE,
+      ),
+      'impression_field_collection' => array(
+        'custom_settings' => TRUE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(
+        'questions_liees_indicateurs_entity_view_2' => array(
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'sous_question_impress' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'sous_question_gauche' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'impression_field_collection' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
+    ),
+  );
+  $export['field_bundle_settings_field_collection_item__field_sousquestion'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_field_collection_item__field_sousquestion_indicateur';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'entityreference_view_widget' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'visuels_indicateurs' => array(
+        'custom_settings' => FALSE,
+      ),
+      'sousquestion_indicateur_impress' => array(
+        'custom_settings' => TRUE,
+      ),
+      'sous_question_impress' => array(
+        'custom_settings' => FALSE,
+      ),
+      'impression_field_collection' => array(
+        'custom_settings' => TRUE,
+      ),
+      'sous_question_gauche' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(
+        'reverse_entity_entity_view_1' => array(
+          'default' => array(
+            'weight' => '5',
+            'visible' => FALSE,
+          ),
+          'sousquestion_indicateur_impress' => array(
+            'weight' => '5',
+            'visible' => FALSE,
+          ),
+          'impression_field_collection' => array(
+            'weight' => '7',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
+    ),
+  );
+  $export['field_bundle_settings_field_collection_item__field_sousquestion_indicateur'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_field_collection_item__field_valeurannee';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'entityreference_view_widget' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'visuels_indicateurs' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_field_collection_item__field_valeurannee'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_file__audio';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(
+        'file' => array(
+          'media_small' => array(
+            'weight' => 0,
+            'visible' => FALSE,
+          ),
+        ),
+      ),
+    ),
+  );
+  $export['field_bundle_settings_file__audio'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_file__default';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(
+        'file' => array(
+          'media_small' => array(
+            'weight' => 0,
+            'visible' => FALSE,
+          ),
+        ),
+      ),
+    ),
+  );
+  $export['field_bundle_settings_file__default'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_file__image';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(
+        'file' => array(
+          'media_small' => array(
+            'weight' => 0,
+            'visible' => FALSE,
+          ),
+        ),
+      ),
+    ),
+  );
+  $export['field_bundle_settings_file__image'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_file__video';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(
+        'file' => array(
+          'media_small' => array(
+            'weight' => 0,
+            'visible' => FALSE,
+          ),
+        ),
+      ),
+    ),
+  );
+  $export['field_bundle_settings_file__video'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__auteur_e';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(
+        'title' => array(
+          'weight' => '-5',
+        ),
+        'path' => array(
+          'weight' => '30',
+        ),
+      ),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_node__auteur_e'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__fiche_ressource_bibliographique';
   $strongarm->value = array(
     'view_modes' => array(),
     'extra_fields' => array(
       'form' => array(
         'language' => array(
-          'weight' => '2',
+          'weight' => '3',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '3',
+          'weight' => '4',
         ),
       ),
       'display' => array(),
     ),
   );
   $export['field_bundle_settings_node__fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_taxonomy_term__jeux_d_indicateurs';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'full' => array(
+        'custom_settings' => TRUE,
+      ),
+      'entityreference_view_widget' => array(
+        'custom_settings' => TRUE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'objectifs_sans_texte' => array(
+        'custom_settings' => FALSE,
+      ),
+      'taxonomie_colorbox' => array(
+        'custom_settings' => TRUE,
+      ),
+      'thematique_lien_question' => array(
+        'custom_settings' => FALSE,
+      ),
+      'print' => array(
+        'custom_settings' => TRUE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(
+        'path' => array(
+          'weight' => '6',
+        ),
+        'name' => array(
+          'weight' => '0',
+        ),
+        'description' => array(
+          'weight' => '1',
+        ),
+      ),
+      'display' => array(
+        'description' => array(
+          'default' => array(
+            'weight' => '3',
+            'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
+          'entityreference_view_widget' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'taxonomie_colorbox' => array(
+            'weight' => '6',
+            'visible' => FALSE,
+          ),
+          'thematique_lien_question' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          'print' => array(
+            'weight' => '3',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
+    ),
+  );
+  $export['field_bundle_settings_taxonomy_term__jeux_d_indicateurs'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_taxonomy_term__objectifs_snb';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'entityreference_view_widget' => array(
+        'custom_settings' => TRUE,
+      ),
+      'taxonomie_colorbox' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'objectifs_sans_texte' => array(
+        'custom_settings' => TRUE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(
+        'description' => array(
+          'default' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'taxonomie_colorbox' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          'objectifs_sans_texte' => array(
+            'weight' => '3',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
+    ),
+  );
+  $export['field_bundle_settings_taxonomy_term__objectifs_snb'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_taxonomy_term__orientations_strat_giques';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'entityreference_view_widget' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'taxonomie_colorbox' => array(
+        'custom_settings' => TRUE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(
+        'description' => array(
+          'default' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
+          'taxonomie_colorbox' => array(
+            'weight' => '5',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
+    ),
+  );
+  $export['field_bundle_settings_taxonomy_term__orientations_strat_giques'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_taxonomy_term__thematiquetest';
+  $strongarm->value = array();
+  $export['field_bundle_settings_taxonomy_term__thematiquetest'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'hs_config_taxonomy-field_continuite_snb';
+  $strongarm->value = array(
+    'save_lineage' => '0',
+    'enforce_deepest' => '0',
+    'resizable' => '1',
+    'level_labels' => array(
+      'status' => 0,
+      'labels' => array(
+        0 => '',
+      ),
+    ),
+    'dropbox' => array(
+      'status' => 0,
+      'title' => 'Toutes les sélections',
+      'limit' => '0',
+      'reset_hs' => '1',
+      'sort' => 1,
+    ),
+    'editability' => array(
+      'status' => 0,
+      'item_types' => array(
+        0 => '',
+      ),
+      'allowed_levels' => array(
+        0 => 1,
+      ),
+      'allow_new_levels' => 0,
+      'max_levels' => '0',
+    ),
+    'entity_count' => array(
+      'enabled' => 0,
+      'require_entity' => 0,
+      'settings' => array(
+        'count_children' => 0,
+        'entity_types' => array(
+          'comment' => array(
+            'count_comment' => array(
+              'comment_node_actualite' => 0,
+              'comment_node_fiche_indicateur' => 0,
+              'comment_node_page' => 0,
+              'comment_node_producteur' => 0,
+              'comment_node_question' => 0,
+            ),
+          ),
+          'field_collection_item' => array(
+            'count_field_collection_item' => array(
+              'field_collecvisuels' => 0,
+              'field_sousquestion' => 0,
+              'field_sousquestion_indicateur' => 0,
+              'field_valeurannee' => 0,
+              'field_analyse_frb' => 0,
+              'field_definitions' => 0,
+            ),
+          ),
+          'node' => array(
+            'count_node' => array(
+              'actualite' => 'actualite',
+              'fiche_indicateur' => 'fiche_indicateur',
+              'page' => 'page',
+              'producteur' => 'producteur',
+              'question' => 'question',
+            ),
+          ),
+          'file' => array(
+            'count_file' => array(
+              'audio' => 0,
+              'document' => 0,
+              'image' => 0,
+              'video' => 0,
+            ),
+          ),
+          'taxonomy_term' => array(
+            'count_taxonomy_term' => array(
+              'tags' => 0,
+              'orientations_strat_giques' => 0,
+              'piste_d_indicateur' => 0,
+              'objectifs_snb' => 0,
+              'type_dpsir' => 0,
+              'couverture_g_ographique' => 0,
+              'd_clinaisons_locales' => 0,
+              'sensibilit_' => 0,
+              'continuit_du_jeu_national' => 0,
+              'type_de_pr_sentation' => 0,
+              'qualit_' => 0,
+              'disponibilite' => 0,
+              'type_de_pression' => 0,
+              'milieux' => 0,
+              'echelle' => 0,
+              'type_de_variable' => 0,
+              'unit_de_mesure' => 0,
+              'indicateurs_quivalents' => 0,
+              'pas_de_temps' => 0,
+              'rupture_de_s_rie' => 0,
+              'niveau_d_appropriation' => 0,
+              'media_folders' => 0,
+              'mots_cl_s' => 0,
+              'jeux_d_indicateurs' => 0,
+              'biais' => 0,
+              'cdb' => 0,
+              'sueb' => 0,
+              'statut_de_publication' => 0,
+              'type_de_th_matique' => 0,
+              'headline' => 0,
+              'thematiquetest' => 0,
+              'sigle' => 0,
+              'thematique' => 0,
+              'glossaire' => 0,
+            ),
+          ),
+          'user' => array(
+            'count_user' => array(
+              'user' => 0,
+            ),
+          ),
+          'rules_config' => array(
+            'count_rules_config' => array(
+              'rules_config' => 0,
+            ),
+          ),
+        ),
+      ),
+    ),
+    'animation_delay' => 400,
+    'special_items' => array(),
+    'render_flat_select' => 0,
+    'config_id' => 'taxonomy-field_continuite_snb',
+  );
+  $export['hs_config_taxonomy-field_continuite_snb'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'hs_config_taxonomy-field_relation_indicateurs';
+  $strongarm->value = array(
+    'save_lineage' => '0',
+    'enforce_deepest' => '0',
+    'resizable' => '0',
+    'level_labels' => array(
+      'status' => 0,
+      'labels' => array(
+        0 => '',
+      ),
+    ),
+    'dropbox' => array(
+      'status' => 1,
+      'title' => 'All selections',
+      'limit' => '0',
+      'reset_hs' => '1',
+      'sort' => 1,
+    ),
+    'editability' => array(
+      'status' => 1,
+      'item_types' => array(
+        0 => '',
+      ),
+      'allowed_levels' => array(
+        0 => 1,
+      ),
+      'allow_new_levels' => 0,
+      'max_levels' => '0',
+    ),
+    'entity_count' => array(
+      'enabled' => 0,
+      'require_entity' => 0,
+      'settings' => array(
+        'count_children' => 0,
+        'entity_types' => array(
+          'comment' => array(
+            'count_comment' => array(
+              'comment_node_actualite' => 0,
+              'comment_node_fiche_indicateur' => 0,
+              'comment_node_page' => 0,
+              'comment_node_producteur' => 0,
+              'comment_node_question' => 0,
+            ),
+          ),
+          'field_collection_item' => array(
+            'count_field_collection_item' => array(
+              'field_collecvisuels' => 0,
+              'field_sousquestion' => 0,
+              'field_sousquestion_indicateur' => 0,
+              'field_valeurannee' => 0,
+              'field_analyse_frb' => 0,
+              'field_definitions' => 0,
+            ),
+          ),
+          'node' => array(
+            'count_node' => array(
+              'actualite' => 'actualite',
+              'fiche_indicateur' => 'fiche_indicateur',
+              'page' => 'page',
+              'producteur' => 'producteur',
+              'question' => 'question',
+            ),
+          ),
+          'file' => array(
+            'count_file' => array(
+              'audio' => 0,
+              'document' => 0,
+              'image' => 0,
+              'video' => 0,
+            ),
+          ),
+          'taxonomy_term' => array(
+            'count_taxonomy_term' => array(
+              'tags' => 0,
+              'orientations_strat_giques' => 0,
+              'piste_d_indicateur' => 0,
+              'objectifs_snb' => 0,
+              'type_dpsir' => 0,
+              'couverture_g_ographique' => 0,
+              'd_clinaisons_locales' => 0,
+              'sensibilit_' => 0,
+              'continuit_du_jeu_national' => 0,
+              'type_de_pr_sentation' => 0,
+              'qualit_' => 0,
+              'disponibilite' => 0,
+              'type_de_pression' => 0,
+              'milieux' => 0,
+              'echelle' => 0,
+              'type_de_variable' => 0,
+              'unit_de_mesure' => 0,
+              'indicateurs_quivalents' => 0,
+              'pas_de_temps' => 0,
+              'rupture_de_s_rie' => 0,
+              'niveau_d_appropriation' => 0,
+              'media_folders' => 0,
+              'mots_cl_s' => 0,
+              'jeux_d_indicateurs' => 0,
+              'biais' => 0,
+              'cdb' => 0,
+              'sueb' => 0,
+              'statut_de_publication' => 0,
+              'type_de_th_matique' => 0,
+              'headline' => 0,
+              'thematiquetest' => 0,
+              'sigle' => 0,
+              'thematique' => 0,
+              'glossaire' => 0,
+            ),
+          ),
+          'user' => array(
+            'count_user' => array(
+              'user' => 0,
+            ),
+          ),
+          'rules_config' => array(
+            'count_rules_config' => array(
+              'rules_config' => 0,
+            ),
+          ),
+        ),
+      ),
+    ),
+    'animation_delay' => 400,
+    'special_items' => array(),
+    'render_flat_select' => 0,
+    'config_id' => 'taxonomy-field_relation_indicateurs',
+  );
+  $export['hs_config_taxonomy-field_relation_indicateurs'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'hs_config_taxonomy-field_unite_mesure';
+  $strongarm->value = array(
+    'save_lineage' => '0',
+    'enforce_deepest' => '0',
+    'resizable' => '0',
+    'level_labels' => array(
+      'status' => 0,
+      'labels' => array(
+        0 => '',
+      ),
+    ),
+    'dropbox' => array(
+      'status' => 0,
+      'title' => 'All selections',
+      'limit' => '0',
+      'reset_hs' => '1',
+      'sort' => 1,
+    ),
+    'editability' => array(
+      'status' => 1,
+      'item_types' => array(
+        0 => '',
+      ),
+      'allowed_levels' => array(
+        0 => 1,
+      ),
+      'allow_new_levels' => 0,
+      'max_levels' => '1',
+    ),
+    'entity_count' => array(
+      'enabled' => 0,
+      'require_entity' => 0,
+      'settings' => array(
+        'count_children' => 0,
+        'entity_types' => array(
+          'comment' => array(
+            'count_comment' => array(
+              'comment_node_actualite' => 0,
+              'comment_node_fiche_indicateur' => 0,
+              'comment_node_page' => 0,
+              'comment_node_producteur' => 0,
+              'comment_node_question' => 0,
+            ),
+          ),
+          'field_collection_item' => array(
+            'count_field_collection_item' => array(
+              'field_collecvisuels' => 0,
+              'field_sousquestion' => 0,
+              'field_sousquestion_indicateur' => 0,
+              'field_valeurannee' => 0,
+              'field_analyse_frb' => 0,
+              'field_definitions' => 0,
+            ),
+          ),
+          'node' => array(
+            'count_node' => array(
+              'actualite' => 'actualite',
+              'fiche_indicateur' => 'fiche_indicateur',
+              'page' => 'page',
+              'producteur' => 'producteur',
+              'question' => 'question',
+            ),
+          ),
+          'file' => array(
+            'count_file' => array(
+              'audio' => 0,
+              'document' => 0,
+              'image' => 0,
+              'video' => 0,
+            ),
+          ),
+          'taxonomy_term' => array(
+            'count_taxonomy_term' => array(
+              'tags' => 0,
+              'orientations_strat_giques' => 0,
+              'piste_d_indicateur' => 0,
+              'objectifs_snb' => 0,
+              'type_dpsir' => 0,
+              'couverture_g_ographique' => 0,
+              'd_clinaisons_locales' => 0,
+              'sensibilit_' => 0,
+              'continuit_du_jeu_national' => 0,
+              'type_de_pr_sentation' => 0,
+              'qualit_' => 0,
+              'disponibilite' => 0,
+              'type_de_pression' => 0,
+              'milieux' => 0,
+              'echelle' => 0,
+              'type_de_variable' => 0,
+              'unit_de_mesure' => 0,
+              'indicateurs_quivalents' => 0,
+              'pas_de_temps' => 0,
+              'rupture_de_s_rie' => 0,
+              'niveau_d_appropriation' => 0,
+              'media_folders' => 0,
+              'mots_cl_s' => 0,
+              'jeux_d_indicateurs' => 0,
+              'biais' => 0,
+              'cdb' => 0,
+              'sueb' => 0,
+              'statut_de_publication' => 0,
+              'type_de_th_matique' => 0,
+              'headline' => 0,
+              'thematiquetest' => 0,
+              'sigle' => 0,
+              'thematique' => 0,
+              'glossaire' => 0,
+            ),
+          ),
+          'user' => array(
+            'count_user' => array(
+              'user' => 0,
+            ),
+          ),
+          'rules_config' => array(
+            'count_rules_config' => array(
+              'rules_config' => 0,
+            ),
+          ),
+        ),
+      ),
+    ),
+    'animation_delay' => 400,
+    'special_items' => array(),
+    'render_flat_select' => 0,
+    'config_id' => 'taxonomy-field_unite_mesure',
+  );
+  $export['hs_config_taxonomy-field_unite_mesure'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -836,6 +1779,13 @@ node/*/edit';
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_sync_node_type_auteur_e';
+  $strongarm->value = array();
+  $export['i18n_sync_node_type_auteur_e'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'i18n_sync_node_type_event_calendar';
   $strongarm->value = array();
   $export['i18n_sync_node_type_event_calendar'] = $strongarm;
@@ -846,6 +1796,578 @@ node/*/edit';
   $strongarm->name = 'i18n_sync_node_type_fiche_ressource_bibliographique';
   $strongarm->value = array();
   $export['i18n_sync_node_type_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imagefield_crop_info';
+  $strongarm->value = array(
+    34 => array(
+      'x' => '0',
+      'y' => '181',
+      'width' => '848',
+      'height' => '283',
+    ),
+    38 => array(
+      'x' => '0',
+      'y' => '302',
+      'width' => '1280',
+      'height' => '465',
+    ),
+    220 => array(
+      'x' => '0',
+      'y' => '1032',
+      'width' => '4064',
+      'height' => '1471',
+    ),
+    222 => array(
+      'x' => '0',
+      'y' => '471',
+      'width' => '4288',
+      'height' => '1552',
+    ),
+    224 => array(
+      'x' => '0',
+      'y' => '222',
+      'width' => '4288',
+      'height' => '1552',
+    ),
+    228 => array(
+      'x' => '0',
+      'y' => '59',
+      'width' => '800',
+      'height' => '289',
+    ),
+    234 => array(
+      'x' => '0',
+      'y' => '297',
+      'width' => '2288',
+      'height' => '828',
+    ),
+    236 => array(
+      'x' => '0',
+      'y' => '144',
+      'width' => '4256',
+      'height' => '1540',
+    ),
+    218 => array(
+      'x' => '0',
+      'y' => '658',
+      'width' => '4064',
+      'height' => '1471',
+    ),
+    457 => array(
+      'x' => '0',
+      'y' => '463',
+      'width' => '3562',
+      'height' => '1289',
+    ),
+    455 => array(
+      'x' => '3',
+      'y' => '0',
+      'width' => '766',
+      'height' => '277',
+    ),
+    459 => array(
+      'x' => '0',
+      'y' => '0',
+      'width' => '4288',
+      'height' => '1552',
+    ),
+    530 => array(
+      'x' => '0',
+      'y' => '621',
+      'width' => '4256',
+      'height' => '1540',
+    ),
+    458 => array(
+      'x' => '0',
+      'y' => '617',
+      'width' => '4064',
+      'height' => '1471',
+    ),
+    456 => array(
+      'x' => '0',
+      'y' => '68',
+      'width' => '4279',
+      'height' => '1543',
+    ),
+    453 => array(
+      'x' => '0',
+      'y' => '98',
+      'width' => '3072',
+      'height' => '1112',
+    ),
+    454 => array(
+      'x' => '0',
+      'y' => '272',
+      'width' => '4256',
+      'height' => '1540',
+    ),
+    541 => array(
+      'x' => '0',
+      'y' => '245',
+      'width' => '640',
+      'height' => '231',
+    ),
+    451 => array(
+      'x' => '0',
+      'y' => '0',
+      'width' => '4256',
+      'height' => '1540',
+    ),
+    544 => array(
+      'x' => '0',
+      'y' => '0',
+      'width' => '4288',
+      'height' => '1552',
+    ),
+    547 => array(
+      'x' => '0',
+      'y' => '136',
+      'width' => '4256',
+      'height' => '1540',
+    ),
+    550 => array(
+      'x' => '0',
+      'y' => '476',
+      'width' => '4256',
+      'height' => '1540',
+    ),
+    552 => array(
+      'x' => '0',
+      'y' => '482',
+      'width' => '2977',
+      'height' => '1077',
+    ),
+    554 => array(
+      'x' => '0',
+      'y' => '817',
+      'width' => '4256',
+      'height' => '1540',
+    ),
+    556 => array(
+      'x' => '0',
+      'y' => '493',
+      'width' => '4256',
+      'height' => '1540',
+    ),
+    558 => array(
+      'x' => '0',
+      'y' => '629',
+      'width' => '4256',
+      'height' => '1540',
+    ),
+    560 => array(
+      'x' => '0',
+      'y' => '553',
+      'width' => '1600',
+      'height' => '579',
+    ),
+    563 => array(
+      'x' => '0',
+      'y' => '241',
+      'width' => '2048',
+      'height' => '741',
+    ),
+    567 => array(
+      'x' => '0',
+      'y' => '715',
+      'width' => '3472',
+      'height' => '1256',
+    ),
+    569 => array(
+      'x' => '0',
+      'y' => '831',
+      'width' => '4288',
+      'height' => '1552',
+    ),
+    571 => array(
+      'x' => '0',
+      'y' => '729',
+      'width' => '3645',
+      'height' => '1319',
+    ),
+    573 => array(
+      'x' => '0',
+      'y' => '1220',
+      'width' => '4041',
+      'height' => '1462',
+    ),
+    613 => array(
+      'x' => '0',
+      'y' => '84',
+      'width' => '640',
+      'height' => '231',
+    ),
+    617 => array(
+      'x' => '0',
+      'y' => '410',
+      'width' => '2304',
+      'height' => '834',
+    ),
+    622 => array(
+      'x' => '0',
+      'y' => '608',
+      'width' => '2304',
+      'height' => '834',
+    ),
+    624 => array(
+      'x' => '0',
+      'y' => '238',
+      'width' => '4256',
+      'height' => '1540',
+    ),
+    835 => array(
+      'x' => '0',
+      'y' => '304',
+      'width' => '900',
+      'height' => '325',
+    ),
+    839 => array(
+      'x' => '-79',
+      'y' => '102',
+      'width' => '719',
+      'height' => '259',
+    ),
+    841 => array(
+      'x' => '0',
+      'y' => '66',
+      'width' => '1500',
+      'height' => '543',
+    ),
+    845 => array(
+      'x' => '0',
+      'y' => '225',
+      'width' => '1500',
+      'height' => '543',
+    ),
+    847 => array(
+      'x' => '0',
+      'y' => '303',
+      'width' => '1500',
+      'height' => '543',
+    ),
+    219 => array(
+      'x' => '0',
+      'y' => '626',
+      'width' => '2048',
+      'height' => '741',
+    ),
+    1457 => array(
+      'x' => '20',
+      'y' => '152',
+      'width' => '960',
+      'height' => '260',
+    ),
+    1550 => array(
+      'x' => '0',
+      'y' => '564',
+      'width' => '1920',
+      'height' => '695',
+    ),
+    1553 => array(
+      'x' => '0',
+      'y' => '468',
+      'width' => '1920',
+      'height' => '695',
+    ),
+    1555 => array(
+      'x' => '0',
+      'y' => '195',
+      'width' => '1920',
+      'height' => '695',
+    ),
+    1557 => array(
+      'x' => '0',
+      'y' => '165',
+      'width' => '1920',
+      'height' => '695',
+    ),
+    1559 => array(
+      'x' => '0',
+      'y' => '541',
+      'width' => '1920',
+      'height' => '695',
+    ),
+    1565 => array(
+      'x' => '0',
+      'y' => '217',
+      'width' => '1280',
+      'height' => '463',
+    ),
+    1569 => array(
+      'x' => '0',
+      'y' => '322',
+      'width' => '1920',
+      'height' => '695',
+    ),
+    1571 => array(
+      'x' => '0',
+      'y' => '523',
+      'width' => '4288',
+      'height' => '1552',
+    ),
+    1847 => array(
+      'x' => '0',
+      'y' => '0',
+      'width' => '960',
+      'height' => '259',
+    ),
+    1854 => array(
+      'x' => '0',
+      'y' => '0',
+      'width' => '960',
+      'height' => '259',
+    ),
+    1900 => array(
+      'x' => '0',
+      'y' => '178',
+      'width' => '4256',
+      'height' => '1540',
+    ),
+    1902 => array(
+      'x' => '0',
+      'y' => '927',
+      'width' => '4256',
+      'height' => '1540',
+    ),
+    1904 => array(
+      'x' => '0',
+      'y' => '325',
+      'width' => '4288',
+      'height' => '1552',
+    ),
+    1906 => array(
+      'x' => '0',
+      'y' => '297',
+      'width' => '3920',
+      'height' => '1419',
+    ),
+    1908 => array(
+      'x' => '0',
+      'y' => '493',
+      'width' => '4256',
+      'height' => '1540',
+    ),
+    1910 => array(
+      'x' => '0',
+      'y' => '1285',
+      'width' => '4256',
+      'height' => '1540',
+    ),
+    1912 => array(
+      'x' => '0',
+      'y' => '1023',
+      'width' => '3737',
+      'height' => '1352',
+    ),
+    1914 => array(
+      'x' => '0',
+      'y' => '909',
+      'width' => '4288',
+      'height' => '1552',
+    ),
+    1924 => array(
+      'x' => '0',
+      'y' => '969',
+      'width' => '4288',
+      'height' => '1552',
+    ),
+    1930 => array(
+      'x' => '0',
+      'y' => '729',
+      'width' => '4006',
+      'height' => '1450',
+    ),
+    1932 => array(
+      'x' => '0',
+      'y' => '478',
+      'width' => '1856',
+      'height' => '671',
+    ),
+    1934 => array(
+      'x' => '0',
+      'y' => '131',
+      'width' => '3872',
+      'height' => '1401',
+    ),
+    1960 => array(
+      'x' => '0',
+      'y' => '861',
+      'width' => '3264',
+      'height' => '881',
+    ),
+    1962 => array(
+      'x' => '0',
+      'y' => '748',
+      'width' => '3858',
+      'height' => '1041',
+    ),
+  );
+  $export['imagefield_crop_info'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'image_toolkit';
+  $strongarm->value = 'gd';
+  $export['image_toolkit'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imce_profiles';
+  $strongarm->value = array(
+    1 => array(
+      'name' => 'User-1',
+      'usertab' => 1,
+      'filesize' => 0,
+      'quota' => 0,
+      'tuquota' => 0,
+      'extensions' => '*',
+      'dimensions' => '1200x1200',
+      'filenum' => 0,
+      'directories' => array(
+        0 => array(
+          'name' => '.',
+          'subnav' => 1,
+          'browse' => 1,
+          'upload' => 1,
+          'thumb' => 1,
+          'delete' => 1,
+          'resize' => 1,
+          'crop' => 1,
+        ),
+      ),
+      'thumbnails' => array(
+        0 => array(
+          'name' => 'Small',
+          'dimensions' => '90x90',
+          'prefix' => 'small_',
+          'suffix' => '',
+        ),
+        1 => array(
+          'name' => 'Medium',
+          'dimensions' => '120x120',
+          'prefix' => 'medium_',
+          'suffix' => '',
+        ),
+        2 => array(
+          'name' => 'Large',
+          'dimensions' => '180x180',
+          'prefix' => 'large_',
+          'suffix' => '',
+        ),
+      ),
+    ),
+    2 => array(
+      'name' => 'Sample profile',
+      'usertab' => 1,
+      'filesize' => 1,
+      'quota' => 2,
+      'tuquota' => 0,
+      'extensions' => 'gif png jpg jpeg',
+      'dimensions' => '800x600',
+      'filenum' => 1,
+      'directories' => array(
+        0 => array(
+          'name' => 'u%uid',
+          'subnav' => 0,
+          'browse' => 1,
+          'upload' => 1,
+          'thumb' => 1,
+          'delete' => 0,
+          'resize' => 0,
+          'crop' => 0,
+        ),
+      ),
+      'thumbnails' => array(
+        0 => array(
+          'name' => 'Thumb',
+          'dimensions' => '90x90',
+          'prefix' => 'thumb_',
+          'suffix' => '',
+        ),
+      ),
+    ),
+  );
+  $export['imce_profiles'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imce_roles_profiles';
+  $strongarm->value = array(
+    5 => array(
+      'weight' => '0',
+      'public_pid' => 0,
+      'private_pid' => 0,
+    ),
+    4 => array(
+      'weight' => '0',
+      'public_pid' => '1',
+      'private_pid' => 0,
+    ),
+    3 => array(
+      'weight' => '0',
+      'public_pid' => '1',
+      'private_pid' => 0,
+    ),
+    2 => array(
+      'weight' => 11,
+      'public_pid' => 0,
+      'private_pid' => 0,
+    ),
+    1 => array(
+      'weight' => 12,
+      'public_pid' => 0,
+      'private_pid' => 0,
+    ),
+  );
+  $export['imce_roles_profiles'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imce_settings_absurls';
+  $strongarm->value = 0;
+  $export['imce_settings_absurls'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imce_settings_disable_private';
+  $strongarm->value = 1;
+  $export['imce_settings_disable_private'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imce_settings_replace';
+  $strongarm->value = '0';
+  $export['imce_settings_replace'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imce_settings_textarea';
+  $strongarm->value = '';
+  $export['imce_settings_textarea'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imce_settings_thumb_method';
+  $strongarm->value = 'scale_and_crop';
+  $export['imce_settings_thumb_method'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'language_content_type_auteur_e';
+  $strongarm->value = '0';
+  $export['language_content_type_auteur_e'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -991,6 +2513,100 @@ node/*/edit';
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'maintenance_mode';
+  $strongarm->value = FALSE;
+  $export['maintenance_mode'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'maintenance_mode_message';
+  $strongarm->value = 'Indicateurs ONB est en cours de maintenance. Nous serons de retour très bientôt. Merci de votre patience.';
+  $export['maintenance_mode_message'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_expanded';
+  $strongarm->value = array();
+  $export['menu_expanded'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_masks';
+  $strongarm->value = array(
+    0 => 507,
+    1 => 506,
+    2 => 501,
+    3 => 493,
+    4 => 490,
+    5 => 255,
+    6 => 253,
+    7 => 252,
+    8 => 251,
+    9 => 250,
+    10 => 247,
+    11 => 246,
+    12 => 245,
+    13 => 242,
+    14 => 241,
+    15 => 238,
+    16 => 234,
+    17 => 127,
+    18 => 126,
+    19 => 125,
+    20 => 124,
+    21 => 123,
+    22 => 122,
+    23 => 121,
+    24 => 120,
+    25 => 119,
+    26 => 118,
+    27 => 117,
+    28 => 112,
+    29 => 63,
+    30 => 62,
+    31 => 61,
+    32 => 60,
+    33 => 59,
+    34 => 58,
+    35 => 56,
+    36 => 44,
+    37 => 31,
+    38 => 30,
+    39 => 29,
+    40 => 28,
+    41 => 26,
+    42 => 24,
+    43 => 23,
+    44 => 21,
+    45 => 15,
+    46 => 14,
+    47 => 13,
+    48 => 12,
+    49 => 11,
+    50 => 10,
+    51 => 7,
+    52 => 6,
+    53 => 5,
+    54 => 4,
+    55 => 3,
+    56 => 2,
+    57 => 1,
+  );
+  $export['menu_masks'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_auteur_e';
+  $strongarm->value = array();
+  $export['menu_options_auteur_e'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_event_calendar';
   $strongarm->value = array(
     0 => 'main-menu',
@@ -1009,6 +2625,20 @@ node/*/edit';
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_thematique';
+  $strongarm->value = array();
+  $export['menu_options_thematique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_parent_auteur_e';
+  $strongarm->value = 'main-menu:0';
+  $export['menu_parent_auteur_e'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_event_calendar';
   $strongarm->value = 'main-menu:0';
   $export['menu_parent_event_calendar'] = $strongarm;
@@ -1023,72 +2653,67 @@ node/*/edit';
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'nice_menus_custom_css';
-  $strongarm->value = '';
-  $export['nice_menus_custom_css'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'nice_menus_depth_1';
-  $strongarm->value = '-1';
-  $export['nice_menus_depth_1'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'nice_menus_depth_2';
-  $strongarm->value = -1;
-  $export['nice_menus_depth_2'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'nice_menus_menu_1';
-  $strongarm->value = 'menu-main-menu-en:0';
-  $export['nice_menus_menu_1'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'nice_menus_menu_2';
+  $strongarm->name = 'menu_parent_thematique';
   $strongarm->value = 'main-menu:0';
-  $export['nice_menus_menu_2'] = $strongarm;
+  $export['menu_parent_thematique'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'nice_menus_name_1';
-  $strongarm->value = '';
-  $export['nice_menus_name_1'] = $strongarm;
+  $strongarm->name = 'menu_position_active_link_display';
+  $strongarm->value = 'parent';
+  $export['menu_position_active_link_display'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'nice_menus_name_2';
-  $strongarm->value = '';
-  $export['nice_menus_name_2'] = $strongarm;
+  $strongarm->name = 'node_admin_theme';
+  $strongarm->value = 1;
+  $export['node_admin_theme'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'nice_menus_respect_expand_2';
-  $strongarm->value = 0;
-  $export['nice_menus_respect_expand_2'] = $strongarm;
+  $strongarm->name = 'node_export_reset_changed_actualite';
+  $strongarm->value = 1;
+  $export['node_export_reset_changed_actualite'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'nice_menus_type_1';
-  $strongarm->value = 'down';
-  $export['nice_menus_type_1'] = $strongarm;
+  $strongarm->name = 'node_export_reset_changed_fiche_indicateur';
+  $strongarm->value = 1;
+  $export['node_export_reset_changed_fiche_indicateur'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'nice_menus_type_2';
-  $strongarm->value = 'down';
-  $export['nice_menus_type_2'] = $strongarm;
+  $strongarm->name = 'node_export_reset_changed_page';
+  $strongarm->value = 1;
+  $export['node_export_reset_changed_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_export_reset_changed_producteur';
+  $strongarm->value = 1;
+  $export['node_export_reset_changed_producteur'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_export_reset_changed_question';
+  $strongarm->value = 1;
+  $export['node_export_reset_changed_question'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_auteur_e';
+  $strongarm->value = array(
+    0 => 'status',
+  );
+  $export['node_options_auteur_e'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1111,6 +2736,22 @@ node/*/edit';
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_thematique';
+  $strongarm->value = array(
+    0 => 'status',
+  );
+  $export['node_options_thematique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_preview_auteur_e';
+  $strongarm->value = '1';
+  $export['node_preview_auteur_e'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_event_calendar';
   $strongarm->value = '0';
   $export['node_preview_event_calendar'] = $strongarm;
@@ -1125,6 +2766,13 @@ node/*/edit';
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_auteur_e';
+  $strongarm->value = 0;
+  $export['node_submitted_auteur_e'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_event_calendar';
   $strongarm->value = 0;
   $export['node_submitted_event_calendar'] = $strongarm;
@@ -1135,6 +2783,27 @@ node/*/edit';
   $strongarm->name = 'node_submitted_fiche_ressource_bibliographique';
   $strongarm->value = 0;
   $export['node_submitted_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_thematique';
+  $strongarm->value = 0;
+  $export['node_submitted_thematique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_auteur_e';
+  $strongarm->value = '[node:field-nom] [node:field-prenom]';
+  $export['page_title_type_auteur_e'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_auteur_e_showfield';
+  $strongarm->value = 0;
+  $export['page_title_type_auteur_e_showfield'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1315,6 +2984,24 @@ node/*/edit';
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'variable_module_list';
+  $strongarm->value = array(
+    'i18n' => array(
+      0 => 'i18n_language_list',
+    ),
+    'i18n_string' => array(
+      0 => 'i18n_string_translate_langcode_en',
+      1 => 'i18n_string_translate_langcode_fr',
+      2 => 'i18n_string_allowed_formats',
+      3 => 'i18n_string_source_language',
+      4 => 'i18n_string_debug',
+    ),
+  );
+  $export['variable_module_list'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'variable_realm_list_language';
   $strongarm->value = array(
     0 => 'site_name',
@@ -1335,6 +3022,89 @@ node/*/edit';
     15 => 'user_mail_status_canceled_[mail_part]',
   );
   $export['variable_realm_list_language'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'views_block_hashes';
+  $strongarm->value = array();
+  $export['views_block_hashes'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'views_defaults';
+  $strongarm->value = array(
+    'indicateurs' => TRUE,
+    'indicateurs_apparait_question' => TRUE,
+    'recherche_thematique' => TRUE,
+    'glossaire' => TRUE,
+    'media_default' => TRUE,
+    'reverse_entity' => TRUE,
+    'admin_views_node' => TRUE,
+    'admin_views_user' => TRUE,
+    'admin_views_file' => TRUE,
+  );
+  $export['views_defaults'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'views_exposed_filter_any_label';
+  $strongarm->value = 'new_any';
+  $export['views_exposed_filter_any_label'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'views_localization_plugin';
+  $strongarm->value = 'i18nstrings';
+  $export['views_localization_plugin'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'views_show_additional_queries';
+  $strongarm->value = 0;
+  $export['views_show_additional_queries'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'views_ui_basic';
+  $strongarm->value = array(
+    'recherche_glossaire' => array(
+      0 => 'page',
+    ),
+    'recherche_indicateurs' => array(
+      0 => 'page',
+      1 => 'tableau1',
+      2 => 'tableau3',
+      3 => 'tableau2',
+      4 => 'tableau4',
+    ),
+    'recherche_questions' => array(
+      0 => 'page',
+      1 => 'page_2',
+      2 => 'page_5',
+      3 => 'page_1',
+      4 => 'page_4',
+      5 => 'page_3',
+      6 => 'page_8',
+      7 => 'page_9',
+    ),
+    'tableau_croise_indicateurs' => array(
+      0 => 'page',
+      1 => 'page_1',
+      2 => 'page_2',
+      3 => 'page_3',
+      4 => 'page_4',
+    ),
+    'recherche_thematiques' => array(
+      0 => 'page',
+    ),
+  );
+  $export['views_ui_basic'] = $strongarm;
 
   return $export;
 }

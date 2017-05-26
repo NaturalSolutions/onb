@@ -1,4 +1,10 @@
-DEPLOIEMENT ONB
+*******************
+* DEPLOIEMENT ONB *
+*******************
+
+*********
+* MEP 1 *
+*********
 
 Pour son instance locale :
 - créer un fichier settings.local.php avec la conf de la base et tout paramètre utile pour cette instance
@@ -39,3 +45,137 @@ drush updb -y
 
 NB, à faire à la main :
 1/ cocher FR comme langue par default dans "admin/config/regional/language"
+
+
+
+*********
+* MEP 2 *
+*********
+
+
+// Activer la nouvelle feature ONB Permissions (Cf. Problème avec la table 'Sytem' ci-dessous)
+drush en onb_permissions
+
+// Remplir les taxos via Taxonomy Manager (admin/structure/taxonomy_manager/voc) :
+NB : le mieux serait de les avoir en EN pour ne pas avoir à refaire le boulot !!!!
+
+*Origine de la ressource
+
+Interne (ONB ou SINP)
+Externe
+
+
+*Accessibilité de la ressource
+
+Libre
+Restreinte
+Réservée
+Non renseigné
+
+
+*Classification
+
+ONB
+SINP
+-SINP Mer
+-SINP Paysage
+-SINP Terre
+
+
+*Statut de la ressource
+
+Active (par défaut)
+Archive"
+
+
+*Nature de la ressource interne
+
+Compte-rendu
+Document de stratégie, orientations, cadrage général
+Document préparatoire
+Formulaire
+Guide
+Liste de membres
+Livrable
+Livrable d'étude ou d'audit
+-Livrable de groupe de travail
+-Livrable de réunion technique
+-Livrable de séminaire ou colloque
+Mandat
+Norme technique
+Rapport de saisine
+Support de communication (diaporama)
+Support de communication (produit papier)
+Texte de saisine
+Texte juridique
+-Charte
+-Convention
+-Directive, loi, décret, arrêté, circulaire
+
+
+*Nature de la ressource externe
+
+Publication scientifique
+Littérature grise
+Site internet
+Site cartographique
+
+
+*Périmètre géographique
+
+Local
+Régional
+-Outre-mer
+National
+International
+-Europe
+
+
+*Périmètre thématique naturel
+
+Biodiversité générale
+Biodiversité remarquée (patrimoniale)
+Biodiversité sauvage
+Biodiversité domestique
+Biodiversité terrestre
+Biodiversité marine
+
+
+*Périmètre sectoriel
+
+Agriculture
+Culture
+Education
+Espaces naturels
+Foresterie
+Industrie
+Loisirs
+Pêche
+Santé
+Services tertiaires
+Tourisme
+Transport
+Urbanisme
+
+
+NB : Attention au champ conditionnel quand on change la valeur des termes de la taxo 'Origine de la ressource' => admin/structure/dependencies / Fiche ressource bibliographique
+Le filtre se base sur le tid, donc pas de soucis entre les chaines FR et EN (car els termes sont localisés et ont le même tid.
+MAIS les tid changeront probablement entre mon local, le dev la PP et la Prod si les taxos ne sont pas créées dans le même ordre
+=> il faudra donc changer la valeur de la condition (penser aussi à la virer de la feature pour que la valuer ne soit pas ré-écrasée)
+NB2 : la condition ne semble pas être featurisable, il faut donc la recréer à la mano
+
+Fiche ressource bibliographique
+Nature de la ressource (field_nature_interne)	Origine de la ressource (field_origine)	Nature de la ressource is visible when Origine de la ressource has value "1962".
+Nature de la ressource (field_nature_externe)	Origine de la ressource (field_origine)	Nature de la ressource is visible when Origine de la ressource has value "1963".
+(Comme dit plus haut, 1962 et 1963 ne seront sans dout pas les mêmes valeurs, elles correspndent aux valeurs (termes) "Interne" et "Externe").
+
+
+?? Problème avec la table système : le .info de la features gloabale est trop gros pour la capacité du champ.
+Solutions :
+1/ diviser les features. Ex : Créer une feature des Perms
+2/ Changer la nature du champ 'Info' de la table 'System' =>
+drush sqlq "ALTER TABLE `system` CHANGE `info` `info` LONGBLOB NULL DEFAULT NULL"
+Ou dans Phpmyadmin :
+ALTER TABLE `system` CHANGE `info` `info` LONGBLOB NULL DEFAULT NULL
+
+Solution 1/ effectuée pour ne pas toucher aux paramètres de la base.
