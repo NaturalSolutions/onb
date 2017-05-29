@@ -18,7 +18,7 @@ function onb_global_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'fiche_ressource_bibliographique';
   $field_group->mode = 'form';
-  $field_group->parent_name = '_add_new_group';
+  $field_group->parent_name = 'group_ref_peri_activites';
   $field_group->data = array(
     'label' => 'Activités',
     'weight' => '11',
@@ -2678,7 +2678,7 @@ function onb_global_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'fiche_ressource_bibliographique';
   $field_group->mode = 'form';
-  $field_group->parent_name = '_add_new_group';
+  $field_group->parent_name = 'group_ref_peri_activites';
   $field_group->data = array(
     'label' => 'Périmètre',
     'weight' => '10',
@@ -3535,7 +3535,7 @@ function onb_global_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'fiche_ressource_bibliographique';
   $field_group->mode = 'form';
-  $field_group->parent_name = '_add_new_group';
+  $field_group->parent_name = 'group_ref_peri_activites';
   $field_group->data = array(
     'label' => 'Références de la ressource',
     'weight' => '9',
@@ -3546,9 +3546,9 @@ function onb_global_field_group_info() {
       3 => 'field_nature_interne',
       4 => 'field_nature_externe',
       5 => 'field_pagination',
-      6 => 'field_description',
-      7 => 'field_citation',
-      8 => 'field_auteures',
+      6 => 'field_citation',
+      7 => 'field_auteures',
+      8 => 'field_description',
     ),
     'format_type' => 'accordion-item',
     'format_settings' => array(

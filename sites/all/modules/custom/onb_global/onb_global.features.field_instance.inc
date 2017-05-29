@@ -6083,6 +6083,7 @@ function onb_global_field_default_field_instances() {
   // 'node-fiche_ressource_bibliographique-field_auteures'.
   $field_instances['node-fiche_ressource_bibliographique-field_auteures'] = array(
     'bundle' => 'fiche_ressource_bibliographique',
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -6115,17 +6116,17 @@ function onb_global_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'entityreference_view_widget',
+      'module' => 'entityreference',
       'settings' => array(
-        'allow_duplicates' => 0,
-        'close_modal' => 0,
-        'pass_argument' => 0,
-        'pass_arguments' => '',
-        'rendered_entity' => 0,
-        'view' => 'entityreference_view_widget_sample|entityreference_view_widget_1',
-        'view_mode' => 'full',
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'references_dialog_add' => 1,
+        'references_dialog_edit' => 1,
+        'references_dialog_search' => 1,
+        'references_dialog_search_view' => '',
+        'size' => 60,
       ),
-      'type' => 'entityreference_view_widget',
+      'type' => 'entityreference_autocomplete',
       'weight' => 10,
     ),
   );
@@ -6459,7 +6460,7 @@ function onb_global_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 12,
+        'weight' => 25,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -6473,16 +6474,18 @@ function onb_global_field_default_field_instances() {
     'label' => 'Description',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'display_summary' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 5,
+        'rows' => 20,
+        'summary_rows' => 5,
       ),
-      'type' => 'text_textarea',
+      'type' => 'text_textarea_with_summary',
       'weight' => 16,
     ),
   );

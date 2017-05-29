@@ -896,12 +896,11 @@ $entity_field[0][\'value\'] = $value;
         0 => 'format',
       ),
     ),
-    'label' => 'Description',
     'locked' => 0,
     'module' => 'text',
     'settings' => array(),
     'translatable' => 0,
-    'type' => 'text_long',
+    'type' => 'text_with_summary',
   );
 
   // Exported field_base: 'field_disponibilite'.
