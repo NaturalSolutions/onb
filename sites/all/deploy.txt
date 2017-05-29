@@ -52,17 +52,14 @@ NB, à faire à la main :
 * MEP 2 *
 *********
 
+// Revert la Feature principale onb_global
+drush fr onb_global
 
 // Activer la nouvelle feature ONB Permissions (Cf. Problème avec la table 'Sytem' ci-dessous)
 drush en onb_permissions
 
 // Remplir les taxos via Taxonomy Manager (admin/structure/taxonomy_manager/voc) :
 NB : le mieux serait de les avoir en EN pour ne pas avoir à refaire le boulot !!!!
-
-*Origine de la ressource
-
-Interne (ONB ou SINP)
-Externe
 
 
 *Accessibilité de la ressource
@@ -73,7 +70,7 @@ Réservée
 Non renseigné
 
 
-*Classification
+*Classification de la ressource
 
 ONB
 SINP
@@ -82,10 +79,12 @@ SINP
 -SINP Terre
 
 
-*Statut de la ressource
+*Nature de la ressource externe
 
-Active (par défaut)
-Archive"
+Publication scientifique
+Littérature grise
+Site internet
+Site cartographique
 
 
 *Nature de la ressource interne
@@ -113,12 +112,10 @@ Texte juridique
 -Directive, loi, décret, arrêté, circulaire
 
 
-*Nature de la ressource externe
+*Origine de la ressource
 
-Publication scientifique
-Littérature grise
-Site internet
-Site cartographique
+Interne (ONB ou SINP)
+Externe
 
 
 *Périmètre géographique
@@ -129,16 +126,6 @@ Régional
 National
 International
 -Europe
-
-
-*Périmètre thématique naturel
-
-Biodiversité générale
-Biodiversité remarquée (patrimoniale)
-Biodiversité sauvage
-Biodiversité domestique
-Biodiversité terrestre
-Biodiversité marine
 
 
 *Périmètre sectoriel
@@ -156,6 +143,23 @@ Services tertiaires
 Tourisme
 Transport
 Urbanisme
+
+
+*Périmètre thématique naturel
+
+Biodiversité générale
+Biodiversité remarquée (patrimoniale)
+Biodiversité sauvage
+Biodiversité domestique
+Biodiversité terrestre
+Biodiversité marine
+
+
+*Statut de la ressource
+
+Active
+Archive
+
 
 
 NB : Attention au champ conditionnel quand on change la valeur des termes de la taxo 'Origine de la ressource' => admin/structure/dependencies / Fiche ressource bibliographique
