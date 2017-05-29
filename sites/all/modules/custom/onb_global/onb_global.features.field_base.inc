@@ -302,6 +302,7 @@ $entity_field[0][\'value\'] = $value;
       'allowed_values' => array(
         'oui' => 'oui',
         'non' => 'non',
+        'encours' => 'En cours',
       ),
       'allowed_values_function' => '',
     ),

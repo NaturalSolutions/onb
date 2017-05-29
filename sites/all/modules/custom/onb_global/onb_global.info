@@ -522,7 +522,6 @@ features[field_instance][] = node-event_calendar-event_calendar_date
 features[field_instance][] = node-event_calendar-event_calendar_status
 features[field_instance][] = node-fiche_indicateur-field_abondance
 features[field_instance][] = node-fiche_indicateur-field_accessiblite
-features[field_instance][] = node-fiche_indicateur-field_actu_date
 features[field_instance][] = node-fiche_indicateur-field_analyse_frb
 features[field_instance][] = node-fiche_indicateur-field_analyse_frb_oui_non
 features[field_instance][] = node-fiche_indicateur-field_avantages

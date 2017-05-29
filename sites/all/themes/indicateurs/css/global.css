@@ -580,6 +580,12 @@ a.bouton-questions:hover {
   float: left;
 }
 
+
+  .node-type-fiche-indicateur .field-collection-container .field-name-field-collecvisuels .field-items .field-item:nth-child(4n) {
+    clear: left;
+  }
+
+
 .node-type-fiche-indicateur .field-collection-container .field-name-field-collecvisuels .group-right .field-items .field-item {
   width: 100%;
   float: left;
@@ -1339,6 +1345,22 @@ background: url("../images/redsmallexpanded.gif") no-repeat scroll 0px 30% trans
     display: none;
   }
 }
+
+.print_html a {
+  display: block;
+  padding: 3px 8px;
+  background-color: #AF3225;
+  border: solid 2px #AF3225;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+
+  .print_html a:hover {
+    background-color: #fff;
+    color: #AF3225;
+    text-decoration: none;
+  }
 
 /*Site map*/
 .context-sitemap h2.title {
