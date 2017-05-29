@@ -58,6 +58,16 @@ a:hover {
   text-decoration: underline;
 }
 
+sup{
+  position: relative;
+  top: -3px;
+}
+
+sub{
+  position: relative;
+  top: 3px;
+}
+
 .field .field-label {
   font-size: 0.9em;
   font-weight: bold;
@@ -836,7 +846,7 @@ clear:both;
 .view-recherche-questions .view-display-id-attachment_1 .view-content,
 .view-recherche-questions .view-display-id-attachment_2 .view-content,
 .view-recherche-questions .view-display-id-attachment_3 .view-content,
-.view-recherche-questions .view-display-id-attachment_4 .view-content, 
+.view-recherche-questions .view-display-id-attachment_4 .view-content,
 .view-recherche-questions .view-display-id-attachment_5 .view-content,
 .view-recherche-questions .view-display-id-attachment_6 .view-content {
   display: inherit;
@@ -1576,7 +1586,7 @@ div.view-id-recherche_actualite.view-display-id-block_1  div.views-slideshow-con
   color: #000;
 }
 
-span.lexicon-term {    
-    border-bottom: 0 !important;    
+span.lexicon-term {
+    border-bottom: 0 !important;
 }
 
