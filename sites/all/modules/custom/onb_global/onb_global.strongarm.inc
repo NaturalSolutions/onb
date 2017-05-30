@@ -13,6 +13,13 @@ function onb_global_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'additional_settings__active_tab_fiche_ressource_bibliographique';
+  $strongarm->value = 'edit-comment';
+  $export['additional_settings__active_tab_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'clean_url';
   $strongarm->value = 1;
   $export['clean_url'] = $strongarm;
@@ -728,6 +735,13 @@ function onb_global_strongarm() {
   $strongarm->name = 'extlink_target';
   $strongarm->value = '_blank';
   $export['extlink_target'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'facetapi:block_cache:search_api@search_fiches_biblio';
+  $strongarm->value = -1;
+  $export['facetapi:block_cache:search_api@search_fiches_biblio'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2806,6 +2820,55 @@ function onb_global_strongarm() {
   $strongarm->name = 'page_title_type_auteur_e_showfield';
   $strongarm->value = 0;
   $export['page_title_type_auteur_e_showfield'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_fiche_ressource_bibliographique';
+  $strongarm->value = '';
+  $export['page_title_type_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_fiche_ressource_bibliographique_showfield';
+  $strongarm->value = 0;
+  $export['page_title_type_fiche_ressource_bibliographique_showfield'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'print_display_fiche_ressource_bibliographique';
+  $strongarm->value = 1;
+  $export['print_display_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'print_display_urllist_fiche_ressource_bibliographique';
+  $strongarm->value = 1;
+  $export['print_display_urllist_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'print_pdf_display_comment_fiche_ressource_bibliographique';
+  $strongarm->value = 0;
+  $export['print_pdf_display_comment_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'print_pdf_display_fiche_ressource_bibliographique';
+  $strongarm->value = 1;
+  $export['print_pdf_display_fiche_ressource_bibliographique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'print_pdf_display_urllist_fiche_ressource_bibliographique';
+  $strongarm->value = 1;
+  $export['print_pdf_display_urllist_fiche_ressource_bibliographique'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
