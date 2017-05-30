@@ -37,11 +37,11 @@ function onb_global_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '-10',
         ),
-        'views-calendar-block_1' => array(
+        'views-calendrier-block_1' => array(
           'module' => 'views',
-          'delta' => 'calendar-block_1',
+          'delta' => 'calendrier-block_1',
           'region' => 'sidebar_first',
-          'weight' => '-9',
+          'weight' => '-8',
         ),
         'views-recherche_actualite-block_1' => array(
           'module' => 'views',
@@ -108,11 +108,11 @@ function onb_global_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '-10',
         ),
-        'views-calendar-block_1' => array(
+        'views-calendrier-block_1' => array(
           'module' => 'views',
-          'delta' => 'calendar-block_1',
+          'delta' => 'calendrier-block_1',
           'region' => 'sidebar_first',
-          'weight' => '-9',
+          'weight' => '-8',
         ),
         'views-recherche_actualite-block_1' => array(
           'module' => 'views',
@@ -228,6 +228,59 @@ function onb_global_context_default_contexts() {
   // Included for use with string extractors like potx.
   t('Actualités');
   $export['page_actualite'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'page_fiches_biblio';
+  $context->description = '';
+  $context->tag = 'Fiches biblio';
+  $context->conditions = array(
+    'node' => array(
+      'values' => array(
+        'fiche_ressource_bibliographique' => 'fiche_ressource_bibliographique',
+      ),
+      'options' => array(
+        'node_form' => '0',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'block-6' => array(
+          'module' => 'block',
+          'delta' => '6',
+          'region' => 'sidebar_first',
+          'weight' => '-10',
+        ),
+        'ds_extras-barre_de_gauche' => array(
+          'module' => 'ds_extras',
+          'delta' => 'barre_de_gauche',
+          'region' => 'sidebar_first',
+          'weight' => '-9',
+        ),
+        'print-print-links' => array(
+          'module' => 'print',
+          'delta' => 'print-links',
+          'region' => 'sidebar_first',
+          'weight' => '-7',
+        ),
+        'block-11' => array(
+          'module' => 'block',
+          'delta' => '11',
+          'region' => 'sidebar_first',
+          'weight' => '-6',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Fiches biblio');
+  $export['page_fiches_biblio'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
@@ -577,6 +630,110 @@ function onb_global_context_default_contexts() {
   // Included for use with string extractors like potx.
   t('Actualités');
   $export['vue_actualites'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'vue_fiches_biblio';
+  $context->description = '';
+  $context->tag = 'Fiches biblio';
+  $context->conditions = array(
+    'views' => array(
+      'values' => array(
+        'recherche_fiches_biblio:page' => 'recherche_fiches_biblio:page',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'block-5' => array(
+          'module' => 'block',
+          'delta' => '5',
+          'region' => 'sidebar_first',
+          'weight' => '-10',
+        ),
+        'current_search-standard' => array(
+          'module' => 'current_search',
+          'delta' => 'standard',
+          'region' => 'sidebar_first',
+          'weight' => '-9',
+        ),
+        'block-2' => array(
+          'module' => 'block',
+          'delta' => '2',
+          'region' => 'sidebar_first',
+          'weight' => '-8',
+        ),
+        'facetapi-q3qwjbG6MgQk86uYcYLCdo1w1Ox7ZnWp' => array(
+          'module' => 'facetapi',
+          'delta' => 'q3qwjbG6MgQk86uYcYLCdo1w1Ox7ZnWp',
+          'region' => 'sidebar_first',
+          'weight' => '-7',
+        ),
+        'facetapi-NgIF8RIOBV5ECrk45ALlKR9HmbhH18Ji' => array(
+          'module' => 'facetapi',
+          'delta' => 'NgIF8RIOBV5ECrk45ALlKR9HmbhH18Ji',
+          'region' => 'sidebar_first',
+          'weight' => '-6',
+        ),
+        'facetapi-AwNEwsXHd7MP1Hf1PGqiOnj10sHJNPVL' => array(
+          'module' => 'facetapi',
+          'delta' => 'AwNEwsXHd7MP1Hf1PGqiOnj10sHJNPVL',
+          'region' => 'sidebar_first',
+          'weight' => '-5',
+        ),
+        'facetapi-jQgxrRm5eVtgSYZyZNmjQUf6Ta7Aobab' => array(
+          'module' => 'facetapi',
+          'delta' => 'jQgxrRm5eVtgSYZyZNmjQUf6Ta7Aobab',
+          'region' => 'sidebar_first',
+          'weight' => '-4',
+        ),
+        'facetapi-md1YF9vasA71mFnhlCGlWct30DFspy0o' => array(
+          'module' => 'facetapi',
+          'delta' => 'md1YF9vasA71mFnhlCGlWct30DFspy0o',
+          'region' => 'sidebar_first',
+          'weight' => '-3',
+        ),
+        'facetapi-LrRXTrkdLflxt2AVW8oPY87SUtZ3RIEE' => array(
+          'module' => 'facetapi',
+          'delta' => 'LrRXTrkdLflxt2AVW8oPY87SUtZ3RIEE',
+          'region' => 'sidebar_first',
+          'weight' => '-2',
+        ),
+        'facetapi-QVrrrqoV00iJQusZ2iG8KyA7khx9ytJr' => array(
+          'module' => 'facetapi',
+          'delta' => 'QVrrrqoV00iJQusZ2iG8KyA7khx9ytJr',
+          'region' => 'sidebar_first',
+          'weight' => '-1',
+        ),
+        'facetapi-6JYJcWN6wB2bNpqybC0Jm0rEEPwITmXg' => array(
+          'module' => 'facetapi',
+          'delta' => '6JYJcWN6wB2bNpqybC0Jm0rEEPwITmXg',
+          'region' => 'sidebar_first',
+          'weight' => '0',
+        ),
+        'facetapi-3r46c3NAblFRJM5BrJDdvrs40XMXhTay' => array(
+          'module' => 'facetapi',
+          'delta' => '3r46c3NAblFRJM5BrJDdvrs40XMXhTay',
+          'region' => 'sidebar_first',
+          'weight' => '1',
+        ),
+        'facetapi-pmyXsWlY1Yg494QwWotv5xOoyj1rCGes' => array(
+          'module' => 'facetapi',
+          'delta' => 'pmyXsWlY1Yg494QwWotv5xOoyj1rCGes',
+          'region' => 'sidebar_first',
+          'weight' => '2',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Fiches biblio');
+  $export['vue_fiches_biblio'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */

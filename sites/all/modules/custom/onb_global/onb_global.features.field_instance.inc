@@ -1533,11 +1533,7 @@ function onb_global_field_default_field_instances() {
   // Exported field_instance: 'node-event_calendar-event_calendar_status'.
   $field_instances['node-event_calendar-event_calendar_status'] = array(
     'bundle' => 'event_calendar',
-    'default_value' => array(
-      0 => array(
-        'tid' => 1892,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Describe Event status',
     'display' => array(
@@ -1557,14 +1553,15 @@ function onb_global_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'event_calendar_status',
     'label' => 'Statut',
-    'required' => TRUE,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'options',
       'settings' => array(),
-      'type' => 'options_select',
+      'type' => 'options_buttons',
       'weight' => 10,
     ),
   );

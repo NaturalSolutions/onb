@@ -1590,3 +1590,17 @@ span.lexicon-term {
     border-bottom: 0 !important;
 }
 
+.view .date-nav-wrapper .date-prev,
+.view .date-nav-wrapper .date-next {
+  background: none;
+  border-radius: 0;
+}
+
+  .view .date-nav-wrapper .date-prev a,
+  .view .date-nav-wrapper .date-next a {
+    margin: 0;
+  }
+
+  #region-sidebar-first .view .date-nav-wrapper ul li {
+    padding: 0;
+  }

@@ -940,6 +940,7 @@ function onb_global_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Administration des termes de taxonomies';
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'plus';
   $handler->display->display_options['access']['type'] = 'role';
   $handler->display->display_options['access']['role'] = array(
     3 => '3',
@@ -948,9 +949,19 @@ function onb_global_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Appliquer';
   $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Réinitialiser';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Trier par';
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '50';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Éléments par page';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Tout -';
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Décalage';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« premier';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ précédent';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'suivant ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'dernier »';
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
     'views_bulk_operations' => 'views_bulk_operations',
@@ -1011,7 +1022,6 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
   $handler->display->display_options['fields']['views_bulk_operations']['table'] = 'views_entity_taxonomy_term';
   $handler->display->display_options['fields']['views_bulk_operations']['field'] = 'views_bulk_operations';
-  $handler->display->display_options['fields']['views_bulk_operations']['label'] = 'Taxonomy term';
   $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['display_type'] = '0';
   $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['enable_select_all_pages'] = 1;
   $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['row_clickable'] = 1;
@@ -1037,7 +1047,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['name']['field'] = 'name';
-  $handler->display->display_options['fields']['name']['label'] = 'Term';
+  $handler->display->display_options['fields']['name']['label'] = 'Terme';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
@@ -1045,7 +1055,6 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['language']['id'] = 'language';
   $handler->display->display_options['fields']['language']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['language']['field'] = 'language';
-  $handler->display->display_options['fields']['language']['label'] = 'Language';
   /* Field: Terme de taxonomie: Name (translated) */
   $handler->display->display_options['fields']['name_i18n']['id'] = 'name_i18n';
   $handler->display->display_options['fields']['name_i18n']['table'] = 'taxonomy_term_data';
@@ -1055,7 +1064,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['name_1']['id'] = 'name_1';
   $handler->display->display_options['fields']['name_1']['table'] = 'taxonomy_vocabulary';
   $handler->display->display_options['fields']['name_1']['field'] = 'name';
-  $handler->display->display_options['fields']['name_1']['label'] = 'Vocabulary';
+  $handler->display->display_options['fields']['name_1']['label'] = 'Vocabulaire';
   /* Field: Vocabulaire de taxonomie: Nom système */
   $handler->display->display_options['fields']['machine_name']['id'] = 'machine_name';
   $handler->display->display_options['fields']['machine_name']['table'] = 'taxonomy_vocabulary';
@@ -1076,7 +1085,6 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['description']['id'] = 'description';
   $handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['description']['field'] = 'description';
-  $handler->display->display_options['fields']['description']['label'] = 'Term description';
   $handler->display->display_options['fields']['description']['alter']['max_length'] = '300';
   $handler->display->display_options['fields']['description']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['description']['alter']['trim'] = TRUE;
@@ -1090,14 +1098,12 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['tid']['id'] = 'tid';
   $handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['tid']['field'] = 'tid';
-  $handler->display->display_options['fields']['tid']['label'] = 'Term ID';
   $handler->display->display_options['fields']['tid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['tid']['separator'] = '';
   /* Field: Global: Texte personnalisé */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['label'] = 'Custom text';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="/fr/taxonomy/term/[tid]/translate">Translate</a>  |  <a href="/fr/taxonomy/term/[tid]/translate/fr">Translate FR</a>';
   /* Filter criterion: Terme de taxonomie: Nom */
   $handler->display->display_options['filters']['name']['id'] = 'name';
@@ -1107,7 +1113,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['filters']['name']['group'] = 1;
   $handler->display->display_options['filters']['name']['exposed'] = TRUE;
   $handler->display->display_options['filters']['name']['expose']['operator_id'] = 'name_op';
-  $handler->display->display_options['filters']['name']['expose']['label'] = 'Name';
+  $handler->display->display_options['filters']['name']['expose']['label'] = 'Nom';
   $handler->display->display_options['filters']['name']['expose']['operator'] = 'name_op';
   $handler->display->display_options['filters']['name']['expose']['identifier'] = 'name';
   $handler->display->display_options['filters']['name']['expose']['remember_roles'] = array(
@@ -1124,7 +1130,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['filters']['vid']['group'] = 1;
   $handler->display->display_options['filters']['vid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['vid']['expose']['operator_id'] = 'vid_op';
-  $handler->display->display_options['filters']['vid']['expose']['label'] = 'Vocabulary';
+  $handler->display->display_options['filters']['vid']['expose']['label'] = 'Vocabulaire';
   $handler->display->display_options['filters']['vid']['expose']['operator'] = 'vid_op';
   $handler->display->display_options['filters']['vid']['expose']['identifier'] = 'vid';
   $handler->display->display_options['filters']['vid']['expose']['multiple'] = TRUE;
@@ -1147,6 +1153,362 @@ function onb_global_views_default_views() {
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
   $export['administration_taxos'] = $view;
+
+  $view = new view();
+  $view->name = 'calendrier';
+  $view->description = '';
+  $view->tag = 'Event Calendar';
+  $view->base_table = 'node';
+  $view->human_name = 'Calendrier';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Event Calendar';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['link_display'] = 'page_1';
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['query_comment'] = FALSE;
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'date_views_pager';
+  $handler->display->display_options['pager']['options']['date_id'] = 'month';
+  $handler->display->display_options['style_plugin'] = 'calendar_style';
+  $handler->display->display_options['style_options']['name_size'] = '3';
+  $handler->display->display_options['style_options']['with_weekno'] = '0';
+  $handler->display->display_options['style_options']['multiday_theme'] = '1';
+  $handler->display->display_options['style_options']['theme_style'] = '1';
+  $handler->display->display_options['style_options']['max_items'] = '0';
+  $handler->display->display_options['row_plugin'] = 'calendar_entity';
+  /* Field: Contenu: Titre */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = 'First Title';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['max_length'] = '15';
+  $handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  $handler->display->display_options['fields']['title']['node_in_colorbox'] = TRUE;
+  $handler->display->display_options['fields']['title']['node_in_colorbox_width'] = '600';
+  $handler->display->display_options['fields']['title']['node_in_colorbox_height'] = '600';
+  $handler->display->display_options['fields']['title']['node_in_colorbox_rel'] = '';
+  /* Field: Contenu: Titre */
+  $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
+  $handler->display->display_options['fields']['title_1']['table'] = 'node';
+  $handler->display->display_options['fields']['title_1']['field'] = 'title';
+  $handler->display->display_options['fields']['title_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title_1']['link_to_node'] = FALSE;
+  /* Field: Contenu: Date */
+  $handler->display->display_options['fields']['event_calendar_date']['id'] = 'event_calendar_date';
+  $handler->display->display_options['fields']['event_calendar_date']['table'] = 'field_data_event_calendar_date';
+  $handler->display->display_options['fields']['event_calendar_date']['field'] = 'event_calendar_date';
+  $handler->display->display_options['fields']['event_calendar_date']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['event_calendar_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['event_calendar_date']['settings'] = array(
+    'format_type' => 'long',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Field: Contenu: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Field: Contenu: Chemin */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+  /* Field: Global: Texte personnalisé */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="[path]" class="event-popup" id = "event-popup"  name="node-[nid]" title="[title_1]">[title]</a>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Field: Contenu: Lien de modification */
+  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['label'] = '';
+  $handler->display->display_options['fields']['edit_node']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['edit_node']['alter']['alt'] = '[title_1]';
+  $handler->display->display_options['fields']['edit_node']['alter']['link_class'] = 'event-popup';
+  $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['edit_node']['text'] = 'EDIT';
+  /* Sort criterion: Contenu: Date - date de début (event_calendar_date) */
+  $handler->display->display_options['sorts']['event_calendar_date_value']['id'] = 'event_calendar_date_value';
+  $handler->display->display_options['sorts']['event_calendar_date_value']['table'] = 'field_data_event_calendar_date';
+  $handler->display->display_options['sorts']['event_calendar_date_value']['field'] = 'event_calendar_date_value';
+  /* Filter criterion: Contenu: Publié */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 0;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Contenu: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'event_calendar' => 'event_calendar',
+  );
+
+  /* Display: Month */
+  $handler = $view->new_display('page', 'Month', 'page_1');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'date_views_pager';
+  $handler->display->display_options['pager']['options']['date_id'] = 'month';
+  $handler->display->display_options['pager']['options']['link_format'] = 'clean';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'calendar_style';
+  $handler->display->display_options['style_options']['name_size'] = '3';
+  $handler->display->display_options['style_options']['mini'] = '0';
+  $handler->display->display_options['style_options']['with_weekno'] = '0';
+  $handler->display->display_options['style_options']['multiday_theme'] = '1';
+  $handler->display->display_options['style_options']['theme_style'] = '1';
+  $handler->display->display_options['style_options']['max_items'] = '0';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'calendar_entity';
+  $handler->display->display_options['row_options']['colors']['legend'] = 'type';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Date: Date (node) */
+  $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
+  $handler->display->display_options['arguments']['date_argument']['table'] = 'node';
+  $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
+  $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'date';
+  $handler->display->display_options['arguments']['date_argument']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['date_argument']['add_delta'] = 'yes';
+  $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
+    'field_data_event_calendar_date.event_calendar_date_value' => 'field_data_event_calendar_date.event_calendar_date_value',
+  );
+  $handler->display->display_options['path'] = 'event-created/month';
+  $handler->display->display_options['menu']['type'] = 'default tab';
+  $handler->display->display_options['menu']['title'] = 'Month';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['tab_options']['type'] = 'normal';
+  $handler->display->display_options['tab_options']['title'] = 'Calendar';
+  $handler->display->display_options['tab_options']['weight'] = '0';
+
+  /* Display: Week */
+  $handler = $view->new_display('page', 'Week', 'page_2');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'date_views_pager';
+  $handler->display->display_options['pager']['options']['date_id'] = 'week';
+  $handler->display->display_options['pager']['options']['link_format'] = 'clean';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'calendar_style';
+  $handler->display->display_options['style_options']['calendar_type'] = 'week';
+  $handler->display->display_options['style_options']['name_size'] = '3';
+  $handler->display->display_options['style_options']['mini'] = '0';
+  $handler->display->display_options['style_options']['with_weekno'] = '0';
+  $handler->display->display_options['style_options']['multiday_theme'] = '1';
+  $handler->display->display_options['style_options']['theme_style'] = '1';
+  $handler->display->display_options['style_options']['max_items'] = '0';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'calendar_entity';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Date: Date (node) */
+  $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
+  $handler->display->display_options['arguments']['date_argument']['table'] = 'node';
+  $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
+  $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'date';
+  $handler->display->display_options['arguments']['date_argument']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['date_argument']['granularity'] = 'week';
+  $handler->display->display_options['arguments']['date_argument']['add_delta'] = 'yes';
+  $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
+    'field_data_event_calendar_date.event_calendar_date_value' => 'field_data_event_calendar_date.event_calendar_date_value',
+  );
+  $handler->display->display_options['path'] = 'event-created/week';
+  $handler->display->display_options['menu']['type'] = 'tab';
+  $handler->display->display_options['menu']['title'] = 'Week';
+  $handler->display->display_options['menu']['weight'] = '2';
+  $handler->display->display_options['menu']['context'] = 0;
+
+  /* Display: Day */
+  $handler = $view->new_display('page', 'Day', 'page_3');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'date_views_pager';
+  $handler->display->display_options['pager']['options']['date_id'] = 'day';
+  $handler->display->display_options['pager']['options']['link_format'] = 'clean';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'calendar_style';
+  $handler->display->display_options['style_options']['calendar_type'] = 'day';
+  $handler->display->display_options['style_options']['name_size'] = '3';
+  $handler->display->display_options['style_options']['mini'] = '0';
+  $handler->display->display_options['style_options']['with_weekno'] = '0';
+  $handler->display->display_options['style_options']['multiday_theme'] = '1';
+  $handler->display->display_options['style_options']['theme_style'] = '1';
+  $handler->display->display_options['style_options']['max_items'] = '0';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'calendar_entity';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Date: Date (node) */
+  $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
+  $handler->display->display_options['arguments']['date_argument']['table'] = 'node';
+  $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
+  $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'date';
+  $handler->display->display_options['arguments']['date_argument']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['date_argument']['granularity'] = 'day';
+  $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
+    'field_data_event_calendar_date.event_calendar_date_value' => 'field_data_event_calendar_date.event_calendar_date_value',
+  );
+  $handler->display->display_options['path'] = 'event-created/day';
+  $handler->display->display_options['menu']['type'] = 'tab';
+  $handler->display->display_options['menu']['title'] = 'Day';
+  $handler->display->display_options['menu']['weight'] = '3';
+  $handler->display->display_options['menu']['context'] = 0;
+
+  /* Display: Year */
+  $handler = $view->new_display('page', 'Year', 'page');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'date_views_pager';
+  $handler->display->display_options['pager']['options']['date_id'] = 'year';
+  $handler->display->display_options['pager']['options']['link_format'] = 'clean';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'calendar_style';
+  $handler->display->display_options['style_options']['calendar_type'] = 'year';
+  $handler->display->display_options['style_options']['name_size'] = '1';
+  $handler->display->display_options['style_options']['mini'] = '0';
+  $handler->display->display_options['style_options']['with_weekno'] = '0';
+  $handler->display->display_options['style_options']['multiday_theme'] = '1';
+  $handler->display->display_options['style_options']['theme_style'] = '1';
+  $handler->display->display_options['style_options']['max_items'] = '0';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'calendar_entity';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Contenu: Titre */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['hide_alter_empty'] = FALSE;
+  /* Field: Contenu: Date */
+  $handler->display->display_options['fields']['event_calendar_date']['id'] = 'event_calendar_date';
+  $handler->display->display_options['fields']['event_calendar_date']['table'] = 'field_data_event_calendar_date';
+  $handler->display->display_options['fields']['event_calendar_date']['field'] = 'event_calendar_date';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Date: Date (node) */
+  $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
+  $handler->display->display_options['arguments']['date_argument']['table'] = 'node';
+  $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
+  $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'date';
+  $handler->display->display_options['arguments']['date_argument']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['date_argument']['granularity'] = 'year';
+  $handler->display->display_options['arguments']['date_argument']['add_delta'] = 'yes';
+  $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
+    'field_data_event_calendar_date.event_calendar_date_value' => 'field_data_event_calendar_date.event_calendar_date_value',
+  );
+  $handler->display->display_options['path'] = 'event-created/year';
+  $handler->display->display_options['menu']['type'] = 'tab';
+  $handler->display->display_options['menu']['title'] = 'Year';
+  $handler->display->display_options['menu']['weight'] = '4';
+  $handler->display->display_options['menu']['context'] = 0;
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block_1');
+  $handler->display->display_options['defaults']['use_ajax'] = FALSE;
+  $handler->display->display_options['use_ajax'] = TRUE;
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['access'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'role';
+  $handler->display->display_options['access']['role'] = array(
+    2 => '2',
+  );
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'date_views_pager';
+  $handler->display->display_options['pager']['options']['date_id'] = 'mini';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'calendar_style';
+  $handler->display->display_options['style_options']['name_size'] = '1';
+  $handler->display->display_options['style_options']['mini'] = '1';
+  $handler->display->display_options['style_options']['with_weekno'] = '0';
+  $handler->display->display_options['style_options']['multiday_theme'] = '1';
+  $handler->display->display_options['style_options']['theme_style'] = '1';
+  $handler->display->display_options['style_options']['max_items'] = '0';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'calendar_entity';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Date: Date (node) */
+  $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
+  $handler->display->display_options['arguments']['date_argument']['table'] = 'node';
+  $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
+  $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'date';
+  $handler->display->display_options['arguments']['date_argument']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['date_argument']['add_delta'] = 'yes';
+  $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
+    'field_data_event_calendar_date.event_calendar_date_value' => 'field_data_event_calendar_date.event_calendar_date_value',
+  );
+
+  /* Display: Upcoming */
+  $handler = $view->new_display('block', 'Upcoming', 'block_2');
+  $handler->display->display_options['display_description'] = 'Upcoming events block';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Contenu: Publié */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 0;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Date: Date (node) */
+  $handler->display->display_options['filters']['date_filter']['id'] = 'date_filter';
+  $handler->display->display_options['filters']['date_filter']['table'] = 'node';
+  $handler->display->display_options['filters']['date_filter']['field'] = 'date_filter';
+  $handler->display->display_options['filters']['date_filter']['operator'] = '>=';
+  $handler->display->display_options['filters']['date_filter']['default_date'] = 'now';
+  $handler->display->display_options['filters']['date_filter']['add_delta'] = 'yes';
+  $handler->display->display_options['filters']['date_filter']['date_fields'] = array(
+    'node.created' => 'node.created',
+  );
+  $export['calendrier'] = $view;
 
   $view = new view();
   $view->name = 'diaporama';
@@ -2026,6 +2388,441 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['block_caching'] = '8';
   $export['recherche_actualite'] = $view;
+
+  $view = new view();
+  $view->name = 'recherche_fiches_biblio';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'search_api_index_search_indicateurs';
+  $view->human_name = 'Recherche Fiches biblio';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Les fiches bibliographiques';
+  $handler->display->display_options['use_ajax'] = TRUE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'plus';
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Appliquer';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Réinitialiser';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Trier par';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '0';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'field_visuels' => 'field_visuels',
+    'title' => 'title',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'field_visuels' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'title' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  /* Field: Indexed Nœud: Visuels */
+  $handler->display->display_options['fields']['field_collecvisuels']['id'] = 'field_collecvisuels';
+  $handler->display->display_options['fields']['field_collecvisuels']['table'] = 'search_api_index_search_indicateurs';
+  $handler->display->display_options['fields']['field_collecvisuels']['field'] = 'field_collecvisuels';
+  $handler->display->display_options['fields']['field_collecvisuels']['label'] = '';
+  $handler->display->display_options['fields']['field_collecvisuels']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_collecvisuels']['list']['mode'] = 'first';
+  $handler->display->display_options['fields']['field_collecvisuels']['link_to_entity'] = 0;
+  $handler->display->display_options['fields']['field_collecvisuels']['display'] = 'view';
+  $handler->display->display_options['fields']['field_collecvisuels']['view_mode'] = 'visuels_indicateurs';
+  /* Field: Indexed Nœud: Titre */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'search_api_index_search_indicateurs';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
+  /* Field: Indexed Nœud: Intitulé court */
+  $handler->display->display_options['fields']['field_intitule_court']['id'] = 'field_intitule_court';
+  $handler->display->display_options['fields']['field_intitule_court']['table'] = 'search_api_index_search_indicateurs';
+  $handler->display->display_options['fields']['field_intitule_court']['field'] = 'field_intitule_court';
+  $handler->display->display_options['fields']['field_intitule_court']['label'] = '';
+  $handler->display->display_options['fields']['field_intitule_court']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_intitule_court']['element_label_colon'] = FALSE;
+  /* Field: Global: Texte personnalisé */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[title]<br\\>
+[field_intitule_court]';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Sort criterion: Indexed Nœud: Titre */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'search_api_index_search_indicateurs';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
+  /* Filter criterion: Indexed Nœud: Type de contenu */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_indicateurs';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'fiche_ressource_bibliographique' => 'fiche_ressource_bibliographique',
+  );
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'field_collecvisuels' => 'field_collecvisuels',
+    'title' => 'title',
+    'field_intitule_court' => 'field_intitule_court',
+    'field_jeux_indicateur' => 'field_jeux_indicateur',
+    'field_valeurannee' => 'field_valeurannee',
+    'nothing' => 'nothing',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'field_collecvisuels' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_intitule_court' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_jeux_indicateur' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_valeurannee' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'nothing' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['style_options']['caption'] = 'Les indicateurs nationaux de synthèse';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Zone de texte */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['content'] = '
+';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Indexed Nœud: Titre */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'search_api_index_search_indicateurs';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['alt'] = 'Accéder à la fiche indicateur';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
+  /* Field: Indexed Nœud: Accessibilité des données */
+  $handler->display->display_options['fields']['field_accessiblite']['id'] = 'field_accessiblite';
+  $handler->display->display_options['fields']['field_accessiblite']['table'] = 'search_api_index_search_indicateurs';
+  $handler->display->display_options['fields']['field_accessiblite']['field'] = 'field_accessiblite';
+  $handler->display->display_options['fields']['field_accessiblite']['link_to_entity'] = 1;
+  $handler->display->display_options['fields']['field_accessiblite']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_accessiblite']['bypass_access'] = 0;
+  /* Field: Indexed Nœud: Auteur(e - s) */
+  $handler->display->display_options['fields']['field_auteures']['id'] = 'field_auteures';
+  $handler->display->display_options['fields']['field_auteures']['table'] = 'search_api_index_search_indicateurs';
+  $handler->display->display_options['fields']['field_auteures']['field'] = 'field_auteures';
+  $handler->display->display_options['fields']['field_auteures']['link_to_entity'] = 1;
+  $handler->display->display_options['fields']['field_auteures']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_auteures']['bypass_access'] = 0;
+  /* Field: Indexed Nœud: Classification */
+  $handler->display->display_options['fields']['field_classification']['id'] = 'field_classification';
+  $handler->display->display_options['fields']['field_classification']['table'] = 'search_api_index_search_indicateurs';
+  $handler->display->display_options['fields']['field_classification']['field'] = 'field_classification';
+  $handler->display->display_options['fields']['field_classification']['link_to_entity'] = 1;
+  $handler->display->display_options['fields']['field_classification']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_classification']['bypass_access'] = 0;
+  /* Field: Indexed Nœud: Nature de la ressource */
+  $handler->display->display_options['fields']['field_nature_interne']['id'] = 'field_nature_interne';
+  $handler->display->display_options['fields']['field_nature_interne']['table'] = 'search_api_index_search_indicateurs';
+  $handler->display->display_options['fields']['field_nature_interne']['field'] = 'field_nature_interne';
+  $handler->display->display_options['fields']['field_nature_interne']['link_to_entity'] = 1;
+  $handler->display->display_options['fields']['field_nature_interne']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_nature_interne']['bypass_access'] = 0;
+  /* Field: Indexed Nœud: Nature de la ressource */
+  $handler->display->display_options['fields']['field_nature_externe']['id'] = 'field_nature_externe';
+  $handler->display->display_options['fields']['field_nature_externe']['table'] = 'search_api_index_search_indicateurs';
+  $handler->display->display_options['fields']['field_nature_externe']['field'] = 'field_nature_externe';
+  $handler->display->display_options['fields']['field_nature_externe']['link_to_entity'] = 1;
+  $handler->display->display_options['fields']['field_nature_externe']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_nature_externe']['bypass_access'] = 0;
+  /* Field: Indexed Nœud: Origine de la ressource */
+  $handler->display->display_options['fields']['field_origine']['id'] = 'field_origine';
+  $handler->display->display_options['fields']['field_origine']['table'] = 'search_api_index_search_indicateurs';
+  $handler->display->display_options['fields']['field_origine']['field'] = 'field_origine';
+  $handler->display->display_options['fields']['field_origine']['link_to_entity'] = 1;
+  $handler->display->display_options['fields']['field_origine']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_origine']['bypass_access'] = 0;
+  /* Field: Indexed Nœud: Périmètre géographique */
+  $handler->display->display_options['fields']['field_perimetre_geo']['id'] = 'field_perimetre_geo';
+  $handler->display->display_options['fields']['field_perimetre_geo']['table'] = 'search_api_index_search_indicateurs';
+  $handler->display->display_options['fields']['field_perimetre_geo']['field'] = 'field_perimetre_geo';
+  $handler->display->display_options['fields']['field_perimetre_geo']['link_to_entity'] = 1;
+  $handler->display->display_options['fields']['field_perimetre_geo']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_perimetre_geo']['bypass_access'] = 0;
+  /* Field: Indexed Nœud: Périmètre thématique naturel */
+  $handler->display->display_options['fields']['field_perimetre_thematique_nat']['id'] = 'field_perimetre_thematique_nat';
+  $handler->display->display_options['fields']['field_perimetre_thematique_nat']['table'] = 'search_api_index_search_indicateurs';
+  $handler->display->display_options['fields']['field_perimetre_thematique_nat']['field'] = 'field_perimetre_thematique_nat';
+  $handler->display->display_options['fields']['field_perimetre_thematique_nat']['link_to_entity'] = 1;
+  $handler->display->display_options['fields']['field_perimetre_thematique_nat']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_perimetre_thematique_nat']['bypass_access'] = 0;
+  /* Field: Indexed Nœud: Statut de la ressource */
+  $handler->display->display_options['fields']['field_statut']['id'] = 'field_statut';
+  $handler->display->display_options['fields']['field_statut']['table'] = 'search_api_index_search_indicateurs';
+  $handler->display->display_options['fields']['field_statut']['field'] = 'field_statut';
+  $handler->display->display_options['fields']['field_statut']['link_to_entity'] = 1;
+  $handler->display->display_options['fields']['field_statut']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_statut']['bypass_access'] = 0;
+  /* Field: Global: Texte personnalisé */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[title]<br\\>
+[field_intitule_court]<br\\>
+<div class="valeurindic">[field_valeurannee]<br\\></div>
+<div class="jeuindic">[field_jeux_indicateur]</div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['filter_groups']['groups'] = array(
+    1 => 'AND',
+    2 => 'OR',
+  );
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Indexed Nœud: Type de contenu */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_indicateurs';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'fiche_ressource_bibliographique' => 'fiche_ressource_bibliographique',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Indexed Nœud: Statut */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'search_api_index_search_indicateurs';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = array(
+    1 => '1',
+  );
+  /* Filter criterion: Indexed Nœud: Language de l'élément */
+  $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
+  $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_indicateurs';
+  $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
+  $handler->display->display_options['filters']['search_api_language']['value'] = array(
+    'current' => 'current',
+  );
+  $handler->display->display_options['path'] = 'fiches_bibliographiques';
+  $handler->display->display_options['menu']['title'] = 'Indicateurs';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['name'] = 'main-menu';
+  $handler->display->display_options['menu']['context'] = 0;
+
+  /* Display: Biodiversité et changement climatique */
+  $handler = $view->new_display('attachment', 'Biodiversité et changement climatique', 'attachment_6');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Les indicateurs Biodiversité et changement climatique';
+  $handler->display->display_options['enabled'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'field_collecvisuels' => 'field_collecvisuels',
+    'title' => 'title',
+    'field_intitule_court' => 'field_intitule_court',
+    'field_jeux_indicateur' => 'field_jeux_indicateur',
+    'field_valeurannee' => 'field_valeurannee',
+    'nothing_1' => 'nothing_1',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'field_collecvisuels' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_intitule_court' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_jeux_indicateur' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_valeurannee' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'nothing_1' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['style_options']['caption'] = 'Les indicateurs nationaux thématiques "Biodiversité & changement climatique"';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Indexed Nœud: Visuels */
+  $handler->display->display_options['fields']['field_collecvisuels']['id'] = 'field_collecvisuels';
+  $handler->display->display_options['fields']['field_collecvisuels']['table'] = 'search_api_index_search_indicateurs';
+  $handler->display->display_options['fields']['field_collecvisuels']['field'] = 'field_collecvisuels';
+  $handler->display->display_options['fields']['field_collecvisuels']['label'] = '';
+  $handler->display->display_options['fields']['field_collecvisuels']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_collecvisuels']['list']['mode'] = 'first';
+  $handler->display->display_options['fields']['field_collecvisuels']['link_to_entity'] = 0;
+  $handler->display->display_options['fields']['field_collecvisuels']['display'] = 'view';
+  $handler->display->display_options['fields']['field_collecvisuels']['view_mode'] = 'visuels_indicateurs';
+  /* Field: Indexed Nœud: Titre */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'search_api_index_search_indicateurs';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
+  /* Field: Indexed Nœud: Intitulé court */
+  $handler->display->display_options['fields']['field_intitule_court']['id'] = 'field_intitule_court';
+  $handler->display->display_options['fields']['field_intitule_court']['table'] = 'search_api_index_search_indicateurs';
+  $handler->display->display_options['fields']['field_intitule_court']['field'] = 'field_intitule_court';
+  $handler->display->display_options['fields']['field_intitule_court']['label'] = '';
+  $handler->display->display_options['fields']['field_intitule_court']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_intitule_court']['element_label_colon'] = FALSE;
+  /* Field: Indexed Nœud: Jeu(x) d'indicateurs */
+  $handler->display->display_options['fields']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
+  $handler->display->display_options['fields']['field_jeux_indicateur']['table'] = 'search_api_index_search_indicateurs';
+  $handler->display->display_options['fields']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
+  $handler->display->display_options['fields']['field_jeux_indicateur']['label'] = 'Indicators set(s)';
+  $handler->display->display_options['fields']['field_jeux_indicateur']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_jeux_indicateur']['link_to_entity'] = 0;
+  $handler->display->display_options['fields']['field_jeux_indicateur']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_jeux_indicateur']['bypass_access'] = 0;
+  /* Field: Indexed Nœud: Valeur par période */
+  $handler->display->display_options['fields']['field_valeurannee']['id'] = 'field_valeurannee';
+  $handler->display->display_options['fields']['field_valeurannee']['table'] = 'search_api_index_search_indicateurs';
+  $handler->display->display_options['fields']['field_valeurannee']['field'] = 'field_valeurannee';
+  $handler->display->display_options['fields']['field_valeurannee']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_valeurannee']['link_to_entity'] = 1;
+  $handler->display->display_options['fields']['field_valeurannee']['display'] = 'view';
+  $handler->display->display_options['fields']['field_valeurannee']['view_mode'] = 'full';
+  /* Field: Global: Texte personnalisé */
+  $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
+  $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing_1']['label'] = '';
+  $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '[title]<br\\>
+[field_intitule_court]<br\\>
+<div class="valeurindic">[field_valeurannee]<br\\></div>
+<div class="jeuindic">[field_jeux_indicateur]</div>';
+  $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Indexed Nœud: Type de contenu */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_indicateurs';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'fiche_indicateur' => 'fiche_indicateur',
+  );
+  /* Filter criterion: Indexed Nœud: Jeu(x) d'indicateurs */
+  $handler->display->display_options['filters']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
+  $handler->display->display_options['filters']['field_jeux_indicateur']['table'] = 'search_api_index_search_indicateurs';
+  $handler->display->display_options['filters']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
+  $handler->display->display_options['filters']['field_jeux_indicateur']['value'] = array(
+    148 => '148',
+  );
+  /* Filter criterion: Indexed Nœud: Statut */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'search_api_index_search_indicateurs';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = array(
+    1 => '1',
+  );
+  /* Filter criterion: Indexed Nœud: Language de l'élément */
+  $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
+  $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_indicateurs';
+  $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
+  $handler->display->display_options['filters']['search_api_language']['value'] = array(
+    'current' => 'current',
+  );
+  $handler->display->display_options['displays'] = array(
+    'default' => 0,
+    'page' => 0,
+    'block_1' => 0,
+  );
+  $handler->display->display_options['attachment_position'] = 'after';
+  $handler->display->display_options['inherit_exposed_filters'] = TRUE;
+
+  /* Display: Bloc */
+  $handler = $view->new_display('block', 'Bloc', 'block_1');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'field_visuels' => 'field_visuels',
+    'title' => 'title',
+  );
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Indexed Nœud: Titre */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'search_api_index_search_indicateurs';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
+  $export['recherche_fiches_biblio'] = $view;
 
   $view = new view();
   $view->name = 'recherche_indicateurs';
@@ -4295,7 +5092,7 @@ function onb_global_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = ' Biodiversity & society, questions asked at the ONB';
+  $handler->display->display_options['title'] = 'Biodiversité & société, questions posées à l\'ONB';
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'plus';
@@ -5739,6 +6536,58 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['row_plugin'] = 'references_fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $export['reference_producteur'] = $view;
+
+  $view = new view();
+  $view->name = 'references_bibliographiques';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Références bibliographiques';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Références bibliographiques';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '50';
+  $handler->display->display_options['style_plugin'] = 'table';
+  /* Field: Contenu: Titre */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Sort criterion: Contenu: Date de publication */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Filter criterion: Contenu: Publié */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Contenu: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'fiche_ressource_bibliographique' => 'fiche_ressource_bibliographique',
+  );
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['path'] = 'ressourcesreferences-bibliographiques';
+  $export['references_bibliographiques'] = $view;
 
   $view = new view();
   $view->name = 'relations';

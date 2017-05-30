@@ -58,6 +58,9 @@ drush fr onb_global
 // Activer la nouvelle feature ONB Permissions (Cf. Problème avec la table 'Sytem' ci-dessous)
 drush en onb_permissions
 
+// Désactive la vues par défaut du Calendrier
+drush vdis event_calendar
+
 // Remplir les taxos via Taxonomy Manager (admin/structure/taxonomy_manager/voc) :
 NB : le mieux serait de les avoir en EN pour ne pas avoir à refaire le boulot !!!!
 
