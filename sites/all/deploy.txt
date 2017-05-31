@@ -186,3 +186,14 @@ Ou dans Phpmyadmin :
 ALTER TABLE `system` CHANGE `info` `info` LONGBLOB NULL DEFAULT NULL
 
 Solution 1/ effectuée pour ne pas toucher aux paramètres de la base.
+
+
+// Traduction des deux termes en anglais
+"- "Biodiversity & society, questions asked at the ONB" (présente dans les pages questions)
+qui se traduit via l'interface : admin/config/regional/translate/edit/21731?destination=admin/config/regional/translate/translate
+=> traduction de la chaîne via l'UI par "Biodiversité & société, les questions posées à l'ONB"
+http://213.32.18.30/onb/fr/admin/config/regional/translate/edit/21735?destination=admin/config/regional/translate/translate
+
+- "News" (présent sur le bloc actu de la HP)"
+=> traduction de la chaîne via l'UI par "Actualités"
+http://213.32.18.30/onb/fr/admin/config/regional/translate/edit/21745?destination=admin/config/regional/translate/translate
