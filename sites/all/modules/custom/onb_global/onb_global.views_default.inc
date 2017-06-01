@@ -124,11 +124,11 @@ function onb_global_views_default_views() {
   $handler->display->display_options['empty']['area_text_custom']['field'] = 'area_text_custom';
   $handler->display->display_options['empty']['area_text_custom']['empty'] = TRUE;
   $handler->display->display_options['empty']['area_text_custom']['content'] = 'Aucun contenu disponible.';
-  /* Relationship: Contenu: Auteur */
+  /* Relationship: Content: Author */
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
   $handler->display->display_options['relationships']['uid']['table'] = 'node';
   $handler->display->display_options['relationships']['uid']['field'] = 'uid';
-  /* Relationship: Contenu: Termes de taxonomie du nœud */
+  /* Relationship: Content: Taxonomy terms on node */
   $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
   $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
   $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
@@ -136,7 +136,7 @@ function onb_global_views_default_views() {
     'forums' => 0,
     'tags' => 0,
   );
-  /* Field: Bulk operations: Contenu */
+  /* Field: Bulk operations: Content */
   $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
   $handler->display->display_options['fields']['views_bulk_operations']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['views_bulk_operations']['field'] = 'views_bulk_operations';
@@ -207,7 +207,7 @@ function onb_global_views_default_views() {
       'label' => '',
     ),
   );
-  /* Field: Contenu: Visuel */
+  /* Field: Nœud: Visuel */
   $handler->display->display_options['fields']['field_questionvisuel']['id'] = 'field_questionvisuel';
   $handler->display->display_options['fields']['field_questionvisuel']['table'] = 'field_data_field_questionvisuel';
   $handler->display->display_options['fields']['field_questionvisuel']['field'] = 'field_questionvisuel';
@@ -218,53 +218,53 @@ function onb_global_views_default_views() {
     'image_style' => 'square_thumbnail_80',
     'image_link' => '',
   );
-  /* Field: Contenu: Titre */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
-  /* Field: Contenu: Présente des contenus nouveaux */
+  /* Field: Content: Has new content */
   $handler->display->display_options['fields']['timestamp']['id'] = 'timestamp';
   $handler->display->display_options['fields']['timestamp']['table'] = 'history';
   $handler->display->display_options['fields']['timestamp']['field'] = 'timestamp';
   $handler->display->display_options['fields']['timestamp']['label'] = '';
   $handler->display->display_options['fields']['timestamp']['element_label_colon'] = FALSE;
-  /* Field: Contenu: Langue */
+  /* Field: Content: Language */
   $handler->display->display_options['fields']['language']['id'] = 'language';
   $handler->display->display_options['fields']['language']['table'] = 'node';
   $handler->display->display_options['fields']['language']['field'] = 'language';
-  /* Field: Contenu: Type */
+  /* Field: Content: Type */
   $handler->display->display_options['fields']['type']['id'] = 'type';
   $handler->display->display_options['fields']['type']['table'] = 'node';
   $handler->display->display_options['fields']['type']['field'] = 'type';
-  /* Field: Utilisateur: Nom */
+  /* Field: User: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'users';
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['relationship'] = 'uid';
   $handler->display->display_options['fields']['name']['label'] = 'Auteur';
   $handler->display->display_options['fields']['name']['hide_alter_empty'] = FALSE;
-  /* Field: Contenu: Publié */
+  /* Field: Content: Published */
   $handler->display->display_options['fields']['status']['id'] = 'status';
   $handler->display->display_options['fields']['status']['table'] = 'node';
   $handler->display->display_options['fields']['status']['field'] = 'status';
   $handler->display->display_options['fields']['status']['not'] = 0;
-  /* Field: Contenu: Date de mise à jour */
+  /* Field: Content: Updated date */
   $handler->display->display_options['fields']['changed']['id'] = 'changed';
   $handler->display->display_options['fields']['changed']['table'] = 'node';
   $handler->display->display_options['fields']['changed']['field'] = 'changed';
   $handler->display->display_options['fields']['changed']['label'] = 'Mis à jour';
   $handler->display->display_options['fields']['changed']['date_format'] = 'short';
-  /* Field: Contenu: Lien de modification */
+  /* Field: Content: Edit link */
   $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['label'] = 'Actions';
-  /* Field: Contenu: Lien de suppression */
+  /* Field: Content: Delete link */
   $handler->display->display_options['fields']['delete_node']['id'] = 'delete_node';
   $handler->display->display_options['fields']['delete_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['delete_node']['field'] = 'delete_node';
   $handler->display->display_options['fields']['delete_node']['label'] = '';
-  /* Filter criterion: Contenu: Titre */
+  /* Filter criterion: Content: Title */
   $handler->display->display_options['filters']['title']['id'] = 'title';
   $handler->display->display_options['filters']['title']['table'] = 'node';
   $handler->display->display_options['filters']['title']['field'] = 'title';
@@ -276,7 +276,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
   $handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
   $handler->display->display_options['filters']['title']['expose']['remember'] = TRUE;
-  /* Filter criterion: Contenu: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -287,7 +287,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['filters']['type']['expose']['operator'] = 'type_op';
   $handler->display->display_options['filters']['type']['expose']['identifier'] = 'type';
   $handler->display->display_options['filters']['type']['expose']['remember'] = TRUE;
-  /* Filter criterion: Contenu: Langue */
+  /* Filter criterion: Content: Language */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
@@ -304,7 +304,7 @@ function onb_global_views_default_views() {
     3 => 0,
     5 => 0,
   );
-  /* Filter criterion: Utilisateur: Nom */
+  /* Filter criterion: User: Name */
   $handler->display->display_options['filters']['uid']['id'] = 'uid';
   $handler->display->display_options['filters']['uid']['table'] = 'users';
   $handler->display->display_options['filters']['uid']['field'] = 'uid';
@@ -317,7 +317,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['filters']['uid']['expose']['operator'] = 'uid_op';
   $handler->display->display_options['filters']['uid']['expose']['identifier'] = 'author';
   $handler->display->display_options['filters']['uid']['expose']['remember'] = TRUE;
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -329,7 +329,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['filters']['status']['expose']['operator'] = 'status_op';
   $handler->display->display_options['filters']['status']['expose']['identifier'] = 'status';
   $handler->display->display_options['filters']['status']['expose']['remember'] = TRUE;
-  /* Filter criterion: Terme de taxonomie: Vocabulaire */
+  /* Filter criterion: Taxonomy term: Vocabulary */
   $handler->display->display_options['filters']['vid']['id'] = 'vid';
   $handler->display->display_options['filters']['vid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['filters']['vid']['field'] = 'vid';
@@ -470,12 +470,12 @@ function onb_global_views_default_views() {
   $handler->display->display_options['empty']['area_text_custom']['field'] = 'area_text_custom';
   $handler->display->display_options['empty']['area_text_custom']['empty'] = TRUE;
   $handler->display->display_options['empty']['area_text_custom']['content'] = 'Pas de fichiers disponibles.';
-  /* Relationship: Fichier: Utilisateur ayant transféré */
+  /* Relationship: File: User who uploaded */
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
   $handler->display->display_options['relationships']['uid']['table'] = 'file_managed';
   $handler->display->display_options['relationships']['uid']['field'] = 'uid';
   $handler->display->display_options['relationships']['uid']['label'] = 'utilisateur';
-  /* Field: Bulk operations: Fichier */
+  /* Field: Bulk operations: File */
   $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
   $handler->display->display_options['fields']['views_bulk_operations']['table'] = 'views_entity_file';
   $handler->display->display_options['fields']['views_bulk_operations']['field'] = 'views_bulk_operations';
@@ -525,48 +525,48 @@ function onb_global_views_default_views() {
       ),
     ),
   );
-  /* Field: Fichier: Nom */
+  /* Field: File: Name */
   $handler->display->display_options['fields']['filename']['id'] = 'filename';
   $handler->display->display_options['fields']['filename']['table'] = 'file_managed';
   $handler->display->display_options['fields']['filename']['field'] = 'filename';
   $handler->display->display_options['fields']['filename']['label'] = 'Titre';
-  /* Field: Fichier: Type */
+  /* Field: File: Type */
   $handler->display->display_options['fields']['type']['id'] = 'type';
   $handler->display->display_options['fields']['type']['table'] = 'file_managed';
   $handler->display->display_options['fields']['type']['field'] = 'type';
   $handler->display->display_options['fields']['type']['machine_name'] = 0;
-  /* Field: Fichier: Taille */
+  /* Field: File: Size */
   $handler->display->display_options['fields']['filesize']['id'] = 'filesize';
   $handler->display->display_options['fields']['filesize']['table'] = 'file_managed';
   $handler->display->display_options['fields']['filesize']['field'] = 'filesize';
   $handler->display->display_options['fields']['filesize']['empty'] = '0 bytes';
-  /* Field: Utilisateur: Nom */
+  /* Field: User: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'users';
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['relationship'] = 'uid';
   $handler->display->display_options['fields']['name']['label'] = 'Auteur';
-  /* Field: Fichier: Date de transfert */
+  /* Field: File: Upload date */
   $handler->display->display_options['fields']['timestamp']['id'] = 'timestamp';
   $handler->display->display_options['fields']['timestamp']['table'] = 'file_managed';
   $handler->display->display_options['fields']['timestamp']['field'] = 'timestamp';
   $handler->display->display_options['fields']['timestamp']['label'] = 'Mis à jour';
   $handler->display->display_options['fields']['timestamp']['date_format'] = 'short';
   $handler->display->display_options['fields']['timestamp']['second_date_format'] = 'long';
-  /* Field: Fichier: Usage link */
+  /* Field: File: Usage link */
   $handler->display->display_options['fields']['usage']['id'] = 'usage';
   $handler->display->display_options['fields']['usage']['table'] = 'file_managed';
   $handler->display->display_options['fields']['usage']['field'] = 'usage';
   $handler->display->display_options['fields']['usage']['label'] = 'Utilisé dans';
   $handler->display->display_options['fields']['usage']['element_label_colon'] = FALSE;
-  /* Field: Fichier: Lien de modification */
+  /* Field: File: Edit link */
   $handler->display->display_options['fields']['edit']['id'] = 'edit';
   $handler->display->display_options['fields']['edit']['table'] = 'file_managed';
   $handler->display->display_options['fields']['edit']['field'] = 'edit';
   $handler->display->display_options['fields']['edit']['label'] = '';
   $handler->display->display_options['fields']['edit']['exclude'] = TRUE;
   $handler->display->display_options['fields']['edit']['element_label_colon'] = FALSE;
-  /* Field: Fichier: Lien de suppression */
+  /* Field: File: Delete link */
   $handler->display->display_options['fields']['delete']['id'] = 'delete';
   $handler->display->display_options['fields']['delete']['table'] = 'file_managed';
   $handler->display->display_options['fields']['delete']['field'] = 'delete';
@@ -577,7 +577,7 @@ function onb_global_views_default_views() {
 <li>[delete]</li>
 </ul>';
   $handler->display->display_options['fields']['delete']['element_label_colon'] = FALSE;
-  /* Field: Global: Texte personnalisé */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -587,7 +587,7 @@ function onb_global_views_default_views() {
 <li>[delete]</li>
 </ul>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Filter criterion: Fichier: Nom */
+  /* Filter criterion: File: Name */
   $handler->display->display_options['filters']['filename']['id'] = 'filename';
   $handler->display->display_options['filters']['filename']['table'] = 'file_managed';
   $handler->display->display_options['filters']['filename']['field'] = 'filename';
@@ -604,7 +604,7 @@ function onb_global_views_default_views() {
     1 => 0,
     3 => 0,
   );
-  /* Filter criterion: Fichier: Type */
+  /* Filter criterion: File: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'file_managed';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -620,7 +620,7 @@ function onb_global_views_default_views() {
     1 => 0,
     3 => 0,
   );
-  /* Filter criterion: Utilisateur: Nom */
+  /* Filter criterion: User: Name */
   $handler->display->display_options['filters']['uid']['id'] = 'uid';
   $handler->display->display_options['filters']['uid']['table'] = 'users';
   $handler->display->display_options['filters']['uid']['field'] = 'uid';
@@ -760,7 +760,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['empty']['area_text_custom']['field'] = 'area_text_custom';
   $handler->display->display_options['empty']['area_text_custom']['empty'] = TRUE;
   $handler->display->display_options['empty']['area_text_custom']['content'] = 'Aucun utilisateur disponible.';
-  /* Field: Bulk operations: Utilisateur */
+  /* Field: Bulk operations: User */
   $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
   $handler->display->display_options['fields']['views_bulk_operations']['table'] = 'views_entity_user';
   $handler->display->display_options['fields']['views_bulk_operations']['field'] = 'views_bulk_operations';
@@ -812,56 +812,56 @@ function onb_global_views_default_views() {
       'label' => 'Changer le rôle de l\'utilisateur',
     ),
   );
-  /* Field: Utilisateur: Nom */
+  /* Field: User: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'users';
   $handler->display->display_options['fields']['name']['field'] = 'name';
-  /* Field: Utilisateur: Courriel */
+  /* Field: User: E-mail */
   $handler->display->display_options['fields']['mail']['id'] = 'mail';
   $handler->display->display_options['fields']['mail']['table'] = 'users';
   $handler->display->display_options['fields']['mail']['field'] = 'mail';
   $handler->display->display_options['fields']['mail']['label'] = '';
   $handler->display->display_options['fields']['mail']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['mail']['link_to_user'] = '0';
-  /* Field: Utilisateur: Actif */
+  /* Field: User: Active */
   $handler->display->display_options['fields']['status']['id'] = 'status';
   $handler->display->display_options['fields']['status']['table'] = 'users';
   $handler->display->display_options['fields']['status']['field'] = 'status';
   $handler->display->display_options['fields']['status']['not'] = 0;
-  /* Field: Utilisateur: Rôles */
+  /* Field: User: Roles */
   $handler->display->display_options['fields']['rid']['id'] = 'rid';
   $handler->display->display_options['fields']['rid']['table'] = 'users_roles';
   $handler->display->display_options['fields']['rid']['field'] = 'rid';
   $handler->display->display_options['fields']['rid']['type'] = 'ul';
-  /* Field: Utilisateur: Date de création */
+  /* Field: User: Created date */
   $handler->display->display_options['fields']['created']['id'] = 'created';
   $handler->display->display_options['fields']['created']['table'] = 'users';
   $handler->display->display_options['fields']['created']['field'] = 'created';
   $handler->display->display_options['fields']['created']['label'] = 'Membre depuis';
   $handler->display->display_options['fields']['created']['date_format'] = 'raw time ago';
-  /* Field: Utilisateur: Dernier accès */
+  /* Field: User: Last access */
   $handler->display->display_options['fields']['access']['id'] = 'access';
   $handler->display->display_options['fields']['access']['table'] = 'users';
   $handler->display->display_options['fields']['access']['field'] = 'access';
   $handler->display->display_options['fields']['access']['date_format'] = 'time ago';
-  /* Field: Utilisateur: Lien de modification */
+  /* Field: User: Edit link */
   $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['table'] = 'users';
   $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['label'] = 'Actions';
-  /* Field: Utilisateur: Lien d'annulation */
+  /* Field: User: Cancel link */
   $handler->display->display_options['fields']['cancel_node']['id'] = 'cancel_node';
   $handler->display->display_options['fields']['cancel_node']['table'] = 'users';
   $handler->display->display_options['fields']['cancel_node']['field'] = 'cancel_node';
   $handler->display->display_options['fields']['cancel_node']['label'] = '';
   $handler->display->display_options['fields']['cancel_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['cancel_node']['hide_alter_empty'] = FALSE;
-  /* Sort criterion: Utilisateur: Date de création */
+  /* Sort criterion: User: Created date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'users';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Utilisateur: Nom */
+  /* Filter criterion: User: Name */
   $handler->display->display_options['filters']['uid']['id'] = 'uid';
   $handler->display->display_options['filters']['uid']['table'] = 'users';
   $handler->display->display_options['filters']['uid']['field'] = 'uid';
@@ -870,7 +870,7 @@ function onb_global_views_default_views() {
     0 => 0,
   );
   $handler->display->display_options['filters']['uid']['group'] = 1;
-  /* Filter criterion: Utilisateur: Nom (brut) */
+  /* Filter criterion: User: Name (raw) */
   $handler->display->display_options['filters']['name']['id'] = 'name';
   $handler->display->display_options['filters']['name']['table'] = 'users';
   $handler->display->display_options['filters']['name']['field'] = 'name';
@@ -882,7 +882,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['filters']['name']['expose']['operator'] = 'name_op';
   $handler->display->display_options['filters']['name']['expose']['identifier'] = 'name';
   $handler->display->display_options['filters']['name']['expose']['remember'] = TRUE;
-  /* Filter criterion: Utilisateur: Courriel */
+  /* Filter criterion: User: E-mail */
   $handler->display->display_options['filters']['mail']['id'] = 'mail';
   $handler->display->display_options['filters']['mail']['table'] = 'users';
   $handler->display->display_options['filters']['mail']['field'] = 'mail';
@@ -894,7 +894,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['filters']['mail']['expose']['operator'] = 'mail_op';
   $handler->display->display_options['filters']['mail']['expose']['identifier'] = 'mail';
   $handler->display->display_options['filters']['mail']['expose']['remember'] = TRUE;
-  /* Filter criterion: Utilisateur: Actif */
+  /* Filter criterion: User: Active */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'users';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -906,7 +906,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['filters']['status']['expose']['operator'] = 'status_op';
   $handler->display->display_options['filters']['status']['expose']['identifier'] = 'status';
   $handler->display->display_options['filters']['status']['expose']['remember'] = TRUE;
-  /* Filter criterion: Utilisateur: Rôles */
+  /* Filter criterion: User: Roles */
   $handler->display->display_options['filters']['rid']['id'] = 'rid';
   $handler->display->display_options['filters']['rid']['table'] = 'users_roles';
   $handler->display->display_options['filters']['rid']['field'] = 'rid';
@@ -1018,7 +1018,7 @@ function onb_global_views_default_views() {
       'empty_column' => 0,
     ),
   );
-  /* Field: Bulk operations: Terme de taxonomie */
+  /* Field: Bulk operations: Taxonomy term */
   $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
   $handler->display->display_options['fields']['views_bulk_operations']['table'] = 'views_entity_taxonomy_term';
   $handler->display->display_options['fields']['views_bulk_operations']['field'] = 'views_bulk_operations';
@@ -1043,7 +1043,7 @@ function onb_global_views_default_views() {
       ),
     ),
   );
-  /* Field: Terme de taxonomie: Nom */
+  /* Field: Taxonomy term: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['name']['field'] = 'name';
@@ -1051,61 +1051,61 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
-  /* Field: Terme de taxonomie: Langue */
+  /* Field: Taxonomy term: Language */
   $handler->display->display_options['fields']['language']['id'] = 'language';
   $handler->display->display_options['fields']['language']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['language']['field'] = 'language';
-  /* Field: Terme de taxonomie: Name (translated) */
+  /* Field: Taxonomy term: Name (translated) */
   $handler->display->display_options['fields']['name_i18n']['id'] = 'name_i18n';
   $handler->display->display_options['fields']['name_i18n']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['name_i18n']['field'] = 'name_i18n';
   $handler->display->display_options['fields']['name_i18n']['exclude'] = TRUE;
-  /* Field: Vocabulaire de taxonomie: Nom */
+  /* Field: Taxonomy vocabulary: Name */
   $handler->display->display_options['fields']['name_1']['id'] = 'name_1';
   $handler->display->display_options['fields']['name_1']['table'] = 'taxonomy_vocabulary';
   $handler->display->display_options['fields']['name_1']['field'] = 'name';
   $handler->display->display_options['fields']['name_1']['label'] = 'Vocabulaire';
-  /* Field: Vocabulaire de taxonomie: Nom système */
+  /* Field: Taxonomy vocabulary: Machine name */
   $handler->display->display_options['fields']['machine_name']['id'] = 'machine_name';
   $handler->display->display_options['fields']['machine_name']['table'] = 'taxonomy_vocabulary';
   $handler->display->display_options['fields']['machine_name']['field'] = 'machine_name';
   $handler->display->display_options['fields']['machine_name']['exclude'] = TRUE;
-  /* Field: Vocabulaire de taxonomie: Identifiant (ID) de vocabulaire */
+  /* Field: Taxonomy vocabulary: Vocabulary ID */
   $handler->display->display_options['fields']['vid']['id'] = 'vid';
   $handler->display->display_options['fields']['vid']['table'] = 'taxonomy_vocabulary';
   $handler->display->display_options['fields']['vid']['field'] = 'vid';
   $handler->display->display_options['fields']['vid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['vid']['separator'] = '';
-  /* Field: Global: Texte personnalisé */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
   $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
   $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '<a href="/fr/admin/structure/taxonomy/[machine_name]/edit">Translate / Edit vocabulary</a>  |  <a href="/fr/admin/structure/taxonomy/[machine_name]/translate/fr">Translate FR</a> ';
-  /* Field: Terme de taxonomie: Description du terme */
+  /* Field: Taxonomy term: Term description */
   $handler->display->display_options['fields']['description']['id'] = 'description';
   $handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['description']['field'] = 'description';
   $handler->display->display_options['fields']['description']['alter']['max_length'] = '300';
   $handler->display->display_options['fields']['description']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['description']['alter']['trim'] = TRUE;
-  /* Field: Terme de taxonomie: Lien de modification du terme */
+  /* Field: Taxonomy term: Term edit link */
   $handler->display->display_options['fields']['edit_term']['id'] = 'edit_term';
   $handler->display->display_options['fields']['edit_term']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['edit_term']['field'] = 'edit_term';
   $handler->display->display_options['fields']['edit_term']['label'] = '';
   $handler->display->display_options['fields']['edit_term']['element_label_colon'] = FALSE;
-  /* Field: Terme de taxonomie: Identifiant (ID) du terme */
+  /* Field: Taxonomy term: Term ID */
   $handler->display->display_options['fields']['tid']['id'] = 'tid';
   $handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['tid']['field'] = 'tid';
   $handler->display->display_options['fields']['tid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['tid']['separator'] = '';
-  /* Field: Global: Texte personnalisé */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="/fr/taxonomy/term/[tid]/translate">Translate</a>  |  <a href="/fr/taxonomy/term/[tid]/translate/fr">Translate FR</a>';
-  /* Filter criterion: Terme de taxonomie: Nom */
+  /* Filter criterion: Taxonomy term: Name */
   $handler->display->display_options['filters']['name']['id'] = 'name';
   $handler->display->display_options['filters']['name']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['filters']['name']['field'] = 'name';
@@ -1123,7 +1123,7 @@ function onb_global_views_default_views() {
     3 => 0,
     5 => 0,
   );
-  /* Filter criterion: Terme de taxonomie: Vocabulaire */
+  /* Filter criterion: Taxonomy term: Vocabulary */
   $handler->display->display_options['filters']['vid']['id'] = 'vid';
   $handler->display->display_options['filters']['vid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['filters']['vid']['field'] = 'vid';
@@ -1183,7 +1183,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['style_options']['theme_style'] = '1';
   $handler->display->display_options['style_options']['max_items'] = '0';
   $handler->display->display_options['row_plugin'] = 'calendar_entity';
-  /* Field: Contenu: Titre */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -1196,13 +1196,13 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['title']['node_in_colorbox_width'] = '600';
   $handler->display->display_options['fields']['title']['node_in_colorbox_height'] = '600';
   $handler->display->display_options['fields']['title']['node_in_colorbox_rel'] = '';
-  /* Field: Contenu: Titre */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
   $handler->display->display_options['fields']['title_1']['table'] = 'node';
   $handler->display->display_options['fields']['title_1']['field'] = 'title';
   $handler->display->display_options['fields']['title_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title_1']['link_to_node'] = FALSE;
-  /* Field: Contenu: Date */
+  /* Field: Nœud: Date */
   $handler->display->display_options['fields']['event_calendar_date']['id'] = 'event_calendar_date';
   $handler->display->display_options['fields']['event_calendar_date']['table'] = 'field_data_event_calendar_date';
   $handler->display->display_options['fields']['event_calendar_date']['field'] = 'event_calendar_date';
@@ -1215,27 +1215,27 @@ function onb_global_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Contenu: Nid */
+  /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Field: Contenu: Chemin */
+  /* Field: Content: Path */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
   $handler->display->display_options['fields']['path']['field'] = 'path';
   $handler->display->display_options['fields']['path']['label'] = '';
   $handler->display->display_options['fields']['path']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Global: Texte personnalisé */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="[path]" class="event-popup" id = "event-popup"  name="node-[nid]" title="[title_1]">[title]</a>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Field: Contenu: Lien de modification */
+  /* Field: Content: Edit link */
   $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
@@ -1245,18 +1245,18 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['edit_node']['alter']['link_class'] = 'event-popup';
   $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['edit_node']['text'] = 'EDIT';
-  /* Sort criterion: Contenu: Date - date de début (event_calendar_date) */
+  /* Sort criterion: Nœud: Date -  start date (event_calendar_date) */
   $handler->display->display_options['sorts']['event_calendar_date_value']['id'] = 'event_calendar_date_value';
   $handler->display->display_options['sorts']['event_calendar_date_value']['table'] = 'field_data_event_calendar_date';
   $handler->display->display_options['sorts']['event_calendar_date_value']['field'] = 'event_calendar_date_value';
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 0;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Contenu: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -1403,7 +1403,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'calendar_entity';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Contenu: Titre */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -1412,7 +1412,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['hide_alter_empty'] = FALSE;
-  /* Field: Contenu: Date */
+  /* Field: Nœud: Date */
   $handler->display->display_options['fields']['event_calendar_date']['id'] = 'event_calendar_date';
   $handler->display->display_options['fields']['event_calendar_date']['table'] = 'field_data_event_calendar_date';
   $handler->display->display_options['fields']['event_calendar_date']['field'] = 'event_calendar_date';
@@ -1491,7 +1491,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -1555,7 +1555,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['row_options']['image_field'] = 'field_questionvisuel';
   $handler->display->display_options['row_options']['title_field'] = 'nothing';
   $handler->display->display_options['row_options']['link_field'] = 'path';
-  /* Relationship: Contenu: Termes de taxonomie du nœud */
+  /* Relationship: Content: Taxonomy terms on node */
   $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
   $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
   $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
@@ -1587,7 +1587,7 @@ function onb_global_views_default_views() {
     'type_dpsir' => 0,
     'unit_de_mesure' => 0,
   );
-  /* Field: Contenu: Visuel */
+  /* Field: Nœud: Visuel */
   $handler->display->display_options['fields']['field_questionvisuel']['id'] = 'field_questionvisuel';
   $handler->display->display_options['fields']['field_questionvisuel']['table'] = 'field_data_field_questionvisuel';
   $handler->display->display_options['fields']['field_questionvisuel']['field'] = 'field_questionvisuel';
@@ -1598,7 +1598,7 @@ function onb_global_views_default_views() {
     'image_style' => '550x200',
     'image_link' => '',
   );
-  /* Field: Contenu: Titre */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -1607,7 +1607,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Contenu: Thématique(s) */
+  /* Field: Nœud: Thématique(s) */
   $handler->display->display_options['fields']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['fields']['field_jeux_indicateur']['table'] = 'field_data_field_jeux_indicateur';
   $handler->display->display_options['fields']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
@@ -1615,14 +1615,14 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_jeux_indicateur']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_jeux_indicateur']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_jeux_indicateur']['delta_offset'] = '0';
-  /* Field: Global: Texte personnalisé */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '[title] ([field_jeux_indicateur])';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Field: Contenu: Chemin */
+  /* Field: Content: Path */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
   $handler->display->display_options['fields']['path']['field'] = 'path';
@@ -1630,25 +1630,25 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['path']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['path']['absolute'] = TRUE;
-  /* Sort criterion: Global: Au hasard */
+  /* Sort criterion: Global: Random */
   $handler->display->display_options['sorts']['random']['id'] = 'random';
   $handler->display->display_options['sorts']['random']['table'] = 'views';
   $handler->display->display_options['sorts']['random']['field'] = 'random';
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Contenu: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'question' => 'question',
   );
-  /* Filter criterion: Contenu: Langue */
+  /* Filter criterion: Content: Language */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
@@ -1691,30 +1691,30 @@ function onb_global_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'node';
   $handler->display->display_options['row_options']['links'] = FALSE;
-  /* Field: Contenu: Titre */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Sort criterion: Contenu: Date de publication */
+  /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Sort criterion: Contenu: Titre */
+  /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Contenu: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -1766,18 +1766,18 @@ function onb_global_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'list';
   $handler->display->display_options['style_options']['type'] = 'ol';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* No results behavior: Global: Zone de texte */
+  /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['text']['id'] = 'area';
   $handler->display->display_options['empty']['text']['table'] = 'views';
   $handler->display->display_options['empty']['text']['field'] = 'area';
   $handler->display->display_options['empty']['text']['content'] = 'Aucun lien entrant (backlink) trouvé.';
   $handler->display->display_options['empty']['text']['format'] = '1';
-  /* Field: Contenu: Titre */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
-  /* Contextual filter: Recherche: Liens vers */
+  /* Contextual filter: Search: Links to */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'search_node_links_to';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
@@ -1789,7 +1789,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['specify_validation'] = TRUE;
   $handler->display->display_options['arguments']['nid']['validate']['type'] = 'node';
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -1808,7 +1808,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Recherche: Liens vers */
+  /* Contextual filter: Search: Links to */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'search_node_links_to';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
@@ -1868,47 +1868,47 @@ function onb_global_views_default_views() {
   $handler->display->display_options['pager']['options']['tags']['next'] = 'suivant ›';
   $handler->display->display_options['pager']['options']['tags']['last'] = 'dernier »';
   $handler->display->display_options['style_plugin'] = 'media_browser';
-  /* No results behavior: Global: Zone de texte */
+  /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
   $handler->display->display_options['empty']['area']['table'] = 'views';
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['content'] = 'Pas de fichiers disponibles.';
   $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
-  /* Field: Fichier: Nom */
+  /* Field: File: Name */
   $handler->display->display_options['fields']['filename']['id'] = 'filename';
   $handler->display->display_options['fields']['filename']['table'] = 'file_managed';
   $handler->display->display_options['fields']['filename']['field'] = 'filename';
   $handler->display->display_options['fields']['filename']['label'] = '';
   $handler->display->display_options['fields']['filename']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['filename']['alter']['ellipsis'] = FALSE;
-  /* Sort criterion: Fichier: Date de transfert */
+  /* Sort criterion: File: Upload date */
   $handler->display->display_options['sorts']['timestamp']['id'] = 'timestamp';
   $handler->display->display_options['sorts']['timestamp']['table'] = 'file_managed';
   $handler->display->display_options['sorts']['timestamp']['field'] = 'timestamp';
   $handler->display->display_options['sorts']['timestamp']['order'] = 'DESC';
   $handler->display->display_options['sorts']['timestamp']['exposed'] = TRUE;
   $handler->display->display_options['sorts']['timestamp']['expose']['label'] = 'Date';
-  /* Sort criterion: Fichier: Nom */
+  /* Sort criterion: File: Name */
   $handler->display->display_options['sorts']['filename']['id'] = 'filename';
   $handler->display->display_options['sorts']['filename']['table'] = 'file_managed';
   $handler->display->display_options['sorts']['filename']['field'] = 'filename';
   $handler->display->display_options['sorts']['filename']['exposed'] = TRUE;
   $handler->display->display_options['sorts']['filename']['expose']['label'] = 'Nom de fichier';
-  /* Sort criterion: SUM(Utilisation du fichier: Nombre d'utilisations) */
+  /* Sort criterion: SUM(File Usage: Use count) */
   $handler->display->display_options['sorts']['count']['id'] = 'count';
   $handler->display->display_options['sorts']['count']['table'] = 'file_usage';
   $handler->display->display_options['sorts']['count']['field'] = 'count';
   $handler->display->display_options['sorts']['count']['group_type'] = 'sum';
   $handler->display->display_options['sorts']['count']['exposed'] = TRUE;
   $handler->display->display_options['sorts']['count']['expose']['label'] = 'Nombre d utilisations';
-  /* Filter criterion: Fichier: Statut */
+  /* Filter criterion: File: Status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'file_managed';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Fichier: Nom */
+  /* Filter criterion: File: Name */
   $handler->display->display_options['filters']['filename']['id'] = 'filename';
   $handler->display->display_options['filters']['filename']['table'] = 'file_managed';
   $handler->display->display_options['filters']['filename']['field'] = 'filename';
@@ -1918,7 +1918,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['filters']['filename']['expose']['label'] = 'Nom du fichier';
   $handler->display->display_options['filters']['filename']['expose']['operator'] = 'filename_op';
   $handler->display->display_options['filters']['filename']['expose']['identifier'] = 'filename';
-  /* Filter criterion: Fichier: Type */
+  /* Filter criterion: File: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'file_managed';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -1944,7 +1944,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['pager']['options']['tags']['last'] = 'dernier »';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Fichier: Statut */
+  /* Filter criterion: File: Status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'file_managed';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -1952,7 +1952,7 @@ function onb_global_views_default_views() {
     1 => '1',
   );
   $handler->display->display_options['filters']['status']['group'] = 1;
-  /* Filter criterion: Fichier: Nom */
+  /* Filter criterion: File: Name */
   $handler->display->display_options['filters']['filename']['id'] = 'filename';
   $handler->display->display_options['filters']['filename']['table'] = 'file_managed';
   $handler->display->display_options['filters']['filename']['field'] = 'filename';
@@ -1963,7 +1963,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['filters']['filename']['expose']['label'] = 'Nom du fichier';
   $handler->display->display_options['filters']['filename']['expose']['operator'] = 'filename_op';
   $handler->display->display_options['filters']['filename']['expose']['identifier'] = 'filename';
-  /* Filter criterion: Fichier: Chemin */
+  /* Filter criterion: File: Path */
   $handler->display->display_options['filters']['uri']['id'] = 'uri';
   $handler->display->display_options['filters']['uri']['table'] = 'file_managed';
   $handler->display->display_options['filters']['uri']['field'] = 'uri';
@@ -1974,7 +1974,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['filters']['uri']['expose']['label'] = 'Chemin';
   $handler->display->display_options['filters']['uri']['expose']['operator'] = 'uri_op';
   $handler->display->display_options['filters']['uri']['expose']['identifier'] = 'uri';
-  /* Filter criterion: Fichier: Type */
+  /* Filter criterion: File: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'file_managed';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -2014,7 +2014,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['pager']['options']['tags']['last'] = 'dernier »';
   $handler->display->display_options['style_plugin'] = 'references_style';
   $handler->display->display_options['row_plugin'] = 'references_fields';
-  /* Field: Contenu: Titre */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -2037,19 +2037,19 @@ function onb_global_views_default_views() {
   );
   $handler->display->display_options['fields']['field_visuels']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_visuels']['delta_offset'] = '0';
-  /* Sort criterion: Contenu: Titre */
+  /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
   $handler->display->display_options['sorts']['title']['order'] = 'DESC';
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Contenu: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -2162,7 +2162,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'actualite' => 'actualite',
   );
-  /* Filter criterion: Indexed Nœud: Language de l'élément */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_actualite';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -2232,7 +2232,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['row_options']['separator'] = ' - ';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
-  /* Footer: Global: Zone de texte */
+  /* Footer: Global: Text area */
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
@@ -2272,7 +2272,7 @@ function onb_global_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Global: Texte personnalisé */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -2306,7 +2306,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['filters']['field_actu_date_1']['field'] = 'field_actu_date';
   $handler->display->display_options['filters']['field_actu_date_1']['operator'] = '<=';
   $handler->display->display_options['filters']['field_actu_date_1']['value'] = 'now';
-  /* Filter criterion: Indexed Nœud: Language de l'élément */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_actualite';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -2379,7 +2379,7 @@ function onb_global_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Global: Texte personnalisé */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -2458,7 +2458,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_intitule_court']['label'] = '';
   $handler->display->display_options['fields']['field_intitule_court']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_intitule_court']['element_label_colon'] = FALSE;
-  /* Field: Global: Texte personnalisé */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -2530,7 +2530,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Zone de texte */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -2611,7 +2611,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_statut']['link_to_entity'] = 1;
   $handler->display->display_options['fields']['field_statut']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_statut']['bypass_access'] = 0;
-  /* Field: Global: Texte personnalisé */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -2642,7 +2642,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Nœud: Language de l'élément */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -2754,7 +2754,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_valeurannee']['link_to_entity'] = 1;
   $handler->display->display_options['fields']['field_valeurannee']['display'] = 'view';
   $handler->display->display_options['fields']['field_valeurannee']['view_mode'] = 'full';
-  /* Field: Global: Texte personnalisé */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
   $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
   $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
@@ -2787,7 +2787,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Nœud: Language de l'élément */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -2893,7 +2893,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_intitule_court']['label'] = '';
   $handler->display->display_options['fields']['field_intitule_court']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_intitule_court']['element_label_colon'] = FALSE;
-  /* Field: Global: Texte personnalisé */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -2965,7 +2965,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Zone de texte */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -3030,7 +3030,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_valeurannee']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_valeurannee']['display'] = 'view';
   $handler->display->display_options['fields']['field_valeurannee']['view_mode'] = 'full';
-  /* Field: Global: Texte personnalisé */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -3086,7 +3086,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Nœud: Language de l'élément */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -3199,7 +3199,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_valeurannee']['display'] = 'view';
   $handler->display->display_options['fields']['field_valeurannee']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_valeurannee']['bypass_access'] = 0;
-  /* Field: Global: Texte personnalisé */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
   $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
   $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
@@ -3241,7 +3241,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['filters']['title']['field'] = 'title';
   $handler->display->display_options['filters']['title']['operator'] = '<>';
   $handler->display->display_options['filters']['title']['value'] = 'Déplacement des espèces lié au changement climatique';
-  /* Filter criterion: Indexed Nœud: Language de l'élément */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -3354,7 +3354,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_valeurannee']['link_to_entity'] = 1;
   $handler->display->display_options['fields']['field_valeurannee']['display'] = 'view';
   $handler->display->display_options['fields']['field_valeurannee']['view_mode'] = 'full';
-  /* Field: Global: Texte personnalisé */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
   $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
   $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
@@ -3387,7 +3387,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Nœud: Language de l'élément */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -3500,7 +3500,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_valeurannee']['link_to_entity'] = 1;
   $handler->display->display_options['fields']['field_valeurannee']['display'] = 'view';
   $handler->display->display_options['fields']['field_valeurannee']['view_mode'] = 'full';
-  /* Field: Global: Texte personnalisé */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
   $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
   $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
@@ -3533,7 +3533,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Nœud: Language de l'élément */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -3646,7 +3646,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_valeurannee']['link_to_entity'] = 1;
   $handler->display->display_options['fields']['field_valeurannee']['display'] = 'view';
   $handler->display->display_options['fields']['field_valeurannee']['view_mode'] = 'full';
-  /* Field: Global: Texte personnalisé */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
   $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
   $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
@@ -3679,7 +3679,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Nœud: Language de l'élément */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -3792,7 +3792,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_valeurannee']['link_to_entity'] = 1;
   $handler->display->display_options['fields']['field_valeurannee']['display'] = 'view';
   $handler->display->display_options['fields']['field_valeurannee']['view_mode'] = 'full';
-  /* Field: Global: Texte personnalisé */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
   $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
   $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
@@ -3825,7 +3825,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Nœud: Language de l'élément */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -3938,7 +3938,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_valeurannee']['link_to_entity'] = 1;
   $handler->display->display_options['fields']['field_valeurannee']['display'] = 'view';
   $handler->display->display_options['fields']['field_valeurannee']['view_mode'] = 'full';
-  /* Field: Global: Texte personnalisé */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
   $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
   $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
@@ -3971,7 +3971,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Nœud: Language de l'élément */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -4083,7 +4083,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_valeurannee']['link_to_entity'] = 1;
   $handler->display->display_options['fields']['field_valeurannee']['display'] = 'view';
   $handler->display->display_options['fields']['field_valeurannee']['view_mode'] = 'full';
-  /* Field: Global: Texte personnalisé */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
   $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
   $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
@@ -4117,7 +4117,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Nœud: Language de l'élément */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -4228,7 +4228,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_valeurannee']['link_to_entity'] = 1;
   $handler->display->display_options['fields']['field_valeurannee']['display'] = 'view';
   $handler->display->display_options['fields']['field_valeurannee']['view_mode'] = 'full';
-  /* Field: Global: Texte personnalisé */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
   $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
   $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
@@ -4262,7 +4262,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Nœud: Language de l'élément */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_indicateurs';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -4337,7 +4337,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Zone de texte */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -4398,7 +4398,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_couveture_geo']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_couveture_geo']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_couveture_geo']['bypass_access'] = 0;
-  /* Field: Global: Texte personnalisé */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -4530,7 +4530,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_jeux_indicateur']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_jeux_indicateur']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_jeux_indicateur']['bypass_access'] = 0;
-  /* Field: Global: Texte personnalisé */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -4637,7 +4637,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Zone de texte */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -4698,7 +4698,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_couveture_geo']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_couveture_geo']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_couveture_geo']['bypass_access'] = 0;
-  /* Field: Global: Texte personnalisé */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -4806,7 +4806,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Zone de texte */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -4867,7 +4867,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_couveture_geo']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_couveture_geo']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_couveture_geo']['bypass_access'] = 0;
-  /* Field: Global: Texte personnalisé */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -4973,7 +4973,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Zone de texte */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -5034,7 +5034,7 @@ function onb_global_views_default_views() {
   $handler->display->display_options['fields']['field_couveture_geo']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_couveture_geo']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_couveture_geo']['bypass_access'] = 0;
-  /* Field: Global: Texte personnalisé */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -5125,7 +5125,7 @@ function onb_global_views_default_views() {
       'empty_column' => 0,
     ),
   );
-  /* Header: Global: Zone de texte */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -5177,7 +5177,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['filters']['field_jeux_indicateur']['value'] = array(
     128 => '128',
   );
-  /* Filter criterion: Indexed Nœud: Language de l'élément */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -5214,7 +5214,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Zone de texte */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -5281,7 +5281,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
     129 => '129',
     203 => '203',
   );
-  /* Filter criterion: Indexed Nœud: Language de l'élément */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -5325,7 +5325,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Zone de texte */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -5356,7 +5356,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['filters']['field_jeux_indicateur']['value'] = array(
     120 => '120',
   );
-  /* Filter criterion: Indexed Nœud: Language de l'élément */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -5406,7 +5406,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Zone de texte */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -5437,7 +5437,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['filters']['field_jeux_indicateur']['value'] = array(
     121 => '121',
   );
-  /* Filter criterion: Indexed Nœud: Language de l'élément */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -5487,7 +5487,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Zone de texte */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -5516,7 +5516,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['filters']['field_jeux_indicateur']['value'] = array(
     130 => '130',
   );
-  /* Filter criterion: Indexed Nœud: Language de l'élément */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -5566,7 +5566,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Zone de texte */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -5597,7 +5597,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['filters']['field_jeux_indicateur']['value'] = array(
     125 => '125',
   );
-  /* Filter criterion: Indexed Nœud: Language de l'élément */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -5647,7 +5647,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Zone de texte */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -5697,7 +5697,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Zone de texte */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -5728,7 +5728,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['filters']['field_jeux_indicateur']['value'] = array(
     204 => '204',
   );
-  /* Filter criterion: Indexed Nœud: Language de l'élément */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -5775,7 +5775,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Zone de texte */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -5806,7 +5806,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Nœud: Language de l'élément */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -5848,7 +5848,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Zone de texte */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -5881,7 +5881,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Nœud: Language de l'élément */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -5937,7 +5937,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Zone de texte */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -5972,7 +5972,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Nœud: Language de l'élément */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -6012,7 +6012,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Zone de texte */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -6044,7 +6044,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Nœud: Language de l'élément */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -6062,7 +6062,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Zone de texte */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -6118,7 +6118,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Zone de texte */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -6149,7 +6149,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Nœud: Language de l'élément */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -6191,7 +6191,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Zone de texte */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -6223,7 +6223,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Indexed Nœud: Language de l'élément */
+  /* Filter criterion: Indexed Nœud: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_search_questions';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -6275,7 +6275,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Global: Texte personnalisé */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -6328,7 +6328,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Trier par';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'table';
-  /* Header: Global: Zone de texte */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -6385,7 +6385,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Zone de texte */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -6473,13 +6473,13 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'table';
-  /* Header: Global: Zone de texte */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['content'] = 'Pour sélectionner un producteur, cliquez sur son nom.';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
-  /* Field: Contenu: Titre */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -6488,26 +6488,26 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Contenu: Nid */
+  /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Sort criterion: Contenu: Titre */
+  /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
   $handler->display->display_options['sorts']['title']['order'] = 'DESC';
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Contenu: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -6558,25 +6558,25 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '50';
   $handler->display->display_options['style_plugin'] = 'table';
-  /* Field: Contenu: Titre */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Sort criterion: Contenu: Date de publication */
+  /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Contenu: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -6622,7 +6622,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
     ),
   );
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Entity Reference: Entité référante */
+  /* Relationship: Entity Reference: Referencing entity */
   $handler->display->display_options['relationships']['reverse_field_sousquestion_indic_nom_field_collection_item']['id'] = 'reverse_field_sousquestion_indic_nom_field_collection_item';
   $handler->display->display_options['relationships']['reverse_field_sousquestion_indic_nom_field_collection_item']['table'] = 'node';
   $handler->display->display_options['relationships']['reverse_field_sousquestion_indic_nom_field_collection_item']['field'] = 'reverse_field_sousquestion_indic_nom_field_collection_item';
@@ -6636,7 +6636,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['relationships']['field_sousquestion_node']['table'] = 'field_collection_item';
   $handler->display->display_options['relationships']['field_sousquestion_node']['field'] = 'field_sousquestion_node';
   $handler->display->display_options['relationships']['field_sousquestion_node']['relationship'] = 'field_sousquestion_indicateur_field_collection_item';
-  /* Field: Contenu: Titre */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -6647,7 +6647,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['node_in_colorbox_width'] = '600';
   $handler->display->display_options['fields']['title']['node_in_colorbox_height'] = '600';
-  /* Field: Contenu: Thématique(s) */
+  /* Field: Nœud: Thématique(s) */
   $handler->display->display_options['fields']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['fields']['field_jeux_indicateur']['table'] = 'field_data_field_jeux_indicateur';
   $handler->display->display_options['fields']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
@@ -6657,17 +6657,17 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['fields']['field_jeux_indicateur']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_jeux_indicateur']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_jeux_indicateur']['delta_offset'] = '0';
-  /* Sort criterion: Contenu: Titre */
+  /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
   $handler->display->display_options['sorts']['title']['relationship'] = 'field_sousquestion_node';
-  /* Sort criterion: Contenu: Date de publication */
+  /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Contextual filter: Contenu: Nid */
+  /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
@@ -6677,21 +6677,21 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Contenu: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'fiche_indicateur' => 'fiche_indicateur',
   );
-  /* Filter criterion: Contenu: Langue */
+  /* Filter criterion: Content: Language */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
@@ -6715,7 +6715,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Contenu: Sous-question (field_sousquestion) */
+  /* Relationship: Nœud: Sous-question (field_sousquestion) */
   $handler->display->display_options['relationships']['field_sousquestion_value']['id'] = 'field_sousquestion_value';
   $handler->display->display_options['relationships']['field_sousquestion_value']['table'] = 'field_data_field_sousquestion';
   $handler->display->display_options['relationships']['field_sousquestion_value']['field'] = 'field_sousquestion_value';
@@ -6729,7 +6729,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['fields']['field_sousquestion_titre']['label'] = '';
   $handler->display->display_options['fields']['field_sousquestion_titre']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_sousquestion_titre']['element_label_colon'] = FALSE;
-  /* Field: Global: Texte personnalisé */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -6737,7 +6737,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="#[field_sousquestion_titre]">[field_sousquestion_titre] </a>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Contenu: Nid */
+  /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
@@ -6749,21 +6749,21 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Contenu: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'question' => 'question',
   );
-  /* Filter criterion: Contenu: Langue */
+  /* Filter criterion: Content: Language */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
@@ -6797,12 +6797,12 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Entity Reference: Entité référante */
+  /* Relationship: Entity Reference: Referencing entity */
   $handler->display->display_options['relationships']['reverse_field_sousquestion_indic_nom_field_collection_item']['id'] = 'reverse_field_sousquestion_indic_nom_field_collection_item';
   $handler->display->display_options['relationships']['reverse_field_sousquestion_indic_nom_field_collection_item']['table'] = 'node';
   $handler->display->display_options['relationships']['reverse_field_sousquestion_indic_nom_field_collection_item']['field'] = 'reverse_field_sousquestion_indic_nom_field_collection_item';
   $handler->display->display_options['relationships']['reverse_field_sousquestion_indic_nom_field_collection_item']['label'] = 'Field collection item referencing Contenu from field_sousquestion_indic_nom';
-  /* Field: Contenu: Titre */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -6810,17 +6810,17 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Contenu: Type */
+  /* Field: Content: Type */
   $handler->display->display_options['fields']['type']['id'] = 'type';
   $handler->display->display_options['fields']['type']['table'] = 'node';
   $handler->display->display_options['fields']['type']['field'] = 'type';
   $handler->display->display_options['fields']['type']['relationship'] = 'field_sousquestion_indic_nom_target_id';
-  /* Sort criterion: Contenu: Date de publication */
+  /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -6863,26 +6863,26 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['pager']['options']['tags']['last'] = 'dernier »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Contenu: Titre */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Sort criterion: Contenu: Date de publication */
+  /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Contenu: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -7001,11 +7001,11 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
     ),
   );
   $handler->display->display_options['style_options']['sticky'] = TRUE;
-  /* Header: Global: Zone de texte */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  /* Relationship: Contenu: Termes de taxonomie du nœud */
+  /* Relationship: Content: Taxonomy terms on node */
   $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
   $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
   $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
@@ -7039,11 +7039,11 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
     'type_dpsir' => 0,
     'unit_de_mesure' => 0,
   );
-  /* Relationship: Contenu: Axe CDB (field_axe_et_objectifs_cdb) */
+  /* Relationship: Nœud: Axe CDB (field_axe_et_objectifs_cdb) */
   $handler->display->display_options['relationships']['field_axe_et_objectifs_cdb_tid']['id'] = 'field_axe_et_objectifs_cdb_tid';
   $handler->display->display_options['relationships']['field_axe_et_objectifs_cdb_tid']['table'] = 'field_data_field_axe_et_objectifs_cdb';
   $handler->display->display_options['relationships']['field_axe_et_objectifs_cdb_tid']['field'] = 'field_axe_et_objectifs_cdb_tid';
-  /* Field: Contenu: Titre */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -7051,21 +7051,21 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['node_in_colorbox_width'] = '600';
   $handler->display->display_options['fields']['title']['node_in_colorbox_height'] = '600';
-  /* Field: Contenu: Orientation(s) stratégique(s) concernée(s) */
+  /* Field: Nœud: Orientation(s) stratégique(s) concernée(s) */
   $handler->display->display_options['fields']['field_orientations_principales']['id'] = 'field_orientations_principales';
   $handler->display->display_options['fields']['field_orientations_principales']['table'] = 'field_data_field_orientations_principales';
   $handler->display->display_options['fields']['field_orientations_principales']['field'] = 'field_orientations_principales';
   $handler->display->display_options['fields']['field_orientations_principales']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_orientations_principales']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_orientations_principales']['delta_offset'] = '0';
-  /* Field: Contenu: Objectif(s) concerné(s) principalement */
+  /* Field: Nœud: Objectif(s) concerné(s) principalement */
   $handler->display->display_options['fields']['field_objectifs_snb_principaux']['id'] = 'field_objectifs_snb_principaux';
   $handler->display->display_options['fields']['field_objectifs_snb_principaux']['table'] = 'field_data_field_objectifs_snb_principaux';
   $handler->display->display_options['fields']['field_objectifs_snb_principaux']['field'] = 'field_objectifs_snb_principaux';
   $handler->display->display_options['fields']['field_objectifs_snb_principaux']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_objectifs_snb_principaux']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_objectifs_snb_principaux']['delta_offset'] = '0';
-  /* Field: Contenu: Axe CDB */
+  /* Field: Nœud: Axe CDB */
   $handler->display->display_options['fields']['field_axe_et_objectifs_cdb']['id'] = 'field_axe_et_objectifs_cdb';
   $handler->display->display_options['fields']['field_axe_et_objectifs_cdb']['table'] = 'field_data_field_axe_et_objectifs_cdb';
   $handler->display->display_options['fields']['field_axe_et_objectifs_cdb']['field'] = 'field_axe_et_objectifs_cdb';
@@ -7073,46 +7073,46 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['fields']['field_axe_et_objectifs_cdb']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_axe_et_objectifs_cdb']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_axe_et_objectifs_cdb']['delta_offset'] = '0';
-  /* Field: Contenu: Objectifs CDB */
+  /* Field: Nœud: Objectifs CDB */
   $handler->display->display_options['fields']['field_objectifs_cdb']['id'] = 'field_objectifs_cdb';
   $handler->display->display_options['fields']['field_objectifs_cdb']['table'] = 'field_data_field_objectifs_cdb';
   $handler->display->display_options['fields']['field_objectifs_cdb']['field'] = 'field_objectifs_cdb';
   $handler->display->display_options['fields']['field_objectifs_cdb']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_objectifs_cdb']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_objectifs_cdb']['delta_offset'] = '0';
-  /* Field: Contenu: Axe SUEB */
+  /* Field: Nœud: Axe SUEB */
   $handler->display->display_options['fields']['field_axe_sueb']['id'] = 'field_axe_sueb';
   $handler->display->display_options['fields']['field_axe_sueb']['table'] = 'field_data_field_axe_sueb';
   $handler->display->display_options['fields']['field_axe_sueb']['field'] = 'field_axe_sueb';
   $handler->display->display_options['fields']['field_axe_sueb']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_axe_sueb']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_axe_sueb']['delta_offset'] = '0';
-  /* Field: Contenu: Objectif SUEB */
+  /* Field: Nœud: Objectif SUEB */
   $handler->display->display_options['fields']['field_objectif_sueb']['id'] = 'field_objectif_sueb';
   $handler->display->display_options['fields']['field_objectif_sueb']['table'] = 'field_data_field_objectif_sueb';
   $handler->display->display_options['fields']['field_objectif_sueb']['field'] = 'field_objectif_sueb';
   $handler->display->display_options['fields']['field_objectif_sueb']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_objectif_sueb']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_objectif_sueb']['delta_offset'] = '0';
-  /* Sort criterion: Contenu: Titre */
+  /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Contenu: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'fiche_indicateur' => 'fiche_indicateur',
   );
-  /* Filter criterion: Contenu: Langue */
+  /* Filter criterion: Content: Language */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
@@ -7175,7 +7175,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Contenu: Axe SUEB */
+  /* Field: Nœud: Axe SUEB */
   $handler->display->display_options['fields']['field_axe_sueb']['id'] = 'field_axe_sueb';
   $handler->display->display_options['fields']['field_axe_sueb']['table'] = 'field_data_field_axe_sueb';
   $handler->display->display_options['fields']['field_axe_sueb']['field'] = 'field_axe_sueb';
@@ -7183,14 +7183,14 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['fields']['field_axe_sueb']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_axe_sueb']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_axe_sueb']['delta_offset'] = '0';
-  /* Field: Contenu: Objectif SUEB */
+  /* Field: Nœud: Objectif SUEB */
   $handler->display->display_options['fields']['field_objectif_sueb']['id'] = 'field_objectif_sueb';
   $handler->display->display_options['fields']['field_objectif_sueb']['table'] = 'field_data_field_objectif_sueb';
   $handler->display->display_options['fields']['field_objectif_sueb']['field'] = 'field_objectif_sueb';
   $handler->display->display_options['fields']['field_objectif_sueb']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_objectif_sueb']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_objectif_sueb']['delta_offset'] = '0';
-  /* Field: Contenu: Titre */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -7199,35 +7199,35 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['fields']['title']['node_in_colorbox_width'] = '600';
   $handler->display->display_options['fields']['title']['node_in_colorbox_height'] = '600';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Contenu: Axe SUEB (field_axe_sueb) */
+  /* Sort criterion: Nœud: Axe SUEB (field_axe_sueb) */
   $handler->display->display_options['sorts']['field_axe_sueb_tid']['id'] = 'field_axe_sueb_tid';
   $handler->display->display_options['sorts']['field_axe_sueb_tid']['table'] = 'field_data_field_axe_sueb';
   $handler->display->display_options['sorts']['field_axe_sueb_tid']['field'] = 'field_axe_sueb_tid';
-  /* Sort criterion: Contenu: Objectif SUEB (field_objectif_sueb) */
+  /* Sort criterion: Nœud: Objectif SUEB (field_objectif_sueb) */
   $handler->display->display_options['sorts']['field_objectif_sueb_tid']['id'] = 'field_objectif_sueb_tid';
   $handler->display->display_options['sorts']['field_objectif_sueb_tid']['table'] = 'field_data_field_objectif_sueb';
   $handler->display->display_options['sorts']['field_objectif_sueb_tid']['field'] = 'field_objectif_sueb_tid';
-  /* Sort criterion: Contenu: Titre */
+  /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Contenu: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'fiche_indicateur' => 'fiche_indicateur',
   );
-  /* Filter criterion: Contenu: Thématique(s) (field_jeux_indicateur) */
+  /* Filter criterion: Nœud: Thématique(s) (field_jeux_indicateur) */
   $handler->display->display_options['filters']['field_jeux_indicateur_tid']['id'] = 'field_jeux_indicateur_tid';
   $handler->display->display_options['filters']['field_jeux_indicateur_tid']['table'] = 'field_data_field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur_tid']['field'] = 'field_jeux_indicateur_tid';
@@ -7237,14 +7237,14 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   );
   $handler->display->display_options['filters']['field_jeux_indicateur_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_jeux_indicateur_tid']['vocabulary'] = 'jeux_d_indicateurs';
-  /* Filter criterion: Contenu: Axe SUEB (field_axe_sueb) */
+  /* Filter criterion: Nœud: Axe SUEB (field_axe_sueb) */
   $handler->display->display_options['filters']['field_axe_sueb_tid']['id'] = 'field_axe_sueb_tid';
   $handler->display->display_options['filters']['field_axe_sueb_tid']['table'] = 'field_data_field_axe_sueb';
   $handler->display->display_options['filters']['field_axe_sueb_tid']['field'] = 'field_axe_sueb_tid';
   $handler->display->display_options['filters']['field_axe_sueb_tid']['operator'] = 'not empty';
   $handler->display->display_options['filters']['field_axe_sueb_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_axe_sueb_tid']['vocabulary'] = 'sueb';
-  /* Filter criterion: Contenu: Langue */
+  /* Filter criterion: Content: Language */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
@@ -7308,7 +7308,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Contenu: Termes de taxonomie du nœud */
+  /* Relationship: Content: Taxonomy terms on node */
   $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
   $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
   $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
@@ -7346,7 +7346,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
     'unit_de_mesure' => 0,
   );
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Contenu: Objectifs CDB */
+  /* Field: Nœud: Objectifs CDB */
   $handler->display->display_options['fields']['field_objectifs_cdb']['id'] = 'field_objectifs_cdb';
   $handler->display->display_options['fields']['field_objectifs_cdb']['table'] = 'field_data_field_objectifs_cdb';
   $handler->display->display_options['fields']['field_objectifs_cdb']['field'] = 'field_objectifs_cdb';
@@ -7354,7 +7354,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['fields']['field_objectifs_cdb']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_objectifs_cdb']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_objectifs_cdb']['delta_offset'] = '0';
-  /* Field: Contenu: Titre */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -7363,7 +7363,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['node_in_colorbox_width'] = '600';
   $handler->display->display_options['fields']['title']['node_in_colorbox_height'] = '600';
-  /* Field: Contenu: Axe CDB */
+  /* Field: Nœud: Axe CDB */
   $handler->display->display_options['fields']['field_axe_et_objectifs_cdb']['id'] = 'field_axe_et_objectifs_cdb';
   $handler->display->display_options['fields']['field_axe_et_objectifs_cdb']['table'] = 'field_data_field_axe_et_objectifs_cdb';
   $handler->display->display_options['fields']['field_axe_et_objectifs_cdb']['field'] = 'field_axe_et_objectifs_cdb';
@@ -7375,42 +7375,42 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['fields']['field_axe_et_objectifs_cdb']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_axe_et_objectifs_cdb']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Contenu: Axe CDB (field_axe_et_objectifs_cdb) */
+  /* Sort criterion: Nœud: Axe CDB (field_axe_et_objectifs_cdb) */
   $handler->display->display_options['sorts']['field_axe_et_objectifs_cdb_tid']['id'] = 'field_axe_et_objectifs_cdb_tid';
   $handler->display->display_options['sorts']['field_axe_et_objectifs_cdb_tid']['table'] = 'field_data_field_axe_et_objectifs_cdb';
   $handler->display->display_options['sorts']['field_axe_et_objectifs_cdb_tid']['field'] = 'field_axe_et_objectifs_cdb_tid';
-  /* Sort criterion: Contenu: Objectifs CDB (field_objectifs_cdb) */
+  /* Sort criterion: Nœud: Objectifs CDB (field_objectifs_cdb) */
   $handler->display->display_options['sorts']['field_objectifs_cdb_tid']['id'] = 'field_objectifs_cdb_tid';
   $handler->display->display_options['sorts']['field_objectifs_cdb_tid']['table'] = 'field_data_field_objectifs_cdb';
   $handler->display->display_options['sorts']['field_objectifs_cdb_tid']['field'] = 'field_objectifs_cdb_tid';
-  /* Sort criterion: Contenu: Titre */
+  /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Contenu: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'fiche_indicateur' => 'fiche_indicateur',
   );
-  /* Filter criterion: Contenu: Axe CDB (field_axe_et_objectifs_cdb) */
+  /* Filter criterion: Nœud: Axe CDB (field_axe_et_objectifs_cdb) */
   $handler->display->display_options['filters']['field_axe_et_objectifs_cdb_tid']['id'] = 'field_axe_et_objectifs_cdb_tid';
   $handler->display->display_options['filters']['field_axe_et_objectifs_cdb_tid']['table'] = 'field_data_field_axe_et_objectifs_cdb';
   $handler->display->display_options['filters']['field_axe_et_objectifs_cdb_tid']['field'] = 'field_axe_et_objectifs_cdb_tid';
   $handler->display->display_options['filters']['field_axe_et_objectifs_cdb_tid']['operator'] = 'not empty';
   $handler->display->display_options['filters']['field_axe_et_objectifs_cdb_tid']['value'] = '';
   $handler->display->display_options['filters']['field_axe_et_objectifs_cdb_tid']['vocabulary'] = 'cdb';
-  /* Filter criterion: Contenu: Objectifs CDB (field_objectifs_cdb) */
+  /* Filter criterion: Nœud: Objectifs CDB (field_objectifs_cdb) */
   $handler->display->display_options['filters']['field_objectifs_cdb_tid']['id'] = 'field_objectifs_cdb_tid';
   $handler->display->display_options['filters']['field_objectifs_cdb_tid']['table'] = 'field_data_field_objectifs_cdb';
   $handler->display->display_options['filters']['field_objectifs_cdb_tid']['field'] = 'field_objectifs_cdb_tid';
@@ -7452,7 +7452,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['filters']['field_objectifs_cdb_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_objectifs_cdb_tid']['vocabulary'] = 'cdb';
   $handler->display->display_options['filters']['field_objectifs_cdb_tid']['hierarchy'] = 1;
-  /* Filter criterion: Contenu: Langue */
+  /* Filter criterion: Content: Language */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
@@ -7507,13 +7507,13 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Zone de texte */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Contenu: Termes de taxonomie du nœud */
+  /* Relationship: Content: Taxonomy terms on node */
   $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
   $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
   $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
@@ -7547,19 +7547,19 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
     'type_dpsir' => 0,
     'unit_de_mesure' => 0,
   );
-  /* Relationship: Terme de taxonomie: Contenu utilisant Axe SUEB */
+  /* Relationship: Taxonomy term: Nœud using Axe SUEB */
   $handler->display->display_options['relationships']['reverse_field_axe_sueb_node']['id'] = 'reverse_field_axe_sueb_node';
   $handler->display->display_options['relationships']['reverse_field_axe_sueb_node']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['relationships']['reverse_field_axe_sueb_node']['field'] = 'reverse_field_axe_sueb_node';
   $handler->display->display_options['relationships']['reverse_field_axe_sueb_node']['relationship'] = 'term_node_tid';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Contenu: Objectif SUEB */
+  /* Field: Nœud: Objectif SUEB */
   $handler->display->display_options['fields']['field_objectif_sueb']['id'] = 'field_objectif_sueb';
   $handler->display->display_options['fields']['field_objectif_sueb']['table'] = 'field_data_field_objectif_sueb';
   $handler->display->display_options['fields']['field_objectif_sueb']['field'] = 'field_objectif_sueb';
   $handler->display->display_options['fields']['field_objectif_sueb']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_objectif_sueb']['delta_offset'] = '0';
-  /* Field: Contenu: Titre */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -7568,7 +7568,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['node_in_colorbox_width'] = '600';
   $handler->display->display_options['fields']['title']['node_in_colorbox_height'] = '600';
-  /* Field: Contenu: Axe SUEB */
+  /* Field: Nœud: Axe SUEB */
   $handler->display->display_options['fields']['field_axe_sueb']['id'] = 'field_axe_sueb';
   $handler->display->display_options['fields']['field_axe_sueb']['table'] = 'field_data_field_axe_sueb';
   $handler->display->display_options['fields']['field_axe_sueb']['field'] = 'field_axe_sueb';
@@ -7576,42 +7576,42 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['fields']['field_axe_sueb']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_axe_sueb']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Contenu: Axe SUEB (field_axe_sueb) */
+  /* Sort criterion: Nœud: Axe SUEB (field_axe_sueb) */
   $handler->display->display_options['sorts']['field_axe_sueb_tid']['id'] = 'field_axe_sueb_tid';
   $handler->display->display_options['sorts']['field_axe_sueb_tid']['table'] = 'field_data_field_axe_sueb';
   $handler->display->display_options['sorts']['field_axe_sueb_tid']['field'] = 'field_axe_sueb_tid';
-  /* Sort criterion: Contenu: Objectif SUEB (field_objectif_sueb) */
+  /* Sort criterion: Nœud: Objectif SUEB (field_objectif_sueb) */
   $handler->display->display_options['sorts']['field_objectif_sueb_tid']['id'] = 'field_objectif_sueb_tid';
   $handler->display->display_options['sorts']['field_objectif_sueb_tid']['table'] = 'field_data_field_objectif_sueb';
   $handler->display->display_options['sorts']['field_objectif_sueb_tid']['field'] = 'field_objectif_sueb_tid';
-  /* Sort criterion: Contenu: Titre */
+  /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Contenu: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'fiche_indicateur' => 'fiche_indicateur',
   );
-  /* Filter criterion: Contenu: Axe SUEB (field_axe_sueb) */
+  /* Filter criterion: Nœud: Axe SUEB (field_axe_sueb) */
   $handler->display->display_options['filters']['field_axe_sueb_tid']['id'] = 'field_axe_sueb_tid';
   $handler->display->display_options['filters']['field_axe_sueb_tid']['table'] = 'field_data_field_axe_sueb';
   $handler->display->display_options['filters']['field_axe_sueb_tid']['field'] = 'field_axe_sueb_tid';
   $handler->display->display_options['filters']['field_axe_sueb_tid']['operator'] = 'not empty';
   $handler->display->display_options['filters']['field_axe_sueb_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_axe_sueb_tid']['vocabulary'] = 'sueb';
-  /* Filter criterion: Contenu: Thématique(s) (field_jeux_indicateur) */
+  /* Filter criterion: Nœud: Thématique(s) (field_jeux_indicateur) */
   $handler->display->display_options['filters']['field_jeux_indicateur_tid']['id'] = 'field_jeux_indicateur_tid';
   $handler->display->display_options['filters']['field_jeux_indicateur_tid']['table'] = 'field_data_field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur_tid']['field'] = 'field_jeux_indicateur_tid';
@@ -7620,7 +7620,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   );
   $handler->display->display_options['filters']['field_jeux_indicateur_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_jeux_indicateur_tid']['vocabulary'] = 'jeux_d_indicateurs';
-  /* Filter criterion: Contenu: Langue */
+  /* Filter criterion: Content: Language */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
@@ -7675,13 +7675,13 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Zone de texte */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Contenu: Termes de taxonomie du nœud */
+  /* Relationship: Content: Taxonomy terms on node */
   $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
   $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
   $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
@@ -7715,20 +7715,20 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
     'type_dpsir' => 0,
     'unit_de_mesure' => 0,
   );
-  /* Relationship: Terme de taxonomie: Contenu utilisant Axe SUEB */
+  /* Relationship: Taxonomy term: Nœud using Axe SUEB */
   $handler->display->display_options['relationships']['reverse_field_axe_sueb_node']['id'] = 'reverse_field_axe_sueb_node';
   $handler->display->display_options['relationships']['reverse_field_axe_sueb_node']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['relationships']['reverse_field_axe_sueb_node']['field'] = 'reverse_field_axe_sueb_node';
   $handler->display->display_options['relationships']['reverse_field_axe_sueb_node']['relationship'] = 'term_node_tid';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Contenu: Objectif(s) concerné(s) principalement */
+  /* Field: Nœud: Objectif(s) concerné(s) principalement */
   $handler->display->display_options['fields']['field_objectifs_snb_principaux']['id'] = 'field_objectifs_snb_principaux';
   $handler->display->display_options['fields']['field_objectifs_snb_principaux']['table'] = 'field_data_field_objectifs_snb_principaux';
   $handler->display->display_options['fields']['field_objectifs_snb_principaux']['field'] = 'field_objectifs_snb_principaux';
   $handler->display->display_options['fields']['field_objectifs_snb_principaux']['label'] = 'Objectifs';
   $handler->display->display_options['fields']['field_objectifs_snb_principaux']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_objectifs_snb_principaux']['delta_offset'] = '0';
-  /* Field: Contenu: Titre */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -7737,7 +7737,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['node_in_colorbox_width'] = '600';
   $handler->display->display_options['fields']['title']['node_in_colorbox_height'] = '600';
-  /* Field: Contenu: Orientation(s) stratégique(s) concernée(s) */
+  /* Field: Nœud: Orientation(s) stratégique(s) concernée(s) */
   $handler->display->display_options['fields']['field_orientations_principales']['id'] = 'field_orientations_principales';
   $handler->display->display_options['fields']['field_orientations_principales']['table'] = 'field_data_field_orientations_principales';
   $handler->display->display_options['fields']['field_orientations_principales']['field'] = 'field_orientations_principales';
@@ -7746,43 +7746,43 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['fields']['field_orientations_principales']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_orientations_principales']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Contenu: Orientation(s) stratégique(s) concernée(s) (field_orientations_principales) */
+  /* Sort criterion: Nœud: Orientation(s) stratégique(s) concernée(s) (field_orientations_principales) */
   $handler->display->display_options['sorts']['field_orientations_principales_tid']['id'] = 'field_orientations_principales_tid';
   $handler->display->display_options['sorts']['field_orientations_principales_tid']['table'] = 'field_data_field_orientations_principales';
   $handler->display->display_options['sorts']['field_orientations_principales_tid']['field'] = 'field_orientations_principales_tid';
-  /* Sort criterion: Contenu: Objectif(s) concerné(s) principalement (field_objectifs_snb_principaux) */
+  /* Sort criterion: Nœud: Objectif(s) concerné(s) principalement (field_objectifs_snb_principaux) */
   $handler->display->display_options['sorts']['field_objectifs_snb_principaux_tid']['id'] = 'field_objectifs_snb_principaux_tid';
   $handler->display->display_options['sorts']['field_objectifs_snb_principaux_tid']['table'] = 'field_data_field_objectifs_snb_principaux';
   $handler->display->display_options['sorts']['field_objectifs_snb_principaux_tid']['field'] = 'field_objectifs_snb_principaux_tid';
-  /* Sort criterion: Contenu: Titre */
+  /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Contenu: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'fiche_indicateur' => 'fiche_indicateur',
   );
-  /* Filter criterion: Contenu: Orientation(s) stratégique(s) concernée(s) (field_orientations_principales) */
+  /* Filter criterion: Nœud: Orientation(s) stratégique(s) concernée(s) (field_orientations_principales) */
   $handler->display->display_options['filters']['field_orientations_principales_tid']['id'] = 'field_orientations_principales_tid';
   $handler->display->display_options['filters']['field_orientations_principales_tid']['table'] = 'field_data_field_orientations_principales';
   $handler->display->display_options['filters']['field_orientations_principales_tid']['field'] = 'field_orientations_principales_tid';
   $handler->display->display_options['filters']['field_orientations_principales_tid']['operator'] = 'not empty';
   $handler->display->display_options['filters']['field_orientations_principales_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_orientations_principales_tid']['vocabulary'] = 'orientations_strat_giques';
-  /* Filter criterion: Contenu: Langue */
+  /* Filter criterion: Content: Language */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
@@ -7877,26 +7877,26 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
       'empty_column' => 0,
     ),
   );
-  /* Field: Contenu: Objectif(s) concerné(s) principalement */
+  /* Field: Nœud: Objectif(s) concerné(s) principalement */
   $handler->display->display_options['fields']['field_objectifs_snb_principaux']['id'] = 'field_objectifs_snb_principaux';
   $handler->display->display_options['fields']['field_objectifs_snb_principaux']['table'] = 'field_data_field_objectifs_snb_principaux';
   $handler->display->display_options['fields']['field_objectifs_snb_principaux']['field'] = 'field_objectifs_snb_principaux';
   $handler->display->display_options['fields']['field_objectifs_snb_principaux']['type'] = 'taxonomy_objectifs_sans_texte';
   $handler->display->display_options['fields']['field_objectifs_snb_principaux']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_objectifs_snb_principaux']['delta_offset'] = '0';
-  /* Field: Contenu: Objectif(s) concerné(s) secondairement */
+  /* Field: Nœud: Objectif(s) concerné(s) secondairement */
   $handler->display->display_options['fields']['field_objectifs_snb_secondaires']['id'] = 'field_objectifs_snb_secondaires';
   $handler->display->display_options['fields']['field_objectifs_snb_secondaires']['table'] = 'field_data_field_objectifs_snb_secondaires';
   $handler->display->display_options['fields']['field_objectifs_snb_secondaires']['field'] = 'field_objectifs_snb_secondaires';
   $handler->display->display_options['fields']['field_objectifs_snb_secondaires']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_objectifs_snb_secondaires']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_objectifs_snb_secondaires']['separator'] = '</br>';
-  /* Field: Contenu: Code indicateur */
+  /* Field: Nœud: Code indicateur */
   $handler->display->display_options['fields']['field_code']['id'] = 'field_code';
   $handler->display->display_options['fields']['field_code']['table'] = 'field_data_field_code';
   $handler->display->display_options['fields']['field_code']['field'] = 'field_code';
   $handler->display->display_options['fields']['field_code']['exclude'] = TRUE;
-  /* Field: Contenu: Titre */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -7905,19 +7905,19 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Global: Texte personnalisé */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = 'Nature et code de l\'indicateur';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '[title]</br>
 [field_code]';
-  /* Field: Contenu: Intitulé court */
+  /* Field: Nœud: Intitulé court */
   $handler->display->display_options['fields']['field_intitule_court']['id'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['table'] = 'field_data_field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['field'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['label'] = 'Intitulé exact correspondant à la valeur mentionnée pour l\'indicateur';
-  /* Field: Contenu: Valeur par période */
+  /* Field: Nœud: Valeur par période */
   $handler->display->display_options['fields']['field_valeurannee']['id'] = 'field_valeurannee';
   $handler->display->display_options['fields']['field_valeurannee']['table'] = 'field_data_field_valeurannee';
   $handler->display->display_options['fields']['field_valeurannee']['field'] = 'field_valeurannee';
@@ -7927,36 +7927,36 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
     'view_mode' => 'full',
   );
   $handler->display->display_options['fields']['field_valeurannee']['delta_offset'] = '0';
-  /* Field: Contenu: Couverture géographique */
+  /* Field: Nœud: Couverture géographique */
   $handler->display->display_options['fields']['field_couveture_geo']['id'] = 'field_couveture_geo';
   $handler->display->display_options['fields']['field_couveture_geo']['table'] = 'field_data_field_couveture_geo';
   $handler->display->display_options['fields']['field_couveture_geo']['field'] = 'field_couveture_geo';
   $handler->display->display_options['fields']['field_couveture_geo']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_couveture_geo']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_couveture_geo']['separator'] = '</br>';
-  /* Sort criterion: Contenu: Objectif(s) concerné(s) principalement (field_objectifs_snb_principaux) */
+  /* Sort criterion: Nœud: Objectif(s) concerné(s) principalement (field_objectifs_snb_principaux) */
   $handler->display->display_options['sorts']['field_objectifs_snb_principaux_tid']['id'] = 'field_objectifs_snb_principaux_tid';
   $handler->display->display_options['sorts']['field_objectifs_snb_principaux_tid']['table'] = 'field_data_field_objectifs_snb_principaux';
   $handler->display->display_options['sorts']['field_objectifs_snb_principaux_tid']['field'] = 'field_objectifs_snb_principaux_tid';
-  /* Sort criterion: Contenu: Code indicateur (field_code) */
+  /* Sort criterion: Nœud: Code indicateur (field_code) */
   $handler->display->display_options['sorts']['field_code_value']['id'] = 'field_code_value';
   $handler->display->display_options['sorts']['field_code_value']['table'] = 'field_data_field_code';
   $handler->display->display_options['sorts']['field_code_value']['field'] = 'field_code_value';
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Contenu: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'fiche_indicateur' => 'fiche_indicateur',
   );
-  /* Filter criterion: Contenu: Thématique(s) (field_jeux_indicateur) */
+  /* Filter criterion: Nœud: Thématique(s) (field_jeux_indicateur) */
   $handler->display->display_options['filters']['field_jeux_indicateur_tid']['id'] = 'field_jeux_indicateur_tid';
   $handler->display->display_options['filters']['field_jeux_indicateur_tid']['table'] = 'field_data_field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur_tid']['field'] = 'field_jeux_indicateur_tid';
@@ -7973,7 +7973,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   /* Display: Page2 */
   $handler = $view->new_display('page', 'Page2', 'page_1');
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Contenu: Objectif(s) concerné(s) principalement */
+  /* Field: Nœud: Objectif(s) concerné(s) principalement */
   $handler->display->display_options['fields']['field_objectifs_snb_principaux']['id'] = 'field_objectifs_snb_principaux';
   $handler->display->display_options['fields']['field_objectifs_snb_principaux']['table'] = 'field_data_field_objectifs_snb_principaux';
   $handler->display->display_options['fields']['field_objectifs_snb_principaux']['field'] = 'field_objectifs_snb_principaux';
@@ -7981,7 +7981,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['fields']['field_objectifs_snb_principaux']['type'] = 'taxonomy_objectifs_sans_texte';
   $handler->display->display_options['fields']['field_objectifs_snb_principaux']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_objectifs_snb_principaux']['delta_offset'] = '0';
-  /* Field: Contenu: Objectif(s) concerné(s) secondairement */
+  /* Field: Nœud: Objectif(s) concerné(s) secondairement */
   $handler->display->display_options['fields']['field_objectifs_snb_secondaires']['id'] = 'field_objectifs_snb_secondaires';
   $handler->display->display_options['fields']['field_objectifs_snb_secondaires']['table'] = 'field_data_field_objectifs_snb_secondaires';
   $handler->display->display_options['fields']['field_objectifs_snb_secondaires']['field'] = 'field_objectifs_snb_secondaires';
@@ -7989,11 +7989,11 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['fields']['field_objectifs_snb_secondaires']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_objectifs_snb_secondaires']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_objectifs_snb_secondaires']['separator'] = '</br>';
-  /* Field: Contenu: Code indicateur */
+  /* Field: Nœud: Code indicateur */
   $handler->display->display_options['fields']['field_code']['id'] = 'field_code';
   $handler->display->display_options['fields']['field_code']['table'] = 'field_data_field_code';
   $handler->display->display_options['fields']['field_code']['field'] = 'field_code';
-  /* Field: Contenu: Titre */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -8002,7 +8002,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Global: Texte personnalisé */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -8010,12 +8010,12 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['fields']['nothing']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '[title]</br>
 [field_code]';
-  /* Field: Contenu: Intitulé court */
+  /* Field: Nœud: Intitulé court */
   $handler->display->display_options['fields']['field_intitule_court']['id'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['table'] = 'field_data_field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['field'] = 'field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court']['label'] = 'Intitulé exact correspondant à la valeur mentionnée pour l\'indicateur';
-  /* Field: Contenu: Valeur par période */
+  /* Field: Nœud: Valeur par période */
   $handler->display->display_options['fields']['field_valeurannee']['id'] = 'field_valeurannee';
   $handler->display->display_options['fields']['field_valeurannee']['table'] = 'field_data_field_valeurannee';
   $handler->display->display_options['fields']['field_valeurannee']['field'] = 'field_valeurannee';
@@ -8025,7 +8025,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
     'view_mode' => 'full',
   );
   $handler->display->display_options['fields']['field_valeurannee']['delta_offset'] = '0';
-  /* Field: Contenu: Couverture géographique */
+  /* Field: Nœud: Couverture géographique */
   $handler->display->display_options['fields']['field_couveture_geo']['id'] = 'field_couveture_geo';
   $handler->display->display_options['fields']['field_couveture_geo']['table'] = 'field_data_field_couveture_geo';
   $handler->display->display_options['fields']['field_couveture_geo']['field'] = 'field_couveture_geo';
@@ -8034,21 +8034,21 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['fields']['field_couveture_geo']['separator'] = '</br>';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Contenu: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'fiche_indicateur' => 'fiche_indicateur',
   );
-  /* Filter criterion: Contenu: Thématique(s) (field_jeux_indicateur) */
+  /* Filter criterion: Nœud: Thématique(s) (field_jeux_indicateur) */
   $handler->display->display_options['filters']['field_jeux_indicateur_tid']['id'] = 'field_jeux_indicateur_tid';
   $handler->display->display_options['filters']['field_jeux_indicateur_tid']['table'] = 'field_data_field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur_tid']['field'] = 'field_jeux_indicateur_tid';
@@ -8068,42 +8068,42 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['style_options']['filename'] = 'indicateurs.xls';
   $handler->display->display_options['style_options']['parent_sort'] = 0;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Contenu: Titre */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
   $handler->display->display_options['fields']['title_1']['table'] = 'node';
   $handler->display->display_options['fields']['title_1']['field'] = 'title';
   $handler->display->display_options['fields']['title_1']['link_to_node'] = FALSE;
-  /* Field: Contenu: Abondance des données */
+  /* Field: Nœud: Abondance des données */
   $handler->display->display_options['fields']['field_abondance']['id'] = 'field_abondance';
   $handler->display->display_options['fields']['field_abondance']['table'] = 'field_data_field_abondance';
   $handler->display->display_options['fields']['field_abondance']['field'] = 'field_abondance';
   $handler->display->display_options['fields']['field_abondance']['type'] = 'taxonomy_term_reference_link';
-  /* Field: Contenu: Accessibilité des données */
+  /* Field: Nœud: Accessibilité des données */
   $handler->display->display_options['fields']['field_accessiblite']['id'] = 'field_accessiblite';
   $handler->display->display_options['fields']['field_accessiblite']['table'] = 'field_data_field_accessiblite';
   $handler->display->display_options['fields']['field_accessiblite']['field'] = 'field_accessiblite';
   $handler->display->display_options['fields']['field_accessiblite']['type'] = 'taxonomy_term_reference_link';
-  /* Field: Contenu: Code indicateur */
+  /* Field: Nœud: Code indicateur */
   $handler->display->display_options['fields']['field_code_1']['id'] = 'field_code_1';
   $handler->display->display_options['fields']['field_code_1']['table'] = 'field_data_field_code';
   $handler->display->display_options['fields']['field_code_1']['field'] = 'field_code';
-  /* Field: Contenu: Continuité du jeu national SNB */
+  /* Field: Nœud: Continuité du jeu national SNB */
   $handler->display->display_options['fields']['field_continuite_snb']['id'] = 'field_continuite_snb';
   $handler->display->display_options['fields']['field_continuite_snb']['table'] = 'field_data_field_continuite_snb';
   $handler->display->display_options['fields']['field_continuite_snb']['field'] = 'field_continuite_snb';
   $handler->display->display_options['fields']['field_continuite_snb']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Contenu: Couverture géographique */
+  /* Field: Nœud: Couverture géographique */
   $handler->display->display_options['fields']['field_couveture_geo_1']['id'] = 'field_couveture_geo_1';
   $handler->display->display_options['fields']['field_couveture_geo_1']['table'] = 'field_data_field_couveture_geo';
   $handler->display->display_options['fields']['field_couveture_geo_1']['field'] = 'field_couveture_geo';
   $handler->display->display_options['fields']['field_couveture_geo_1']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_couveture_geo_1']['delta_offset'] = '0';
-  /* Field: Contenu: Coût de mobilisation */
+  /* Field: Nœud: Coût de mobilisation */
   $handler->display->display_options['fields']['field_cout']['id'] = 'field_cout';
   $handler->display->display_options['fields']['field_cout']['table'] = 'field_data_field_cout';
   $handler->display->display_options['fields']['field_cout']['field'] = 'field_cout';
   $handler->display->display_options['fields']['field_cout']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Contenu: Date de publication de la première valeur de la série */
+  /* Field: Nœud: Date de publication de la première valeur de la série */
   $handler->display->display_options['fields']['field_date_publication']['id'] = 'field_date_publication';
   $handler->display->display_options['fields']['field_date_publication']['table'] = 'field_data_field_date_publication';
   $handler->display->display_options['fields']['field_date_publication']['field'] = 'field_date_publication';
@@ -8114,210 +8114,210 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Contenu: Disponibilité */
+  /* Field: Nœud: Disponibilité */
   $handler->display->display_options['fields']['field_disponibilite']['id'] = 'field_disponibilite';
   $handler->display->display_options['fields']['field_disponibilite']['table'] = 'field_data_field_disponibilite';
   $handler->display->display_options['fields']['field_disponibilite']['field'] = 'field_disponibilite';
   $handler->display->display_options['fields']['field_disponibilite']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Contenu: Définition */
+  /* Field: Nœud: Définition */
   $handler->display->display_options['fields']['field_definition_indicateur']['id'] = 'field_definition_indicateur';
   $handler->display->display_options['fields']['field_definition_indicateur']['table'] = 'field_data_field_definition_indicateur';
   $handler->display->display_options['fields']['field_definition_indicateur']['field'] = 'field_definition_indicateur';
-  /* Field: Contenu: Echelle(s) territoriale(s) de restitution */
+  /* Field: Nœud: Echelle(s) territoriale(s) de restitution */
   $handler->display->display_options['fields']['field_echelle_restitution']['id'] = 'field_echelle_restitution';
   $handler->display->display_options['fields']['field_echelle_restitution']['table'] = 'field_data_field_echelle_restitution';
   $handler->display->display_options['fields']['field_echelle_restitution']['field'] = 'field_echelle_restitution';
   $handler->display->display_options['fields']['field_echelle_restitution']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_echelle_restitution']['delta_offset'] = '0';
-  /* Field: Contenu: Efficacité */
+  /* Field: Nœud: Efficacité */
   $handler->display->display_options['fields']['field_efficacite']['id'] = 'field_efficacite';
   $handler->display->display_options['fields']['field_efficacite']['table'] = 'field_data_field_efficacite';
   $handler->display->display_options['fields']['field_efficacite']['field'] = 'field_efficacite';
   $handler->display->display_options['fields']['field_efficacite']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Contenu: Fiabilité des données */
+  /* Field: Nœud: Fiabilité des données */
   $handler->display->display_options['fields']['field_fiabilite']['id'] = 'field_fiabilite';
   $handler->display->display_options['fields']['field_fiabilite']['table'] = 'field_data_field_fiabilite';
   $handler->display->display_options['fields']['field_fiabilite']['field'] = 'field_fiabilite';
   $handler->display->display_options['fields']['field_fiabilite']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Contenu: Grain(s) de précision d'échelle */
+  /* Field: Nœud: Grain(s) de précision d'échelle */
   $handler->display->display_options['fields']['field_grain_precision_echelle']['id'] = 'field_grain_precision_echelle';
   $handler->display->display_options['fields']['field_grain_precision_echelle']['table'] = 'field_data_field_grain_precision_echelle';
   $handler->display->display_options['fields']['field_grain_precision_echelle']['field'] = 'field_grain_precision_echelle';
   $handler->display->display_options['fields']['field_grain_precision_echelle']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_grain_precision_echelle']['delta_offset'] = '0';
-  /* Field: Contenu: Homogénéité des données */
+  /* Field: Nœud: Homogénéité des données */
   $handler->display->display_options['fields']['field_homogeneite']['id'] = 'field_homogeneite';
   $handler->display->display_options['fields']['field_homogeneite']['table'] = 'field_data_field_homogeneite';
   $handler->display->display_options['fields']['field_homogeneite']['field'] = 'field_homogeneite';
   $handler->display->display_options['fields']['field_homogeneite']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Contenu: Indicateurs équivalents existant dans d'autres jeux */
+  /* Field: Nœud: Indicateurs équivalents existant dans d'autres jeux */
   $handler->display->display_options['fields']['field_relation_indicateurs']['id'] = 'field_relation_indicateurs';
   $handler->display->display_options['fields']['field_relation_indicateurs']['table'] = 'field_data_field_relation_indicateurs';
   $handler->display->display_options['fields']['field_relation_indicateurs']['field'] = 'field_relation_indicateurs';
   $handler->display->display_options['fields']['field_relation_indicateurs']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_relation_indicateurs']['delta_offset'] = '0';
-  /* Field: Contenu: Intitulé court */
+  /* Field: Nœud: Intitulé court */
   $handler->display->display_options['fields']['field_intitule_court_1']['id'] = 'field_intitule_court_1';
   $handler->display->display_options['fields']['field_intitule_court_1']['table'] = 'field_data_field_intitule_court';
   $handler->display->display_options['fields']['field_intitule_court_1']['field'] = 'field_intitule_court';
-  /* Field: Contenu: Thématique(s) */
+  /* Field: Nœud: Thématique(s) */
   $handler->display->display_options['fields']['field_jeux_indicateur']['id'] = 'field_jeux_indicateur';
   $handler->display->display_options['fields']['field_jeux_indicateur']['table'] = 'field_data_field_jeux_indicateur';
   $handler->display->display_options['fields']['field_jeux_indicateur']['field'] = 'field_jeux_indicateur';
   $handler->display->display_options['fields']['field_jeux_indicateur']['label'] = 'Indicators set(s)';
   $handler->display->display_options['fields']['field_jeux_indicateur']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_jeux_indicateur']['delta_offset'] = '0';
-  /* Field: Contenu: Habitat(s) concerné(s) */
+  /* Field: Nœud: Habitat(s) concerné(s) */
   $handler->display->display_options['fields']['field_milieux_concernes']['id'] = 'field_milieux_concernes';
   $handler->display->display_options['fields']['field_milieux_concernes']['table'] = 'field_data_field_milieux_concernes';
   $handler->display->display_options['fields']['field_milieux_concernes']['field'] = 'field_milieux_concernes';
   $handler->display->display_options['fields']['field_milieux_concernes']['label'] = 'Milieu(x) concerné(s)';
   $handler->display->display_options['fields']['field_milieux_concernes']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_milieux_concernes']['delta_offset'] = '0';
-  /* Field: Contenu: Modalités d'interprétation de l'indicateur */
+  /* Field: Nœud: Modalités d'interprétation de l'indicateur */
   $handler->display->display_options['fields']['field_mod_interpretation']['id'] = 'field_mod_interpretation';
   $handler->display->display_options['fields']['field_mod_interpretation']['table'] = 'field_data_field_mod_interpretation';
   $handler->display->display_options['fields']['field_mod_interpretation']['field'] = 'field_mod_interpretation';
   $handler->display->display_options['fields']['field_mod_interpretation']['type'] = 'text_plain';
-  /* Field: Contenu: Méthodologie de construction */
+  /* Field: Nœud: Méthodologie de construction */
   $handler->display->display_options['fields']['field_methodologie']['id'] = 'field_methodologie';
   $handler->display->display_options['fields']['field_methodologie']['table'] = 'field_data_field_methodologie';
   $handler->display->display_options['fields']['field_methodologie']['field'] = 'field_methodologie';
   $handler->display->display_options['fields']['field_methodologie']['type'] = 'text_plain';
-  /* Field: Contenu: Niveau d'appropriation */
+  /* Field: Nœud: Niveau d'appropriation */
   $handler->display->display_options['fields']['field_niveau']['id'] = 'field_niveau';
   $handler->display->display_options['fields']['field_niveau']['table'] = 'field_data_field_niveau';
   $handler->display->display_options['fields']['field_niveau']['field'] = 'field_niveau';
   $handler->display->display_options['fields']['field_niveau']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Contenu: Objectif(s) concerné(s) principalement */
+  /* Field: Nœud: Objectif(s) concerné(s) principalement */
   $handler->display->display_options['fields']['field_objectifs_snb_principaux_1']['id'] = 'field_objectifs_snb_principaux_1';
   $handler->display->display_options['fields']['field_objectifs_snb_principaux_1']['table'] = 'field_data_field_objectifs_snb_principaux';
   $handler->display->display_options['fields']['field_objectifs_snb_principaux_1']['field'] = 'field_objectifs_snb_principaux';
   $handler->display->display_options['fields']['field_objectifs_snb_principaux_1']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_objectifs_snb_principaux_1']['delta_offset'] = '0';
-  /* Field: Contenu: Objectif(s) concerné(s) secondairement */
+  /* Field: Nœud: Objectif(s) concerné(s) secondairement */
   $handler->display->display_options['fields']['field_objectifs_snb_secondaires_1']['id'] = 'field_objectifs_snb_secondaires_1';
   $handler->display->display_options['fields']['field_objectifs_snb_secondaires_1']['table'] = 'field_data_field_objectifs_snb_secondaires';
   $handler->display->display_options['fields']['field_objectifs_snb_secondaires_1']['field'] = 'field_objectifs_snb_secondaires';
   $handler->display->display_options['fields']['field_objectifs_snb_secondaires_1']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_objectifs_snb_secondaires_1']['delta_offset'] = '0';
-  /* Field: Contenu: Orientation(s) stratégique(s) concernée(s) */
+  /* Field: Nœud: Orientation(s) stratégique(s) concernée(s) */
   $handler->display->display_options['fields']['field_orientations_principales']['id'] = 'field_orientations_principales';
   $handler->display->display_options['fields']['field_orientations_principales']['table'] = 'field_data_field_orientations_principales';
   $handler->display->display_options['fields']['field_orientations_principales']['field'] = 'field_orientations_principales';
   $handler->display->display_options['fields']['field_orientations_principales']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_orientations_principales']['delta_offset'] = '0';
-  /* Field: Contenu: Origine et description des données sources */
+  /* Field: Nœud: Origine et description des données sources */
   $handler->display->display_options['fields']['field_origine_source']['id'] = 'field_origine_source';
   $handler->display->display_options['fields']['field_origine_source']['table'] = 'field_data_field_origine_source';
   $handler->display->display_options['fields']['field_origine_source']['field'] = 'field_origine_source';
   $handler->display->display_options['fields']['field_origine_source']['type'] = 'text_plain';
-  /* Field: Contenu: Pas de temps de disponibilité des valeurs */
+  /* Field: Nœud: Pas de temps de disponibilité des valeurs */
   $handler->display->display_options['fields']['field_pas_tps_disponibilite']['id'] = 'field_pas_tps_disponibilite';
   $handler->display->display_options['fields']['field_pas_tps_disponibilite']['table'] = 'field_data_field_pas_tps_disponibilite';
   $handler->display->display_options['fields']['field_pas_tps_disponibilite']['field'] = 'field_pas_tps_disponibilite';
   $handler->display->display_options['fields']['field_pas_tps_disponibilite']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Contenu: Pas de temps de restitution */
+  /* Field: Nœud: Pas de temps de restitution */
   $handler->display->display_options['fields']['field_pas_tps_restitution']['id'] = 'field_pas_tps_restitution';
   $handler->display->display_options['fields']['field_pas_tps_restitution']['table'] = 'field_data_field_pas_tps_restitution';
   $handler->display->display_options['fields']['field_pas_tps_restitution']['field'] = 'field_pas_tps_restitution';
   $handler->display->display_options['fields']['field_pas_tps_restitution']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_pas_tps_restitution']['delta_offset'] = '0';
-  /* Field: Contenu: Pistes de travail et d'amélioration */
+  /* Field: Nœud: Pistes de travail et d'amélioration */
   $handler->display->display_options['fields']['field_pistes']['id'] = 'field_pistes';
   $handler->display->display_options['fields']['field_pistes']['table'] = 'field_data_field_pistes';
   $handler->display->display_options['fields']['field_pistes']['field'] = 'field_pistes';
   $handler->display->display_options['fields']['field_pistes']['type'] = 'text_plain';
-  /* Field: Contenu: Possibilité de rétro-calcul */
+  /* Field: Nœud: Possibilité de rétro-calcul */
   $handler->display->display_options['fields']['field_retro_calcul']['id'] = 'field_retro_calcul';
   $handler->display->display_options['fields']['field_retro_calcul']['table'] = 'field_data_field_retro_calcul';
   $handler->display->display_options['fields']['field_retro_calcul']['field'] = 'field_retro_calcul';
-  /* Field: Contenu: Principales limites */
+  /* Field: Nœud: Principales limites */
   $handler->display->display_options['fields']['field_limites']['id'] = 'field_limites';
   $handler->display->display_options['fields']['field_limites']['table'] = 'field_data_field_limites';
   $handler->display->display_options['fields']['field_limites']['field'] = 'field_limites';
   $handler->display->display_options['fields']['field_limites']['type'] = 'text_plain';
-  /* Field: Contenu: Principaux avantages */
+  /* Field: Nœud: Principaux avantages */
   $handler->display->display_options['fields']['field_avantages']['id'] = 'field_avantages';
   $handler->display->display_options['fields']['field_avantages']['table'] = 'field_data_field_avantages';
   $handler->display->display_options['fields']['field_avantages']['field'] = 'field_avantages';
   $handler->display->display_options['fields']['field_avantages']['type'] = 'text_plain';
-  /* Field: Contenu: Producteur */
+  /* Field: Nœud: Producteur */
   $handler->display->display_options['fields']['field_indicateur_producteur']['id'] = 'field_indicateur_producteur';
   $handler->display->display_options['fields']['field_indicateur_producteur']['table'] = 'field_data_field_indicateur_producteur';
   $handler->display->display_options['fields']['field_indicateur_producteur']['field'] = 'field_indicateur_producteur';
   $handler->display->display_options['fields']['field_indicateur_producteur']['type'] = 'node_reference_plain';
   $handler->display->display_options['fields']['field_indicateur_producteur']['delta_offset'] = '0';
-  /* Field: Contenu: Précision */
+  /* Field: Nœud: Précision */
   $handler->display->display_options['fields']['field_precision']['id'] = 'field_precision';
   $handler->display->display_options['fields']['field_precision']['table'] = 'field_data_field_precision';
   $handler->display->display_options['fields']['field_precision']['field'] = 'field_precision';
   $handler->display->display_options['fields']['field_precision']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Contenu: Pérennité des données */
+  /* Field: Nœud: Pérennité des données */
   $handler->display->display_options['fields']['field_perennite']['id'] = 'field_perennite';
   $handler->display->display_options['fields']['field_perennite']['table'] = 'field_data_field_perennite';
   $handler->display->display_options['fields']['field_perennite']['field'] = 'field_perennite';
   $handler->display->display_options['fields']['field_perennite']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Contenu: Qualité des données */
+  /* Field: Nœud: Qualité des données */
   $handler->display->display_options['fields']['field_qualite']['id'] = 'field_qualite';
   $handler->display->display_options['fields']['field_qualite']['table'] = 'field_data_field_qualite';
   $handler->display->display_options['fields']['field_qualite']['field'] = 'field_qualite';
-  /* Field: Contenu: Relations avec le(s) objectif(s) renseigné(s) */
+  /* Field: Nœud: Relations avec le(s) objectif(s) renseigné(s) */
   $handler->display->display_options['fields']['field_relation_objectifs']['id'] = 'field_relation_objectifs';
   $handler->display->display_options['fields']['field_relation_objectifs']['table'] = 'field_data_field_relation_objectifs';
   $handler->display->display_options['fields']['field_relation_objectifs']['field'] = 'field_relation_objectifs';
   $handler->display->display_options['fields']['field_relation_objectifs']['type'] = 'text_plain';
-  /* Field: Contenu: Remarques */
+  /* Field: Nœud: Remarques */
   $handler->display->display_options['fields']['field_pas_tps_remarques']['id'] = 'field_pas_tps_remarques';
   $handler->display->display_options['fields']['field_pas_tps_remarques']['table'] = 'field_data_field_pas_tps_remarques';
   $handler->display->display_options['fields']['field_pas_tps_remarques']['field'] = 'field_pas_tps_remarques';
-  /* Field: Contenu: Remarques rétro-calcul */
+  /* Field: Nœud: Remarques rétro-calcul */
   $handler->display->display_options['fields']['field_retro_calcul_remarques']['id'] = 'field_retro_calcul_remarques';
   $handler->display->display_options['fields']['field_retro_calcul_remarques']['table'] = 'field_data_field_retro_calcul_remarques';
   $handler->display->display_options['fields']['field_retro_calcul_remarques']['field'] = 'field_retro_calcul_remarques';
-  /* Field: Contenu: Robustesse */
+  /* Field: Nœud: Robustesse */
   $handler->display->display_options['fields']['field_robustesse']['id'] = 'field_robustesse';
   $handler->display->display_options['fields']['field_robustesse']['table'] = 'field_data_field_robustesse';
   $handler->display->display_options['fields']['field_robustesse']['field'] = 'field_robustesse';
   $handler->display->display_options['fields']['field_robustesse']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Contenu: Robustesse - remarques  */
+  /* Field: Nœud: Robustesse - remarques  */
   $handler->display->display_options['fields']['field_robustesse_remarques']['id'] = 'field_robustesse_remarques';
   $handler->display->display_options['fields']['field_robustesse_remarques']['table'] = 'field_data_field_robustesse_remarques';
   $handler->display->display_options['fields']['field_robustesse_remarques']['field'] = 'field_robustesse_remarques';
-  /* Field: Contenu: Rupture de série */
+  /* Field: Nœud: Rupture de série */
   $handler->display->display_options['fields']['field_rupture_serie']['id'] = 'field_rupture_serie';
   $handler->display->display_options['fields']['field_rupture_serie']['table'] = 'field_data_field_rupture_serie';
   $handler->display->display_options['fields']['field_rupture_serie']['field'] = 'field_rupture_serie';
   $handler->display->display_options['fields']['field_rupture_serie']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_rupture_serie']['delta_offset'] = '0';
-  /* Field: Contenu: Sensiblité */
+  /* Field: Nœud: Sensiblité */
   $handler->display->display_options['fields']['field_sensibilite']['id'] = 'field_sensibilite';
   $handler->display->display_options['fields']['field_sensibilite']['table'] = 'field_data_field_sensibilite';
   $handler->display->display_options['fields']['field_sensibilite']['field'] = 'field_sensibilite';
   $handler->display->display_options['fields']['field_sensibilite']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Contenu: Type de variable */
+  /* Field: Nœud: Type de variable */
   $handler->display->display_options['fields']['field_type_variable']['id'] = 'field_type_variable';
   $handler->display->display_options['fields']['field_type_variable']['table'] = 'field_data_field_type_variable';
   $handler->display->display_options['fields']['field_type_variable']['field'] = 'field_type_variable';
   $handler->display->display_options['fields']['field_type_variable']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Contenu: Type(s) de pression */
+  /* Field: Nœud: Type(s) de pression */
   $handler->display->display_options['fields']['field_type_pression']['id'] = 'field_type_pression';
   $handler->display->display_options['fields']['field_type_pression']['table'] = 'field_data_field_type_pression';
   $handler->display->display_options['fields']['field_type_pression']['field'] = 'field_type_pression';
   $handler->display->display_options['fields']['field_type_pression']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_type_pression']['delta_offset'] = '0';
-  /* Field: Contenu: Type(s) DPSIR */
+  /* Field: Nœud: Type(s) DPSIR */
   $handler->display->display_options['fields']['field_type_dpsir']['id'] = 'field_type_dpsir';
   $handler->display->display_options['fields']['field_type_dpsir']['table'] = 'field_data_field_type_dpsir';
   $handler->display->display_options['fields']['field_type_dpsir']['field'] = 'field_type_dpsir';
   $handler->display->display_options['fields']['field_type_dpsir']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_type_dpsir']['delta_offset'] = '0';
-  /* Field: Contenu: Unité de mesure */
+  /* Field: Nœud: Unité de mesure */
   $handler->display->display_options['fields']['field_unite_mesure']['id'] = 'field_unite_mesure';
   $handler->display->display_options['fields']['field_unite_mesure']['table'] = 'field_data_field_unite_mesure';
   $handler->display->display_options['fields']['field_unite_mesure']['field'] = 'field_unite_mesure';
   $handler->display->display_options['fields']['field_unite_mesure']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Contenu: Valeur par période */
+  /* Field: Nœud: Valeur par période */
   $handler->display->display_options['fields']['field_valeurannee_1']['id'] = 'field_valeurannee_1';
   $handler->display->display_options['fields']['field_valeurannee_1']['table'] = 'field_data_field_valeurannee';
   $handler->display->display_options['fields']['field_valeurannee_1']['field'] = 'field_valeurannee';
@@ -8329,30 +8329,30 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
     'view_mode' => 'full',
   );
   $handler->display->display_options['fields']['field_valeurannee_1']['delta_offset'] = '0';
-  /* Field: Contenu: Valeur(s) cible(s) */
+  /* Field: Nœud: Valeur(s) cible(s) */
   $handler->display->display_options['fields']['field_valeur_cible']['id'] = 'field_valeur_cible';
   $handler->display->display_options['fields']['field_valeur_cible']['table'] = 'field_data_field_valeur_cible';
   $handler->display->display_options['fields']['field_valeur_cible']['field'] = 'field_valeur_cible';
-  /* Field: Contenu: Valeur(s) cible(s) renseignement */
+  /* Field: Nœud: Valeur(s) cible(s) renseignement */
   $handler->display->display_options['fields']['field_valeur_cible_renseignement']['id'] = 'field_valeur_cible_renseignement';
   $handler->display->display_options['fields']['field_valeur_cible_renseignement']['table'] = 'field_data_field_valeur_cible_renseignement';
   $handler->display->display_options['fields']['field_valeur_cible_renseignement']['field'] = 'field_valeur_cible_renseignement';
   $handler->display->display_options['fields']['field_valeur_cible_renseignement']['type'] = 'text_plain';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Contenu: Titre */
+  /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Contenu: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -8424,21 +8424,21 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Contenu: Objectif(s) concerné(s) principalement */
+  /* Field: Nœud: Objectif(s) concerné(s) principalement */
   $handler->display->display_options['fields']['field_objectifs_snb_principaux']['id'] = 'field_objectifs_snb_principaux';
   $handler->display->display_options['fields']['field_objectifs_snb_principaux']['table'] = 'field_data_field_objectifs_snb_principaux';
   $handler->display->display_options['fields']['field_objectifs_snb_principaux']['field'] = 'field_objectifs_snb_principaux';
   $handler->display->display_options['fields']['field_objectifs_snb_principaux']['type'] = 'taxonomy_objectifs_sans_texte';
   $handler->display->display_options['fields']['field_objectifs_snb_principaux']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_objectifs_snb_principaux']['delta_offset'] = '0';
-  /* Field: Contenu: Objectif(s) concerné(s) secondairement */
+  /* Field: Nœud: Objectif(s) concerné(s) secondairement */
   $handler->display->display_options['fields']['field_objectifs_snb_secondaires']['id'] = 'field_objectifs_snb_secondaires';
   $handler->display->display_options['fields']['field_objectifs_snb_secondaires']['table'] = 'field_data_field_objectifs_snb_secondaires';
   $handler->display->display_options['fields']['field_objectifs_snb_secondaires']['field'] = 'field_objectifs_snb_secondaires';
   $handler->display->display_options['fields']['field_objectifs_snb_secondaires']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_objectifs_snb_secondaires']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_objectifs_snb_secondaires']['separator'] = '</br>';
-  /* Field: Contenu: Titre */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -8449,7 +8449,7 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['node_in_colorbox_width'] = '600';
   $handler->display->display_options['fields']['title']['node_in_colorbox_height'] = '600';
-  /* Field: Contenu: Orientation(s) stratégique(s) concernée(s) */
+  /* Field: Nœud: Orientation(s) stratégique(s) concernée(s) */
   $handler->display->display_options['fields']['field_orientations_principales']['id'] = 'field_orientations_principales';
   $handler->display->display_options['fields']['field_orientations_principales']['table'] = 'field_data_field_orientations_principales';
   $handler->display->display_options['fields']['field_orientations_principales']['field'] = 'field_orientations_principales';
@@ -8459,27 +8459,27 @@ Remarque : il s\'agit de la première publication de ces questions, qui sont don
   $handler->display->display_options['fields']['field_orientations_principales']['delta_reversed'] = TRUE;
   $handler->display->display_options['fields']['field_orientations_principales']['multi_type'] = 'ul';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Contenu: Titre */
+  /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Contenu: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'fiche_indicateur' => 'fiche_indicateur',
   );
-  /* Filter criterion: Contenu: Thématique(s) (field_jeux_indicateur) */
+  /* Filter criterion: Nœud: Thématique(s) (field_jeux_indicateur) */
   $handler->display->display_options['filters']['field_jeux_indicateur_tid']['id'] = 'field_jeux_indicateur_tid';
   $handler->display->display_options['filters']['field_jeux_indicateur_tid']['table'] = 'field_data_field_jeux_indicateur';
   $handler->display->display_options['filters']['field_jeux_indicateur_tid']['field'] = 'field_jeux_indicateur_tid';

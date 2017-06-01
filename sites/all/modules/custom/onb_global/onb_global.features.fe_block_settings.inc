@@ -2487,7 +2487,7 @@ function onb_global_default_fe_block_settings() {
     'custom' => 0,
     'delta' => 'calendrier-block_1',
     'i18n_block_language' => array(),
-    'i18n_mode' => 1,
+    'i18n_mode' => 0,
     'module' => 'views',
     'node_types' => array(),
     'pages' => '',

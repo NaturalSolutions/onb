@@ -555,6 +555,12 @@ function onb_global_default_search_api_server() {
             "column" : "value",
             "type" : "list\\u003Cinteger\\u003E",
             "boost" : "1.0"
+          },
+          "field_actu_date" : {
+            "table" : "search_api_db_search_indicateurs",
+            "column" : "field_actu_date_1",
+            "type" : "date",
+            "boost" : "1.0"
           }
         },
         "search_term_thematique" : {
@@ -719,6 +725,44 @@ function onb_global_default_search_api_server() {
             "table" : "search_api_db_search_fiches_biblio",
             "column" : "search_api_language",
             "type" : "string",
+            "boost" : "1.0"
+          }
+        },
+        "search_glossaire" : {
+          "name" : {
+            "table" : "search_api_db_search_glossaire",
+            "column" : "name",
+            "type" : "string",
+            "boost" : "1.0"
+          },
+          "weight" : {
+            "table" : "search_api_db_search_glossaire",
+            "column" : "weight",
+            "type" : "integer",
+            "boost" : "1.0"
+          },
+          "vocabulary" : {
+            "table" : "search_api_db_search_glossaire",
+            "column" : "vocabulary",
+            "type" : "integer",
+            "boost" : "1.0"
+          },
+          "field_first_letter" : {
+            "table" : "search_api_db_search_glossaire",
+            "column" : "field_first_letter",
+            "type" : "string",
+            "boost" : "1.0"
+          },
+          "search_api_language" : {
+            "table" : "search_api_db_search_glossaire",
+            "column" : "search_api_language",
+            "type" : "string",
+            "boost" : "1.0"
+          },
+          "field_definitions:field_thematique" : {
+            "table" : "search_api_db_search_glossaire_field_definitions_field_themati",
+            "column" : "value",
+            "type" : "list\\u003Clist\\u003Cinteger\\u003E\\u003E",
             "boost" : "1.0"
           }
         }

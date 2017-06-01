@@ -288,10 +288,10 @@ function onb_global_conditional_fields_default_fields() {
       ),
       'selector' => '',
       'values_set' => 1,
-      'value_form' => 1963,
+      'value_form' => 1936,
       'value' => array(
         0 => array(
-          'tid' => 1963,
+          'tid' => 1936,
         ),
       ),
       'values' => array(),
@@ -383,10 +383,10 @@ function onb_global_conditional_fields_default_fields() {
       ),
       'selector' => '',
       'values_set' => 1,
-      'value_form' => 1962,
+      'value_form' => 1935,
       'value' => array(
         0 => array(
-          'tid' => 1962,
+          'tid' => 1935,
         ),
       ),
       'values' => array(),

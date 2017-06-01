@@ -53,12 +53,12 @@ NB, à faire à la main :
 *********
 
 // Revert la Feature principale onb_global
-drush fr onb_global
+drush fr onb_global -y
 
 // Activer la nouvelle feature ONB Permissions (Cf. Problème avec la table 'Sytem' ci-dessous)
-drush en onb_permissions
+drush en onb_permissions -y
 
-// Désactive la vues par défaut du Calendrier
+// Désactive la vues par défaut du Calendrier (apparement inutile car message drush : The view 'event_calendar' is already désactivé)
 drush vdis event_calendar
 
 // Remplir les taxos via Taxonomy Manager (admin/structure/taxonomy_manager/voc) :
@@ -164,36 +164,55 @@ Active
 Archive
 
 
+// NB : Attention au champ conditionnel quand on change la valeur des termes de la taxo 'Origine de la ressource' => admin/structure/dependencies / Fiche ressource bibliographique
+// Le filtre se base sur le tid, donc pas de soucis entre les chaines FR et EN (car els termes sont localisés et ont le même tid.
+// MAIS les tid changeront probablement entre mon local, le dev la PP et la Prod si les taxos ne sont pas créées dans le même ordre
+// => il faudra donc changer la valeur de la condition (penser aussi à la virer de la feature pour que la valuer ne soit pas ré-écrasée)
+// NB2 : la condition ne semble pas être featurisable, il faut donc la recréer à la mano
 
-NB : Attention au champ conditionnel quand on change la valeur des termes de la taxo 'Origine de la ressource' => admin/structure/dependencies / Fiche ressource bibliographique
-Le filtre se base sur le tid, donc pas de soucis entre les chaines FR et EN (car els termes sont localisés et ont le même tid.
-MAIS les tid changeront probablement entre mon local, le dev la PP et la Prod si les taxos ne sont pas créées dans le même ordre
-=> il faudra donc changer la valeur de la condition (penser aussi à la virer de la feature pour que la valuer ne soit pas ré-écrasée)
-NB2 : la condition ne semble pas être featurisable, il faut donc la recréer à la mano
 
-Fiche ressource bibliographique
+// TODO : (admin/structure/dependencies) pour les "Fiche ressource bibliographique"
 Nature de la ressource (field_nature_interne)	Origine de la ressource (field_origine)	Nature de la ressource is visible when Origine de la ressource has value "1962".
 Nature de la ressource (field_nature_externe)	Origine de la ressource (field_origine)	Nature de la ressource is visible when Origine de la ressource has value "1963".
 (Comme dit plus haut, 1962 et 1963 ne seront sans dout pas les mêmes valeurs, elles correspndent aux valeurs (termes) "Interne" et "Externe").
 
 
-?? Problème avec la table système : le .info de la features gloabale est trop gros pour la capacité du champ.
-Solutions :
-1/ diviser les features. Ex : Créer une feature des Perms
-2/ Changer la nature du champ 'Info' de la table 'System' =>
-drush sqlq "ALTER TABLE `system` CHANGE `info` `info` LONGBLOB NULL DEFAULT NULL"
-Ou dans Phpmyadmin :
-ALTER TABLE `system` CHANGE `info` `info` LONGBLOB NULL DEFAULT NULL
+// ?? Problème avec la table système : le .info de la features gloabale est trop gros pour la capacité du champ.
+// Solutions :
+// 1/ diviser les features. Ex : Créer une feature des Perms
+// 2/ Changer la nature du champ 'Info' de la table 'System' =>
+// drush sqlq "ALTER TABLE `system` CHANGE `info` `info` LONGBLOB NULL DEFAULT NULL"
+// Ou dans Phpmyadmin :
+// ALTER TABLE `system` CHANGE `info` `info` LONGBLOB NULL DEFAULT NULL
+// Solution 1/ effectuée pour ne pas toucher aux paramètres de la base.
 
-Solution 1/ effectuée pour ne pas toucher aux paramètres de la base.
+
+// Traduction de terme en anglais (via ui : admin/config/regional/translate/translate)
+- "Biodiversity & society, questions asked at the ONB" (présente dans les pages questions) à traduire via l'interface par "Biodiversité & société, les questions posées à l'ONB"
+- "News" (présent sur le bloc actu de la HP)" à traduire via l'interface par "Actualités"
 
 
-// Traduction des deux termes en anglais
-"- "Biodiversity & society, questions asked at the ONB" (présente dans les pages questions)
-qui se traduit via l'interface : admin/config/regional/translate/edit/21731?destination=admin/config/regional/translate/translate
-=> traduction de la chaîne via l'UI par "Biodiversité & société, les questions posées à l'ONB"
-http://213.32.18.30/onb/fr/admin/config/regional/translate/edit/21735?destination=admin/config/regional/translate/translate
+// Remettre les filtres en place, Todo :
+admin/config/search/search_api/server/recherches/edit
+-> désactiver
 
-- "News" (présent sur le bloc actu de la HP)"
-=> traduction de la chaîne via l'UI par "Actualités"
-http://213.32.18.30/onb/fr/admin/config/regional/translate/edit/21745?destination=admin/config/regional/translate/translate
+admin/config/search/search_api/index/search_actualite/edit
+-> sélectionner le serveur "Recherche", puis "Enregistrer"
+-> sur la page qui suit, clic sur "activer"
+-> sur la page qui suit, clic sur "Queue all items for reindexing", "confirmer"
+-> sur la page qui suit, clic sur "Index now"
+
+// Même opération pour les autres index, depuis ces liens :
+admin/config/search/search_api/index/search_questions/edit
+admin/config/search/search_api/index/search_indicateurs/edit
+admin/config/search/search_api/index/search_term_thematique/edit
+admin/config/search/search_api/index/search_term_glossaire/edit
+admin/config/search/search_api/index/search_glossaire/edit
+
+// vider les caches
+drush cc all
+
+
+
+
+
