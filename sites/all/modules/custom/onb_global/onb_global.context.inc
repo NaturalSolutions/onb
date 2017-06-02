@@ -640,7 +640,7 @@ function onb_global_context_default_contexts() {
   $context->conditions = array(
     'views' => array(
       'values' => array(
-        'recherche_fiches_biblio:page' => 'recherche_fiches_biblio:page',
+        'recherche_fiches_bibliographiques' => 'recherche_fiches_bibliographiques',
       ),
     ),
   );

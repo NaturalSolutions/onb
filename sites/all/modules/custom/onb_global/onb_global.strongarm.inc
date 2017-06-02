@@ -3110,6 +3110,7 @@ function onb_global_strongarm() {
     'admin_views_file' => TRUE,
     'calendar' => TRUE,
     'event_calendar' => TRUE,
+    'recherche_fiches_biblio' => TRUE,
   );
   $export['views_defaults'] = $strongarm;
 

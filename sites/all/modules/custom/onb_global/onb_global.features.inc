@@ -274,6 +274,7 @@ function onb_global_default_search_api_index() {
         "field_perimetre_thematique_nat" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_statut" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "search_api_language" : { "type" : "string" },
+        "status" : { "type" : "integer" },
         "title" : { "type" : "string" },
         "type" : { "type" : "string" }
       },
@@ -726,6 +727,12 @@ function onb_global_default_search_api_server() {
             "column" : "search_api_language",
             "type" : "string",
             "boost" : "1.0"
+          },
+          "status" : {
+            "table" : "search_api_db_search_fiches_biblio",
+            "column" : "status",
+            "type" : "integer",
+            "boost" : "1.0"
           }
         },
         "search_glossaire" : {
@@ -893,7 +900,7 @@ function onb_global_default_search_api_sort() {
     "default_sort" : "0",
     "default_sort_no_terms" : "0",
     "default_order" : "desc",
-    "options" : { "field_name" : "Title" },
+    "options" : { "field_name" : "Titre" },
     "rdf_mapping" : []
   }');
   $items['search_fiches_biblio__type'] = entity_import('search_api_sort', '{
@@ -906,7 +913,7 @@ function onb_global_default_search_api_sort() {
     "default_sort" : "0",
     "default_sort_no_terms" : "0",
     "default_order" : "desc",
-    "options" : { "field_name" : "Content type" },
+    "options" : { "field_name" : "Type de contenu" },
     "rdf_mapping" : []
   }');
   return $items;

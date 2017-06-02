@@ -209,6 +209,10 @@ admin/config/search/search_api/index/search_term_thematique/edit
 admin/config/search/search_api/index/search_term_glossaire/edit
 admin/config/search/search_api/index/search_glossaire/edit
 
+# pour remettre l'ordre de trie des filtres :
+admin/config/search/facetapi/search_api%40search_indicateurs/block/field_jeux_indicateur/edit
+-> dans la conf des tries, tout décocher sauf "Indexed value",  enregistrer.
+
 // vider les caches
 drush cc all
 
