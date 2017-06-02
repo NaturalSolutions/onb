@@ -213,6 +213,13 @@ admin/config/search/search_api/index/search_glossaire/edit
 admin/config/search/facetapi/search_api%40search_indicateurs/block/field_jeux_indicateur/edit
 -> dans la conf des tries, tout décocher sauf "Indexed value",  enregistrer.
 
+# ajouter un lien dans le menu vers la page des références biblios
+admin/structure/menu/manage/main-menu/add
+Titre du lien dans le menu -> Références bibliographiques
+Chemin -> fiches-bibliographiques
+Lien parent -> Les ressources
+Langue -> FR
+
 // vider les caches
 drush cc all
 
