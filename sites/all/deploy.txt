@@ -211,7 +211,13 @@ admin/config/search/search_api/index/search_glossaire/edit
 
 # pour remettre l'ordre de trie des filtres :
 admin/config/search/facetapi/search_api%40search_indicateurs/block/field_jeux_indicateur/edit
--> dans la conf des tries, tout décocher sauf "Indexed value",  enregistrer.
+-> dans la conf des tries, tout décocher sauf
+-> "Indexed value" : "descendant"
+-> "Display value" : "descendant"
+
+admin/config/search/facetapi/search_api%40search_indicateurs/block/field_type_pression/edit
+-> dans la conf des tries, tout décocher sauf
+-> "Indexed value" : "Ascendant"
 
 # ajouter un lien dans le menu vers la page des références biblios
 admin/structure/menu/manage/main-menu/add

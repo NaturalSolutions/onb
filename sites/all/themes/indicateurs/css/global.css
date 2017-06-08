@@ -1571,7 +1571,7 @@ ul ul, ol ul {
 }
 
 /* ONGLET ONB */
-body.context-lonb div.field-type-image img{
+body.node-type-page div.field-type-image img{
   width: 100%;
 }
 
