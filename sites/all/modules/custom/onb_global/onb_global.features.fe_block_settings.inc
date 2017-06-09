@@ -2622,34 +2622,6 @@ function onb_global_default_fe_block_settings() {
     'visibility' => 0,
   );
 
-  $export['views-recherche_fiches_biblio-block_1'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'recherche_fiches_biblio-block_1',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 0,
-    'module' => 'views',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'adminimal' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'adminimal',
-        'weight' => 0,
-      ),
-      'indicateurs' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'indicateurs',
-        'weight' => 0,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 0,
-  );
-
   $export['views-recherche_indicateurs-block_1'] = array(
     'cache' => -1,
     'custom' => 0,

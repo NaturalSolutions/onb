@@ -2219,6 +2219,12 @@ function onb_global_strongarm() {
       'width' => '3858',
       'height' => '1041',
     ),
+    1984 => array(
+      'x' => '40',
+      'y' => '1',
+      'width' => '919',
+      'height' => '259',
+    ),
   );
   $export['imagefield_crop_info'] = $strongarm;
 

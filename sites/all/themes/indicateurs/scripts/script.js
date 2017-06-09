@@ -31,6 +31,13 @@ jQuery( document ).ready(function() {
 
 	};
 
+	var alterActuView = function(){
+
+		jQuery('span.views-slideshow-controls-text-next a').text('Plus anciennes');
+		jQuery('span.views-slideshow-controls-text-previous a').text('Plus récents');
+
+	}
+
 	window.init = function() {
 
 		if(jQuery('body').hasClass('context-actualites')) editBtnImpression();
@@ -41,6 +48,9 @@ jQuery( document ).ready(function() {
 		// Fix JS in wait to find in config Drupal how to have dom complete
 		if(jQuery('body').hasClass('node-type-question')) fixBugOeil();
 		if(jQuery('body').hasClass('node-type-fiche-indicateur')) fixBugOeil();
+
+		if(jQuery('body').hasClass('front')) alterActuView();
+		if(jQuery('body').hasClass('node-type-actualite')) alterActuView();
 
 	}
 

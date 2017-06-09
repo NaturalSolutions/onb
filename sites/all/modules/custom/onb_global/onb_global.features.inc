@@ -900,7 +900,7 @@ function onb_global_default_search_api_sort() {
     "default_sort" : "0",
     "default_sort_no_terms" : "0",
     "default_order" : "desc",
-    "options" : { "field_name" : "Titre" },
+    "options" : { "field_name" : "Title" },
     "rdf_mapping" : []
   }');
   $items['search_fiches_biblio__type'] = entity_import('search_api_sort', '{
@@ -913,7 +913,7 @@ function onb_global_default_search_api_sort() {
     "default_sort" : "0",
     "default_sort_no_terms" : "0",
     "default_order" : "desc",
-    "options" : { "field_name" : "Type de contenu" },
+    "options" : { "field_name" : "Content type" },
     "rdf_mapping" : []
   }');
   return $items;

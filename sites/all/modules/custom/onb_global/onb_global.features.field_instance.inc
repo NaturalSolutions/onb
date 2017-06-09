@@ -7201,10 +7201,6 @@ function onb_global_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'alt_field' => 0,
-      'alt_field_default' => '',
-      'alt_field_hide' => 0,
-      'alt_field_sync_title' => 0,
-      'alt_field_update_on_edit' => 0,
       'default_image' => 0,
       'file_directory' => 'images/pages/visuels',
       'file_extensions' => 'png gif jpg jpeg',
@@ -7213,6 +7209,7 @@ function onb_global_field_default_field_instances() {
         'file_name' => array(
           'options' => array(
             'pathauto' => 0,
+            'slashes' => 0,
             'transliterate' => 1,
           ),
           'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
@@ -7220,20 +7217,19 @@ function onb_global_field_default_field_instances() {
         'file_path' => array(
           'options' => array(
             'pathauto' => 0,
+            'slashes' => 0,
             'transliterate' => 1,
           ),
           'value' => 'fichiers/images/pages/[node:title]',
         ),
-        'retroactive_update' => 1,
+        'redirect' => FALSE,
+        'retroactive_update' => 0,
       ),
       'filefield_paths_enabled' => 1,
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
       'title_field' => 1,
-      'title_field_default' => '',
-      'title_field_hide' => 0,
-      'title_field_update_on_edit' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -7246,7 +7242,7 @@ function onb_global_field_default_field_instances() {
         'enforce_ratio' => 1,
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
-        'resolution' => '960x260',
+        'resolution' => '920x260',
       ),
       'type' => 'imagefield_crop_widget',
       'weight' => 31,
