@@ -226,6 +226,14 @@ Chemin -> fiches-bibliographiques
 Lien parent -> Les ressources
 Langue -> FR
 
+# ajout du filtre date sur page liste actualité
+admin/config/search/facetapi/search_api%40search_actualite/block/field_actu_date/edit
+-> "Display widget" : "liens"
+-> "Query type" : "Date"
+-> "Display for searches" : "Seulement pour les sélectionnés"
+-> "Search ID" : "search_api_views:recherche_actualite:block_2"
+-> "Trier" : "Indexed value" : "descendant"
+
 // vider les caches
 drush cc all
 

@@ -458,7 +458,7 @@ function onb_global_default_fe_block_settings() {
         'weight' => -10,
       ),
     ),
-    'title' => 'dateSearch',
+    'title' => 'Date',
     'visibility' => 0,
   );
 
