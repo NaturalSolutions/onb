@@ -112,6 +112,7 @@ function onb_global_strongarm() {
     'block-menu-block-3' => '1',
     'block-menu-block-4' => '1',
     'block-views-calendrier-block-1' => '1',
+    'block-facetapi-2nqgdplv05knsanhczebmyncr7km2wou' => '3',
   );
   $export['collapsiblock_settings'] = $strongarm;
 

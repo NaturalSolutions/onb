@@ -439,7 +439,7 @@ function onb_global_default_fe_block_settings() {
     'custom' => 0,
     'delta' => '2nqGdPLV05KnsANhCZeBMYNCR7Km2Wou',
     'i18n_block_language' => array(),
-    'i18n_mode' => 0,
+    'i18n_mode' => 1,
     'module' => 'facetapi',
     'node_types' => array(),
     'pages' => '',
@@ -458,7 +458,7 @@ function onb_global_default_fe_block_settings() {
         'weight' => -10,
       ),
     ),
-    'title' => '',
+    'title' => 'dateSearch',
     'visibility' => 0,
   );
 
