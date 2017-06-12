@@ -473,6 +473,8 @@ body.node-type-actualite  .view-recherche-actualite .view-footer {
 
 .front .grid-4#region-postscript-first, .front .grid-4#region-postscript-second, .front .grid-4#region-postscript-third {
   width: 305px;
+  min-height: 230px;
+  background-color: #F6F6F2;
 }
 
 .front .grid-4#region-postscript-second h6 {
