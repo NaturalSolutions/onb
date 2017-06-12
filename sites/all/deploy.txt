@@ -234,6 +234,9 @@ admin/config/search/facetapi/search_api%40search_actualite/block/field_actu_date
 -> "Search ID" : "search_api_views:recherche_actualite:block_2"
 -> "Trier" : "Indexed value" : "descendant"
 
+# admin/structure/views/view/calendrier/edit/page_2
+Menu onglet : remplacer week par semaine
+
 // vider les caches
 drush cc all
 
