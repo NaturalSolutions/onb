@@ -234,8 +234,13 @@ admin/config/search/facetapi/search_api%40search_actualite/block/field_actu_date
 -> "Search ID" : "search_api_views:recherche_actualite:block_2"
 -> "Trier" : "Indexed value" : "descendant"
 
-# admin/structure/views/view/calendrier/edit/page_2
+# Maj label calendrier
+admin/structure/views/view/calendrier/edit/page_2
 Menu onglet : remplacer week par semaine
+
+# Ajouter les droits pour la recherche avancée
+admin/people/permissions
+-> "Utiliser la recherche avancée" : autoriser tout le monde
 
 // vider les caches
 drush cc all
