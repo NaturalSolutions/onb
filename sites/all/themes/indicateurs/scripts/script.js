@@ -40,7 +40,7 @@ jQuery( document ).ready(function() {
 
 	var alterLabelSearch = function(){
 
-		jQuery('.form-item-type > label').text('Seulement du ou des type(s)');
+		jQuery('.form-item-type > label').text('Du ou des type(s)');
 		jQuery('.form-item-language > label').text('Langue');
 		jQuery('.form-item-language-en > label').text('Anglais');
 		jQuery('.form-item-language-fr > label').text('Français');
