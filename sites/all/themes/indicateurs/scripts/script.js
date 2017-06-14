@@ -38,6 +38,15 @@ jQuery( document ).ready(function() {
 
 	}
 
+	var alterLabelSearch = function(){
+
+		jQuery('.form-item-type > label').text('Seulement du ou des type(s)');
+		jQuery('.form-item-language > label').text('Langue');
+		jQuery('.form-item-language-en > label').text('Anglais');
+		jQuery('.form-item-language-fr > label').text('Français');
+
+	}
+
 	window.init = function() {
 
 		if(jQuery('body').hasClass('context-actualites')) editBtnImpression();
@@ -51,6 +60,8 @@ jQuery( document ).ready(function() {
 
 		if(jQuery('body').hasClass('front')) alterActuView();
 		if(jQuery('body').hasClass('node-type-actualite')) alterActuView();
+
+		if(jQuery('body').hasClass('page-search-node')) alterLabelSearch();
 
 	}
 
