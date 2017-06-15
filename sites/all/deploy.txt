@@ -242,6 +242,24 @@ Menu onglet : remplacer week par semaine
 admin/people/permissions
 -> "Utiliser la recherche avancée" : autoriser tout le monde
 
+# rendre visible le bloc calendrier
+admin/structure/views/view/calendrier/edit/block_1
+-> accès : aucun : all display
+
+# ajouter colorbox dans calendar template
+admin/config/date/calendar
+-> colorbox -> oui
+
+# activer le module "Colorbox Field Formatter"
+admin/modules
+
+# cacher la langue dans l'affichage d'un event
+admin/structure/types/manage/event_calendar/display
+(langue) format : cacher
+
+# re-revert feature
+drush fr onb_global -y
+
 // vider les caches
 drush cc all
 
