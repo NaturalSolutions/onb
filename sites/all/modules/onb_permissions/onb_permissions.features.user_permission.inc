@@ -324,6 +324,7 @@ function onb_permissions_user_default_permissions() {
     'name' => 'administer content translations',
     'roles' => array(
       'administrator' => 'administrator',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'i18n_node',
   );
@@ -508,6 +509,7 @@ function onb_permissions_user_default_permissions() {
     'name' => 'administer languages',
     'roles' => array(
       'administrator' => 'administrator',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'locale',
   );
@@ -2752,6 +2754,7 @@ function onb_permissions_user_default_permissions() {
     'name' => 'translate admin strings',
     'roles' => array(
       'administrator' => 'administrator',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'i18n_string',
   );
@@ -2771,6 +2774,7 @@ function onb_permissions_user_default_permissions() {
     'name' => 'translate interface',
     'roles' => array(
       'administrator' => 'administrator',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'locale',
   );
@@ -2780,6 +2784,7 @@ function onb_permissions_user_default_permissions() {
     'name' => 'translate user-defined strings',
     'roles' => array(
       'administrator' => 'administrator',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'i18n_string',
   );
