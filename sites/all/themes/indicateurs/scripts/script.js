@@ -43,11 +43,12 @@ jQuery( document ).ready(function() {
 
 	}
 
-	var alterLabels = function(){
+	var alterHPLabels = function(){
 
 		// EN
 		jQuery('body.i18n-en section.block-calendrier-block-1 h2').text('Calendar');
 		jQuery('body.i18n-en section.block-recherche-actualite-block-1 h2').text('News');
+		jQuery('body.i18n-en div.view-display-id-block_1 div.view-footer a').html('<a href="en/actualites/all">Find all our news</a>');
 
 	}
 
@@ -75,7 +76,7 @@ jQuery( document ).ready(function() {
 
 		if(jQuery('body').hasClass('front')) {
 			alterActuView();
-			alterLabels();
+			alterHPLabels();
 		}
 
 		if(jQuery('body').hasClass('node-type-actualite')) alterActuView();

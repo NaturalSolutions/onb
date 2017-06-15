@@ -261,8 +261,8 @@ admin/structure/types/manage/event_calendar/display
 drush fr onb_global -y
 
 # traduction de termes
-admin/config/regional/translate/translate
--> traduire "<a href="en/actualites/all">Find all our news</a>" par "<a href="fr/actualites/toutes">Retrouvez toutes nos actualités</a>"
+admin/structure/block/manage/block/1/translate/fr
+-> changer les liens des deux btn par "fr/questions/toutes"
 
 // vider les caches
 drush cc all
