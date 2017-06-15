@@ -1601,16 +1601,27 @@ span.lexicon-term {
   border-radius: 0;
 }
 
-  .view .date-nav-wrapper .date-prev a,
-  .view .date-nav-wrapper .date-next a {
-    margin: 0;
-  }
+.view .date-nav-wrapper .date-prev a,
+.view .date-nav-wrapper .date-next a {
+  margin: 0;
+}
 
-  #region-sidebar-first .view .date-nav-wrapper ul li {
-    padding: 0;
-  }
+#region-sidebar-first .view .date-nav-wrapper ul li {
+  padding: 0;
+}
 
-  body.page-search-node fieldset.search-advanced > legend > span > a{
-    font-size: 16px;
-    font-weight: bold;
-  }
+body.page-search-node fieldset.search-advanced > legend > span > a{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+body.front section.block-views-calendrier-block-1{
+  width: 954px;
+  margin-bottom: 20px;
+  background: #F6F6F2;
+}
+body.front section.block-views-calendrier-block-1 h2{
+  position: relative;
+  top: 5px;
+  text-align: center;
+}
