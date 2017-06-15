@@ -33,8 +33,13 @@ jQuery( document ).ready(function() {
 
 	var alterActuView = function(){
 
-		jQuery('span.views-slideshow-controls-text-next a').text('Plus anciennes');
-		jQuery('span.views-slideshow-controls-text-previous a').text('Plus récents');
+		// FR
+		jQuery('body.i18n-fr span.views-slideshow-controls-text-next a').text('Plus anciennes');
+		jQuery('body.i18n-fr span.views-slideshow-controls-text-previous a').text('Plus récents');
+
+		// EN
+		jQuery('body.i18n-en span.views-slideshow-controls-text-next a').text('Older');
+		jQuery('body.i18n-en span.views-slideshow-controls-text-previous a').text('Most Recent');
 
 	}
 
