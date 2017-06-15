@@ -88,6 +88,7 @@ function onb_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
+      'contributeur' => 'contributeur',
     ),
     'module' => 'node',
   );
@@ -97,6 +98,7 @@ function onb_permissions_user_default_permissions() {
     'name' => 'access content overview',
     'roles' => array(
       'administrator' => 'administrator',
+      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -867,7 +869,6 @@ function onb_permissions_user_default_permissions() {
     'name' => 'create actualite content',
     'roles' => array(
       'administrator' => 'administrator',
-      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -885,7 +886,6 @@ function onb_permissions_user_default_permissions() {
     'name' => 'create event_calendar content',
     'roles' => array(
       'administrator' => 'administrator',
-      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -896,7 +896,6 @@ function onb_permissions_user_default_permissions() {
     'name' => 'create fiche_indicateur content',
     'roles' => array(
       'administrator' => 'administrator',
-      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -928,7 +927,6 @@ function onb_permissions_user_default_permissions() {
     'name' => 'create page content',
     'roles' => array(
       'administrator' => 'administrator',
-      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -939,7 +937,6 @@ function onb_permissions_user_default_permissions() {
     'name' => 'create producteur content',
     'roles' => array(
       'administrator' => 'administrator',
-      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -950,7 +947,6 @@ function onb_permissions_user_default_permissions() {
     'name' => 'create question content',
     'roles' => array(
       'administrator' => 'administrator',
-      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -1027,6 +1023,7 @@ function onb_permissions_user_default_permissions() {
     'name' => 'delete any fiche_ressource_bibliographique content',
     'roles' => array(
       'administrator' => 'administrator',
+      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -1096,7 +1093,6 @@ function onb_permissions_user_default_permissions() {
     'name' => 'delete own actualite content',
     'roles' => array(
       'administrator' => 'administrator',
-      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -1107,7 +1103,6 @@ function onb_permissions_user_default_permissions() {
     'name' => 'delete own audio files',
     'roles' => array(
       'administrator' => 'administrator',
-      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'file_entity',
@@ -1125,7 +1120,6 @@ function onb_permissions_user_default_permissions() {
     'name' => 'delete own document files',
     'roles' => array(
       'administrator' => 'administrator',
-      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'file_entity',
@@ -1136,7 +1130,6 @@ function onb_permissions_user_default_permissions() {
     'name' => 'delete own event_calendar content',
     'roles' => array(
       'administrator' => 'administrator',
-      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -1147,7 +1140,6 @@ function onb_permissions_user_default_permissions() {
     'name' => 'delete own fiche_indicateur content',
     'roles' => array(
       'administrator' => 'administrator',
-      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -1169,7 +1161,6 @@ function onb_permissions_user_default_permissions() {
     'name' => 'delete own image files',
     'roles' => array(
       'administrator' => 'administrator',
-      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'file_entity',
@@ -1180,7 +1171,6 @@ function onb_permissions_user_default_permissions() {
     'name' => 'delete own page content',
     'roles' => array(
       'administrator' => 'administrator',
-      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -1191,7 +1181,6 @@ function onb_permissions_user_default_permissions() {
     'name' => 'delete own producteur content',
     'roles' => array(
       'administrator' => 'administrator',
-      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -1202,7 +1191,6 @@ function onb_permissions_user_default_permissions() {
     'name' => 'delete own question content',
     'roles' => array(
       'administrator' => 'administrator',
-      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -1213,7 +1201,6 @@ function onb_permissions_user_default_permissions() {
     'name' => 'delete own video files',
     'roles' => array(
       'administrator' => 'administrator',
-      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'file_entity',
@@ -1744,7 +1731,6 @@ function onb_permissions_user_default_permissions() {
     'name' => 'download own audio files',
     'roles' => array(
       'administrator' => 'administrator',
-      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'file_entity',
@@ -1755,7 +1741,6 @@ function onb_permissions_user_default_permissions() {
     'name' => 'download own document files',
     'roles' => array(
       'administrator' => 'administrator',
-      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'file_entity',
@@ -1766,7 +1751,6 @@ function onb_permissions_user_default_permissions() {
     'name' => 'download own image files',
     'roles' => array(
       'administrator' => 'administrator',
-      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'file_entity',
@@ -1777,7 +1761,6 @@ function onb_permissions_user_default_permissions() {
     'name' => 'download own video files',
     'roles' => array(
       'administrator' => 'administrator',
-      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'file_entity',
@@ -1845,6 +1828,7 @@ function onb_permissions_user_default_permissions() {
     'name' => 'edit any fiche_ressource_bibliographique content',
     'roles' => array(
       'administrator' => 'administrator',
+      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -1905,7 +1889,6 @@ function onb_permissions_user_default_permissions() {
     'name' => 'edit own actualite content',
     'roles' => array(
       'administrator' => 'administrator',
-      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -1916,7 +1899,6 @@ function onb_permissions_user_default_permissions() {
     'name' => 'edit own audio files',
     'roles' => array(
       'administrator' => 'administrator',
-      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'file_entity',
@@ -1943,7 +1925,6 @@ function onb_permissions_user_default_permissions() {
     'name' => 'edit own document files',
     'roles' => array(
       'administrator' => 'administrator',
-      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'file_entity',
@@ -1954,7 +1935,6 @@ function onb_permissions_user_default_permissions() {
     'name' => 'edit own event_calendar content',
     'roles' => array(
       'administrator' => 'administrator',
-      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -1965,7 +1945,6 @@ function onb_permissions_user_default_permissions() {
     'name' => 'edit own fiche_indicateur content',
     'roles' => array(
       'administrator' => 'administrator',
-      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -1987,7 +1966,6 @@ function onb_permissions_user_default_permissions() {
     'name' => 'edit own image files',
     'roles' => array(
       'administrator' => 'administrator',
-      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'file_entity',
@@ -1998,7 +1976,6 @@ function onb_permissions_user_default_permissions() {
     'name' => 'edit own page content',
     'roles' => array(
       'administrator' => 'administrator',
-      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -2009,7 +1986,6 @@ function onb_permissions_user_default_permissions() {
     'name' => 'edit own producteur content',
     'roles' => array(
       'administrator' => 'administrator',
-      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -2020,7 +1996,6 @@ function onb_permissions_user_default_permissions() {
     'name' => 'edit own question content',
     'roles' => array(
       'administrator' => 'administrator',
-      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -2031,7 +2006,6 @@ function onb_permissions_user_default_permissions() {
     'name' => 'edit own video files',
     'roles' => array(
       'administrator' => 'administrator',
-      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'file_entity',
@@ -2693,7 +2667,6 @@ function onb_permissions_user_default_permissions() {
     'name' => 'revert revisions',
     'roles' => array(
       'administrator' => 'administrator',
-      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -2788,6 +2761,7 @@ function onb_permissions_user_default_permissions() {
     'name' => 'translate content',
     'roles' => array(
       'administrator' => 'administrator',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'translation',
   );
@@ -2860,6 +2834,8 @@ function onb_permissions_user_default_permissions() {
     'name' => 'use advanced search',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'search',
   );
@@ -2988,7 +2964,6 @@ function onb_permissions_user_default_permissions() {
     'name' => 'view revisions',
     'roles' => array(
       'administrator' => 'administrator',
-      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
