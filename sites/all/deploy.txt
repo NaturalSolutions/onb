@@ -260,6 +260,10 @@ admin/structure/types/manage/event_calendar/display
 # re-revert feature
 drush fr onb_global -y
 
+# traduction de termes
+admin/config/regional/translate/translate
+-> traduire "<a href="en/actualites/all">Find all our news</a>" par "<a href="fr/actualites/toutes">Retrouvez toutes nos actualités</a>"
+
 // vider les caches
 drush cc all
 

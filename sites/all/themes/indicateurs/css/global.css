@@ -1625,3 +1625,7 @@ body.front section.block-views-calendrier-block-1 h2{
   top: 5px;
   text-align: center;
 }
+
+body.front.i18n-en div#views_slideshow_cycle_main_recherche_actualite-block_1{
+  height: 100px;
+}

@@ -43,14 +43,24 @@ jQuery( document ).ready(function() {
 
 	}
 
-	var alterLabelSearch = function(){
+	var alterLabels = function(){
 
-		jQuery('.form-item-type > label').text('Du ou des type(s)');
-		jQuery('.form-item-language > label').text('Langue');
-		jQuery('.form-item-language-en > label').text('Anglais');
-		jQuery('.form-item-language-fr > label').text('Français');
+		// EN
+		jQuery('body.i18n-en section.block-calendrier-block-1 h2').text('Calendar');
+		jQuery('body.i18n-en section.block-recherche-actualite-block-1 h2').text('News');
 
 	}
+
+	var alterLabelSearch = function(){
+
+		// EN
+		jQuery('body.i18n-fr .form-item-type > label').text('Du ou des type(s)');
+		jQuery('body.i18n-fr .form-item-language > label').text('Langue');
+		jQuery('body.i18n-fr .form-item-language-en > label').text('Anglais');
+		jQuery('body.i18n-fr .form-item-language-fr > label').text('Français');
+
+	}
+
 
 	window.init = function() {
 
@@ -63,7 +73,11 @@ jQuery( document ).ready(function() {
 		if(jQuery('body').hasClass('node-type-question')) fixBugOeil();
 		if(jQuery('body').hasClass('node-type-fiche-indicateur')) fixBugOeil();
 
-		if(jQuery('body').hasClass('front')) alterActuView();
+		if(jQuery('body').hasClass('front')) {
+			alterActuView();
+			alterLabels();
+		}
+
 		if(jQuery('body').hasClass('node-type-actualite')) alterActuView();
 
 		if(jQuery('body').hasClass('page-search-node')) alterLabelSearch();
