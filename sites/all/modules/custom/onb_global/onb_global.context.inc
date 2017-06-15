@@ -102,17 +102,17 @@ function onb_global_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'views-calendrier-block_1' => array(
+          'module' => 'views',
+          'delta' => 'calendrier-block_1',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
         'views-diaporama-block' => array(
           'module' => 'views',
           'delta' => 'diaporama-block',
           'region' => 'sidebar_first',
           'weight' => '-10',
-        ),
-        'views-calendrier-block_1' => array(
-          'module' => 'views',
-          'delta' => 'calendrier-block_1',
-          'region' => 'sidebar_first',
-          'weight' => '-8',
         ),
         'views-recherche_actualite-block_1' => array(
           'module' => 'views',
