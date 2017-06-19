@@ -264,6 +264,10 @@ drush fr onb_global -y
 admin/structure/block/manage/block/1/translate/fr
 -> changer les liens des deux btn par "fr/questions/toutes"
 
+# traduction
+admin/config/regional/translate/translate
+-> Traduire "<a href="en/actualites/all">Find all our news</a>" par "<a href="fr/actualites/toutes">Retrouvez toutes nos actualités</a>" en fr
+
 // vider les caches
 drush cc all
 
