@@ -54,11 +54,11 @@ jQuery( document ).ready(function() {
 
 	var alterLabelSearch = function(){
 
-		// EN
 		jQuery('body.i18n-fr .form-item-type > label').text('Du ou des type(s)');
 		jQuery('body.i18n-fr .form-item-language > label').text('Langue');
 		jQuery('body.i18n-fr .form-item-language-en > label').text('Anglais');
 		jQuery('body.i18n-fr .form-item-language-fr > label').text('Français');
+		jQuery('body.i18n-fr .form-type-checkboxes.form-item-type .form-item-type-actualite > label').text('Actualité');
 
 	}
 
