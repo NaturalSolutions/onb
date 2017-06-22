@@ -859,6 +859,7 @@ clear:both;
   text-transform: none;
   font-weight: normal;
   font-size: 3em;
+  min-height: 80px;
   line-height: 1em;
   background-image: url("../images/quotes.png");
   background-position: center left;
@@ -1632,10 +1633,13 @@ body.front.i18n-en div#views_slideshow_cycle_main_recherche_actualite-block_1{
 }
 
 body.node-type-question .floating-block-active#block-print-print-links{
-  top: 570px !important;
+  top: 0px !important;
   max-width: 220px;
 }
 body.node-type-question .floating-block-active.block-block-11{
-  top: 660px !important;
+  top: 90px !important;
   max-width: 220px;
+}
+body.node-type-question section#block-views-relations-block-2.floating-block-active{
+  top: 210px !important;
 }
