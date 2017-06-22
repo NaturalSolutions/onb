@@ -1630,3 +1630,12 @@ body.front section.block-views-calendrier-block-1 h2{
 body.front.i18n-en div#views_slideshow_cycle_main_recherche_actualite-block_1{
   height: 100px;
 }
+
+body.node-type-question .floating-block-active#block-print-print-links{
+  top: 570px !important;
+  max-width: 220px;
+}
+body.node-type-question .floating-block-active.block-block-11{
+  top: 660px !important;
+  max-width: 220px;
+}
