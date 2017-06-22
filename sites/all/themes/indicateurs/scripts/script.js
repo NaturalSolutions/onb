@@ -64,6 +64,7 @@ jQuery( document ).ready(function() {
 
 	var setFixedBlockImprim = function(){
 
+		// when scrolling
 		jQuery(window).scroll(function (event) {
 
 			if( jQuery('.block-views-relations-block-2').hasClass('floating-block-active') ){
@@ -74,6 +75,26 @@ jQuery( document ).ready(function() {
 			}
 
 		});
+
+		// when clic on anchor
+		jQuery('.view-relations a').click(function(event) {
+
+			if( jQuery('.block-views-relations-block-2').hasClass('floating-block-active') ){
+
+				jQuery('#block-print-print-links').addClass('blockFloat-0 floating-block-active');
+				jQuery('#block-block-11').addClass('blockFloat-0 floating-block-active');
+
+			}
+
+		});
+
+		// on first loading page
+		if( jQuery('.block-views-relations-block-2').hasClass('floating-block-active') ){
+
+			jQuery('#block-print-print-links').addClass('blockFloat-0 floating-block-active');
+			jQuery('#block-block-11').addClass('blockFloat-0 floating-block-active');
+
+		}
 
 	}
 
@@ -87,8 +108,10 @@ jQuery( document ).ready(function() {
 
 		// Fix JS in wait to find in config Drupal how to have dom complete
 		if(jQuery('body').hasClass('node-type-question')) {
+
 			fixBugOeil();
 			setFixedBlockImprim();
+
 		}
 		if(jQuery('body').hasClass('node-type-fiche-indicateur')) fixBugOeil();
 
