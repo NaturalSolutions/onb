@@ -1651,5 +1651,15 @@ body.node-type-question .floating-block-active.block-block-11{
   max-width: 220px;
 }
 body.node-type-question section#block-views-relations-block-2.floating-block-active{
-  top: 210px !important;
+  top: 20px !important;
+}
+body.node-type-question div#block-print-print-links div.block-inner{
+  padding: 0;
+}
+body.node-type-question div#block-print-print-links span.print_html{
+  margin: 5px 0 0 0;
+  width: 220px;
+}
+body.node-type-question div#block-print-print-links a{
+
 }

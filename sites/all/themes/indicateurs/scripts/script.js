@@ -70,7 +70,7 @@ jQuery( document ).ready(function() {
 			if( jQuery('.block-views-relations-block-2').hasClass('floating-block-active') ){
 
 				jQuery('#block-print-print-links').addClass('blockFloat-0 floating-block-active');
-				jQuery('#block-block-11').addClass('blockFloat-0 floating-block-active');
+				//jQuery('#block-block-11').addClass('blockFloat-0 floating-block-active');
 
 			}
 
@@ -82,7 +82,7 @@ jQuery( document ).ready(function() {
 			if( jQuery('.block-views-relations-block-2').hasClass('floating-block-active') ){
 
 				jQuery('#block-print-print-links').addClass('blockFloat-0 floating-block-active');
-				jQuery('#block-block-11').addClass('blockFloat-0 floating-block-active');
+				//jQuery('#block-block-11').addClass('blockFloat-0 floating-block-active');
 
 			}
 
@@ -92,7 +92,7 @@ jQuery( document ).ready(function() {
 		if( jQuery('.block-views-relations-block-2').hasClass('floating-block-active') ){
 
 			jQuery('#block-print-print-links').addClass('blockFloat-0 floating-block-active');
-			jQuery('#block-block-11').addClass('blockFloat-0 floating-block-active');
+			//jQuery('#block-block-11').addClass('blockFloat-0 floating-block-active');
 
 		}
 
