@@ -98,6 +98,10 @@ jQuery( document ).ready(function() {
 
 	}
 
+	var linkColorBoxVisuel = function(){
+		jQuery('a.colorbox').colorbox({rel:'gal'});
+	}
+
 
 	window.init = function() {
 
@@ -111,9 +115,11 @@ jQuery( document ).ready(function() {
 
 			fixBugOeil();
 			setFixedBlockImprim();
+			linkColorBoxVisuel();
 
 		}
 		if(jQuery('body').hasClass('node-type-fiche-indicateur')) fixBugOeil();
+		if(jQuery('body').hasClass('page-indicateurs-tous')) linkColorBoxVisuel();
 
 		if(jQuery('body').hasClass('front')) {
 			alterActuView();
