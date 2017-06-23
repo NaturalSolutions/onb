@@ -34,10 +34,20 @@ h1 {
 
 h2 {
   font-size: 1.4em;
+  color: #096B00;
 }
 
 h3 {
   font-size: 1.2em;
+  color: #096B00;
+}
+
+h4 {
+  font-weight: bold;
+}
+
+h5 {
+  font-style: italic;
 }
 
 tr.even td, tr.even:hover td {
