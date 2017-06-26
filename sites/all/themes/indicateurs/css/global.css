@@ -1314,7 +1314,7 @@ background: url("../images/redsmallexpanded.gif") no-repeat scroll 0px 30% trans
 
 /*Thématiques*/
 .field-name-thematique-lien-vers-question {
-  display: none;
+  display: none !important;
 }
 
 .page-taxonomy-term-120 .field-name-thematique-lien-vers-question,
