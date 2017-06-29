@@ -438,7 +438,12 @@ div .collapsiblock a {
 
 /*Page d'accueil*/
 .front #zone-postscript .block {
-  min-height: 200px;
+  /*min-height: 200px;*/
+  min-height: 250px;
+}
+
+.front #zone-postscript .block-title {
+  text-align: center;
 }
 
 .front .view-recherche-actualite .view-content,
@@ -484,7 +489,7 @@ body.node-type-actualite  .view-recherche-actualite .view-footer {
 .front .grid-4#region-postscript-first, .front .grid-4#region-postscript-second, .front .grid-4#region-postscript-third {
   width: 305px;
   min-height: 230px;
-  background-color: #F6F6F2;
+  /*background-color: #F6F6F2;*/
 }
 
 .front .grid-4#region-postscript-second h6 {
@@ -1628,18 +1633,22 @@ body.page-search-node fieldset.search-advanced > legend > span > a{
 }
 
 body.front section.block-views-calendrier-block-1{
-  width: 954px;
+  /*width: 954px;*/
   margin-bottom: 20px;
   background: #F6F6F2;
 }
 body.front section.block-views-calendrier-block-1 h2{
   position: relative;
   top: 5px;
-  text-align: center;
+  /*text-align: center;*/
 }
 
 body.front.i18n-en div#views_slideshow_cycle_main_recherche_actualite-block_1{
   height: 100px;
+}
+
+body.front #zone-postscript .block {
+  margin-bottom: 15px;
 }
 
 body.node-type-question .floating-block-active#block-print-print-links{
